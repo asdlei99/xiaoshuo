@@ -1,0 +1,55 @@
+#
+# robots.txt for 08CMS
+# Version v3.3
+#
+
+User-agent: *
+
+Disallow: /admina/
+Disallow: /adminm/
+Disallow: /dynamic/
+Disallow: /images/
+Disallow: /include/
+Disallow: /install/
+Disallow: /payonline/
+Disallow: /template/
+Disallow: /uc_client/
+Disallow: /userfiles/
+Disallow: /admina.php
+Disallow: /adminm.php
+Disallow: /ajax.php
+Disallow: /albums.php
+Disallow: /archiveadd.php
+Disallow: /base.inc.php
+Disallow: /cart.php
+Disallow: /cata.php
+Disallow: /counter.php
+Disallow: /debase.php
+Disallow: /down.php
+Disallow: /favorite.php
+Disallow: /flash.php
+Disallow: /install.php
+Disallow: /js.php
+Disallow: /login.php
+Disallow: /lostpwd.php
+Disallow: /media.php
+Disallow: /memactive.php
+Disallow: /mfavorite.php
+Disallow: /mflink.php
+Disallow: /mfriend.php
+Disallow: /mreply.php
+Disallow: /mreport.php
+Disallow: /mscore.php
+Disallow: /offer.php
+Disallow: /passport_in.php
+Disallow: /purchase.php
+Disallow: /regcode.php
+Disallow: /register.php
+Disallow: /reply.php
+Disallow: /report.php
+Disallow: /subscribe.php
+Disallow: /upload.php
+Disallow: /view_count.php
+Disallow: /vote.php
+
+
