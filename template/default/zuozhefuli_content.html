@@ -1,0 +1,40 @@
+{tpl$header}
+<script type="text/javascript">var CMS_ABS='{cms_abs}',IXDIR = '{tplurl}css/', charset = 'gbk',allowfloatwin = '1',floatwidth='400',floatheight='400'</script>
+<script type="text/javascript" src="{$cms_abs}include/js/langs.js"></script>
+<script type="text/javascript" src="{$cms_abs}include/js/common.js"></script>
+<script type="text/javascript" src="{$cms_abs}include/js/floatwin.js"></script>
+<div id="append_parent"></div>
+</div>
+</div>
+
+<style type="text/css">
+.z_left {width: 220px;height: 670px;padding: 18px 0px 0px 15px;margin-top: 5px;overflow: hidden;background: url({tplurl}/images/ll_bg.jpg) no-repeat;float: left;}
+.z_left h1 {font-weight: bold;font-size: 15px;margin-bottom: 20px;margin-left:-20px;}
+a, a:visited {color: #333;text-decoration: none;}
+.z_left ul li {font-size: 12px;width: 201px;height: 34px;}
+.z_right {width: 680px;padding: 10px;float: right;margin-bottom: 10px;border: 1px #d3d4d6 solid;font-size: 12px; margin-top: 5px;}
+.z_right .tiltle {height: 36px;text-align: center;display: block;font-size: 15px;font-weight: bold;line-height: 36px;background: url({tplurl}images/t_bg.jpg) no-repeat;margin-bottom: 20px;}
+</style>
+
+<div id="main">
+
+	<div class="z_left">
+	      <h1>作者福利</h1>
+			<ul>
+		        {c$zuozhefuli_list}
+		 	</ul>
+	 </div>
+
+
+    <div class="z_right">
+        <span class='tiltle'>{subject}</span>
+
+        <div>
+        {wz_content}
+		</div>
+     </div>
+</div>
+
+<div class="blank3"></div>
+<div id="links"><b>友情链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

@@ -1,0 +1,15 @@
+<?php
+$utagabstract120_0 = array (
+  'cname' => 'Ð¡Ëµ¼ò½é120',
+  'ename' => 'abstract120',
+  'tclass' => 'odeal',
+  'template' => '',
+  'setting' => 
+  array (
+    'tname' => 'abstract',
+    'dealhtml' => 'clearhtml',
+    'trim' => 120,
+  ),
+  'disabled' => 0,
+) ;
+?>

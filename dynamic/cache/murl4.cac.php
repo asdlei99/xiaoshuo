@@ -1,0 +1,35 @@
+<?php
+$murl4_0 = array (
+  'muid' => '4',
+  'cname' => '单篇内容管理',
+  'remark' => '单篇内容管理',
+  'uclass' => 'archives',
+  'issys' => '0',
+  'available' => '1',
+  'vieworder' => '0',
+  'url' => '?action=archives&nmuid=4',
+  'setting' => 
+  array (
+    'checked' => '-1',
+    'valid' => '-1',
+    'sids' => '',
+    'caids' => '8,9,10',
+    'chids' => '3',
+    'filters' => '',
+    'lists' => 'catalog,uclass,adddate,admin',
+    'operates' => 'delete',
+    'imuids' => '1',
+    'ccids1' => '',
+    'ccids2' => '',
+    'ccids3' => '',
+    'ccids4' => '',
+    'ccids5' => '',
+  ),
+  'tplname' => '',
+  'onlyview' => '0',
+  'isbk' => '0',
+  'mtitle' => '',
+  'otitle' => '',
+  'guide' => '',
+) ;
+?>

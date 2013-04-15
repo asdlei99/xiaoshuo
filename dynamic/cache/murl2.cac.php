@@ -1,0 +1,36 @@
+<?php
+$murl2_0 = array (
+  'muid' => '2',
+  'cname' => '连载小说管理',
+  'remark' => '连载小说管理',
+  'uclass' => 'archives',
+  'issys' => '0',
+  'available' => '1',
+  'vieworder' => '0',
+  'url' => '?action=archives&nmuid=2',
+  'setting' => 
+  array (
+    'checked' => '-1',
+    'valid' => '-1',
+    'sids' => '',
+    'caids' => '1,2,4,5,6,7,14,3,15,16,18,19,20',
+    'chids' => '4',
+    'filters' => 'catalog,check',
+    'lists' => 'catalog,check,clicks,favorites,adddate,updatedate,admin,ccid3',
+    'operates' => 'delete,abover,unabover',
+    'imuids' => '1,5,6,101,103',
+    'ccids1' => '',
+    'ccids2' => '',
+    'ccids3' => '',
+    'ccids5' => '',
+    'ccids6' => '',
+    'ccids7' => '',
+  ),
+  'tplname' => '',
+  'onlyview' => '0',
+  'isbk' => '0',
+  'mtitle' => '',
+  'otitle' => '',
+  'guide' => '',
+) ;
+?>

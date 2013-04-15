@@ -1,0 +1,11 @@
+<?php
+$rtaghead_pinlun_0 = array (
+  'cname' => 'ÆÀÂÛÒ³Í·²¿',
+  'ename' => 'head_pinlun',
+  'tclass' => '',
+  'template' => 'head_pinlun.html',
+  'setting' => 
+  array (
+  ),
+) ;
+?>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={mcharset}">
+<title>{mname}的个人空间 - {cmsname} - {hostname}</title>
+<meta name="keywords" content="{cmskeyword}">
+<meta name="description" content="{cmsdescription}">
+<link type="text/css" rel="stylesheet" href="{tplurl}css/space.css" />
+<script type="text/javascript">var cmsUrl = "{cms_abs}";</script>
+<script src="{tplurl}js/common.js" type="text/javascript" language="javascript"></script>
+<script src="{tplurl}js/ajax.js" type="text/javascript" language="javascript"></script>
+<script src="{tplurl}js/commu.js" type="text/javascript" language="javascript"></script>
+</head>
+<style type="text/css">
+#nav .on{mcaid}{background:#fff;text-decoration:none;color:#800000}
+#left .menu{ucid}{background:#fff url("{tplurl}images/li_ggao.gif") 30px center no-repeat;text-decoration:none;}
+</style>
+<body>
+<div id="wrap">
+{tpl$space_header}
+<div id="main">
+<div id="left">
+<ul class="m_b8">{c$men_list}</ul>
+<dl><dt>推荐文章</dt><dd>{c$space_rec}</dd></dl>
+<dl><dt>热门文章</dt><dd>{c$space_hot}</dd></dl>
+<dl><dt>最新文章</dt><dd>{c$space_new}</dd></dl>
+</div>
+<div id="right">
+<dl><dt>会员信息</dt><dd><h1>{u$photo_66_66}</h1>
+用户名：{mname}<br />
+性别：{gender}<br />
+生日：{u$birthday}<br />
+E-Mail：{email}<br />
+注册时间：{u$regdate}<br /><br /></dd></dl>
+<dl><dt>统计信息</dt><dd>文档：{archives}篇<br />评论：{comments}篇<br />信息：{freeinfos}篇<br />网币：{currency2}个<br /><br /></dd></dl>
+</div>
+<div id="container">
+<div class="site m_b8"><span>当前位置：</span><a href="#">首页</a>&nbsp;>>&nbsp;{c$m_nav}</div>
+<table cellpadding="0" cellspacing="5" border="0"><tr>{c$space_xs}</tr></table>
+<h1>最近更新</h1>
+{c$duanpianlist_m}
+</div>
+</div>
+{tpl$space_footer}

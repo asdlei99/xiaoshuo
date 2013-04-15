@@ -1,0 +1,15 @@
+<?php
+$utagxiaoshuomiaoshu46_0 = array (
+  'cname' => 'Ð¡ËµÃèÊö46',
+  'ename' => 'xiaoshuomiaoshu46',
+  'tclass' => 'odeal',
+  'template' => '',
+  'setting' => 
+  array (
+    'tname' => 'xs_miaoshu',
+    'dealhtml' => 'clearhtml',
+    'trim' => 92,
+  ),
+  'disabled' => 0,
+) ;
+?>
