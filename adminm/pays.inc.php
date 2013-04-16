@@ -9,6 +9,13 @@ $pays = array(
 $poids = array();
 foreach(array('alipay' => 2, 'tenpay' => 3) as $k => $v)($cfg_paymode & (1 << $v)) && !in_array('', $pays[$k]) && $poids[$k] = lang($k);
 if(empty($pid)){
+	echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+	foreach ($subMenu_pays as $k => $v) {
+		$nclassstr = 'td24'.($action == $k ? ' current' : '');
+		echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+	}
+	echo "</ul></div><div class=\"blank15h\"></div>";
+	
 	$page = !empty($page) ? max(1, intval($page)) : 1;
 	submitcheck('bfilter') && $page = 1;
 	$pmode = isset($pmode) ? $pmode : '-1';
@@ -27,6 +34,8 @@ if(empty($pid)){
 		$filterstr .= "&$k=".rawurlencode(stripslashes($$k));
 	}
 	if(!submitcheck('barcsedit')){
+		
+		
 		$pmodearr = array('-1' => lang('nolimit')) + $pmodearr;
 		$receivearr = array('-1' => lang('nolimit'),'0' => lang('noarrive'),'1' => lang('arrived'));
 		$transarr = array('-1' => lang('nolimit'),'0' => lang('notrans'),'1' => lang('transed'));
@@ -36,7 +45,7 @@ if(empty($pid)){
 		echo "<tr><td class=\"item2\">";
 		echo "<select style=\"vertical-align: middle;\" name=\"receive\">".makeoption($receivearr,$receive)."</select>&nbsp; ";
 		echo "<select style=\"vertical-align: middle;\" name=\"trans\">".makeoption($transarr,$trans)."</select>&nbsp; ";
-		echo "<select style=\"vertical-align: middle;\" name=\"pmode\">".makeoption($pmodearr,$pmode)."</select>&nbsp; ";
+		//echo "<select style=\"vertical-align: middle;\" name=\"pmode\">".makeoption($pmodearr,$pmode)."</select>&nbsp; ";
 		echo "<select style=\"vertical-align: middle;\" name=\"poid\">".makeoption($poidsarr,$poid)."</select>&nbsp; ";
 		echo mstrbutton('bfilter','filter0').'</td></tr>';
 	mtabfooter();
@@ -82,6 +91,13 @@ if(empty($pid)){
 	if(!$item = $db->fetch_one("SELECT * FROM {$tblprefix}pays WHERE pid=$pid")) mcmessage('choosepayrecord',$forward);
 	include_once M_ROOT."./include/fields.fun.php";
 	if(!submitcheck('bpaydetail')){
+		echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+		foreach ($subMenu_pays as $k => $v) {
+			$nclassstr = 'td24'.($action == $k ? ' current' : '');
+			echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+		}
+		echo "</ul></div><div class=\"blank15h\"></div>";
+		
 		if(!$item['transdate']){
 			mtabheader(lang('modifypaymessage'),'paydetail','adminm.php?action=pays&pid='.$pid.'&forward='.rawurlencode($forward),2,1);
 		}else{
@@ -100,7 +116,7 @@ if(empty($pid)){
 		mtrbasic(lang('contacttel'),'itemnew[telephone]',$item['telephone']);
 		mtrbasic(lang('contactemail'),'itemnew[email]',$item['email']);
 		mtrbasic(lang('remark'),'itemnew[remark]',br2nl($item['remark']),'textarea');
-		mtrspecial(lang('paywarrant')."&nbsp; &nbsp; ["."<a href=\"".$item['warrant']."\" target=\"_blank\">".lang('bigimage')."</a>"."]",'itemnew[warrant]',$item['warrant'],'image');
+		//mtrspecial(lang('paywarrant')."&nbsp; &nbsp; ["."<a href=\"".$item['warrant']."\" target=\"_blank\">".lang('bigimage')."</a>"."]",'itemnew[warrant]',$item['warrant'],'image');
 		if($item['transdate']){
 			mtabfooter();
 			echo "<input class=\"button\" type=\"submit\" name=\"\" value=\"".lang('goback')."\" onclick=\"history.go(-1);\">";

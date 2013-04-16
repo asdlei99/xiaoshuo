@@ -26,7 +26,7 @@ if(!$aid){
 	if($nsid == -1) $catalogs = &$acatalogs;
 	else load_cache('catalogs',$nsid);
 
-	mtabheader(empty($u_mtitle) ? lang('cata_choose') : $u_mtitle,'ajax_arc','',2,'',1);
+	mtabheader(empty($u_mtitle) ? lang('请选择小说的分类') : $u_mtitle,'ajax_arc','',2,'',1);
 	if($caid){
 		mtrbasic('*'.lang('be_catalog'),'',@$catalogs[$caid]['title'],'');
 		trhidden('caid',$caid);
@@ -34,7 +34,7 @@ if(!$aid){
 		mtrcns(lang('be_catalog'),'caid',0,$nsid,0,0,0,lang('p_choose'));
 	}
 	$js_frm = "[$ca_vmode,1,'caid','" . str_replace("'", "\\'", lang('be_catalog')) . "'],";
-
+	
 	foreach($u_coids as $k){
 		if(empty(${'ccid'.$k})){
 			mtrcns($cotypes[$k]['cname'],'ccid'.$k,empty(${'ccid'.$k})?'':${'ccid'.$k},$nsid,$k,0,0,lang('p_choose'));
@@ -46,7 +46,7 @@ if(!$aid){
 		$js_frm .= "\n		[".$cotypes[$k]['vmode'].",0,'ccid$k','" . str_replace("'", "\\'", $cotypes[$k]['cname']) . "'],";
 	}
 	mtrbasic(lang('prompt_msg'),'','<div id="information"></div>','');
-	mtrbasic(lang('allow_type'),'','<div id="setlink"></div>','');
+	mtrbasic(lang('点击连载小说添加'),'','<div id="setlink"></div>','');
 	mtabfooter();
 	check_submit_func('return false;');
 	$guest_info = $memberid ? '' : "lang('guest_info', '{$curuser->info['mname']}') + ";
@@ -227,17 +227,16 @@ EOT;
 			}elseif(!empty(${'ccid'.$k})) $cnarr['ccid'.$k] = 'ccid'.$k;//手动指定了分类
 		}
 	}
-
-	mtabheader(lang('add_inalbum',$aedit->archive['subject']));
-	mtrbasic(lang('look_album'),'',"<a href=\"".view_arcurl($aedit->archive)."\" target=\"_blank\">>>".$aedit->archive['subject']."</a>",'');
-	mtrbasic(lang('altype'),'',$aedit->channel['cname'],'');
+	mtabheader(lang('在指定小说《倾世舞姬》 中添加章节'), $aedit->archive['subject']);
+	mtrbasic(lang('查看小说'),'',"<a href=\"".view_arcurl($aedit->archive)."\" target=\"_blank\">>>".$aedit->archive['subject']."</a>",'');
+	//mtrbasic(lang('altype'),'',$aedit->channel['cname'],'');
 	
 	//列出已指定的类目
 	foreach($cnarr as $k => $v){
 		$str_suffix .= "&$k=$v";
 		$coid = $k == 'caid' ? 0 : str_replace('ccid','',$k);
 		$coclasses = !$coid ? @$catalogs : read_cache('coclasses',$coid);
-		mtrbasic(lang('catas_pointed').' : '.($coid ? $cotypes[$coid]['cname'] : lang('catalog')),'',@$coclasses[$v]['title'],'');
+		mtrbasic(lang('已指定的小说类型').' : '.($coid ? $cotypes[$coid]['cname'] : lang('类型')),'',@$coclasses[$v]['title'],'');
 	}
 
 	//直接在辑内添加的内容
@@ -254,7 +253,7 @@ EOT;
 			$i ++;
 		}
 	}else $addstr = lang('novalidtype');
-	mtrbasic(lang('allow_type'),'',$addstr,'');
+	mtrbasic(lang('点击章节内容添加'),'',$addstr,'');
 	mtabfooter();
 
 }

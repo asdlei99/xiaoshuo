@@ -12,8 +12,11 @@ foreach($grouptypes as $k => $v){
 }
 $repugradestr = lang('yourrepugrade').' : <font class="cBlue">'.$repugrades[$curuser->info['rgid']]['cname'].($repugrades[$curuser->info['rgid']]['thumb'] ? '&nbsp; <img src="'.view_atmurl($repugrades[$curuser->info['rgid']]['thumb']).'" height="18">' : '').'</font>';
 $currencystr=lang('cashaccount').' : <font class="cRed">'.$curuser->info['currency0'].'</font><font class="cBlue"> '.lang('yuan').'</font>&nbsp; ';
+
 foreach($currencys as $v){
+	echo 'currency'.$v['crid'];
 	$tmp = $curuser->info['currency'.$v['crid']];
+	var_dump($tmp);
 	$currencystr .= " $v[cname] : <font class=\"cRed\">$tmp</font><font class=\"cBlue\"> $v[unit]</font>&nbsp; ";
 }
 $friendnum = $db->result_one("SELECT COUNT(*) FROM {$tblprefix}mfriends WHERE mid='$memberid' AND checked=1");

@@ -5,6 +5,12 @@ $page = max(1, intval($page));
 $enable_uc && include_once M_ROOT.'./adminm/pmuc.inc.php';
 if(empty($pmid)){
 	if(!submitcheck('bpmbox')){
+		echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+		foreach ($subMenu_pmbox as $k => $v) {
+			$nclassstr = 'td24'.($action == $k ? ' current' : '');
+			echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+		}
+		echo "</ul></div><div class=\"blank15h\"></div>";
 		$wheresql = "WHERE toid=$memberid";
 		$pagetmp = $page;
 		do{

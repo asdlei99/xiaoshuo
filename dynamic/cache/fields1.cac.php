@@ -2,7 +2,7 @@
 $fields1_0 = array (
   'subject' => 
   array (
-    'cname' => '标题',
+    'cname' => '章节名',
     'issystem' => '1',
     'iscustom' => '0',
     'mcommon' => '1',

@@ -1,24 +1,14 @@
 <?php
 $mmnmenus_0 = array (
-  4 => 
+  13 => 
   array (
-    27 => 
+    3 => 
     array (
-      0 => '?action=pmbox',
+      0 => '?action=memberstate',
       1 => '0',
       2 => '0',
       3 => '',
     ),
-    26 => 
-    array (
-      0 => '?action=pmsend',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-  ),
-  2 => 
-  array (
     250 => 
     array (
       0 => '?action=archives&nmuid=2',
@@ -26,26 +16,16 @@ $mmnmenus_0 = array (
       2 => '0',
       3 => '',
     ),
-    10 => 
-    array (
-      0 => 'addpre.php?nmuid=7',
-      1 => '2',
-      2 => '0',
-      3 => 'return floatwin(\'open_acrhiveedit\',this)',
-    ),
-    15 => 
-    array (
-      0 => '?action=uclasses',
-      1 => '2',
-      2 => '0',
-      3 => '',
-    ),
-  ),
-  3 => 
-  array (
     18 => 
     array (
       0 => '?action=favorites',
+      1 => '0',
+      2 => '0',
+      3 => '',
+    ),
+    8 => 
+    array (
+      0 => '?action=pays',
       1 => '0',
       2 => '0',
       3 => '',
@@ -57,6 +37,47 @@ $mmnmenus_0 = array (
       2 => '0',
       3 => '',
     ),
+    27 => 
+    array (
+      0 => '?action=pmbox',
+      1 => '0',
+      2 => '0',
+      3 => '',
+    ),
+    1 => 
+    array (
+      0 => '?action=memberinfo&nmuid=6',
+      1 => '0',
+      2 => '0',
+      3 => '',
+    ),
+    253 => 
+    array (
+      0 => '?action=zuozhegonggao',
+      1 => '2',
+      2 => '0',
+      3 => '',
+    ),
+    32 => 
+    array (
+      0 => '?action=utrans',
+      1 => '0',
+      2 => '0',
+      3 => '',
+    ),
+  ),
+  2 => 
+  array (
+    15 => 
+    array (
+      0 => '?action=uclasses',
+      1 => '2',
+      2 => '0',
+      3 => '',
+    ),
+  ),
+  3 => 
+  array (
     114 => 
     array (
       0 => '?action=mreports',
@@ -105,27 +126,6 @@ $mmnmenus_0 = array (
   ),
   8 => 
   array (
-    6 => 
-    array (
-      0 => '?action=payonline',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-    8 => 
-    array (
-      0 => '?action=pays',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-    4 => 
-    array (
-      0 => '?action=crexchange',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
     9 => 
     array (
       0 => '?action=crrecords',
@@ -153,45 +153,10 @@ $mmnmenus_0 = array (
   ),
   1 => 
   array (
-    1 => 
-    array (
-      0 => '?action=memberinfo&nmuid=6',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-    3 => 
-    array (
-      0 => '?action=memberstate',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-    2 => 
-    array (
-      0 => '?action=memberpwd',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
     5 => 
     array (
       0 => '?action=gtexchange',
       1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-    32 => 
-    array (
-      0 => '?action=utrans',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-    253 => 
-    array (
-      0 => '?action=zuozhegonggao',
-      1 => '2',
       2 => '0',
       3 => '',
     ),

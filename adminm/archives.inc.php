@@ -106,7 +106,8 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 				$caidsarr = array('0' => lang('catalog')) + caidsarr();
 				echo "<select style=\"vertical-align: middle;\" name=\"caid\">".makeoption($caidsarr,$caid)."</select>&nbsp; ";
 			}
-			echo mstrbutton('bfilter','filter0').'</td></tr>';
+			echo mstrbutton('bfilter','filter0').'';
+			echo '<div style="float:right;margin-right:20px;"><a style="font-weight: bold; font-size: 14px;" onclick="return floatwin(\'open_acrhiveedit\',this)" href="addpre.php?nmuid=7">发布新小说</a></div></td></tr>';
 			mtabfooter();
 		
 			$pagetmp = $page;
@@ -116,8 +117,8 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 			}while(!$db->num_rows($query) && $pagetmp);
 	
 			mtabheader(empty($u_mtitle) ? lang('contentlist') : $u_mtitle,'','',30);
-			$cy_arr = array("<input class=\"checkbox\" type=\"checkbox\" name=\"chkall\" onclick=\"checkall(this.form, 'selectid', 'chkall')\">",array(lang('title'), 'left'),);
-			if(in_array('catalog',$u_lists)) $cy_arr[] = lang('catalog');
+			$cy_arr = array("<input class=\"checkbox\" type=\"checkbox\" name=\"chkall\" onclick=\"checkall(this.form, 'selectid', 'chkall')\">",array('作品名', 'left'),);
+			if(in_array('catalog',$u_lists)) $cy_arr[] = '类型';
 			if(in_array('uclass',$u_lists)) $cy_arr[] = lang('mycoclass');
 			if(in_array('channel',$u_lists)) $cy_arr[] = lang('arctype');//模型与合辑类型综合在一起
 			foreach($cotypes as $k => $v) if(!$v['self_reg'] && in_array('ccid'.$k,$u_lists)) $cy_arr["ccid$k"] = $v['cname'];
@@ -180,6 +181,14 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 				$downsstr = $row['downs'];
 				$pricestr = $row['price'];
 				$currencystr = $row['currency'];
+				//获取该作品的最后更新时间
+				$sql = "select a5.* from xs_archives as a5, (select a1.aid from xs_albums as a1 LEFT JOIN xs_archives_1 as a2 ON a2.aid=a1.aid WHERE a1.pid='".$row['aid']."') as a4 WHERE a5.aid=a4.aid  ORDER BY a5.createdate DESC LIMIT 1";
+				$wz = $db->fetch_one($sql);
+				if (!empty($wz)) {
+					$row['updatedate'] = $wz['createdate'];
+				} else {
+					$row['updatedate'] = '';
+				}
 				$adddatestr = $row['createdate'] ? date('Y-m-d',$row['createdate']) : '-';
 				$updatedatestr = $row['updatedate'] ? date('Y-m-d',$row['updatedate']) : '-';
 				$refreshdatestr = $row['refreshdate'] ? date('Y-m-d',$row['refreshdate']) : '-';

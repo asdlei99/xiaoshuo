@@ -89,11 +89,12 @@ if(empty($channel['umdetail'])){
 				}
 				//个人分类设置
 				//var_dump($u_lists);
-				if (!empty($u_list)) {
+				if (!empty($u_lists)) {
 					foreach ($u_lists as $_key => $v) {	//删除浏览收费的修改
 						if ($v == 'salecp' || $v == 'fsalecp') unset($u_lists[$_key]);
 					}
 				}
+				//var_dump($u_lists);
 				
 				
 				if(empty($u_lists) || in_array('ucid',$u_lists)){

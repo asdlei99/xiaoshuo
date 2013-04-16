@@ -1,6 +1,12 @@
 <?php
 !defined('M_COM') && exit('No Permission');
 if(!submitcheck('bmemberpwd')){
+	echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+	foreach ($subMenu_member as $k => $v) {
+		$nclassstr = 'td24'.($action == $k ? ' current' : '');
+		echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+	}
+	echo "</ul></div><div class=\"blank15h\"></div>";
 	mtabheader(lang('memberpwdsetting'),'memberpwd','adminm.php?action=memberpwd',2,0,1);
 	mtrbasic(lang('membercname'),'',$curuser->info['mname'],'');
 	mtrbasic(lang('oldpwd'),'opassword','','password');

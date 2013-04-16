@@ -24,6 +24,13 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 		$a_field = new cls_field;
 		$submitstr = '';
 		$no_view = true;
+		echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+		foreach ($subMenu_member as $k => $v) {
+			$nclassstr = 'td24'.($action == $k ? ' current' : '');
+			echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+		}
+		echo "</ul></div><div class=\"blank15h\"></div>";
+	
 		mtabheader(empty($u_mtitle) ? lang('baseoption') : $u_mtitle,'memberdetail',"adminm.php?action=memberinfo&nmuid=$nmuid",2,1,1);
 		if(empty($u_lists) || in_array('email',$u_lists)){
 			mtrbasic('*'.lang('email'),'minfosnew[email]',$curuser->info['email']);

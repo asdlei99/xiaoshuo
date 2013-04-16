@@ -8,6 +8,12 @@ $poids = array();
 foreach(array('alipay' => 2, 'tenpay' => 3) as $k => $v)($cfg_paymode & (1 << $v)) && !in_array('', $pays[$k]) && $poids[$k] = lang($k);
 empty($poids) && mcmessage('nvopi');
 if(empty($deal)){
+	echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+	foreach ($subMenu_pays as $k => $v) {
+		$nclassstr = 'td24'.($action == $k ? ' current' : '');
+		echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+	}
+	echo "</ul></div><div class=\"blank15h\"></div>";
 	$amount = empty($amount) ? '' : max(0,round($amount,2));
 	if(!$oldmsg = $db->fetch_one("SELECT * FROM {$tblprefix}pays WHERE mid='$memberid' ORDER BY pid DESC LIMIT 0,1")) $oldmsg = array();
 	mtabheader(lang('onlinepay'),'paynew','adminm.php?action=payonline&deal=confirm',2,0,1);

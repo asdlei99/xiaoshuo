@@ -217,6 +217,29 @@ $(function(){
 </div>
 </div>
 
+<?php
+//记录当前会员最近阅读的小说
+if (isset($curuser->info['mid'])) {
+	//如果有用户登录
+	//获取该章节所属小说的 aid
+	$part = $db->fetch_one('SELECT * FROM xs_albums where aid=\''.$aid.'\'');
+	if (!empty($part)) {
+		//查找是否已经添加
+		$mid = $curuser->info['mid'];
+		$pid = $part['pid'];
+		$sql = "select * from xs_newread where mid='".$mid."' and aid='".$pid."'";
+		$isResult = $db->fetch_one($sql);
+		if (empty($isResult)) {
+			$time = time();
+			$sql = 'INSERT into xs_newread (`mid`, `aid`, `readtime`) VALUES("'.$mid.'", "'.$pid.'", "'.$time.'")';
+			$db->query($sql);
+		} else {
+			$db->query("update xs_newread set readtime='".time()."' where mid='".$mid."' and aid='".$pid."'");
+		}
+	}
+}
+?>
+
 <div id="main">
 		<div class="read_tit">
 			<div id="setting">

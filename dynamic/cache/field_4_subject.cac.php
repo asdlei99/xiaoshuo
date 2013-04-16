@@ -2,7 +2,7 @@
 $field_4_subject_0 = array (
   'fid' => '31',
   'ename' => 'subject',
-  'cname' => '标题',
+  'cname' => '作品名',
   'chid' => '4',
   'issystem' => '1',
   'iscustom' => '0',

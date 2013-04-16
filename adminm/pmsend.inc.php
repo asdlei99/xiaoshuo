@@ -2,6 +2,12 @@
 !defined('M_COM') && exit('No Permission');
 $enable_uc && include_once M_ROOT.'./adminm/pmuc.inc.php';
 if(!submitcheck('bpmsend')){
+	echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+	foreach ($subMenu_pmbox as $k => $v) {
+		$nclassstr = 'td24'.($action == $k ? ' current' : '');
+		echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+	}
+	echo "</ul></div><div class=\"blank15h\"></div>";
 	mtabheader(lang('sendpm'),'pmsend','adminm.php?action=pmsend',2,0,1);
 	mtrbasic(lang('pmtitle'),'pmnew[title]','','btext');
 	mtrbasic(lang('pmtonames'),'pmnew[tonames]',empty($tonames) ? '' : $tonames,'btext');

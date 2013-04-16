@@ -8,6 +8,7 @@ foreach($commus as $k => $v) if(in_array($v['cclass'],array('favorite','comment'
 foreach($mcommus as $k => $v) if(in_array($v['cclass'],array('friend','flink','comment','reply','favorite',))) $cuidsarr[-$k] = $v['cname'].'*';
 if(empty($deal)){
 	foreach($cuidsarr as $k => $v) $urlsarr[$k] = array($cuidsarr[$k],"?action=uclasses&cuid=$k$param_suffix");
+	//var_dump($cuidsarr);
 	murl_nav($urlsarr,$cuid);
 	if(!submitcheck('buclassesadd') && !submitcheck('buclassesedit')){
 		mtabheader(lang('uclassmanager'),'uclassesedit',"adminm.php?action=uclasses&cuid=$cuid",'6');

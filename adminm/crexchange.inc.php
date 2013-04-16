@@ -3,6 +3,12 @@
 load_cache('crprojects,currencys');
 if($enable_uc) $outextcredits = unserialize($outextcredits);
 if(!submitcheck('bcrexchange')){
+	echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";
+	foreach ($subMenu_pays as $k => $v) {
+		$nclassstr = 'td24'.($action == $k ? ' current' : '');
+		echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
+	}
+	echo "</ul></div><div class=\"blank15h\"></div>";
 	$cridsarr = cridsarr(1);
 	foreach($crprojects as $crpid => $crproject){
 		mtabheader($cridsarr[$crproject['scrid']].lang('exchangeto').$cridsarr[$crproject['ecrid']],'crexchagne'.$crpid,"adminm.php?action=crexchange");
