@@ -55,8 +55,9 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 		}
 		if(empty($u_lists) || in_array('mtcid',$u_lists)){
 			$noedit = noedit('mtcid');
-			mtrbasic(lang('spacetemplateproject').$noedit,'minfosnew[mtcid]',makeoption(mtcidsarr($mchid),$curuser->info['mtcid']),'select');
+			//mtrbasic(lang('spacetemplateproject').$noedit,'minfosnew[mtcid]',makeoption(mtcidsarr($mchid),$curuser->info['mtcid']),'select');
 		}
+		
 		foreach($grouptypes as $k => $v){
 			if(empty($u_lists) || in_array("grouptype$k",$u_lists)){
 				if(!$v['mode'] && !in_array($mchid,explode(',',$v['mchids']))){

@@ -171,7 +171,7 @@ if (!empty($result)) {
 			$dt = date('Y-m-d H:i' ,$wz['createdate']);
 			$zjid = $wz['aid'];
 		} else {
-			$zj = '无最新章节';
+			$zj = '--';
 			$dt = '';
 			$zjid = '';
 		}
@@ -190,10 +190,12 @@ if (!empty($result)) {
 		echo '<div class="zp"><a target="_blank" title="'.$r['subject'].'" href="/archive.php?aid='.$r['aid'].'">'.$r['subject'].'</a></div>';
 		if ($zjid !== '') {
 			echo '<div class="zj"><a target="_blank" title="'.$zj.'" href="/archive.php?aid='.$zjid.'">'.$zj.'</a></div>';
+			echo '<div class="time">'.$dt.'</div>';
 		} else {
 			echo '<div class="zj">'.$zj.'</div>';
+			echo '<div class="time">--</div>';
 		}
-		echo '<div class="time">'.date('Y-m-d H:i:s', $r['createdate']).'</div>';
+		
 		echo '<div class="zz">'.$r['author'].'</div>';
 		if ($r['abover'] == 1){
 			echo '<div class="zt">完结</div>';

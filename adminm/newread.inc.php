@@ -12,7 +12,7 @@ foreach(array('keyword') as $k){
 	$filterstr .= "&$k=".rawurlencode($$k);
 }
 
-$wheresql = "WHERE f.mid='$memberid'";
+$wheresql = "WHERE n.mid='$memberid'";
 $keyword && $wheresql .= " AND a.subject LIKE '%".str_replace(array(' ','*'),'%',addcslashes($keyword,'%_'))."%'";
 if(!submitcheck('barcsedit')){
 	
@@ -22,17 +22,10 @@ if(!submitcheck('barcsedit')){
 		echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
 	}
 	echo "</ul></div><div class=\"blank15h\"></div>";
-	
-	//echo mform_str($action.'arcsedit',"?action=favorites");
-	//mtabheader_e();
-	//echo "<tr><td class=\"item2\">";
-	//echo lang('keyword')."&nbsp; <input class=\"text\" name=\"keyword\" type=\"text\" value=\"$keyword\" style=\"vertical-align: middle;\">&nbsp; ";
-	//echo mstrbutton('bfilter','filter0').'</td></tr>';
-	//mtabfooter();
 
 	$pagetmp = $page;
 	do{
-		$query = $db->query("SELECT f.*,a.* FROM {$tblprefix}favorites f LEFT JOIN {$tblprefix}archives a ON a.aid=f.aid $wheresql ORDER BY f.aid DESC LIMIT ".(($pagetmp - 1) * $mrowpp).",$mrowpp");
+		$query = $db->query("SELECT n.mid, n.readtime,a.* FROM {$tblprefix}newread  n LEFT JOIN {$tblprefix}archives a ON a.aid=n.aid $wheresql ORDER BY n.readtime DESC LIMIT ".(($pagetmp - 1) * $mrowpp).",$mrowpp");
 		$pagetmp--;
 	} while(!$db->num_rows($query) && $pagetmp);
 	$itemstr = '';
@@ -53,7 +46,7 @@ if(!submitcheck('barcsedit')){
 			$dt = '-';
 			$zjid = '';
 		}
-		$itemstr .= "<tr><td align=\"center\" class=\"item1\" width=\"30\"><input class=\"checkbox\" type=\"checkbox\" name=\"selectid[$aid]\" value=\"$aid\"></td>\n".
+		$itemstr .= "<tr>".
 			"<td class=\"item\" width=\"80\">$castr</td>\n".
 			"<td class=\"item\" width='130' style='text-align:left;'><a style=\"color:#24A3CE;font-weight:bold;\" href=\"$item[arcurl]\" target=\"_blank\">".mhtmlspecialchars($item['subject'])."</a></td>\n";
 			if($zjid !== '') {
@@ -61,25 +54,25 @@ if(!submitcheck('barcsedit')){
 				$itemstr .= "<td class=\"item sj\" width=\"150\">".$dt."</td>\n";
 			} else {
 				$itemstr .= "<td class=\"item\" style='text-align:left;' width=\"250\">--</td>\n";
-				$itemstr .= "<td class=\"item sj\" width=\"150\">&nbsp-</td>\n";
+				$itemstr .= "<td class=\"item\" width=\"150\">&nbsp-</td>\n";
 			}
+			$itemstr .= "<td class=\"item sj\" width=\"150\">".date('m-d H:i:s', $item['readtime'])."</td>\n";
 			$itemstr .= "<td class=\"item zz\" width=\"100\">$item[author]</td>\n";
 			if ($item['abover'] == 1) {
 				$itemstr .= "<td class=\"item ztb\" width=\"50\">完结</td>\n";
 			} else {
 				$itemstr .= "<td class=\"item ztb\" width=\"50\">连载</td>\n";
 			}
-			$itemstr .= "<td class=\"item sj\" width=\"70\">$item[createdate]</td></tr>\n";
 	}
-	$counts = $db->result_one("SELECT COUNT(*) FROM {$tblprefix}favorites f LEFT JOIN {$tblprefix}archives a ON a.aid=f.aid $wheresql");
-	$multi = multi($counts,$mrowpp,$page,"?action=favorites$filterstr");
+	$counts = $db->result_one("SELECT COUNT(*) FROM {$tblprefix}newread n LEFT JOIN {$tblprefix}archives a ON a.aid=n.aid $wheresql");
+	$multi = multi($counts,$mrowpp,$page,"?action=newread$filterstr");
 
-	mtabheader('我的书架列表','','',8);
-	mtrcategory(array("<input class=\"checkbox\" type=\"checkbox\" name=\"chkall\" onclick=\"checkall(this.form, 'selectid', 'chkall')\">",'类别','作品名', '最新章节', '更新时间', lang('author'),'状态',lang('favoritedate')));
+	mtabheader('最近阅读列表','','',8);
+	mtrcategory(array('类别','作品名', '最新章节', '更新时间', '阅读时间', lang('author'),'状态'));
 	echo $itemstr;
 	mtabfooter();
 	echo $multi;
-	echo "<input class=\"button\" type=\"submit\" name=\"barcsedit\" value=\"移除书架\"></form>";
+	//echo "<input class=\"button\" type=\"submit\" name=\"barcsedit\" value=\"移除书架\"></form>";
 }else{
 	empty($selectid) && mcmessage('selectfavoritearc',$forward);
 	$query = $db->query("SELECT * FROM {$tblprefix}favorites WHERE mid=$memberid AND aid ".multi_str($selectid)." ORDER BY aid DESC");

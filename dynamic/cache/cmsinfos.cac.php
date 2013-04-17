@@ -1,7 +1,7 @@
 <?php
 $cmsinfos_0 = array (
   'dbversion' => '5.1.56-community',
-  'dbsize' => '864.58 KB',
+  'dbsize' => '866.68 KB',
   'attachsize' => '3.63 MB',
   'sys_mail' => 'Unix Sendmail ( Path: G:/APMServ5.2.6/sendmail/sendmail.exe -t -i)',
   'serverip' => '127.0.0.1',

@@ -36,9 +36,11 @@ if($inajax){
 }
 
 //定义各个标签的子标签
-$subMenu_pays = array('pays' => '支付记录', 'payonline' => '在线充值', 'crexchange' => '兑换积分');
+$subMenu_pays = array( 'crrecords' => '积分记录', 'pays' => '充值记录', 'payonline' => '在线充值', 'crexchange' => '兑换积分');
 $subMenu_member = array('memberinfo' => '基本信息', 'memberpwd' => '修改密码');
-$subMenu_pmbox = array('pmbox' => '我的消息', 'pmsend' => '发送消息');
+//'pmsend' => '发送消息'
+$subMenu_pmbox = array('pmbox' => '我的消息');
+$subMenu_fav = array('favorites' => '我的书架', 'newread' => '最近阅读');
 
 if(!$memberid){
 	$message_class = 'curbox';
@@ -160,10 +162,13 @@ $(document).ready(function(){
 	});
 
 
-	var action_payonline = 8;
-	var action_crexchange = 8;
+	var action_payonline = 9;
+	var action_crexchange = 9;
+	var action_pays = 9;
 	var action_memberpwd = 1;
+	var action_memberinfo = 1;
 	var action_pmsend = 27;
+	var action_newread = 18;
 	if (action_<?php echo $action;?> !== undefined) {
 		$('#left_menu_'+action_<?php echo $action;?>).addClass('hover');
 	}

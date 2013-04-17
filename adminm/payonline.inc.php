@@ -16,7 +16,7 @@ if(empty($deal)){
 	echo "</ul></div><div class=\"blank15h\"></div>";
 	$amount = empty($amount) ? '' : max(0,round($amount,2));
 	if(!$oldmsg = $db->fetch_one("SELECT * FROM {$tblprefix}pays WHERE mid='$memberid' ORDER BY pid DESC LIMIT 0,1")) $oldmsg = array();
-	mtabheader(lang('onlinepay'),'paynew','adminm.php?action=payonline&deal=confirm',2,0,1);
+	mtabheader('在线充值','paynew','adminm.php?action=payonline&deal=confirm',2,0,1);
 	mtrbasic('支付方式','paynew[poid]',makeoption($poids),'select');
 	mtrbasic(lang('payamount'),'paynew[amount]',$amount,'text',lang('payamountrmbi'));
 	mtrbasic(lang('contactorname'),'paynew[truename]',empty($oldmsg['truename']) ? '' : $oldmsg['truename'],'btext');

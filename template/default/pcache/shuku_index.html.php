@@ -412,8 +412,8 @@ if (!empty($wz)) {
 	$dt = date('Y-m-d H:i' ,$wz['createdate']);
 	$zjid = $wz['aid'];
 } else {
-	$zj = '无最新章节';
-	$dt = '';
+	$zj = '--';
+	$dt = '--';
 	$zjid = '';
 }
 

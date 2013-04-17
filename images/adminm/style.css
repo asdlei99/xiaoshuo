@@ -8,7 +8,7 @@ body, ul, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset { margin:0; padding:
 ul{ list-style:none; }
 h1, h2, h3, h4, h5, h6{ font-size:12px; }
 a{ color:#2366A8; text-decoration:none; }
-	a:hover { text-decoration:underline; }
+	a:hover { text-decoration: none; }
 	a img{ border:none; }
 em, cite, th{ font-style:normal; font-weight:normal; }
 table{ border-collapse:collapse; }
@@ -70,8 +70,8 @@ label{ cursor:pointer; }
 				.info_Statistics ul li{float:left; width:243px; height:20px; line-height:20px; padding-left:12px; overflow:hidden;}
 				
 			.con_con{margin:0 auto; width:100%;clear:both;}
-			   .smallmenu_td{ vertical-align:top; width:180px; background:url(leftcon_b_bg.gif) left repeat-y;;}
-				.smallmenu {float:left;width:180px; height:100%;background:#f8f8f8;}			
+			   .smallmenu_td{ vertical-align:top; width:165px; background:url(leftcon_b_bg.gif) left repeat-y;;}
+				.smallmenu {float:left; height:100%;background:#f8f8f8;}			
 				.smallmenu ul{ padding:0 9px;}
 				.smallmenu li { width:inherit; font-size:13px; line-height:29px; text-align:left; text-indent:12px;}
 				.smallmenu li.s3 { background:#FFF; height:29px; line-height:29px; background:url(leftcon_bg.gif) repeat-x; border:1px #CCC solid; border-bottom:none;}
@@ -130,7 +130,7 @@ label{ cursor:pointer; }
 	.itemtitle h3{ float:left; margin-right:20px; font-weight:700; text-indent:12px;}
 	.h3other {display:block; border-bottom:1px #deeffb solid; text-align:left; width:100%; line-height:200%;}
 	.itemtitle ul{ float:left; line-height:18px; }
-	.itemtitle .tab1{ clear:none; }
+	.itemtitle .tab1{ clear:none; background:#fafafa;}
 		.itemtitle .tab1 a{ line-height:20px; }
 			.itemtitle .tab1 a span{ padding:0 7px; *padding:1px 7px 0; *line-height:19px; }
 			.itemtitle .tab1 a:hover{ background:#F5F5F5 url(../admina/btn_block_3.gif) no-repeat 0 -40px; color:#134d9d; }

@@ -21,6 +21,35 @@
 <script src="<?=$tplurl?>js/ajax.js" type="text/javascript" language="javascript"></script>
 <script src="<?=$tplurl?>js/commu.js" type="text/javascript" language="javascript"></script>
 <script src="<?=$tplurl?>js/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle);
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+//设为首页 <a onclick="SetHome(this,window.location)">设为首页</a>
+function SetHome(obj,vrl){
+        try {
+        	obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        } catch(e){
+        	if(window.netscape) {
+            	try {
+                	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            	} catch (e) {
+                	alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+            	}
+            	var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+            	prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+}
+</script>
 <style type="text/css">
 .search .but {float: left;margin: 5px 0 0 0;border: 0;width: 51px;height: 24px;line-height: 24px;font-size: 14px;color: #fff;background-position: 0 -19px;cursor: pointer;}
 .headBanner {
@@ -32,7 +61,7 @@
 <!-- 顶部 begin -->
 <div id="top" style="margin-top:0px;">
 <div class="left orangea"><script language="javascript"  src="<?=$cms_abs?>login.php?mode=js&sid=<?=$sid?>"></script></div>
-<div class="right">【<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<?=$cms_abs?>');" style="cursor:hand">设为首页</a>】【<a href="#" onClick="javascript:window.external.AddFavorite('<?=$cms_abs?>','<?=$cmsname?>');">收藏本站</a>】</div>
+<div class="right">【<a href="javascript:void(0);" onclick="SetHome(this,window.location)" style="cursor:hand">设为首页</a>】【<a href="javascript:void(0);" onClick="AddFavorite(window.location,document.title)">收藏本站</a>】</div>
 </div>
 <!-- 首体 begin -->
 <div id="head">
@@ -156,21 +185,28 @@ $(function(){
 
 <div class="repeat_bg searchBox"> 
     <div class="searchBox_inner"> 
-      <ul stat_flag="st_t-gg:头部公告" class="ico1 listTeseXs"> 
-        <?php $_header_notice=_ptag_parse(array("ename" => "header_notice","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "3","orderby" => "createdate_desc","validperiod" => "1","length" => "10",));foreach($_header_notice as $v){_aenter($v);?>
+    	<div style="float:left;">
+    	 <ul stat_flag="st_t-gg:头部公告" class="ico1 listTeseXs" style="width: 230px;"> 
+        	<?php $_header_notice=_ptag_parse(array("ename" => "header_notice","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "3","orderby" => "createdate_desc","validperiod" => "1","length" => "10",));foreach($_header_notice as $v){_aenter($v);?>
 <li><a style="color:#F00" href="<?=$v['arcurl']?>" target="_blank"><?=$v['subject']?></a></li> <?php _aquit();} unset($_header_notice,$v);?>
 
-      </ul> 
-      
-      <p stat_flag="st_ss-ci:搜索热词" class="ico1 search_rc" style="width:auto;">搜索热词：<b><a target="_blank" href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=吞天神帝&searchsubmit=1&x=40&y=12" style="color:#FF0000;">吞天神帝</a></b><b><a target="_blank" href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=特种教师&searchsubmit=1&x=40&y=12">特种教师</a></b><b><a target="_blank" href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=江北女匪&searchsubmit=1&x=40&y=12">江北女匪</a></b></p> 
-      <div class="search"> 
-        <form name="form" id="searchform" action="<?=$cmsurl?>search.php?sid=<?=$sid?>" method="get" target="_blank">                                                     
+      	 </ul> 
+   	 	</div>
+     
+      <div style="float:right;">
+      	<p stat_flag="st_ss-ci:搜索热词" class="ico1 search_rc" style="width:auto;">搜索热词：<?php $_search_reci_list=_ctag_parse(array("ename" => "search_reci_list","tclass" => "farchives","limits" => "3","casource" => "56","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_search_reci_list as $v){_aenter($v);?>
+	<b><a target="_blank" href="<?=$v['rc_link']?>" <? if($v['rc_tuchu']) { ?>style="color:#FF0000;"<? } ?>><?=$v['subject']?></a></b><?php _aquit();} unset($_search_reci_list,$v);?>
+</p> 
+      	<div class="search" style="float:right;"> 
+        	<form name="form" id="searchform" action="<?=$cmsurl?>search.php?sid=<?=$sid?>" method="get" target="_blank">                                                     
                 <span>
                 <input style="width:162px;" id="queryString" name="searchword" title="搜索图书" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate">                            
                 </span>                            
                 <input type="submit" value="搜索" class="but">                            
             </form>
-      </div> 
+      	</div> 
+      </div>
+      
     </div> 
 </div>
 </div>
@@ -399,7 +435,7 @@ if (!empty($result)) {
 			$dt = date('Y-m-d H:i' ,$wz['createdate']);
 			$zjid = $wz['aid'];
 		} else {
-			$zj = '无最新章节';
+			$zj = '--';
 			$dt = '';
 			$zjid = '';
 		}
@@ -418,10 +454,12 @@ if (!empty($result)) {
 		echo '<div class="zp"><a target="_blank" title="'.$r['subject'].'" href="/archive.php?aid='.$r['aid'].'">'.$r['subject'].'</a></div>';
 		if ($zjid !== '') {
 			echo '<div class="zj"><a target="_blank" title="'.$zj.'" href="/archive.php?aid='.$zjid.'">'.$zj.'</a></div>';
+			echo '<div class="time">'.$dt.'</div>';
 		} else {
 			echo '<div class="zj">'.$zj.'</div>';
+			echo '<div class="time">--</div>';
 		}
-		echo '<div class="time">'.date('Y-m-d H:i:s', $r['createdate']).'</div>';
+		
 		echo '<div class="zz">'.$r['author'].'</div>';
 		if ($r['abover'] == 1){
 			echo '<div class="zt">完结</div>';

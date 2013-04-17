@@ -101,8 +101,12 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 			$cy_arr[] = lang('edit');
 			mtrcategory($cy_arr);
 	
-			$itemstr = '';
+			$itemstr = '<div class="mycomment" id="myThemeComment">';
 			while($row = $db->fetch_array($query)){
+				$itemstr .= '<dl><dt><img src="/images/adminm/none.gif" class="head" /></dt>';
+				$itemstr .= '<dd><p class="cc-tit"><em>2013-04-17 11:28:18</em><a href="http://user.17k.com/14831184" target="_blank">Xavier_wang</a><strong>发表<a href="http://comment.17k.com/comment/commentInfo.action?bookId=117302&amp;commentId=11093046" target="_blank">测试一个书评</a></strong></p><p class="cc-content">测试一个书评</p><p class="cc-new"><span>2013-04-17 11:28:18<i>来自<a href="http://comment.17k.com/comment/getCommentList.action?bookId=117302" target="_blank">《罪恶之城》书评区</a></i></span><em><a href="http://comment.17k.com/comment/commentInfo.action?bookId=117302&amp;commentId=11093046#goto" target="_blank">回应(0)</a></em></p></dd></dl></div>
+
+				/*
 				$selectstr = "<input class=\"checkbox\" type=\"checkbox\" name=\"selectid[$row[cid]]\" value=\"$row[cid]\">";
 				$subjectstr = "<a href=\"".view_arcurl($row)."\" target=\"_blank\">".mhtmlspecialchars($row['subject'])."</a>";
 				$catalogstr = @$catalogs[$row['caid']]['title'];
@@ -131,6 +135,7 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 				if(in_array('updatedate',$u_lists)) $itemstr .= "<td class=\"item\">$updatedatestr</td>\n";
 				$itemstr .= "<td class=\"item\">$adminstr</td>\n";
 				$itemstr .= "</tr>\n";
+				//*/
 			}
 			$counts = $db->result_one("SELECT count(*) $fromsql $wheresql");
 			$multi = multi($counts,$mrowpp,$page,"?action=comments$filterstr");

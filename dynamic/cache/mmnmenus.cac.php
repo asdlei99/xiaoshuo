@@ -23,9 +23,9 @@ $mmnmenus_0 = array (
       2 => '0',
       3 => '',
     ),
-    8 => 
+    9 => 
     array (
-      0 => '?action=pays',
+      0 => '?action=crrecords',
       1 => '0',
       2 => '0',
       3 => '',
@@ -119,16 +119,6 @@ $mmnmenus_0 = array (
     108 => 
     array (
       0 => '?action=amcomments',
-      1 => '0',
-      2 => '0',
-      3 => '',
-    ),
-  ),
-  8 => 
-  array (
-    9 => 
-    array (
-      0 => '?action=crrecords',
       1 => '0',
       2 => '0',
       3 => '',

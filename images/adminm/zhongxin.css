@@ -1,0 +1,335 @@
+#leftmenu a {
+	color: #2366A8;
+}
+.smallmenu {
+	width: 165px;
+}
+.smallmenu h3 {
+	background: url(left.gif) 0 0 no-repeat;
+	height: 55px;
+	text-indent: -9999px;
+}
+.smallmenu ul {
+	padding:0px;
+}
+.smallmenu ul li {
+	display: block;
+height: 55px;
+margin: 3px 0;
+padding-top: 15px;
+padding-left: 27px;
+background: url(left.gif) 0 -108px no-repeat;
+overflow: hidden;
+padding:0px;
+margin:0px;
+}
+.smallmenu li a {
+	margin-top: 6px;
+	margin-left: 25px;
+	position: absolute;
+}
+.smallmenu .ahover {
+text-decoration: none;
+background: url(left.gif) 0 -56px no-repeat;
+}
+.smallmenu .hover {
+	display: block;
+height: 35px;
+padding-top: 15px;
+padding-left: 27px;
+background: url(left.gif) 0 -56px no-repeat;
+}
+.smallmenu .hover a {
+	margin-left: 15px;
+	margin-top: -5px;
+	position: absolute;
+}
+
+..itemtitle .tab1 {
+	 background: none repeat scroll 0 0 #FAFAFA;
+}
+
+
+
+.fl {
+float: left;
+}
+.gr {
+width: 463px;
+height: 300px;
+overflow: hidden;
+background: #f0f1f2;
+margin-right: 10px;
+text-align: left;
+}
+.gr dl {
+margin: 10px;
+}
+.gr dl dt {
+float: left;
+overflow: hidden;
+margin-right: 12px;
+}
+.gr dl dt span {
+border: 2px solid #e6e6e6;
+width: 182px;
+height: 182px;
+display: block;
+}
+.gr dl dt img {
+border: 1px solid #ccc;
+display: block;
+width: 180px;
+height: 180px;
+}
+.gr dl dt p {
+text-align: center;
+color: #2b7ca3;
+margin: 2px;
+}
+.gr dl dt p a {
+color: #2b7ca3;
+}
+.gr dl dd p {
+line-height: 25px;
+margin-top: 2px;
+}
+.gr dl dd span {
+color: #999;
+font-weight: bold;
+}
+.gr .zz {
+background: url(butimg.gif) 0 -28px no-repeat;
+height: 25px;
+padding: 0 14px;
+margin-left: 10px;
+display: inline-block;
+color: #2b7ca3;
+}
+.gr .cz {
+background: url(butimg.gif) 0 0 no-repeat;
+height: 22px;
+line-height: 22px;
+padding: 0 7px 0 20px;
+margin-left: 10px;
+display: inline-block;
+color: #000;
+}
+.h_5 {
+height: 5px;
+font-size: 5px;
+line-height: 5px;
+clear: both;
+display: block;
+overflow: hidden;
+}
+.gr .js {
+clear: both;
+background: #f8fafc url(js.jpg) no-repeat;
+width: 443px;
+height: 83px;
+overflow: hidden;
+}
+.gr .js h3 {
+font-size: 12px;
+color: #333;
+padding-left: 13px;
+height: 20px;
+line-height: 20px;
+margin-top: 3px;
+position: relative;
+}
+.gr .js h3 a {
+display: block;
+position: absolute;
+width: 11px;
+height: 10px;
+background: url(i9.gif) no-repeat;
+top: 10px;
+right: 13px;
+}
+.gr .js p {
+font-size: 12px;
+width: 425px;
+text-indent: 2em;
+overflow: hidden;
+padding: 0 3px 0 10px;
+line-height: 18px;
+color: #999;
+}
+
+
+.yd {
+width: 310px;
+height: 300px;
+overflow: hidden;
+background: #f0f1f2;
+text-align: left;
+}
+.tit h3 .l {
+position: absolute;
+left: 0;
+top: 0;
+background: url(tit.gif) no-repeat 0 -90px;
+}
+.tit h3 span {
+display: block;
+width: 10px;
+height: 30px;
+}
+.tit h3 .r {
+position: absolute;
+right: 0;
+top: 0;
+background: url(tit.gif) no-repeat 0 -150px;
+}
+.ico em {
+background: url(ico.gif) no-repeat;
+padding: 3px 3px 3px 5px;
+display: block;
+width: 16px;
+height: 16px;
+float: left;
+}
+.yd dl {
+margin: 0px 8px 6px;
+}
+.yd dl dt {
+float: left;
+overflow: hidden;
+margin-right: 12px;
+}
+.yd dl dt img {
+border: 1px solid #ccc;
+display: block;
+width: 94px;
+height: 125px;
+}
+.yd dl dd p {
+line-height: 20px;
+margin-top: 2px;
+}
+.bule, .bule span, .bule a {
+color: #2b7ca3;
+}
+.fb {
+font-weight: bold;
+}
+.bule a:visited {
+text-decoration: none;
+color: #2b7ca3;
+}
+.yd .ydsj {
+color: #999;
+}
+.yd p.but1 input {
+cursor: pointer;
+color: #2b7ca3;
+border: 0;
+background: url(butimg.gif) 0 -59px no-repeat;
+width: 49px;
+height: 25px;
+line-height: 25px;
+margin: 5px 5px 0 5px;
+}
+
+.ico em.ico-yd {
+background-position: 0 -50px;
+margin-left: 15px;
+margin-top: 5px;
+}
+
+.h_10 {
+height: 10px;
+clear: both;
+display: block;
+overflow: hidden;
+}
+.tit h3 {
+background: url(tit.gif) repeat-x 0 -120px;
+height: 30px;
+position: relative;
+font-size: 12px;
+font-weight: 100;
+overflow: hidden;
+}
+.tit h3 .gd {
+position: absolute;
+right: 15px;
+color: #2b7ca3;
+}
+
+table {
+display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+width: 100%;
+margin: 0 auto;
+margin-bottom: 10px;
+border-collapse: collapse;
+}
+thead {
+display: table-header-group;
+vertical-align: middle;
+border-color: inherit;
+}
+.bg2 {
+background: #fff;
+}
+
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+
+.menulist td, th {
+text-align: left;
+padding-left: 10px;
+}
+table thead th {
+background: #fafafa;
+}
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+td {
+color: #000;
+line-height: 27px;
+border-bottom: 1px dotted #999;
+}
+table .lb a {
+color: #000;
+}
+table a:visited {
+text-decoration: none;
+color: #2b7ca3;
+}
+table .zp a {
+color: #2b7ca3;
+font-weight: bold;
+}
+table .sj {
+color: #999;
+}
+table .zz {
+color: #2b7ca3;
+}
+table .zz a {
+color: #2b7ca3;
+}
+td .zp {
+	text-align: left;
+}
+td .zj {
+	text-align: left;
+}
+td .zz {
+	text-align: left;
+}
+.ztb {
+color: #008000;
+}

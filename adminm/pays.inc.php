@@ -48,7 +48,7 @@ if(empty($pid)){
 		//echo "<select style=\"vertical-align: middle;\" name=\"pmode\">".makeoption($pmodearr,$pmode)."</select>&nbsp; ";
 		echo "<select style=\"vertical-align: middle;\" name=\"poid\">".makeoption($poidsarr,$poid)."</select>&nbsp; ";
 		echo mstrbutton('bfilter','filter0').'</td></tr>';
-	mtabfooter();
+		mtabfooter();
 		$pagetmp = $page;
 		do{
 			$query = $db->query("SELECT * FROM {$tblprefix}pays $wheresql ORDER BY pid DESC LIMIT ".(($pagetmp - 1) * $atpp).",$atpp");
@@ -62,8 +62,8 @@ if(empty($pid)){
 			$sendstr = date("$dateformat",$item['senddate']);
 			$receivestr = empty($item['receivedate']) ? '-' : date("$dateformat",$item['receivedate']);
 			$transstr = empty($item['transdate']) ? '-' : date("$dateformat",$item['transdate']);
-			$stritem .= "<tr><td class=\"item\" width=\"30\"><input class=\"checkbox\" type=\"checkbox\" name=\"selectid[$pid]\" value=\"$pid\"></td>\n".
-				"<td class=\"item\">$pmodestr</td>\n".
+			$stritem .= "<tr>".
+				"<td class=\"item\" width='100'>$pmodestr</td>\n".
 				"<td class=\"item\" width=\"80\">$item[amount]</td>\n".
 				"<td class=\"item\" width=\"60\">$poidstr</td>\n".
 				"<td class=\"item\" width=\"70\">$sendstr</td>\n".
@@ -75,11 +75,11 @@ if(empty($pid)){
 		$multi = multi($counts, $atpp, $page, "adminm.php?action=pays$filterstr");
 
 		mtabheader(lang('payrecordlist'),'','',9);
-		mtrcategory(array("<input class=\"checkbox\" type=\"checkbox\" name=\"chkall\" onclick=\"checkall(this.form, 'selectid', 'chkall')\">",lang('paymode'),lang('payamount'),lang('payinterface'),lang('recorddate'),lang('arrivedate'),lang('savingdate'),lang('detail')));
+		mtrcategory(array(lang('paymode'),lang('payamount'),lang('payinterface'),lang('recorddate'),lang('arrivedate'),lang('savingdate'),lang('detail')));
 		echo $stritem;
 		mtabfooter();
 		echo $multi;
-		mtabfooter('barcsedit',lang('delete'));
+		//mtabfooter('barcsedit',lang('delete'));
 	}else{
 		empty($selectid) && mcmessage('selectpayrecord',"adminm.php?action=pays&page=$page$filterstr");
 		$db->query("DELETE FROM {$tblprefix}pays WHERE mid=$memberid AND pid ".multi_str($selectid)." AND receivedate=0",'SILENT');
