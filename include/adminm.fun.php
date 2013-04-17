@@ -241,7 +241,7 @@ function mcmessage($key='', $url = ''){
 			$str .= "<br><br><a href=\"javascript:$url\">[".lang('rightnowjump')."]</a><script>setTimeout('$url',$msnum);</script>";
 		}else $str .= "<br><br><a href=\"$url\">[".lang('rightnowjump')."]</a><script>setTimeout(\"redirect('$url');\",$msnum);</script>";
 	}
-	$str .= '&nbsp; <a href="javascript:window.close();"'.($infloat?" onclick=\"return floatwin('close_$handlekey')\"":'').'>['.lang('closewindow').']</a>';
+	$str .= '&nbsp; <a href="javascript:window.history.go(-1);"'.($infloat?" onclick=\"return floatwin('close_$handlekey')\"":'').'>['.lang('·µ»Ø').']</a>';
 	$infloat && print('<div style="position:relative;margin-top:-20px">');
 	echo "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td align=\"center\">\n".
 		"<table border=\"0\" cellpadding=\"0\" cellspacing=\"1\" align=\"center\" class=\"$class\">\n".

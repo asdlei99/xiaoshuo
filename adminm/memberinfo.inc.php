@@ -32,6 +32,9 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 		echo "</ul></div><div class=\"blank15h\"></div>";
 	
 		mtabheader(empty($u_mtitle) ? lang('baseoption') : $u_mtitle,'memberdetail',"adminm.php?action=memberinfo&nmuid=$nmuid",2,1,1);
+		echo '<tr><td width="25%" class="item1"><b>ук ╨е</b></td>
+				<td class="item2">'.$curuser->info['mname'].'</td></tr>';
+		
 		if(empty($u_lists) || in_array('email',$u_lists)){
 			mtrbasic('*'.lang('email'),'minfosnew[email]',$curuser->info['email']);
 			$submitstr .= makesubmitstr('minfosnew[email]',1,'email',0,50);

@@ -55,7 +55,7 @@ if(!submitcheck('barcsedit')){
 		}
 		$itemstr .= "<tr><td align=\"center\" class=\"item1\" width=\"30\"><input class=\"checkbox\" type=\"checkbox\" name=\"selectid[$aid]\" value=\"$aid\"></td>\n".
 			"<td class=\"item\" width=\"80\">$castr</td>\n".
-			"<td class=\"item\" width='130' style='text-align:left;'><a style=\"color:#24A3CE;font-weight:bold;\" href=\"$item[arcurl]\" target=\"_blank\">".mhtmlspecialchars($item['subject'])."</a></td>\n";
+			"<td class=\"item\" width='130' style='text-align:left;'><a style=\"color:#24A3CE;\" href=\"$item[arcurl]\" target=\"_blank\">".mhtmlspecialchars($item['subject'])."</a></td>\n";
 			if($zjid !== '') {
 				$itemstr .= "<td class=\"item\" style='text-align:left;' width=\"250\"><a href=\"/archive.php?aid=".$zjid."\" target=\"_blank\">".$zj."</a></td>\n";
 				$itemstr .= "<td class=\"item sj\" width=\"150\">".$dt."</td>\n";

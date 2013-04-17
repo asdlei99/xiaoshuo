@@ -216,7 +216,7 @@ $(function(){
 > <a href="<?=$v['listurl']?>"><?=$v['title']?></a>&nbsp;<?php _aquit();} unset($_nav,$v);?>
 </div>
  -->
-<div style="height:3px;width:960px;"></div>
+<div style="height:1px;width:960px;clear: both;"></div>
 <style type="text/css">
 .tab {margin-bottom: 10px;text-align: left;}
 .tab-menuWrapper{background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;padding: 4px 0 0 5px;height: 26px;}
@@ -397,12 +397,13 @@ li.No15 {background-position: -380px -351px;}
     <div class="J_tab-content">
 
             <?php $_nanpinshouyetuwenxiaoshuotuijian=_ptag_parse(array("ename" => "nanpinshouyetuwenxiaoshuotuijian","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "29","orderby" => "vieworder_asc","length" => "10",));foreach($_nanpinshouyetuwenxiaoshuotuijian as $v){_aenter($v);?>
-	                    <dl class="picList1" style="height:165px;margin-bottom:0px;">
+	                                <dl class="picList1" style="height:165px;margin-bottom:0px;">
                     <dt><a href="<?=$v['xs_link']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
                     <dd class="pic"><a href="<?=$v['xs_link']?>" title="<?=$v['subject']?>" target="_blank"><img src="<?=$v['xs_fengmian']?>" alt="<?=$v['subject']?>"></a></dd>
                     <dd class="intro"><?php echo _utag_parse(array("ename" => "xs_miaoshu180","tclass" => "odeal","disabled" => "0","tname" => "$v[xs_miaoshu]","dealhtml" => "clearhtml","trim" => "180",));?>
 ...</dd>
-                    <dd class="upd"><a href="<?=$v['xs_link']?>" title="<?=$v['subject']?>" target="_blank">£Ûµã»÷ÔÄ¶Á£Ý</a></dd>
+                    <dd class="upd"><a href="<?=$v['xs_link']?>" title="<?=$v['subject']?>" target="_blank">£Ûµã»÷ÔÄ¶Á£Ý</a>
+</dd>
 </dl><?php _aquit();} unset($_nanpinshouyetuwenxiaoshuotuijian,$v);?>
 
 

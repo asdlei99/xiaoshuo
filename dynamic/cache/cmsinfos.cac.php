@@ -1,7 +1,7 @@
 <?php
 $cmsinfos_0 = array (
   'dbversion' => '5.1.56-community',
-  'dbsize' => '866.68 KB',
+  'dbsize' => '867.81 KB',
   'attachsize' => '3.63 MB',
   'sys_mail' => 'Unix Sendmail ( Path: G:/APMServ5.2.6/sendmail/sendmail.exe -t -i)',
   'serverip' => '127.0.0.1',
@@ -10,7 +10,7 @@ $cmsinfos_0 = array (
   array (
     'ck' => '146',
     'nock' => '0',
-    'm' => '118',
+    'm' => '76',
     'w' => '0',
     'd3' => '0',
     'd1' => '0',

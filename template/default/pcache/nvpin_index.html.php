@@ -21,6 +21,35 @@
 <script src="<?=$tplurl?>js/ajax.js" type="text/javascript" language="javascript"></script>
 <script src="<?=$tplurl?>js/commu.js" type="text/javascript" language="javascript"></script>
 <script src="<?=$tplurl?>js/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle);
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+//设为首页 <a onclick="SetHome(this,window.location)">设为首页</a>
+function SetHome(obj,vrl){
+        try {
+        	obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        } catch(e){
+        	if(window.netscape) {
+            	try {
+                	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            	} catch (e) {
+                	alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+            	}
+            	var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+            	prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+}
+</script>
 <style type="text/css">
 .search .but {float: left;margin: 5px 0 0 0;border: 0;width: 51px;height: 24px;line-height: 24px;font-size: 14px;color: #fff;background-position: 0 -19px;cursor: pointer;}
 .headBanner {
@@ -32,7 +61,7 @@
 <!-- 顶部 begin -->
 <div id="top" style="margin-top:0px;">
 <div class="left orangea"><script language="javascript"  src="<?=$cms_abs?>login.php?mode=js&sid=<?=$sid?>"></script></div>
-<div class="right">【<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<?=$cms_abs?>');" style="cursor:hand">设为首页</a>】【<a href="#" onClick="javascript:window.external.AddFavorite('<?=$cms_abs?>','<?=$cmsname?>');">收藏本站</a>】</div>
+<div class="right">【<a href="javascript:void(0);" onclick="SetHome(this,window.location)" style="cursor:hand">设为首页</a>】【<a href="javascript:void(0);" onClick="AddFavorite(window.location,document.title)">收藏本站</a>】</div>
 </div>
 <!-- 首体 begin -->
 <div id="head">
@@ -609,9 +638,7 @@ li.No15 {background-position: -380px -351px;}
 
 <div id="divboxd" style="width:470px;float:left;margin-left:7px;">
 <div id="lm4"><dl>
-<dt><img src="<?=$tplurl?>images/ico_gx.gif"  align="absmiddle" /><b>最新小说更新列表</b><span class="rright"><a href="<?php $v=_ctag_parse(array("ename" => "fenmianabouturl","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "active",));if(!empty($v)){_aenter($v);?>
-<?=$v['listurl']?><?php _aquit();} unset($v);?>
-">更多&gt;&gt;</a></span></dt>
+<dt><img src="<?=$tplurl?>images/ico_gx.gif"  align="absmiddle" /><b>最新小说更新列表</b><span class="rright"><a href="/index.php?caid=22">更多&gt;&gt;</a></span></dt>
 <dd><div id="txttd4"><div class="txttb4 txtbg1"><ul><?php $_list_newlist=_ctag_parse(array("ename" => "list_newlist","tclass" => "archives","disabled" => "0","limits" => "21","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderstr" => "a.abnew DESC","closed" => "-1","abover" => "-1",));foreach($_list_newlist as $v){_aenter($v);?>
 	        <li><span class="urs4 cGray">[<?=$v['catalog']?>]</span> <span class="urs5"><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a></span>

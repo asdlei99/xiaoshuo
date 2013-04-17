@@ -3,6 +3,9 @@
 $page = isset($page) ? $page : 1;
 $page = max(1, intval($page));
 $enable_uc && include_once M_ROOT.'./adminm/pmuc.inc.php';
+
+$mrowpp = 20;
+
 if(empty($pmid)){
 	if(!submitcheck('bpmbox')){
 		/*

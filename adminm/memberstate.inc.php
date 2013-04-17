@@ -28,7 +28,7 @@ $favInfo = $db->fetch_all($query);
 	<dl>
     	<dt>
         	<span>
-    			<img src="<?php echo $userOther['photo'] !== '' ? $userOther['photo'] : 'images/adminm/none.gif'?>">
+    			<img src="<?php echo $userOther['photo'] !== '' ? $userOther['photo'] : '/images/adminm/none.gif'?>">
             </span>
         </dt>
  
@@ -57,7 +57,7 @@ $favInfo = $db->fetch_all($query);
                 <span class="l"></span>
                 <span class="r"></span>
                 <em class="ico-yd">&nbsp;</em>最近阅读
-            <a class="gd" href="/myBookShelf/showUserFavor.action">更多内容&gt;&gt;</a>
+            <a class="gd" href="/adminm.php?action=newread">更多内容&gt;&gt;</a>
             </h3>
             
 <?php 

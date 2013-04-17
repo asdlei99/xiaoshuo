@@ -7,8 +7,8 @@ if(!submitcheck('bmemberpwd')){
 		echo "<li".($nclassstr ? " class=\"$nclassstr\"" : '')."><a href=\"/adminm.php?action={$k}\"><span>{$v}</span></a></li>\n";
 	}
 	echo "</ul></div><div class=\"blank15h\"></div>";
-	mtabheader(lang('memberpwdsetting'),'memberpwd','adminm.php?action=memberpwd',2,0,1);
-	mtrbasic(lang('membercname'),'',$curuser->info['mname'],'');
+	mtabheader(lang('ÕËºÅÃÜÂëÐÞ¸Ä'),'memberpwd','adminm.php?action=memberpwd',2,0,1);
+	mtrbasic(lang('ÕË  ºÅ'),'',$curuser->info['mname'],'');
 	mtrbasic(lang('oldpwd'),'opassword','','password');
 	mtrbasic(lang('newpwd'),'npassword','','password');
 	mtrbasic(lang('repwd'),'npassword2','','password');

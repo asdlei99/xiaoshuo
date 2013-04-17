@@ -205,7 +205,6 @@ function request(paras){
 
 
 <div id="lm3"><dl>
-<dt><img src="<?=$tplurl?>images/ico_hsg.gif"  align="absmiddle" /><b>最热小说推荐</b></dt>
 <dd>
 <div style="width:300px;float:left;margin-left:10px;">
 	<div class="tut03">        

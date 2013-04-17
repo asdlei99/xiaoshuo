@@ -419,3 +419,6 @@
 <?PHP exit;?>	1366166522	1	admin	创始人	127.0.0.1	详细修改会员模型信息字段	
 <?PHP exit;?>	1366166547	1	admin	创始人	127.0.0.1	详细修改会员模型	
 <?PHP exit;?>	1366166776	1	admin	创始人	127.0.0.1	详细修改会员模型	
+<?PHP exit;?>	1366210639	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1366210738	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1366210787	1	admin	创始人	127.0.0.1	detamodptag	

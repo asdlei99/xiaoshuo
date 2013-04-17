@@ -60,6 +60,7 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 	$wheresql = "WHERE ".(empty($no_list) ? $wheresql : '1=0');
 	if(!submitcheck('barcsedit')){
 		if(empty($u_tplname)){
+			/*
 			echo mform_str($action.'archivesedit',"?action=comments&nmuid=$nmuid&page=$page");
 			mtabheader_e();
 			echo "<tr><td class=\"item2\">";
@@ -84,14 +85,15 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 			}
 			echo mstrbutton('bfilter','filter0').'</td></tr>';
 			mtabfooter();
+			*/
 		
 			$pagetmp = $page;
 			do{
-				$query = $db->query("SELECT cu.*,a.sid,a.createdate,a.caid,a.chid,a.subject $fromsql $wheresql ORDER BY cu.cid DESC LIMIT ".(($pagetmp - 1) * $mrowpp).",$mrowpp");
+				$query = $db->query("SELECT cu.*,a.sid,a.caid,a.chid,a.subject $fromsql $wheresql ORDER BY cu.cid DESC LIMIT ".(($pagetmp - 1) * $mrowpp).",$mrowpp");
 				$pagetmp--;
 			}while(!$db->num_rows($query) && $pagetmp);
-			mtabheader(empty($u_mtitle) ? lang('commentlist') : $u_mtitle,'','',30);
-			$cy_arr = array("<input class=\"checkbox\" type=\"checkbox\" name=\"chkall\" onclick=\"checkall(this.form, 'selectid', 'chkall')\">",lang('title'),);
+			//mtabheader(empty($u_mtitle) ? lang('commentlist') : $u_mtitle,'','',30);
+			//$cy_arr = array("<input class=\"checkbox\" type=\"checkbox\" name=\"chkall\" onclick=\"checkall(this.form, 'selectid', 'chkall')\">",lang('title'),);
 			if(in_array('catalog',$u_lists)) $cy_arr[] = lang('catalog');
 			if(in_array('channel',$u_lists)) $cy_arr[] = lang('arctype');//模型与合辑类型综合在一起
 			foreach($ucotypes as $k => $v) if(in_array('uccid'.$k,$u_lists) && $v['cclass'] == 'comment') $cy_arr["ccid$k"] = $v['cname'];
@@ -99,12 +101,25 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 			if(in_array('adddate',$u_lists)) $cy_arr[] = lang('addtime');
 			if(in_array('updatedate',$u_lists)) $cy_arr[] = lang('updatetime');
 			$cy_arr[] = lang('edit');
-			mtrcategory($cy_arr);
-	
+			//mtrcategory($cy_arr);
+			echo '<table border="0" cellpadding="0" cellspacing="1" class="tabmain">
+<tbody><tr class="header"><td colspan="30"><b>书评列表</b></td></tr></tbody></table>';
+			$curuser->sub_data();
+			//查询用户的附属信息
+			$sql = "SELECT * FROM {$tblprefix}members_1 WHERE mid='{$curuser->info['mid']}'";
+			$userOther = $db->fetch_one($sql);
 			$itemstr = '<div class="mycomment" id="myThemeComment">';
 			while($row = $db->fetch_array($query)){
-				$itemstr .= '<dl><dt><img src="/images/adminm/none.gif" class="head" /></dt>';
-				$itemstr .= '<dd><p class="cc-tit"><em>2013-04-17 11:28:18</em><a href="http://user.17k.com/14831184" target="_blank">Xavier_wang</a><strong>发表<a href="http://comment.17k.com/comment/commentInfo.action?bookId=117302&amp;commentId=11093046" target="_blank">测试一个书评</a></strong></p><p class="cc-content">测试一个书评</p><p class="cc-new"><span>2013-04-17 11:28:18<i>来自<a href="http://comment.17k.com/comment/getCommentList.action?bookId=117302" target="_blank">《罪恶之城》书评区</a></i></span><em><a href="http://comment.17k.com/comment/commentInfo.action?bookId=117302&amp;commentId=11093046#goto" target="_blank">回应(0)</a></em></p></dd></dl></div>
+				$itemstr .= '<dl><dt><img src="'.($userOther['photo'] !== '' ? $userOther['photo'] : '/images/adminm/none.gif').'" class="head" /></dt>';
+				$itemstr .= '<dd><p class="cc-tit"><em>'.date('Y-m-d H:i:s', $row['createdate']).'</em>'.$curuser->info['nicename'].'
+				<strong>发表</strong>
+				</p>
+				<p class="cc-content">'.$row['content'].'</p>
+				<p class="cc-new"><span>'.date('Y-m-d H:i:s', $row['createdate']).'
+				</span>
+				<i>来自<a href="/comments.php?aid='.$row['aid'].'" target="_blank">《'.$row['subject'].'》书评区</a></i>
+				</p>
+				</dd></dl>';
 
 				/*
 				$selectstr = "<input class=\"checkbox\" type=\"checkbox\" name=\"selectid[$row[cid]]\" value=\"$row[cid]\">";
@@ -137,12 +152,13 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 				$itemstr .= "</tr>\n";
 				//*/
 			}
+			$itemstr .= '</div>';
 			$counts = $db->result_one("SELECT count(*) $fromsql $wheresql");
 			$multi = multi($counts,$mrowpp,$page,"?action=comments$filterstr");
 			echo $itemstr;
-			mtabfooter();
+			//mtabfooter();
 			echo $multi;
-			echo '<br><br>'.mstrbutton('barcsedit','delete');
+			//echo '<br><br>'.mstrbutton('barcsedit','delete');
 			m_guide(@$u_guide);
 		}else include(M_ROOT.$u_tplname);
 	}else{
