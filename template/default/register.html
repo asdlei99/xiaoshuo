@@ -25,7 +25,8 @@ function check_form() {
 	if (_check_email($('#email').val()) == false) {
 		isError = true;
 	}
-	if (_check_authcode($('#regcode').val()) == false) isError = true;
+	
+	if (_check_authcode($('#regcode_1').val()) == false) isError = true;
 	if (isError == true) return false;
 	return true;
 }
@@ -198,15 +199,15 @@ function _check_authcode(code) {
 	</td></tr>
 	
 	<tr><td align="right">验 证 码：</td>
-	<td><input type="text" name="regcode" id="regcode" size="4" maxlength="4" onBlur="_check_authcode(this.value)"> 
-	<img src="regcode.php" alt="点击图片换验证码" style="vertical-align:inherit;cursor:pointer;" onClick="this.src='regcode.php'"> 
+	<td><input type="text" name="regcode" id="regcode_1" size="4" value="" maxlength="4" onBlur="_check_authcode(this.value)"> 
+	<img src="regcode.php" alt="点击图片换验证码" style="vertical-align:inherit;cursor:pointer;" onClick="this.src='regcode.php?'+Date.parse(new Date())"> 
 	<span class="notice" id="checkregcode">点击图片换验证码</span>
 	</td>
 	<td><span class="error" id="error_authcode">&nbsp;</span></td>
 	</tr>
     <tr><td colspan="3" align="center">
     	<br />
-    	<input type="submit" name="register" value="" style="cursor: pointer;background: url({tplurl}images/zc0823.gif) no-repeat 0 -287px;width: 172px;height: 54px;border: 0;margin-bottom: 20px;" />
+    	<input type="submit" name="register" value="1" style="cursor: pointer;background: url({tplurl}images/zc0823.gif) no-repeat 0 -287px;width: 172px;height: 54px;border: 0;margin-bottom: 20px;" />
     </td>
     
     </tr>
