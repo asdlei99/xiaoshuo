@@ -1,6 +1,7 @@
 <?php
 !defined('M_COM') && exit('No Permission');
 load_cache('crprojects,currencys');
+
 if($enable_uc) $outextcredits = unserialize($outextcredits);
 if(!submitcheck('bcrexchange')){
 	echo "<div class=\"itemtitle\"><ul class=\"tab1 tab0 bdtop\">\n";

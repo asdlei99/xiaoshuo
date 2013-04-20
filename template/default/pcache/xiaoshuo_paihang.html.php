@@ -386,7 +386,16 @@ switch($action) {
 		break;
 	case 'dingyue':
 		$title = '小说订阅榜';
-		$sql = "SELECT *, orders as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY orders DESC LIMIT 0, 100";
+		$sql = "select arc.*, sum(sub.cridstr) AS shuzhi
+				from xs_archives as arc
+				left join xs_subscribes as sub on sub.aid in(
+					select alb.aid from xs_albums as alb where alb.pid=arc.aid
+				)
+				where arc.ucid=5
+				GROUP BY aid
+				order by sub.cridstr DESC LIMIT 0, 100";
+		//$sql = "SELECT *, orders as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY orders DESC LIMIT 0, 100";
+		$isNotShuzi = true;
 		break;
 	case 'dashang':
 		$title = '小说打赏榜';

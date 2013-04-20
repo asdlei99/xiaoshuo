@@ -894,6 +894,10 @@ function axaction($mode,$url=''){
 function ccstrlen($str){
 	global $mcharset;
 	if(!($len = strlen($str))) return 0;
+	//自己写的，替换之前的
+	$num = preg_match_all("/[\xB0-\xF7][\xA1-\xFE]/",$str,$ff);
+	return (int)$num;
+	
 	$n = $i = 0;
 	if(strtolower($mcharset) == 'utf-8'){
 		while($n < $len){
@@ -912,11 +916,14 @@ function ccstrlen($str){
 			$i ++;
 		}
 	}else{
+		var_dump($str);
+		var_dump($len);
 		while($n < $len){
 			$n += ord($str[$n]) > 127 ? 2 : 1;
 			$i ++;
 		}
 	}
+	var_dump($i);exit();
 	return $i;
 }
 

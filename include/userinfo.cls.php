@@ -232,6 +232,7 @@ class cls_userinfo{
 			}
 		}
 		$sqlstr = "SELECT COUNT(*) FROM {$tblprefix}subscribes WHERE aid='$aid' AND mid='".$this->info['mid']."' AND isatm='$isatm'";
+		
 		if($db->result_one($sqlstr)) return true;
 		return false;
 	}

@@ -21,6 +21,35 @@
 <script src="<?=$tplurl?>js/ajax.js" type="text/javascript" language="javascript"></script>
 <script src="<?=$tplurl?>js/commu.js" type="text/javascript" language="javascript"></script>
 <script src="<?=$tplurl?>js/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle);
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+//设为首页 <a onclick="SetHome(this,window.location)">设为首页</a>
+function SetHome(obj,vrl){
+        try {
+        	obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        } catch(e){
+        	if(window.netscape) {
+            	try {
+                	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            	} catch (e) {
+                	alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+            	}
+            	var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+            	prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+}
+</script>
 <style type="text/css">
 .search .but {float: left;margin: 5px 0 0 0;border: 0;width: 51px;height: 24px;line-height: 24px;font-size: 14px;color: #fff;background-position: 0 -19px;cursor: pointer;}
 .headBanner {
@@ -32,7 +61,7 @@
 <!-- 顶部 begin -->
 <div id="top" style="margin-top:0px;">
 <div class="left orangea"><script language="javascript"  src="<?=$cms_abs?>login.php?mode=js&sid=<?=$sid?>"></script></div>
-<div class="right">【<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<?=$cms_abs?>');" style="cursor:hand">设为首页</a>】【<a href="#" onClick="javascript:window.external.AddFavorite('<?=$cms_abs?>','<?=$cmsname?>');">收藏本站</a>】</div>
+<div class="right">【<a href="javascript:void(0);" onclick="SetHome(this,window.location)" style="cursor:hand">设为首页</a>】【<a href="javascript:void(0);" onClick="AddFavorite(window.location,document.title)">收藏本站</a>】</div>
 </div>
 <!-- 首体 begin -->
 <div id="head">
@@ -206,7 +235,8 @@ function check_form() {
 	if (_check_email($('#email').val()) == false) {
 		isError = true;
 	}
-	if (_check_authcode($('#regcode').val()) == false) isError = true;
+	
+	if (_check_authcode($('#regcode_1').val()) == false) isError = true;
 	if (isError == true) return false;
 	return true;
 }
@@ -379,15 +409,15 @@ function _check_authcode(code) {
 	</td></tr>
 	
 	<tr><td align="right">验 证 码：</td>
-	<td><input type="text" name="regcode" id="regcode" size="4" maxlength="4" onBlur="_check_authcode(this.value)"> 
-	<img src="regcode.php" alt="点击图片换验证码" style="vertical-align:inherit;cursor:pointer;" onClick="this.src='regcode.php'"> 
+	<td><input type="text" name="regcode" id="regcode_1" size="4" value="" maxlength="4" onBlur="_check_authcode(this.value)"> 
+	<img src="regcode.php" alt="点击图片换验证码" style="vertical-align:inherit;cursor:pointer;" onClick="this.src='regcode.php?'+Date.parse(new Date())"> 
 	<span class="notice" id="checkregcode">点击图片换验证码</span>
 	</td>
 	<td><span class="error" id="error_authcode">&nbsp;</span></td>
 	</tr>
     <tr><td colspan="3" align="center">
     	<br />
-    	<input type="submit" name="register" value="" style="cursor: pointer;background: url(<?=$tplurl?>images/zc0823.gif) no-repeat 0 -287px;width: 172px;height: 54px;border: 0;margin-bottom: 20px;" />
+    	<input type="submit" name="register" value="1" style="cursor: pointer;background: url(<?=$tplurl?>images/zc0823.gif) no-repeat 0 -287px;width: 172px;height: 54px;border: 0;margin-bottom: 20px;" />
     </td>
     
     </tr>

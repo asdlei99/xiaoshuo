@@ -223,6 +223,20 @@ class pay_base{
 				$user = new cls_userinfo();
 				$user->activeuser($this->mid);
 				$user->updatecrids(array(0 => $this->totalfee), 1);
+				
+				//自动兑换现金为经典币
+				global $crprojects;
+				$crpid = '1';
+				$exchangesource = $this->totalfee;	//兑换的现金
+				$exchangesource = max(0,intval($exchangesource));
+				if (!$exchangesource) break;
+				$crproject = $crprojects[$crpid];
+				if ($exchangesource < $crproject['scurrency']) break;
+				$num = floor($exchangesource / $crproject['scurrency']);
+				
+				$user->updatecrids(array($crproject['scrid'] => -$crproject['scurrency'] * $num),0,lang('充值自动兑换'));
+				$user->updatecrids(array($crproject['ecrid'] => $crproject['ecurrency'] * $num),0,lang('充值自动兑换'));
+				$user->updatedb();
 			}
 			break;
 		default :

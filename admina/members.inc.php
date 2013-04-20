@@ -109,6 +109,7 @@ if($action == 'membersedit'){
 
 			$pagetmp = $page;
 			do{
+				//echo "SELECT * $fromsql $wheresql ORDER BY mid DESC LIMIT ".(($pagetmp - 1) * $atpp).",$atpp";
 				$query = $db->query("SELECT * $fromsql $wheresql ORDER BY mid DESC LIMIT ".(($pagetmp - 1) * $atpp).",$atpp");
 				$pagetmp--;
 			} while(!$db->num_rows($query) && $pagetmp);

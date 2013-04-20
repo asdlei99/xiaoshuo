@@ -22,7 +22,7 @@ $currencys_0 = array (
   2 => 
   array (
     'crid' => '2',
-    'cname' => 'ÔÄ¶Áµã',
+    'cname' => '¾­µä±Ò',
     'unit' => '¸ö',
     'available' => '1',
     'initial' => '0',

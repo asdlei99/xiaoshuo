@@ -1,5 +1,5 @@
 <?php
 $nvconfigs = array (
-  'readprice0' => 5,
+  'readprice0' => 3,
 ) ;
 ?>

@@ -36,7 +36,7 @@ if($inajax){
 }
 
 //定义各个标签的子标签
-$subMenu_pays = array( 'crrecords' => '积分记录', 'pays' => '充值记录', 'payonline' => '在线充值', 'crexchange' => '兑换积分');
+$subMenu_pays = array( 'crrecords' => '积分记录', 'pays' => '充值记录', 'payonline' => '在线充值');
 $subMenu_member = array('memberinfo' => '基本信息', 'memberpwd' => '修改密码');
 //'pmsend' => '发送消息'
 $subMenu_pmbox = array('pmbox' => '我的消息');

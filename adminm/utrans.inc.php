@@ -3,6 +3,23 @@
 load_cache('mchannels,uprojects,grouptypes');
 if(!isset($utran['toid'])){
 	$notranspro = true;
+	
+	foreach($grouptypes as $gtid => $grouptype){
+		//分析是已有更新申请还是新的申请
+		$isold = false;
+		//仅需要读出上次申请时间，备注与回复出来
+		if($minfos = $db->fetch_one("SELECT * FROM {$tblprefix}utrans WHERE mid='$memberid' AND checked='0' AND gtid='$gtid'")){
+			$isold = true;
+		}
+		if ($isold == true) {
+			echo '<table cellspacing="1" cellpadding="0" border="0" class="tabmain">
+			<tbody><tr class="header"><td colspan="2"><b>[作家组系]变更申请&nbsp; 您所在组&nbsp;:&nbsp;组外会员</b></td></tr>
+			<tr><td width="25%" class="item1" style="text-align:center;"><font color="red">作者审核时间为1-3个工作日</font><br />请您请耐心等待，并且随时关注审核情况。审核通过后再添加小说作品。</td>
+			</tr></tbody></table>';
+			exit();
+		}
+	}
+	
 	foreach($grouptypes as $gtid => $grouptype){
 		if(!$grouptype['issystem'] && $grouptype['mode'] == 1){
 			$toidsarr = array();

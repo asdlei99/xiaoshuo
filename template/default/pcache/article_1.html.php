@@ -245,7 +245,7 @@ if (isset($curuser->info['mid'])) {
 			<div id="setting">
 				<div id="fontColor">
 					<strong>选择背景颜色：</strong>
-					<span onclick="setBgCollor('#e8ebec')">1</span>
+					<span onclick="setBgCollor('#abdce5')">1</span>
 					<span onclick="setBgCollor('#e7f4fe')">2</span>
 					<span onclick="setBgCollor('#e7eeda')">3</span>
 					<span onclick="setBgCollor('#eae6da')">4</span>
@@ -280,13 +280,12 @@ if (isset($curuser->info['mid'])) {
 				</ul>
 			</div>
 		</div>
-    <div class="container" style="width:740px;float: left;">
-        <div id="arc_title" style="height:auto;"><!-- <h1><?php $a=_ctag_parse(array("ename" => "arc_nav_xx","tclass" => "archive","disabled" => "0","album" => "4",));if(!empty($a)){_aenter($a);?>
+    <div class="container" style="width:740px;float: left;background-color: #E5ECF3">
+        <div id="arc_title" style="height:auto;background:none;"><!-- <h1><?php $a=_ctag_parse(array("ename" => "arc_nav_xx","tclass" => "archive","disabled" => "0","album" => "4",));if(!empty($a)){_aenter($a);?>
 <a href="<?=$a['arcurl']?>" title="<?=$a['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$a[subject]","trim" => "30",));?>
 </a><?php _aquit();} unset($a);?>
  </h1> -->
-        <h1 style="border-bottom:#BFBFBF 1px dashed;"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$subject","trim" => "30",));?>
-</h1>
+        
         <div class="info"><span>
         	<span>小说:<?php $a=_ctag_parse(array("ename" => "arc_nav_xx","tclass" => "archive","disabled" => "0","album" => "4",));if(!empty($a)){_aenter($a);?>
 <a href="<?=$a['arcurl']?>" title="<?=$a['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$a[subject]","trim" => "30",));?>
@@ -301,9 +300,11 @@ if (isset($curuser->info['mid'])) {
             <a href="javascript:alt_font('contents','16');" class="font16">大</a>
         	 -->
             </span>   更新时间: <?php echo _utag_parse(array("ename" => "createdate_all","tclass" => "date","tname" => "$createdate","date" => "Y-m-d","time" => "H:i",));?>
- |  字数: <font id="cms_content_counts">0</font></div>
+ |  字数: <font id="cms_content_counts"><?=$bytenum?></font></div>
+            <h1 style="border-bottom:#BFBFBF 1px dashed;font-size:26px;line-height:40px;padding:10px 0 15px;border:none;"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$subject","trim" => "30",));?>
+</h1>
             </div>
-        <div id="contents">
+        <div id="contents" style="padding:0 42px 20px;border:none;">
         <?=$content?>
         <div class="blank18"></div> <?=$mpnav?>     
         </div>
@@ -342,9 +343,10 @@ if (isset($curuser->info['mid'])) {
 .rightSide dl {margin: 12px 10px;border: #ccc 1px solid;font-size: 14px;font-weight: bold;}
 .rightSide ul {margin: 12px 10px;}
 .rightSide li {height: 18px;line-height: 18px;overflow: hidden;}    
+#contents p { line-height:155%;}
 </style>
 
-    <div class="rightSide" id="rightSide" style="display: block;width:200px;float:right;">
+    <div class="rightSide" id="rightSide" style="display: block;width:200px;float:right;background-color: ">
 		<ul class="c11" style="margin-top:70px;">
 			<h3><?=$catalog?>强推</h3> 
 			<?php $_yueduyemianqiangtui=_ctag_parse(array("ename" => "yueduyemianqiangtui","tclass" => "archives","limits" => "10","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderby" => "praises_desc","closed" => "-1","abover" => "-1",));foreach($_yueduyemianqiangtui as $v){_aenter($v);?>
@@ -375,13 +377,19 @@ $(document).ready(function(){
 		if ((content.charCodeAt(i) < 0) || (content.charCodeAt(i) > 255))
 			intLength=intLength+2   
 	}
-	$('#cms_content_counts').text(intLength);
+	//$('#cms_content_counts').text(intLength);
+	
+	setBgCollor('#e7f4fe');
+	setBgFont(16);
 });
 
 //设置背景颜色
 function setBgCollor(color) {
 	$("#contents").css({"background": 'none'});
 	$("#contents").css({"background-color": color});
+	$(".container").css({"background": 'none'});
+	$(".container").css({"background-color": color});
+	
 }
 //设置文字大小
 function setBgFont(size) {

@@ -67,13 +67,14 @@ function onePrice(e){
 	}
 	echo $itemstr;
 	mtabfooter('newcommu');
-	echo '<br>&nbsp; &nbsp; 您选择的订阅内容需要<span id="allReadPrice" style="color:red">0</span>阅读点，您目前拥有：'.$curuser->info['currency'.$vip_crid].'阅读点 >><a href="adminm.php?action=payother">前往充值</a>  >><a href="'.$cms_abs.'">返回首页</a>';
+	echo '<br>&nbsp; &nbsp; 您选择的订阅内容需要<span id="allReadPrice" style="color:red">0</span>经典币，您目前拥有：'.$curuser->info['currency'.$vip_crid].'经典币 >><a href="adminm.php?action=payother">前往充值</a>  >><a href="'.$cms_abs.'">返回首页</a>';
 }else{
 	if(empty($selectid)) mcmessage('请选择需要订阅的章节。',M_REFERER);
 	$num = 0;
 	$query = $db->query("SELECT aid,bytenum FROM {$tblprefix}archives WHERE aid ".multi_str($selectid));
 	while($row = $db->fetch_array($query)){
-		$n_price = floor($nvconfigs['readprice0'] * $row['bytenum'] / 1000);
+		//TODO 修改订阅扣款费用
+		$n_price = (int)($nvconfigs['readprice0'] * (int)($row['bytenum'] / 1000));
 		if($curuser->crids_enough(array($vip_crid => -$n_price))){
 			$curuser->updatecrids(array($vip_crid => -$n_price),1,'订阅 '.$aedit->archive['subject']);
 			$aedit->auser->updatecrids(array($vip_crid => $n_price),1,$aedit->archive['subject'].' 被订阅');
@@ -81,7 +82,7 @@ function onePrice(e){
 			aid='$row[aid]',
 			mid='$memberid',
 			mname='".$curuser->info['mname']."',
-			cridstr = '".$n_price."阅读点',
+			cridstr = '".$n_price."',
 			createdate='$timestamp'
 			");
 			$num ++;

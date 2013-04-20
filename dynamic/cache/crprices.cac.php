@@ -32,7 +32,7 @@ $crprices_0 = array (
   array (
     'cpid' => '3',
     'ename' => '2_1',
-    'cname' => '1ÔÄ¶Áµã',
+    'cname' => '1¾­µä±Ò',
     'crid' => '2',
     'crvalue' => '1',
     'available' => '0',
@@ -46,7 +46,7 @@ $crprices_0 = array (
   array (
     'cpid' => '4',
     'ename' => '2_2',
-    'cname' => '2ÔÄ¶Áµã',
+    'cname' => '2¾­µä±Ò',
     'crid' => '2',
     'crvalue' => '2',
     'available' => '0',
@@ -60,7 +60,7 @@ $crprices_0 = array (
   array (
     'cpid' => '5',
     'ename' => '2_3',
-    'cname' => '3ÔÄ¶Áµã',
+    'cname' => '3¾­µä±Ò',
     'crid' => '2',
     'crvalue' => '3',
     'available' => '0',
@@ -74,7 +74,7 @@ $crprices_0 = array (
   array (
     'cpid' => '6',
     'ename' => '2_4',
-    'cname' => '4ÔÄ¶Áµã',
+    'cname' => '4¾­µä±Ò',
     'crid' => '2',
     'crvalue' => '4',
     'available' => '0',
@@ -88,7 +88,7 @@ $crprices_0 = array (
   array (
     'cpid' => '7',
     'ename' => '2_5',
-    'cname' => '5ÔÄ¶Áµã',
+    'cname' => '5¾­µä±Ò',
     'crid' => '2',
     'crvalue' => '5',
     'available' => '0',

@@ -27,7 +27,8 @@ if(!arc_allow($arc->archive,'aread')){//分析权限，如果有备用页，则进入备用页。
 	$ispre = 1;
 }
 
-if($crids = $arc->arc_crids()){//需要对当前用户扣值
+if($arc->archive['chid'] != '4' && $crids = $arc->arc_crids()){//需要对当前用户扣值
+
 	$cridstr = '';
 	foreach($crids['total'] as $k => $v) $cridstr .= ($cridstr ? ',' : '').abs($v).$currencys[$k]['unit'].$currencys[$k]['cname'];
 	$commu = read_cache('commu',8);

@@ -7,7 +7,7 @@ $crprojects_0 = array (
     'scrid' => '0',
     'scurrency' => '1',
     'ecrid' => '2',
-    'ecurrency' => '10',
+    'ecurrency' => '100',
   ),
 ) ;
 ?>

@@ -212,7 +212,7 @@ $(function(){
 <div class="blank9"></div>
 <?php
 //获取书库中总共有多少书
-$sql = "SELECT COUNT(aid) as count FROM xs_archives WHERE ucid=5";
+$sql = "SELECT COUNT(aid) as count FROM xs_archives WHERE chid=4";
 $result = $db->fetch_one($sql);
 $shuCount = $result['count'];
 
@@ -252,11 +252,11 @@ $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $pages = ($page -1)*30;
 
 //获取总的搜索数
-$sql = "SELECT count(aid) as count FROM xs_archives WHERE ucid=5 ".$where.' '.$order;
+$sql = "SELECT count(aid) as count FROM xs_archives WHERE chid=4 ".$where.' '.$order;
 $count = $db->fetch_one($sql);
 $count = $count['count'];
 
-$sql = "SELECT * FROM xs_archives WHERE ucid=5 ".$where.' '.$order.' LIMIT '.$pages.', 30';
+$sql = "SELECT * FROM xs_archives WHERE chid=4 ".$where.' '.$order.' LIMIT '.$pages.', 30';
 if ($z !== '') {
 	if ($z == 1) {
 		$where .= ' AND zishu <= 100000 ';
@@ -274,18 +274,18 @@ if ($z !== '') {
 	$sql = "SELECT count(aid) as count FROM xs_archives as arc,
 			(select b.pid,sum(a.bytenum) as zishu
 			from xs_archives as a ,
-			(SELECT xs_albums.aid,xs_albums.pid from xs_archives , xs_albums where xs_archives.ucid=5 and xs_archives.aid = xs_albums.pid) as b
+			(SELECT xs_albums.aid,xs_albums.pid from xs_archives , xs_albums where xs_archives.chid=4 and xs_archives.aid = xs_albums.pid) as b
 			WHERE a.aid = b.aid GROUP BY b.pid) as a
-			WHERE arc.ucid=5
+			WHERE arc.chid=4
 			AND arc.aid=a.pid ".$where.' '.$order;
 	$count = $db->fetch_one($sql);
 	$count = $count['count'];
 	$sql = "SELECT * FROM xs_archives as arc,
 			(select b.pid,sum(a.bytenum) as zishu
 			from xs_archives as a ,
-			(SELECT xs_albums.aid,xs_albums.pid from xs_archives , xs_albums where xs_archives.ucid=5 and xs_archives.aid = xs_albums.pid) as b
+			(SELECT xs_albums.aid,xs_albums.pid from xs_archives , xs_albums where xs_archives.chid=4 and xs_archives.aid = xs_albums.pid) as b
 			WHERE a.aid = b.aid GROUP BY b.pid) as a
-			WHERE arc.ucid=5
+			WHERE arc.chid=4
 			AND arc.aid=a.pid ".$where.' '.$order.' LIMIT '.$pages.', 30';
 }
 $query = $db->query($sql);

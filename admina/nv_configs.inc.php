@@ -8,7 +8,7 @@ load_cache('mtpls');
 
 if(!submitcheck('bnv_configs')){
 	tabheader('小说系统参数','nv_configs',"?entry=$entry");
-	trbasic('普通会员 阅读价格','nvconfigsnew[readprice0]',empty($nvconfigs['readprice0']) ? '' : $nvconfigs['readprice0'],'text','每千字节需要支付多少阅读点');
+	trbasic('普通会员 阅读价格','nvconfigsnew[readprice0]',empty($nvconfigs['readprice0']) ? '' : $nvconfigs['readprice0'],'text','每千字节需要支付多少经典币');
 	tabfooter('bnv_configs');
 }else{
 	$nvconfigsnew['readprice0'] = empty($nvconfigsnew['readprice0']) ? 0 : round(max(0,floatval($nvconfigsnew['readprice0'])),1);

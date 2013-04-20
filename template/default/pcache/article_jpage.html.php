@@ -233,7 +233,7 @@ function chabg(d){
 			<div class="img book-prop-gz" id="printMarkImg">
 				<span id="printMarkBox"></span>
 				<div id="printMarkBox_Title"></div>
-				<a href="<?=$arcurl?>" target="_blank"><img src="<?=$thumb?>" alt="<?=$subject?>"></a>
+				<a href="<?=$arcurl?>" target="_blank"><img src="<?php echo !empty($thumb) ? $thumb : $tplurl.'images/mr_face.gif';?>" alt="<?=$subject?>"></a>
 			</div>
 			<div class="voteBtnList">
 				<ul>

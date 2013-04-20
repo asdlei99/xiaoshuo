@@ -109,7 +109,7 @@ if(empty($channel['umdetail'])){
 				if(empty($u_lists) || in_array('salecp',$u_lists)){
 					if(!in_array('salecp',$citems)){
 						$noedit = noedit('salecp');
-						mtrbasic(lang('archivesaleprice').$noedit,'archivenew[salecp]',makeoption(array('' => lang('freesale')) + $vcps['sale'],$aedit->archive['salecp']),'select');
+						//mtrbasic(lang('archivesaleprice').$noedit,'archivenew[salecp]',makeoption(array('' => lang('freesale')) + $vcps['sale'],$aedit->archive['salecp']),'select');
 						$no_view = false;
 					}
 				}

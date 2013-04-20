@@ -71,9 +71,11 @@ class cls_archive{
 	function arc_crids($isatm = 0){//计算当前文档或附件对当前用户所需要扣除的积分值数组,需要分别统计税、售、合计等三套积分。
 		global $curuser,$catalogs,$cotypes,$vcps;
 		if($curuser->info['mid'] && $curuser->info['mid'] == $this->archive['mid']) return 0;//自已的文章
+		
 		if(!$this->archive['checked']) return 0;//未审核的文章
-		if($curuser->paydeny($this->aid,$isatm)) return 0;//已经付费或免费订阅的用户
-
+		
+		if($curuser->paydeny($this->aid, $isatm)) return 0;//已经付费或免费订阅的用户
+	
 		//统计扣值设置
 		$retarr = $crids = array();
 		$tax = !$isatm ? 'tax' : 'ftax';
@@ -100,6 +102,7 @@ class cls_archive{
 			$retarr['sale'][$cparr[0]] = -$cparr[1];
 			$retarr['total'][$cparr[0]] = isset($retarr['total'][$cparr[0]]) ? $retarr['total'][$cparr[0]] - $cparr[1] : -$cparr[1];
 		}
+		if ($this->archive['ccid3']) $retarr = array('sale' => array(), 'total' => array());
 		return $retarr ? $retarr : 0;
 	}
 }

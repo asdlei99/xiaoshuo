@@ -4,6 +4,21 @@ $pays = array(
 	'alipay' => array(@$cfg_alipay, @$cfg_alipay_keyt, @$cfg_alipay_partnerid),
 	'tenpay' => array(@$cfg_tenpay, @$cfg_tenpay_keyt)
 );
+
+echo '
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".pay_money").blur(function(){
+			var money = $(this).val();
+			money = parseInt(money);
+			if (isNaN(money)) money = "";
+			if (money <= 0) money = ""; 
+			$(this).val(money);
+		});
+	});
+	</script>
+	';
+
 $poids = array();
 foreach(array('alipay' => 2, 'tenpay' => 3) as $k => $v)($cfg_paymode & (1 << $v)) && !in_array('', $pays[$k]) && $poids[$k] = lang($k);
 empty($poids) && mcmessage('nvopi');
@@ -18,7 +33,14 @@ if(empty($deal)){
 	if(!$oldmsg = $db->fetch_one("SELECT * FROM {$tblprefix}pays WHERE mid='$memberid' ORDER BY pid DESC LIMIT 0,1")) $oldmsg = array();
 	mtabheader('在线充值','paynew','adminm.php?action=payonline&deal=confirm',2,0,1);
 	mtrbasic('支付方式','paynew[poid]',makeoption($poids),'select');
-	mtrbasic(lang('payamount'),'paynew[amount]',$amount,'text',lang('payamountrmbi'));
+	//mtrbasic(lang('payamount'),'paynew[amount]',$amount,'text',lang('payamountrmbi'));
+	echo '
+		<tr><td width="25%" class="item1"><b>支付数量</b></td>
+		<td class="item2">
+			<input class="pay_money" type="text" value="" name="paynew[amount]" id="paynew[amount]" size="25">
+			<div class="red" name="alert_paynew[amount]" id="alert_paynew[amount]"></div>
+			<font class="gray">支付数量(人民币)</font>
+		</td></tr>';
 	mtrbasic(lang('contactorname'),'paynew[truename]',empty($oldmsg['truename']) ? '' : $oldmsg['truename'],'btext');
 	mtrbasic(lang('contacttel'),'paynew[telephone]',empty($oldmsg['telephone']) ? '' : $oldmsg['telephone'],'btext');
 	mtrbasic(lang('contactemail'),'paynew[email]',empty($oldmsg['email']) ? '' : $oldmsg['email'],'btext');

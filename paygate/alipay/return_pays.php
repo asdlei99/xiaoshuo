@@ -19,6 +19,8 @@ if(!$pay->getData()){
 	exit("fail");
 }
 
+load_cache('crprojects,currencys');
+
 $alipay = new alipay_notify($pay->partner, $pay->keyt, 'MD5', $mcharset, 'http');
 $verify_result = $alipay->notify_verify();
 if($verify_result) {   //认证合格

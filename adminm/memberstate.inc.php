@@ -40,7 +40,7 @@ $favInfo = $db->fetch_all($query);
         </p>
                     
         <p><span>用户积分：</span><?php echo $curuser->info['currency1']?>分</p>
-        <p><span>账户余额：</span><?php echo round($curuser->info['currency0'],2);?>元 <a href="/adminm.php?action=payonline" class="cz">立刻充值</a></p>
+        <p><span>账户余额：</span><?php echo round($curuser->info['currency2'],2);?> 经典币 <a href="/adminm.php?action=payonline" class="cz">立刻充值</a></p>
         <p><span>注册时间：</span><?php echo date('Y-m-d H:i', $curuser->info['regdate'])?></p>
         <p><span>最后访问时间：</span><?php echo date('Y-m-d H:i', $curuser->info['lastactive'])?></p>
 	</dd>

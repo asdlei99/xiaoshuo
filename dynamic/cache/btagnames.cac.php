@@ -2675,7 +2675,7 @@ $btagnames_0 = array (
   371 => 
   array (
     'ename' => 'currency2',
-    'cname' => '阅读点数量',
+    'cname' => '经典币数量',
     'bclass' => 'member',
     'sclass' => '',
     'datatype' => 'int',
