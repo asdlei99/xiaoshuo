@@ -62,7 +62,7 @@ function onePrice(e){
 		$bytenumstr = $row['bytenum'];
 		$itemstr .= "<tr><td class=\"item\">$selectstr</td><td class=\"item2\">$subjectstr</td>\n";
 		$itemstr .= "<td class=\"item\">$bytenumstr</td>\n";
-		$itemstr .= "<td class=\"item cRed\" id=\"readPrice[$row[aid]]\">".floor($nvconfigs['readprice0'] * $row['bytenum'] / 1024)."</td>\n";
+		$itemstr .= "<td class=\"item cRed\" id=\"readPrice[$row[aid]]\">".(int)($nvconfigs['readprice0'] * (int)($row['bytenum'] / 1000))."</td>\n";
 		$itemstr .= "</tr>\n";
 	}
 	echo $itemstr;

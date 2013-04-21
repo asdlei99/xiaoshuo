@@ -9,8 +9,8 @@ $commu5_0 = array (
   array (
     'apmid' => '1',
     'autocheck' => '1',
-    'repeat' => '0',
-    'repeattime' => 0,
+    'repeat' => '1',
+    'repeattime' => 1,
     'nouservote' => '1',
     'repeatvote' => '0',
     'citems' => 'title,content,score',

@@ -194,9 +194,23 @@ function mcnselect($varname,$value = 0,$sid=0,$coid = 0,$chid = 0,$ism=0,$addstr
 	global $ca_vmode,$cotypes;
 	//不管sid是什么，当前基于$catalogs来操作。
 	$vmode = $coid ? @$cotypes[$coid]['vmode'] : $ca_vmode;
+	
 	if(!$vmode){
-		if($coid) $str = "<select style=\"vertical-align: middle;\" name=\"$varname\">".umakeoption(($addstr ? array('0' => array('title' => $addstr)) : array()) + uccidsarr($coid,$chid,$framein,0,$ism),$value)."</select>";
-		else $str = "<select style=\"vertical-align: middle;\" name=\"$varname\">".umakeoption(($addstr ? array('0' => array('title' => $addstr)) : array()) + ucaidsarr($chid,$framein,0,$ism),$value)."</select>";
+		if($coid) {
+			$str = "<select style=\"vertical-align: middle;\" name=\"$varname\">".umakeoption(($addstr ? array('0' => array('title' => $addstr)) : array()) + uccidsarr($coid,$chid,$framein,0,$ism),$value)."</select>";
+		} else {
+			$allMenu = ucaidsarr($chid,$framein,0,$ism);
+			//TODO 删除发布小说多于的栏目选项
+			unset($allMenu[22]);
+			unset($allMenu[24]);
+			unset($allMenu[10]);
+			unset($allMenu[11]);
+			unset($allMenu[12]);
+			unset($allMenu[13]);
+			unset($allMenu[23]);
+			$str = "<select style=\"vertical-align: middle;\" name=\"$varname\">".umakeoption(($addstr ? array('0' => array('title' => $addstr)) : array()) + $allMenu,$value)."</select>";
+		}
+		
 	}elseif($vmode == 1){
 		if($coid) $str = umakeradio($varname,($addstr ? array('0' => array('title' => $addstr)) : array()) + uccidsarr($coid,$chid,$framein,1,$ism),$value);
 		else $str = umakeradio($varname,($addstr ? array('0' => array('title' => $addstr)) : array()) + ucaidsarr($chid,$framein,1,$ism),$value);
@@ -205,6 +219,7 @@ function mcnselect($varname,$value = 0,$sid=0,$coid = 0,$chid = 0,$ism=0,$addstr
 		$items = $coid ? read_cache('coclasses',$coid) : $catalogs;
 		$str = "<input type=\"hidden\" name=\"$varname\" value=\"$value\"><input onclick=\"cataarea('scatainfo$coid','$varname',$sid,$coid,$chid,$ism,0);return false\" class=\"uploadbtn\" type=\"button\" value=\"".($addstr ? $addstr : lang('p_choose'))."\" />&nbsp; <span id=\"scatainfo$coid\">".@$items[$value]['title']."</span>";
 	}
+
 	return $str;
 }
 function mtrcns_m($trname,$varname,$value = '',$sid =0,$coid = 0,$chid = 0,$addstr='',$framein=0){

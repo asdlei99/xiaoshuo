@@ -34,8 +34,9 @@ if(!$aid){
 		mtrcns(lang('be_catalog'),'caid',0,$nsid,0,0,0,lang('p_choose'));
 	}
 	$js_frm = "[$ca_vmode,1,'caid','" . str_replace("'", "\\'", lang('be_catalog')) . "'],";
-	
+
 	foreach($u_coids as $k){
+		
 		if(empty(${'ccid'.$k})){
 			mtrcns($cotypes[$k]['cname'],'ccid'.$k,empty(${'ccid'.$k})?'':${'ccid'.$k},$nsid,$k,0,0,lang('p_choose'));
 		}else{
@@ -45,6 +46,7 @@ if(!$aid){
 		}
 		$js_frm .= "\n		[".$cotypes[$k]['vmode'].",0,'ccid$k','" . str_replace("'", "\\'", $cotypes[$k]['cname']) . "'],";
 	}
+	
 	mtrbasic(lang('prompt_msg'),'','<div id="information"></div>','');
 	mtrbasic(lang('点击连载小说添加'),'','<div id="setlink"></div>','');
 	mtabfooter();

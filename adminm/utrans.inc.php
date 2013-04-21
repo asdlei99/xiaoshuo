@@ -1,14 +1,14 @@
 <?php
 !defined('M_COM') && exit('No Permission');
 load_cache('mchannels,uprojects,grouptypes');
+
 if(!isset($utran['toid'])){
 	$notranspro = true;
-	
-	foreach($grouptypes as $gtid => $grouptype){
+	foreach($grouptypes as $_gtid => $grouptype){
 		//分析是已有更新申请还是新的申请
 		$isold = false;
 		//仅需要读出上次申请时间，备注与回复出来
-		if($minfos = $db->fetch_one("SELECT * FROM {$tblprefix}utrans WHERE mid='$memberid' AND checked='0' AND gtid='$gtid'")){
+		if($minfos = $db->fetch_one("SELECT * FROM {$tblprefix}utrans WHERE mid='$memberid' AND checked='0' AND gtid='$_gtid'")){
 			$isold = true;
 		}
 		if ($isold == true) {

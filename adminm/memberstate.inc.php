@@ -28,13 +28,16 @@ $favInfo = $db->fetch_all($query);
 	<dl>
     	<dt>
         	<span>
-    			<img src="<?php echo $userOther['photo'] !== '' ? $userOther['photo'] : '/images/adminm/none.gif'?>">
+    			<img src="<?php echo $userOther['photo'] !== '' ? $userOther['photo'] : '/images/adminm/none.jpg'?>">
             </span>
         </dt>
  
 	<dd>
 		<p><span>昵称：</span><a href="/14831184" target="_blank"><?php echo $curuser->info['nicename']?></a>
-		<a target="_blank" href="/adminm.php?action=utrans" class="zz">成为作者</a>
+		<?php 
+		if ($_notranspro != true) echo '<a target="_blank" href="/adminm.php?action=utrans" class="zz">成为作者</a>';
+		?>
+		
         </p>
         <p><span>用户等级：</span><?php echo $repugradestr = '<font class="cBlue">'.$repugrades[$curuser->info['rgid']]['cname'].($repugrades[$curuser->info['rgid']]['thumb'] ? '&nbsp; <img src="'.view_atmurl($repugrades[$curuser->info['rgid']]['thumb']).'" height="18">' : '').'</font>';?>
         </p>

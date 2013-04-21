@@ -507,19 +507,19 @@ li.No15 {background-position: -380px -351px;}
 
 <!-- 各个榜单 -->
 <?php $_nanpin_bangdan_list=_ctag_parse(array("ename" => "nanpin_bangdan_list","tclass" => "catalogs","disabled" => "0","limits" => "6","nsid" => "-1","listby" => "ca","casource" => "1","caids" => "2,4,5,6,7,17",));foreach($_nanpin_bangdan_list as $v){_aenter($v);?>
-	<div id="lm2" class="lmc" style="width:230px;float:left;margin-right:5px;">
-	<dl><dt><?=$v['title']?>新书榜<span><a href="<?=$v['listurl']?>">更多>></a></span></dt>
-	<dd class="txt_tab" id="dd_11">
-		<ul><?php $_nanpin_jihuo_bangdan_list=_ctag_parse(array("ename" => "nanpin_jihuo_bangdan_list","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "2","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "createdate_desc","closed" => "-1","abover" => "-1",));foreach($_nanpin_jihuo_bangdan_list as $v){_aenter($v);?>
-	            <li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
+	    <div id="lm2" class="lmc" style="width:230px;float:left;margin-right:5px;height:270px;">
+    <dl><dt><?=$v['title']?>新书榜<span><a href="<?=$v['listurl']?>">更多>></a></span></dt>
+    <dd class="txt_tab" id="dd_11">
+        <ul><?php $_nanpin_jihuo_bangdan_list=_ctag_parse(array("ename" => "nanpin_jihuo_bangdan_list","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "2","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_nanpin_jihuo_bangdan_list as $v){_aenter($v);?>
+	                <li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
 <? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?></a><span style="color:#006704;" title="<?=$v['author']?>"><?php echo _utag_parse(array("ename" => "author6","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","dealhtml" => "clearhtml","trim" => "6",));?>
 </span></li><?php _aquit();} unset($_nanpin_jihuo_bangdan_list,$v);?>
 </ul>
-	</dd>
-	</dl>
+    </dd>
+    </dl>
 </div><?php _aquit();} unset($_nanpin_bangdan_list,$v);?>
 
-<div id="lm2" class="lmc" style="width:230px;float:left;margin-right:5px;">
+<div id="lm2" class="lmc" style="width:230px;float:left;margin-right:5px;height:270px;">
     <dl><dt>公众作者新书榜<span><a href="/index.php?caid=24&action=zuixin">更多&gt;&gt;</a></span></dt>
     <dd class="txt_tab" id="dd_11">
         <ul><?php $_nanpingongzongzuozhexinshu=_ctag_parse(array("ename" => "nanpingongzongzuozhexinshu","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "createdate_desc","closed" => "-1","abover" => "-1",));foreach($_nanpingongzongzuozhexinshu as $v){_aenter($v);?>
@@ -530,7 +530,7 @@ li.No15 {background-position: -380px -351px;}
     </dd>
     </dl>
 </div>
-<div id="lm2" class="lmc" style="width:230px;float:left;margin-right:5px;">
+<div id="lm2" class="lmc" style="width:230px;float:left;margin-right:5px;height:270px;">
     <dl><dt>最新签约作品榜<span><a href="/index.php?caid=24&action=zuixin">更多&gt;&gt;</a></span></dt>
     <dd class="txt_tab" id="dd_11">
         <ul><?php $_nanpinzuixinqianyuezuopin=_ctag_parse(array("ename" => "nanpinzuixinqianyuezuopin","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "scores_desc","closed" => "-1","abover" => "-1",));foreach($_nanpinzuixinqianyuezuopin as $v){_aenter($v);?>

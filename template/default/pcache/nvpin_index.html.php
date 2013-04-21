@@ -216,7 +216,7 @@ $(function(){
 > <a href="<?=$v['listurl']?>"><?=$v['title']?></a>&nbsp;<?php _aquit();} unset($_nav,$v);?>
 </div>
  -->
-<div style="height:3px;width:960px;"></div>
+<div style="height:1px;width:960px;clear: both;"></div>
 <style type="text/css">
 .tab {margin-bottom: 10px;text-align: left;}
 .tab-menuWrapper{background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;padding: 4px 0 0 5px;height: 26px;}
@@ -332,6 +332,10 @@ li.No13 {background-position: -380px -303px;}
 li.No14 {background-position: -380px -327px;}
 li.No15 {background-position: -380px -351px;}
 .content-lr .sidebar {float: right;}
+
+.height330 {
+	height: 305px;
+}
 
 </style>
 
@@ -509,19 +513,19 @@ li.No15 {background-position: -380px -351px;}
 <div class="blank3"></div>
 
 <?php $_nvpin_xinshu_paihangbang=_ctag_parse(array("ename" => "nvpin_xinshu_paihangbang","tclass" => "catalogs","disabled" => "0","limits" => "6","nsid" => "-1","listby" => "ca","casource" => "1","caids" => "3,15,16,18,19,20",));foreach($_nvpin_xinshu_paihangbang as $v){_aenter($v);?>
-<div class="main w230 mr10" style="width:232px;float:left;margin:0px;margin-left:5px;">
+	        <div class="main w230 mr10" style="width:232px;float:left;margin:0px;margin-left:5px;">
       <div class="mod-1">
         <!-- <?=$v['title']?>新书榜 -->
         <div class="mod-hd">
           <h2><?=$v['title']?>新书榜</h2>
           <div class="mod-hd-m"><a href="<?=$v['listurl']?>" title="更多" target="_blank">更多</a></div>
         </div>
-        <div class="mod-bd">
-          <?php $_nanpin_xinshu_tuwenshuoming=_ctag_parse(array("ename" => "nanpin_xinshu_tuwenshuoming","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "createdate_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_xinshu_tuwenshuoming as $v){_aenter($v);?>
-		<dl class="picList3">
-	<dt>《<a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+        <div class="mod-bd height330">
+          <?php $_nanpin_xinshu_tuwenshuoming=_ctag_parse(array("ename" => "nanpin_xinshu_tuwenshuoming","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "clicks_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_xinshu_tuwenshuoming as $v){_aenter($v);?>
+	        <dl class="picList3">
+    <dt>《<a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a>》</dt>
-	<dd class="pic"><a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><img src="<?=$v['thumb']?>" alt="《<?=$v['subject']?>》"></a></dd>
+    <dd class="pic"><a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><img src="<?=$v['thumb']?>" alt="《<?=$v['subject']?>》"></a></dd>
         <dd class="author">作者：<?=$v['author']?></dd>
         <dd class="intro" title="<?php echo _utag_parse(array("ename" => "abstract60","tclass" => "odeal","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "60",));?>
  ..."><?php echo _utag_parse(array("ename" => "abstract60","tclass" => "odeal","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "60",));?>
@@ -529,8 +533,8 @@ li.No15 {background-position: -380px -351px;}
 </dl><?php _aquit();} unset($_nanpin_xinshu_tuwenshuoming,$v);?>
 
                   <ul class="topList3">
-                  <?php $_nanpin_xinshu_list_15=_ctag_parse(array("ename" => "nanpin_xinshu_list_15","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "createdate_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_xinshu_list_15 as $v){_aenter($v);?>
-	<? if($v['sn_row']!=1) { ?><li class="No<?=$v['sn_row']?>"><span>《<a href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+                  <?php $_nanpin_xinshu_list_15=_ctag_parse(array("ename" => "nanpin_xinshu_list_15","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "clicks_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_xinshu_list_15 as $v){_aenter($v);?>
+	        <? if($v['sn_row']!=1) { ?><li class="No<?=$v['sn_row']?>"><span>《<a href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a>》</span>
 <span class="author"><?=$v['author']?></span></li><? } ?><?php _aquit();} unset($_nanpin_xinshu_list_15,$v);?>
 
@@ -547,7 +551,7 @@ li.No15 {background-position: -380px -351px;}
 		<h2>最新签约作品榜</h2>
 		<div class="mod-hd-m"></div>
 	</div>
-	<div class="mod-bd">
+	<div class="mod-bd height330">
 		<?php $_nvpin_zuixinxiaoshuo_list=_ctag_parse(array("ename" => "nvpin_zuixinxiaoshuo_list","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "1","caids" => "14","chsource" => "2","chids" => "4","orderby" => "createdate_desc","closed" => "-1","abover" => "-1",));foreach($_nvpin_zuixinxiaoshuo_list as $v){_aenter($v);?>
 	    <dl class="picList3">
     <?php $__sub_nvpin_gengmeitongren_img=_ctag_parse(array("ename" => "_sub_nvpin_gengmeitongren_img","tclass" => "archives","limits" => "1","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderby" => "favorites_desc","closed" => "-1","abover" => "-1",));foreach($__sub_nvpin_gengmeitongren_img as $v){_aenter($v);?>
@@ -580,7 +584,7 @@ li.No15 {background-position: -380px -351px;}
 		<h2>完本精选</h2>
 		<div class="mod-hd-m"></div>
 	</div>
-	<div class="mod-bd">
+	<div class="mod-bd height330">
 		<?php $_nvping_wanbenjingxuan_list=_ctag_parse(array("ename" => "nvping_wanbenjingxuan_list","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "1","caids" => "14","chsource" => "2","chids" => "4","orderby" => "createdate_asc","closed" => "-1","abover" => "-1",));foreach($_nvping_wanbenjingxuan_list as $v){_aenter($v);?>
 	    <dl class="picList3">
     <?php $__sub_nvpin_wanbenjingxuan_img=_ctag_parse(array("ename" => "_sub_nvpin_wanbenjingxuan_img","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderby" => "createdate_asc","closed" => "-1","abover" => "-1",));foreach($__sub_nvpin_wanbenjingxuan_img as $v){_aenter($v);?>

@@ -29,7 +29,7 @@ $permissions_0 = array (
     'menu' => '1',
     'field' => '0',
     'vieworder' => '0',
-    'ugids' => '12,13',
+    'ugids' => '12,21',
     'fugids' => '',
   ),
   3 => 

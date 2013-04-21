@@ -302,7 +302,7 @@ function _check_pwd2(pwd) {
 		return false;
 	}
 	
-	$('#error_pwd1').hide();
+	$('#error_pwd2').hide();
 	return true;
 }
 

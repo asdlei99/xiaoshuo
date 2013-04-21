@@ -216,7 +216,7 @@ $(function(){
 > <a href="<?=$v['listurl']?>"><?=$v['title']?></a>&nbsp;<?php _aquit();} unset($_nav,$v);?>
 </div>
  -->
-<div style="height:3px;width:960px;"></div>
+<div style="height:1px;width:960px;clear: both;"></div>
 <style type="text/css">
 .tab {margin-bottom: 10px;text-align: left;}
 .tab-menuWrapper{background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;padding: 4px 0 0 5px;height: 26px;}

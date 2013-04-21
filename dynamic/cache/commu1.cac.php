@@ -8,8 +8,8 @@ $commu1_0 = array (
   'setting' => 
   array (
     'apmid' => '0',
-    'repeat' => '0',
-    'repeattime' => 1,
+    'repeat' => '1',
+    'repeattime' => 60,
   ),
   'func' => '',
   'cutpl' => '',

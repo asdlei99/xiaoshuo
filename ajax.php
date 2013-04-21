@@ -114,7 +114,7 @@ case 'subject':
 	if(!$table || !$subject){
 		$output = '-1';
 	}else{
-		$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}$table WHERE subject='$subject' LIMIT 0,1");
+		$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}$table WHERE subject='$subject' AND chid='4' LIMIT 0,1");
 		$output = $output['c'];
 	}
 	ajax_info($output);

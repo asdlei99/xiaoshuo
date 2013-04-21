@@ -42,6 +42,23 @@ $subMenu_member = array('memberinfo' => '基本信息', 'memberpwd' => '修改密码');
 $subMenu_pmbox = array('pmbox' => '我的消息');
 $subMenu_fav = array('favorites' => '我的书架', 'newread' => '最近阅读');
 
+//判断是否要显示成为作家
+load_cache('mchannels,uprojects,grouptypes');
+$_notranspro = true;
+foreach($grouptypes as $_gtid => $grouptype){
+	if(!$grouptype['issystem'] && $grouptype['mode'] == 1){
+		$toidsarr = array();
+		$usergroups = read_cache('usergroups',$_gtid);
+		foreach($uprojects as $k => $v){
+			if(($v['sugid'] == $curuser->info["grouptype$_gtid"]) && ($v['gtid'] == $_gtid)){
+				if($v['tugid'] && empty($usergroups[$v['tugid']])) continue;
+				$toidsarr[$v['tugid']] = $v['tugid'] ? $usergroups[$v['tugid']]['cname'] : lang('user0');
+			}
+		}
+		if (!empty($toidsarr)) $_notranspro = false;
+	}
+}
+
 if(!$memberid){
 	$message_class = 'curbox';
 	echo '<div class="area col"><div class="conBox"><div class="con_con"><div class="main_area">';
@@ -91,13 +108,14 @@ foreach($usualurls as $v){
 		<ul><li class="nobg"><a href="adminm.php"><?=lang('mindex')?></a></li><?php
 	$submenustr = '';
 	$menukeys = array();
-	
+
 	foreach($mmnmenus as $k => $v){
 		if ($k != 13) continue;
 		$pu='';
 		$tmp=array();
 		$menukeys[] = $k;
 		foreach($v as $key => $arr){
+			if ($key == 32 && $_notranspro == true) continue;	//过滤成为作者
 			$linkstr = "<a href=\"$arr[0]\"".(empty($arr[3]) ? '' : " onclick=\"$arr[3]\"").(empty($arr[2]) ? '' : " target=\"_blank\"").">";
 			if($curuser->pmbypmids('menu',empty($arr[1]) ? 0 : $arr[1])){
 				$tmp[] = "<li id='left_menu_{$key}'>".$linkstr.$mmnlangs['mmenuitem_'.$key]."</a></li>";
@@ -169,7 +187,7 @@ $(document).ready(function(){
 	var action_memberinfo = 1;
 	var action_pmsend = 27;
 	var action_newread = 18;
-	if (action_<?php echo $action;?> !== undefined) {
+	if (typeof(action_<?php echo $action;?>) !== 'undefined') {
 		$('#left_menu_'+action_<?php echo $action;?>).addClass('hover');
 	}
 	

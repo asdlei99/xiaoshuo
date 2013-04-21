@@ -237,8 +237,8 @@ function chabg(d){
 			</div>
 			<div class="voteBtnList">
 				<ul>
-					<li class="s" title="鲜花" id="cms_praises" onClick="ajax_praise('<?=$aid?>');"><?=$praises?></li>
-					<li class="p" title="凹票数" id="cms_debases" onClick="ajax_debase('<?=$aid?>');"><?=$debases?></li>
+					<li style="background:none;height:auto;margin:0px;padding:10px 0 0 25px;font-weight:bold; width: 55px;" class="s" title="投推荐票" onClick="ajax_praise('<?=$aid?>');">投推荐票<span id="cms_praises" style="color:#F96A0C;"><?=$praises?></span></li>
+					<li style="background:none;height:auto;margin:0px;padding:10px 0 0 25px;font-weight:bold; width: 55px;" class="p" title="投反对票" onClick="ajax_debase('<?=$aid?>');">投反对票<span id="cms_debases" style="color:#F96A0C;"><?=$debases?></span></li>
 					<!-- 
 					<li class="t" title="贵宾" id="postVipVote" onClick="_.book.vipVote(this.id);">11289</li>
 					<li class="g" title="盖章" id="postPrintMark" onClick="_.book.printMark('printMarkBox','postPrintMark');">637</li>
