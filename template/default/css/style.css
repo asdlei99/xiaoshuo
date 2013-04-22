@@ -29,7 +29,7 @@ cite{font-style:normal;}
 
 #head{ height:80px;overflow:hidden}
 #head .left{float:left;width:220px;height:80px;line-height:80px;text-align:center;font-size:80px;}
-#head .left img{vertical-align:middle;}
+#head .left img{vertical-align:middle;margin-top:5px;}
 #head .right{float:right;width:700px}
 
 #head .right .r1,#head .right .r2{float:right; margin:10px 0;}

