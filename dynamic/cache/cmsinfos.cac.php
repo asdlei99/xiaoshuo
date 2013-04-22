@@ -1,7 +1,7 @@
 <?php
 $cmsinfos_0 = array (
   'dbversion' => '5.1.56-community',
-  'dbsize' => '870.54 KB',
+  'dbsize' => '870.73 KB',
   'attachsize' => '3.63 MB',
   'sys_mail' => 'Unix Sendmail ( Path: G:/APMServ5.2.6/sendmail/sendmail.exe -t -i)',
   'serverip' => '127.0.0.1',
@@ -10,19 +10,19 @@ $cmsinfos_0 = array (
   array (
     'ck' => '152',
     'nock' => '0',
-    'm' => '59',
+    'm' => '54',
     'w' => '6',
     'd3' => '6',
-    'd1' => '2',
+    'd1' => '0',
   ),
   'comment' => 
   array (
-    'ck' => '12',
+    'ck' => '14',
     'nock' => '0',
-    'm' => '2',
-    'w' => '0',
-    'd3' => '0',
-    'd1' => '0',
+    'm' => '4',
+    'w' => '2',
+    'd3' => '2',
+    'd1' => '2',
   ),
   'reply' => 
   array (
@@ -67,7 +67,7 @@ $cmsinfos_0 = array (
     'm' => '4',
     'w' => '4',
     'd3' => '3',
-    'd1' => '3',
+    'd1' => '0',
   ),
   'amember' => 
   array (
@@ -94,7 +94,7 @@ $cmsinfos_0 = array (
     'm' => '4',
     'w' => '4',
     'd3' => '4',
-    'd1' => '4',
+    'd1' => '0',
   ),
   'mcomment' => 
   array (

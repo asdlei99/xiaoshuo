@@ -29,7 +29,6 @@ if(empty($channel['ucadd'])){
 		if(!($tplname = @$channel['addtpl'])){
 			_header();
 			$nsid = isset($nsid) ? max(-1,intval($nsid)) : -1;
-	
 			$pre_cns = array();
 			$pre_cns['caid'] = empty($caid) ? 0 : max(0,intval($caid));
 			foreach($cotypes as $k => $v) if(!$v['self_reg'] && !in_array($k,$ccoids) && !in_array($k,$additems)) $pre_cns['ccid'.$k] = empty(${'ccid'.$k}) ? 0 : max(0,intval(${'ccid'.$k}));
@@ -197,11 +196,17 @@ if(empty($channel['ucadd'])){
 			}
 		}
 		unset($a_field);
+		
+		//TODO 直接将作者名替换为笔名
+		$curuser->detail_data();
+		$archiveadd['author'] = $curuser->info['biming'];
+		//TODO 直接将个人简介写入到摘要
+		$archiveadd['abstract'] = $archiveadd['content'];
 	
 		$oldarr = array();
 		$cu_ret = cu_fields_deal($channel['cuid'],'archiveadd',$oldarr);
 		$cu_ret && mcmessage($cu_ret,axaction(2,M_REFERER));
-	
+		
 		if(isset($archiveadd['keywords'])) $archiveadd['keywords'] = keywords($archiveadd['keywords']);
 		$fields['author']['available'] && $archiveadd['author'] = empty($archiveadd['author']) ? $curuser->info['mname'] : $archiveadd['author'];
 		if($fields['abstract']['available'] && !$fields['abstract']['isadmin'] && $channel['autoabstract'] && empty($archiveadd['abstract']) && isset($archiveadd[$channel['autoabstract']])){

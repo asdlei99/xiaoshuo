@@ -136,7 +136,7 @@ function mtrbasic($trname,$varname,$value = '',$type = 'text',$guide='',$width =
 	echo "</td></tr>\n";
 }
 function mtrspecial($trname,$varname,$value = '',$type = 'htmltext',$mode=0,$guide='',$min=0,$max=0,$width='25%'){
-	global $cms_abs,$ftp_url,$cmsurl,$subject_table;
+	global $cms_abs,$ftp_url,$cmsurl,$subject_table,$pid;
 	empty($guide) || $guide = "<font class=\"gray\">$guide</font>";
 	$alert = "<div id=\"alert_$varname\" name=\"alert_$varname\" class=\"red\"></div>";
 	$trname = '<b>'.$trname.'</b>';
@@ -170,7 +170,10 @@ function mtrspecial($trname,$varname,$value = '',$type = 'htmltext',$mode=0,$gui
 		singlemodule($varname,$value,$type,$mode);
 		echo "$alert$guide</td></tr>\n";
 	}elseif($type == 'text'){
-		if($subject_table && ($varname == 'subject' || strpos($varname,'[subject]')))$alert = "&nbsp;&nbsp;<input type=\"button\" value=\"".lang('checksubject')."\" onclick=\"checksubject(this,'$subject_table','$varname');\">$alert";
+		//TODO隐藏添加章节的检测重名
+		if($subject_table && ($varname == 'subject' || strpos($varname,'[subject]')) && empty($pid)) {
+			$alert = "&nbsp;&nbsp;<input type=\"button\" value=\"".lang('checksubject')."\" onclick=\"checksubject(this,'$subject_table','$varname');\">$alert";
+		}
 		echo "<tr><td width=\"$width\" class=\"item1\">$trname</td>\n";
 		echo "<td class=\"item2\"><input type=\"text\" size=\"".($mode ? 60 : 20)."\" id=\"$varname\" name=\"$varname\" value=\"$value\">$alert$guide</td></tr>\n";
 	}elseif($type == 'multitext'){//

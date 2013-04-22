@@ -200,7 +200,16 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 					$adminstr .= "<a href=\"?action=archive&aid=$row[aid]\" onclick=\"return floatwin('open_inarchive',this)\">".lang('edit')."</a>";
 				}else{
 					$u_imuids = array_intersect($u_imuids,explode(',',$channel['imuids']));
-					foreach($u_imuids as $k) if(!empty($inmurls[$k])) $adminstr .= "<a href=\"".$inmurls[$k]['url']."$row[aid]\" onclick=\"return floatwin('open_inarchive',this)\">".$inmurls[$k]['cname']."</a>&nbsp; ";
+					foreach($u_imuids as $k) {
+						if(!empty($inmurls[$k])) {
+							if ($k == '5') {
+								$adminstr .= "<a href=\"".$inmurls[$k]['url']."$row[aid]\" onclick=\"return floatwin('open_inarchive',this)\">".$inmurls[$k]['cname']."</a>&nbsp; ";
+							} else {
+								$adminstr .= "<a href=\"".$inmurls[$k]['url']."$row[aid]\">".$inmurls[$k]['cname']."</a>&nbsp; ";
+							}
+							
+						}
+					}
 				}
 				$itemstr .= "<tr><td class=\"item\">$selectstr</td><td class=\"item2\">$subjectstr</td>\n";
 				if(in_array('catalog',$u_lists)) $itemstr .= "<td class=\"item\">$catalogstr</td>\n";

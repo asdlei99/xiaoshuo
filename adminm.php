@@ -187,6 +187,9 @@ $(document).ready(function(){
 	var action_memberinfo = 1;
 	var action_pmsend = 27;
 	var action_newread = 18;
+	var action_archive = 250;
+	var action_inarchives = 250;
+	var action_nv_vols = 250;
 	if (typeof(action_<?php echo $action;?>) !== 'undefined') {
 		$('#left_menu_'+action_<?php echo $action;?>).addClass('hover');
 	}

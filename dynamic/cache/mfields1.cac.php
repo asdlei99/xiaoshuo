@@ -90,6 +90,21 @@ $mfields1_0 = array (
     'pmid' => '0',
     'useredit' => '0',
   ),
+  'biming' => 
+  array (
+    'cname' => '笔名',
+    'issystem' => '0',
+    'available' => '1',
+    'iscustom' => '1',
+    'mcommon' => '0',
+    'isfunc' => '0',
+    'tbl' => 'custom',
+    'datatype' => 'text',
+    'isadmin' => '0',
+    'vieworder' => '0',
+    'pmid' => '0',
+    'useredit' => '0',
+  ),
   'mname' => 
   array (
     'cname' => '用户名1',

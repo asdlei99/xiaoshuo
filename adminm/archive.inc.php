@@ -4,6 +4,7 @@ load_cache('permissions,vcps,channels,cotypes,acatalogs');
 $aid = empty($aid) ? 0 : max(0,intval($aid));
 $chid = $db->result_one("SELECT chid FROM {$tblprefix}archives WHERE aid='$aid'");
 if(!($channel = read_cache('channel',$chid))) exit('choosearctype');
+
 if(empty($channel['umdetail'])){
 	load_cache('catalogs',$sid);
 	//分析页面设置
@@ -51,10 +52,10 @@ if(empty($channel['umdetail'])){
 				$submitstr = '';
 				$no_view = true;
 				mtabheader($channel['cname'].'&nbsp; -&nbsp; '.(empty($u_mtitle) ? lang('contentsetting') : $u_mtitle),'archivedetail',"?action=archive&aid=$aid$param_suffix$forwardstr",2,1,1,1);
-				//栏目显示
-				if(empty($u_lists) || in_array('caid',$u_lists)){
+				//TODO 编辑小说栏目显示
+				//if(empty($u_lists) || in_array('caid',$u_lists)){
 					mtrbasic(lang('belongcatalog'),'',$acatalogs[$aedit->archive['caid']]['title'],'');
-				}
+				//}
 				//分类设置
 				foreach($cotypes as $k => $v){
 					if(empty($u_lists) || in_array("ccid$k",$u_lists)){
@@ -70,9 +71,12 @@ if(empty($channel['umdetail'])){
 				$a_field = new cls_field;
 				$subject_table = 'archives';
 				//var_dump($fields);exit();
+				//TODO 删除编辑小说的一些现实
 				unset($fields['source']);	//删除来源
 				unset($fields['keywords']);	//删除关键词subtitle
 				unset($fields['subtitle']);	//删除副标题
+				unset($fields['author']);	
+				unset($fields['abstract']);	
 				foreach($fields as $k => $field){
 					if(empty($u_lists) || in_array($k,$u_lists)){
 						if($field['available'] && !$field['isadmin'] && !$field['isfunc']){
@@ -102,7 +106,7 @@ if(empty($channel['umdetail'])){
 						$uclasses = loaduclasses($curuser->info['mid']);
 						$ucidsarr = array();
 						foreach($uclasses as $k => $v) if(!$v['cuid']) $ucidsarr[$k] = $v['title'];
-						mtrbasic(lang('mycoclass'),'archivenew[ucid]',makeoption(array('0' => lang('nosettingcoclass')) + $ucidsarr,$aedit->archive['ucid']),'select');
+						//mtrbasic(lang('mycoclass'),'archivenew[ucid]',makeoption(array('0' => lang('nosettingcoclass')) + $ucidsarr,$aedit->archive['ucid']),'select');
 						$no_view = false;
 					}
 				}
@@ -188,7 +192,10 @@ if(empty($channel['umdetail'])){
 			$cu_ret = cu_fields_deal($aedit->channel['cuid'],'archivenew',$aedit->archive);//需要受$useredits的控制
 			!empty($cu_ret) && mcmessage($cu_ret,axaction(2,M_REFERER));
 			$aedit->edit_cudata($archivenew,1);
-		
+			
+			//TODO 编辑小说 摘要赋值为内容值
+			$archivenew['abstract'] = $archivenew['content'];
+			
 			if(isset($archivenew['keywords']) && ($freeupdate || in_array('keywords',$useredits))) $archivenew['keywords'] = keywords($archivenew['keywords'],$aedit->archive['keywords']);
 			if($fields['abstract']['available'] && !$fields['abstract']['isadmin'] && $aedit->channel['autoabstract'] && empty($archivenew['abstract']) && isset($archivenew[$aedit->channel['autoabstract']])){
 				$archivenew['abstract'] = autoabstract($archivenew[$aedit->channel['autoabstract']]);
@@ -205,6 +212,7 @@ if(empty($channel['umdetail'])){
 				$archivenew['bytenum'] = atm_byte(stripslashes($archivenew[$channel['autobyte']]),$fields[$channel['autobyte']]['datatype']);
 				$aedit->updatefield('bytenum',$archivenew['bytenum'],'main');
 			}
+			
 			foreach($fields as $k => $field){//需要分析是否有字段的编辑权
 				if(isset($archivenew[$k])){
 					if($field['available'] && !$field['isadmin'] && !$field['isfunc'] && !noedit($k)){
@@ -234,7 +242,7 @@ if(empty($channel['umdetail'])){
 			$c_upload->closure(1, $aedit->aid, 'archives');
 			unset($aedit);
 			$c_upload->saveuptotal(1);
-			mcmessage('arceditfinish',axaction(10,$forward));
+			mcmessage('arceditfinish',axaction(4,$forward));
 		}
 	}else include(M_ROOT.$u_tplname);
 }else include(M_ROOT.$channel['umdetail']);
