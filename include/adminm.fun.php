@@ -109,7 +109,7 @@ function mtrrange($trname,$arr1,$arr2,$type='text',$guide='',$width = '25%'){
 	(empty($guide) ? '' : "<br /><font class=\"gray\">$guide</font>").
 	"</td></tr>";
 }
-function mtrbasic($trname,$varname,$value = '',$type = 'text',$guide='',$width = '25%') {
+function mtrbasic($trname,$varname,$value = '',$type = 'text',$guide='',$width = '25%', $other = '') {
 	$check = array();
 	echo "<tr><td width=\"$width\" class=\"item1\"><b>$trname</b></td>\n";
 	echo "<td class=\"item2\">\n";
@@ -121,7 +121,7 @@ function mtrbasic($trname,$varname,$value = '',$type = 'text',$guide='',$width =
 	}elseif($type == 'select') {
 		echo "<select style=\"vertical-align: middle;\" name=\"$varname\">$value</select>";
 	}elseif($type == 'text' || $type == 'password' || $type == 'btext'){
-		echo "<input type=\"$type\" size=\"".($type == 'btext' ? 50 : 25)."\" id=\"$varname\" name=\"$varname\" value=\"".mhtmlspecialchars($value)."\">\n";
+		echo "<input type=\"$type\" size=\"".($type == 'btext' ? 50 : 25)."\" id=\"$varname\" name=\"$varname\" value=\"".mhtmlspecialchars($value)."\">{$other}\n";
 	}elseif($type == 'calendar') {
 		echo "<input type=\"$type\" size=\"25\" id=\"$varname\" name=\"$varname\" value=\"".mhtmlspecialchars($value)."\" onclick=\"ShowCalendar(this.id);\">\n";
 	}elseif($type == 'textarea' || $type == 'btextarea'){
@@ -239,7 +239,7 @@ function mtralbums($trname,$varname,$chid = 0,$isopen = 0){
 }
 function mcmessage($key='', $url = ''){
 	global $mmsgs,$mmsgforwordtime,$inajax,$infloat,$handlekey,$no_mcfooter,$message_class;
-	$msnum = $mmsgforwordtime ? $mmsgforwordtime : 1250;
+	$msnum = $mmsgforwordtime ? $mmsgforwordtime : 125000000000000;
 	$str = @$mmsgs[$key] ? $mmsgs[$key] : $key;
 	if(($num = func_num_args())>2){
 		$ars = func_get_args();

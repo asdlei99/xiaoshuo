@@ -48,10 +48,22 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 		$tempids = array();
 		$tempids = son_ids($catalogs,$caid,$tempids);
 		$caids = array_merge($caids,$tempids);
-		if(!empty($u_caids)) $caids = array_intersect($caids,$u_caids);
-	}elseif(!empty($u_caids)) $caids = $u_caids;
-	if($caids) $wheresql .= " AND a.caid ".multi_str($caids);
-	elseif(!empty($u_caids)) $no_list = true;
+		if(!empty($u_caids)) {
+			//todo 手动添加 科幻灵异的栏目id
+			$u_caids[] = 17;
+			$caids = array_intersect($caids,$u_caids);
+		}
+	}elseif(!empty($u_caids)) {
+		$caids = $u_caids;
+		//todo 手动添加 科幻灵异的栏目id
+		$caids[] = 17;
+	}
+	
+	if($caids) {
+		$wheresql .= " AND a.caid ".multi_str($caids);
+	} elseif(!empty($u_caids)) {
+		$no_list = true;
+	}
 	//审核状态范围
 	if($checked != -1){
 		if(($u_checked != -1) && $checked != $u_checked) $no_list = true;

@@ -889,6 +889,9 @@ function axaction($mode,$url=''){
 	if($mode&16){//°üº¬16£¬Ë¢ÐÂ¸¸¸¸´°¿Ú
 		$ret.="floatwin('updateup2_$handlekey',-1);";
 	}
+	if ($mode&32){
+		$ret.="setDelay('top.location.href=\"{$url}\"',1250);";
+	}
 	return $ret;
 }
 function ccstrlen($str){

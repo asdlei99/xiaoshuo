@@ -196,6 +196,8 @@ function caidsarr($chid = '0'){
 	global $catalogs;
 	$caidsarr = array();
 	foreach($catalogs as $catalog){
+		//TODO 手动排除我的小说搜索栏目中其他栏目信息
+		if (in_array($catalog['caid'], array(22,24,10,11,12,13,23))) continue;
 		if(!$chid || ($chid && in_array($chid,array_filter(explode(',',$catalog['chids']))))){
 			$space ='';
 			for($i=0;$i<$catalog['level'];$i++){

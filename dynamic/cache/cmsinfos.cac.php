@@ -1,28 +1,28 @@
 <?php
 $cmsinfos_0 = array (
   'dbversion' => '5.1.56-community',
-  'dbsize' => '870.73 KB',
-  'attachsize' => '3.63 MB',
+  'dbsize' => '881.07 KB',
+  'attachsize' => '3.64 MB',
   'sys_mail' => 'Unix Sendmail ( Path: G:/APMServ5.2.6/sendmail/sendmail.exe -t -i)',
   'serverip' => '127.0.0.1',
   'servername' => 'xiaoshuo.com',
   'archive' => 
   array (
-    'ck' => '152',
-    'nock' => '0',
-    'm' => '54',
-    'w' => '6',
-    'd3' => '6',
-    'd1' => '0',
+    'ck' => '177',
+    'nock' => '1',
+    'm' => '38',
+    'w' => '32',
+    'd3' => '26',
+    'd1' => '13',
   ),
   'comment' => 
   array (
     'ck' => '14',
     'nock' => '0',
-    'm' => '4',
+    'm' => '3',
     'w' => '2',
     'd3' => '2',
-    'd1' => '2',
+    'd1' => '0',
   ),
   'reply' => 
   array (
@@ -66,7 +66,7 @@ $cmsinfos_0 = array (
     'nock' => '0',
     'm' => '4',
     'w' => '4',
-    'd3' => '3',
+    'd3' => '0',
     'd1' => '0',
   ),
   'amember' => 
@@ -89,12 +89,12 @@ $cmsinfos_0 = array (
   ),
   'utran' => 
   array (
-    'ck' => '4',
+    'ck' => '6',
     'nock' => '0',
-    'm' => '4',
-    'w' => '4',
-    'd3' => '4',
-    'd1' => '0',
+    'm' => '6',
+    'w' => '6',
+    'd3' => '2',
+    'd1' => '2',
   ),
   'mcomment' => 
   array (

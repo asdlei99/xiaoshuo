@@ -53,7 +53,7 @@ $fields4_0 = array (
   ),
   'keywords' => 
   array (
-    'cname' => '¹Ø¼ü´Ê',
+    'cname' => '±êÇ©',
     'issystem' => '0',
     'iscustom' => '0',
     'mcommon' => '1',

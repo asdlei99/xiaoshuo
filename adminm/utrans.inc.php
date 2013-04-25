@@ -19,11 +19,12 @@ if(!isset($utran['toid'])){
 			exit();
 		}
 	}
-	
+
 	foreach($grouptypes as $gtid => $grouptype){
 		if(!$grouptype['issystem'] && $grouptype['mode'] == 1){
 			$toidsarr = array();
 			$usergroups = read_cache('usergroups',$gtid);
+			
 			foreach($uprojects as $k => $v){
 				if(($v['sugid'] == $curuser->info["grouptype$gtid"]) && ($v['gtid'] == $gtid)){
 					if($v['tugid'] && empty($usergroups[$v['tugid']])) continue;
@@ -33,15 +34,20 @@ if(!isset($utran['toid'])){
 			if($toidsarr){
 				$isold = $db->result_one("SELECT COUNT(*) FROM {$tblprefix}utrans WHERE mid='$memberid' AND checked='0' AND gtid='$gtid'");
 				$nowugstr = '&nbsp; '.lang('groupcurrentuser').'&nbsp;:&nbsp;'.($curuser->info["grouptype$gtid"] ? $usergroups[$curuser->info["grouptype$gtid"]]['cname'] : lang('user0'));
-				mtabheader(lang('needusergroupalter',$grouptype['cname']).$nowugstr,"utrans$gtid","?action=utrans");
+				mtabheader(lang('needusergroupalter',$grouptype['cname']).$nowugstr,"utrans$gtid","?action=utrans",2, 0, 1);
 				trhidden('gtid',$gtid);
 				mtrbasic(lang('altertargetusergroup'),'utran[toid]',makeoption($toidsarr),'select');
+				if (count($toidsarr) == 2) {
+					mtrbasic('笔名', 'utran[biming]', '', 'text', '请不要重名', '25%', "&nbsp;&nbsp;<input type=\"button\" value=\"检查重名\" onclick=\"checkbiming(this,'members_1','utran[biming]');\">");
+					$submitstr = makesubmitstr('utran[biming]', 1, 1, 2,14,'text');
+				}
 				mtabfooter('submit',lang($isold ? 'modify' : 'need'));
+				check_submit_func($submitstr);
 				$notranspro = false;
 			}
 		}
 	}	
-	$notranspro && mcmessage(lang('notranpro'));
+	$notranspro && mcmessage('您已经是本站作家。');
 }else{
 	if(empty($gtid)) mcmessage('choosegrouptype');
 	foreach($uprojects as $k => $v){
@@ -68,6 +74,7 @@ if(!isset($utran['toid'])){
 		mtrbasic(lang('usergroupaltermodel'),'',(!$sugid ? lang('user0') : $usergroups[$sugid]['cname']).'&nbsp; ->&nbsp; '.(!$tugid ? lang('user0') : $usergroups[$tugid]['cname']),'');
 		trhidden('utran[toid]',$tugid);
 		trhidden('gtid',$gtid);
+		trhidden('utran[biming]', $utran['biming']);
 		mtrbasic(lang('applytime'),'',date("Y-m-d H:i",$isold ? $minfos['createdate'] : $timestamp),'');
 		mtrbasic(lang('remark'),'utran[remark]',empty($minfos['remark']) ? '' : $minfos['remark'],'textarea');
 		$isold && mtrbasic(lang('adminreply').@noedit(1),'',$minfos['reply'],'textarea');
@@ -76,6 +83,13 @@ if(!isset($utran['toid'])){
 	}else{
 		//需要检查一下，当前会员是否允许加入到新的会员组
 		$omchid = $curuser->info['mchid'];//原模型
+		
+		//TODO 更新用户的笔名
+		if (!empty($utran['biming'])) {
+			$sql = "update {$tblprefix}members_1 SET biming='{$utran['biming']}' WHERE mid={$curuser->info['mid']}";
+			$db->query($sql);
+			$utran['remark'] = '作者笔名：'.$utran['biming'].'\n'.$utran['remark'];
+		}
 		if($uproject['autocheck']){
 			$curuser->updatefield("grouptype$gtid",$tugid,'main');
 			$curuser->updatedb();

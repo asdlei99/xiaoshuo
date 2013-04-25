@@ -81,7 +81,7 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 			//模型搜索
 			if(empty($u_filters) || in_array('channel',$u_filters)){
 				$chidsarr = array('0' => lang('all_channel')) + chidsarr();
-				echo "<select style=\"vertical-align: middle;\" name=\"chid\">".makeoption($chidsarr,$chid)."</select>&nbsp; ";
+				//echo "<select style=\"vertical-align: middle;\" name=\"chid\">".makeoption($chidsarr,$chid)."</select>&nbsp; ";
 			}
 			//所在子站搜索
 			if(empty($u_filters) || in_array('subsite',$u_filters)){
@@ -99,7 +99,7 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 			mtabfooter();
 	
 			//列表区	
-			mtabheader($aedit->archive['subject'].'&nbsp; '.(empty($u_mtitle) ? lang('content_list') : $u_mtitle),'','',20);
+			mtabheader($aedit->archive['subject'].'&nbsp; '.(empty($u_mtitle) ? '章节列表' : $u_mtitle),'','',20);
 			$cy_arr = array("<input class=\"checkbox\" type=\"checkbox\" name=\"chkall\" onclick=\"checkall(this.form, 'selectid', 'chkall')\">",lang('title'),);
 			if(in_array('catalog',$u_lists)) $cy_arr[] = lang('catalog');
 			if(in_array('mname',$u_lists)) $cy_arr[] = lang('member');

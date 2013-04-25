@@ -72,13 +72,21 @@ if(empty($channel['ucadd'])){
 	
 			//类别定义
 			foreach($cotypes as $k => $v){
+				//TODO 判断所属小说是不是VIP小说
+				if (empty($p_album['ccid3'])) continue;
+				
 				if(!$v['self_reg'] && !in_array($k,$ccoids) && !in_array("ccid$k",$additems)){
 					if(empty($pre_cns['ccid'.$k])){
 						mtrcns(($v['notblank'] ? '*' : '').$v['cname'],"archiveadd[ccid$k]",0,$nsid,$k,$chid,0,lang('p_choose'));
 					}else{
-						$coclasses = read_cache('coclasses',$k);
-						mtrbasic(($v['notblank'] ? '*' : '').$v['cname'],'',@$coclasses[$pre_cns['ccid'.$k]]['title'],'');
-						trhidden("archiveadd[ccid$k]",$pre_cns['ccid'.$k]);
+						//TODO 如果是VIP设置，依然可以选择是否是VIP章节
+						if ($k == 3) {
+							mtrcns(($v['notblank'] ? '*' : '').$v['cname'],"archiveadd[ccid$k]",0,$nsid,$k,$chid,0,lang('p_choose'));
+						} else {
+							$coclasses = read_cache('coclasses',$k);
+							mtrbasic(($v['notblank'] ? '*' : '').$v['cname'],'',@$coclasses[$pre_cns['ccid'.$k]]['title'],'');
+							trhidden("archiveadd[ccid$k]",$pre_cns['ccid'.$k]);
+						}
 					}
 					$submitstr .= makesubmitstr("archiveadd[ccid$k]",$v['notblank'],0,0,0,'common');
 				}
@@ -153,6 +161,9 @@ if(empty($channel['ucadd'])){
 		mname='".$curuser->info['mname']."',
 		createdate='$timestamp',
 		refreshdate='$timestamp'";
+		
+		//TODO 手动指定跳转地址
+		$forward = '/adminm.php?action=archives&nmuid=2';
 	
 		$pre_cns = array();
 		$pre_cns['caid'] = $archiveadd['caid'];
@@ -200,8 +211,9 @@ if(empty($channel['ucadd'])){
 		//TODO 直接将作者名替换为笔名
 		$curuser->detail_data();
 		$archiveadd['author'] = $curuser->info['biming'];
+		
 		//TODO 直接将个人简介写入到摘要
-		$archiveadd['abstract'] = $archiveadd['content'];
+		$archiveadd['abstract'] = html2text($archiveadd['content']);
 	
 		$oldarr = array();
 		$cu_ret = cu_fields_deal($channel['cuid'],'archiveadd',$oldarr);
@@ -226,6 +238,13 @@ if(empty($channel['ucadd'])){
 		}
 	
 		$sqlsub = $sqlcustom = '';
+		
+		foreach ($additems as $k => $v) {
+			if ($v == 'author' || $v == 'abstract') {
+				unset($additems[$k]);
+			}
+		}
+		//var_dump($additems);
 		foreach($fields as $k => $field){
 			if($field['available'] && !$field['isadmin'] && !$field['isfunc'] && !in_array($k,$additems)){
 				@$a_field->field = read_cache('field',$chid,$k);
@@ -299,7 +318,7 @@ if(empty($channel['ucadd'])){
 			$c_notice->deal();//通知文档更新记录
 		}
 		$c_upload->saveuptotal(1);
-		mcmessage('arcaddfinish',axaction(10,$forward));
+		mcmessage('arcaddfinish',axaction(34,$forward));
 	}
 }else include(M_ROOT.$channel['ucadd']);
 mexit();

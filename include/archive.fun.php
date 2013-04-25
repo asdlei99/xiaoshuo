@@ -153,7 +153,7 @@ function xiaoshuo_zongzishu($aid) {
 function xiaoshuo_author_list($author) {
 	global $db,$tblprefix;
 	$sql = "select a1.aid,a1.`subject`,a2.caid,a2.title from {$tblprefix}archives as a1, {$tblprefix}catalogs as a2 
-			where a1.caid=a2.caid AND a1.author='{$author}'";
+			where a1.caid=a2.caid AND a1.author='{$author}' AND a1.chid=4";
 	$query = $db->query($sql);
 	$array = $db->fetch_all($query);
 	return $array;

@@ -2,7 +2,7 @@
 <div class="blank9"></div>
 <?php
 //获取书库中总共有多少书
-$sql = "SELECT COUNT(aid) as count FROM xs_archives WHERE chid=4";
+$sql = "SELECT COUNT(aid) as count FROM xs_archives WHERE chid=4 AND checked=1";
 $result = $db->fetch_one($sql);
 $shuCount = $result['count'];
 
@@ -42,11 +42,11 @@ $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $pages = ($page -1)*30;
 
 //获取总的搜索数
-$sql = "SELECT count(aid) as count FROM xs_archives WHERE chid=4 ".$where.' '.$order;
+$sql = "SELECT count(aid) as count FROM xs_archives WHERE chid=4 AND checked=1 ".$where.' '.$order;
 $count = $db->fetch_one($sql);
 $count = $count['count'];
 
-$sql = "SELECT * FROM xs_archives WHERE chid=4 ".$where.' '.$order.' LIMIT '.$pages.', 30';
+$sql = "SELECT * FROM xs_archives WHERE chid=4 AND checked=1 ".$where.' '.$order.' LIMIT '.$pages.', 30';
 if ($z !== '') {
 	if ($z == 1) {
 		$where .= ' AND zishu <= 100000 ';
@@ -66,7 +66,7 @@ if ($z !== '') {
 			from xs_archives as a ,
 			(SELECT xs_albums.aid,xs_albums.pid from xs_archives , xs_albums where xs_archives.chid=4 and xs_archives.aid = xs_albums.pid) as b
 			WHERE a.aid = b.aid GROUP BY b.pid) as a
-			WHERE arc.chid=4
+			WHERE arc.chid=4 AND checked=1
 			AND arc.aid=a.pid ".$where.' '.$order;
 	$count = $db->fetch_one($sql);
 	$count = $count['count'];
@@ -75,7 +75,7 @@ if ($z !== '') {
 			from xs_archives as a ,
 			(SELECT xs_albums.aid,xs_albums.pid from xs_archives , xs_albums where xs_archives.chid=4 and xs_archives.aid = xs_albums.pid) as b
 			WHERE a.aid = b.aid GROUP BY b.pid) as a
-			WHERE arc.chid=4
+			WHERE arc.chid=4 AND checked=1
 			AND arc.aid=a.pid ".$where.' '.$order.' LIMIT '.$pages.', 30';
 }
 $query = $db->query($sql);
@@ -112,18 +112,18 @@ $result = $db->fetch_all($query);
 	            	<dt>作品类别：</dt>
 	                <dd class="allzplb">
 	                	<a href="javascript:void(0);" onclick="change_caid(0)" id="allcaid0">全部</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(2)" id="allcaid2">武侠</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(2)" id="allcaid2">都市</a>
 	                	<a href="javascript:void(0);" onclick="change_caid(4)" id="allcaid4">玄幻</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(5)" id="allcaid5">科幻</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(5)" id="allcaid5">武侠</a>
 	                	<a href="javascript:void(0);" onclick="change_caid(6)" id="allcaid6">历史</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(7)" id="allcaid7">悬疑</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(17)" id="allcaid17">都市</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(7)" id="allcaid7">网游</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(17)" id="allcaid17">科幻</a>
 	                	<a href="javascript:void(0);" onclick="change_caid(3)" id="allcaid3">言情</a>
 	                	<a href="javascript:void(0);" onclick="change_caid(15)" id="allcaid15">穿越</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(16)" id="allcaid16">女强</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(18)" id="allcaid18">精品</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(19)" id="allcaid19">家斗</a>
-	                	<a href="javascript:void(0);" onclick="change_caid(20)" id="allcaid20">灵异</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(16)" id="allcaid16">青春</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(18)" id="allcaid18">古装</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(19)" id="allcaid19">女强</a>
+	                	<a href="javascript:void(0);" onclick="change_caid(20)" id="allcaid20">耽美</a>
 	                </dd>
 	             </dl>
              </div>

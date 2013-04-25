@@ -30,13 +30,15 @@ if($action == 'memberdetail' && $mid){
 			trcns('*'.lang('member_relate_catalog'),'minfosnew[caid]',$actuser->info['caid'],-1,0,$mchid,1,lang('p_choose'));
 			$submitstr .= makesubmitstr('minfosnew[caid]',1,0,0,0,'common');
 		}
+		
 		foreach($cotypes as $k => $v){
 			if(in_array('ccid'.$k,$acoids)){
 				trcns('*'.lang('member_relate_class').'&nbsp; -&nbsp; '.$v['cname'],"minfosnew[ccid$k]",$actuser->info["ccid$k"],-1,$k,$mchid,1,lang('p_choose'));
 				$submitstr .= makesubmitstr("minfosnew[ccid$k]",1,0,0,0,'common');
 			}
 		}
-		trbasic(lang('space_tpl_prj'),'minfosnew[mtcid]',makeoption(mtcidsarr($mchid),$actuser->info['mtcid']),'select');
+		//TODO 去除 个人空间模版的选项
+		//trbasic(lang('space_tpl_prj'),'minfosnew[mtcid]',makeoption(mtcidsarr($mchid),$actuser->info['mtcid']),'select');
 		foreach($mfields as $k => $field){
 			if(!$field['issystem'] && !$field['isfunc']){
 				$a_field->init();
@@ -73,6 +75,11 @@ if($action == 'memberdetail' && $mid){
 		$c_upload = new cls_upload;	
 		$mfields = fields_order($mfields);
 		$a_field = new cls_field;
+		//TODO 如果有更新笔名，则更新该作者所有的作品作者名
+		if (!empty($minfosnew['biming'])) {
+			$sql = "update {$tblprefix}archives SET author='{$minfosnew['biming']}' WHERE mid={$mid}";
+			$db->query($sql);
+		}
 		foreach($mfields as $k => $field){
 			if(!$field['issystem'] && !$field['isfunc']){
 				$a_field->init();

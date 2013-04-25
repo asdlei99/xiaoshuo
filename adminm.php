@@ -115,7 +115,7 @@ foreach($usualurls as $v){
 		$tmp=array();
 		$menukeys[] = $k;
 		foreach($v as $key => $arr){
-			if ($key == 32 && $_notranspro == true) continue;	//过滤成为作者
+			//if ($key == 32 && $_notranspro == true) continue;	//过滤成为作者
 			$linkstr = "<a href=\"$arr[0]\"".(empty($arr[3]) ? '' : " onclick=\"$arr[3]\"").(empty($arr[2]) ? '' : " target=\"_blank\"").">";
 			if($curuser->pmbypmids('menu',empty($arr[1]) ? 0 : $arr[1])){
 				$tmp[] = "<li id='left_menu_{$key}'>".$linkstr.$mmnlangs['mmenuitem_'.$key]."</a></li>";

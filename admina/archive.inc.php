@@ -319,11 +319,13 @@ if($action == 'archiveadd'){//添加任何内容首选必须要指定栏目
 					$a_field = new cls_field;
 		
 					tabheader($channel['cname'].'&nbsp; -&nbsp; '.lang('arcedit'),'archivedetail',"?entry=archive&action=archivedetail&aid=$aid$param_suffix$forwardstr",2,1,1,1);
+					
 					if(empty($u_lists) || in_array('caid',$u_lists)){
 						trcns(lang('be_catalog'),'archivenew[caid]',$aedit->archive['caid'],$aedit->archive['sid'],0,$chid,0,lang('p_choose'));
 						$submitstr .= makesubmitstr('archivenew[caid]',1,0,0,0,'common');
 					}
-			
+					//TODO 手动后台添加VIP选项
+					$u_lists[] = 'ccid3';
 					foreach($cotypes as $k => $v) {
 						if(empty($u_lists) || in_array("ccid$k",$u_lists)){
 							if(!$v['self_reg'] && !in_array($k,$acoids)){
@@ -334,6 +336,11 @@ if($action == 'archiveadd'){//添加任何内容首选必须要指定栏目
 					}
 			
 					$subject_table = 'archives';
+					if (!empty($u_lists)) {
+						foreach ($u_lists as $k => $l) {
+							if ($l == 'source' || $l == 'keywords' || $l == 'abstract') unset($u_lists[$k]);
+						}
+					}
 					foreach($fields as $k => $field){
 						if(empty($u_lists) || in_array($k,$u_lists)){
 							if($field['available'] && !$field['isfunc']){
@@ -390,6 +397,9 @@ if($action == 'archiveadd'){//添加任何内容首选必须要指定栏目
 						}
 					}
 				}
+				//TODO 自动将内容中的值赋值给摘要
+				$archivenew['abstract'] = html2text($archivenew['content']);
+				
 				if(isset($archivenew['rpmid'])){
 					if(!in_array('rpmid',$aitems)) $aedit->updatefield('rpmid',$archivenew['rpmid'],'main');
 				}
@@ -484,7 +494,9 @@ if($action == 'archiveadd'){//添加任何内容首选必须要指定栏目
 				amessage('arceditfinish',axaction(10,$forward));
 			}
 		}else include(M_ROOT.$u_tplname);
-	}else include(M_ROOT.$channel['uadetail']);
+	} else {
+		include(M_ROOT.$channel['uadetail']);
+	}
 }elseif($action == 'viewinfos' && $aid){//文档详细信息
 	$aedit = new cls_arcedit;
 	$aedit->set_aid($aid);

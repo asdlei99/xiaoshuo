@@ -74,9 +74,11 @@ if(empty($channel['umdetail'])){
 				//TODO 删除编辑小说的一些现实
 				unset($fields['source']);	//删除来源
 				unset($fields['keywords']);	//删除关键词subtitle
-				unset($fields['subtitle']);	//删除副标题
+				unset($fields['subtitle']);	//删除副标题keywords
 				unset($fields['author']);	
 				unset($fields['abstract']);	
+				echo '<pre>';
+				
 				foreach($fields as $k => $field){
 					if(empty($u_lists) || in_array($k,$u_lists)){
 						if($field['available'] && !$field['isadmin'] && !$field['isfunc']){
@@ -84,7 +86,15 @@ if(empty($channel['umdetail'])){
 							$a_field->field = read_cache('field',$chid,$k);
 							$a_field->oldvalue = isset($aedit->archive[$k]) ? $aedit->archive[$k] : '';
 							$noedit = noedit($k,!$curuser->pmbypmids('field',$a_field->field['pmid']));
-							$a_field->trfield('archivenew',$noedit);
+							if ($k == 'subject') {
+								echo '
+								<tr><td width="25%" class="item1"><b>*作品名&nbsp; <img align="absmiddle" src="images/common/lock.gif"></b></td>
+<td class="item2"><input type="text" value="'.$a_field->oldvalue.'" name="archivenew[subject]" id="archivenew[subject]" readonly="true" size="60">&nbsp;&nbsp;<div class="red" name="alert_archivenew[subject]" id="alert_archivenew[subject]"></div></td></tr>
+								';
+							} else {
+								$a_field->trfield('archivenew',$noedit);
+							}
+							
 							!$noedit && $submitstr .= $a_field->submitstr;
 							$no_view = false;
 							//ar_dump($a_field);
@@ -131,6 +141,7 @@ if(empty($channel['umdetail'])){
 						$no_view = false;
 					}
 				}
+				
 				mtabfooter($no_view ? '' : 'barchivedetail');
 				check_submit_func($submitstr);
 				m_guide(@$u_guide);

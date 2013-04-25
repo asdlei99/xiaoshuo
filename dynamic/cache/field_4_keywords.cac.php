@@ -2,7 +2,7 @@
 $field_4_keywords_0 = array (
   'fid' => '34',
   'ename' => 'keywords',
-  'cname' => '¹Ø¼ü´Ê',
+  'cname' => '±êÇ©',
   'chid' => '4',
   'issystem' => '0',
   'iscustom' => '0',

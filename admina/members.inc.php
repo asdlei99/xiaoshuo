@@ -50,14 +50,21 @@ if($action == 'membersedit'){
 	$filterstr = '';
 	foreach(array('nauid','viewdetail','mchid','keyword','indays','outdays',) as $k) $$k && $filterstr .= "&$k=".rawurlencode(stripslashes($$k));
 	foreach(array('checked',) as $k) $$k != -1 && $filterstr .= "&$k=".$$k;
-
+	
+	//TODO 手动更改会员组系id为 12 21
+	if ($nauid == 123) {
+		$u_ugids5 = array(12,21);
+	}
 	foreach($grouptypes as $k => $v){
 		${"ugid$k"} = empty(${"ugid$k"}) ? 0 : ${"ugid$k"};
+		
 		if(${"ugid$k"}){
 			$filterstr .= "&ugid$k=".${"ugid$k"};
 			if(!empty(${"u_ugids$k"}) && !in_array(${"ugid$k"},${"u_ugids$k"})) $no_list = 1;
 			$wheresql .= ($wheresql ? ' AND ' : '')."grouptype$k='".${"ugid$k"}."'";
-		}elseif(!empty(${"u_ugids$k"})) $wheresql .= ($wheresql ? ' AND ' : '')."grouptype$k ".multi_str(${"u_ugids$k"});
+		} elseif(!empty(${"u_ugids$k"})) {
+			$wheresql .= ($wheresql ? ' AND ' : '')."grouptype$k ".multi_str(${"u_ugids$k"});
+		}
 	}
 	$wheresql = empty($no_list) ? ($wheresql ? "WHERE $wheresql" : '') : 'WHERE 1=0';
 	//echo $wheresql;

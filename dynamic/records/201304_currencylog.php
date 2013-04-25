@@ -81,3 +81,28 @@
 <?PHP exit;?>	1366646266	1	admin	积分	+	10	积分增减策略
 <?PHP exit;?>	1366646483	1	admin	积分	+	10	积分增减策略
 <?PHP exit;?>	1366646534	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366724965	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366725988	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366730557	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366806135	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366806166	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366806617	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366806947	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366806976	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807019	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807044	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807133	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807256	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807471	8	ceshi1	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807779	8	ceshi1	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807813	8	ceshi1	积分	+	10	积分增减策略
+<?PHP exit;?>	1366807894	8	ceshi1	积分	+	10	积分增减策略
+<?PHP exit;?>	1366808673	1	admin	积分	+	10	积分增减策略
+<?PHP exit;?>	1366808851	8	ceshi1	积分	+	10	积分增减策略
+<?PHP exit;?>	1366808909	1	admin	经典币	+	0	订阅 adsfasdf
+<?PHP exit;?>	1366808909	8	ceshi1	经典币	+	0	adsfasdf 被订阅
+<?PHP exit;?>	1366808919	1	admin	经典币	-	9	订阅 adsfasdf
+<?PHP exit;?>	1366808919	8	ceshi1	经典币	+	9	adsfasdf 被订阅
+<?PHP exit;?>	1366809061	8	ceshi1	积分	+	10	积分增减策略
+<?PHP exit;?>	1366809480	11	ceshi4	积分	+	10	积分增减策略
+<?PHP exit;?>	1366809587	11	ceshi4	积分	+	10	积分增减策略

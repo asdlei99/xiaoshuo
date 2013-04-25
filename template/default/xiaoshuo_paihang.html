@@ -101,23 +101,23 @@ $isNotShuzi = false;
 switch($action) {
 	case 'dianji':
 		$title = '小说点击榜';
-		$sql = "SELECT *, clicks as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY clicks DESC LIMIT 0, 100";
+		$sql = "SELECT *, clicks as shuzhi FROM xs_archives WHERE chid=4 AND checked=1 ORDER BY clicks DESC LIMIT 0, 100";
 		break;
 	case 'shoucang' :
 		$title = '小说收藏榜';
-		$sql = "SELECT *, favorites as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY favorites DESC LIMIT 0, 100";
+		$sql = "SELECT *, favorites as shuzhi FROM xs_archives WHERE chid=4 AND checked=1 ORDER BY favorites DESC LIMIT 0, 100";
 		break;
 	case 'pingjia':
 		$title = '小说评价榜';
-		$sql = "SELECT *, comments as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY comments DESC LIMIT 0, 100";
+		$sql = "SELECT *, comments as shuzhi FROM xs_archives WHERE chid=4 AND checked=1 ORDER BY comments DESC LIMIT 0, 100";
 		break;
 	case 'tuijian':
 		$title = '小说推荐榜';
-		$sql = "SELECT *, praises as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY praises DESC LIMIT 0, 100";
+		$sql = "SELECT *, praises as shuzhi FROM xs_archives WHERE chid=4 AND checked=1 ORDER BY praises DESC LIMIT 0, 100";
 		break;
 	case 'zuixin':
 		$title = '最新小说榜';
-		$sql = "SELECT * FROM xs_archives WHERE ucid=5 ORDER BY createdate DESC LIMIT 0, 100";
+		$sql = "SELECT * FROM xs_archives WHERE chid=4 AND checked=1 ORDER BY createdate DESC LIMIT 0, 100";
 		$isNotShuzi = true;
 		break;
 	case 'dingyue':
@@ -127,7 +127,7 @@ switch($action) {
 				left join xs_subscribes as sub on sub.aid in(
 					select alb.aid from xs_albums as alb where alb.pid=arc.aid
 				)
-				where arc.ucid=5
+				where arc.chid=4 AND checked=1
 				GROUP BY aid
 				order by sub.cridstr DESC LIMIT 0, 100";
 		//$sql = "SELECT *, orders as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY orders DESC LIMIT 0, 100";
@@ -135,7 +135,7 @@ switch($action) {
 		break;
 	case 'dashang':
 		$title = '小说打赏榜';
-		$sql = "SELECT *, praises as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY praises DESC LIMIT 0, 100";
+		$sql = "SELECT *, praises as shuzhi FROM xs_archives WHERE chid=4 AND checked=1 ORDER BY praises DESC LIMIT 0, 100";
 		break;
 	default:
 		header('Location:/index.php');

@@ -439,3 +439,13 @@ function checksubject(btn, tab, fix){
 		alert(lang(!count ? 'subjectavailable' : count == -1 ? 'inputsubject' : 'subjectexist'));
 	});
 }
+function checkbiming(btn, tab, fix){
+	var field = btn.form[fix ? fix : 'biming'], val = trim(field.value), ajax = Ajax();
+	if(!val || !tab)return alert('请输入笔名');
+	btn.disabled = true;
+	ajax.form(CMS_ABS + 'ajax.php?action=biming',{'table':tab,'biming':val}, function(xml){
+		btn.disabled = false;
+		count = parseInt(xml);
+		alert(lang(!count ? '笔名可用' : count == -1 ? '请输入笔名' : '笔名已存在'));
+	});
+}
