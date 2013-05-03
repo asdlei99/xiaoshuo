@@ -208,6 +208,13 @@ if(empty($channel['ucadd'])){
 		}
 		unset($a_field);
 		
+		//TODO 验证小说名是否有重复
+		$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}$table WHERE subject='".$archivead['subject']."' AND chid='4' LIMIT 0,1");
+		$output = $output['c'];
+		if (!empty($output)) {
+			mcmessage('小说名称有重复，请修改!',axaction(2,M_REFERER));
+		}
+		
 		//TODO 直接将作者名替换为笔名
 		$curuser->detail_data();
 		$archiveadd['author'] = $curuser->info['biming'];
