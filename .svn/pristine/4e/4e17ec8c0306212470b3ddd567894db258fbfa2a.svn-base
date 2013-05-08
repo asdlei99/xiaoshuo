@@ -1,0 +1,23 @@
+<?php
+$caid_7__ccid4_13_0 = array (
+  'cnid' => '59',
+  'sid' => '0',
+  'alias' => '',
+  'appurl' => '',
+  'ename' => 'caid=7&ccid4=13',
+  'inconfig' => '1',
+  'indexurl' => '',
+  'cncids' => '',
+  'listurl' => '',
+  'bkurl' => '',
+  'indextpl' => '',
+  'listtpl' => 'column_other_list.html',
+  'bktpl' => '',
+  'mainline' => 'ca',
+  'caid' => '7',
+  'cnlevel' => '2',
+  'ineedstatic' => '1263875308',
+  'lneedstatic' => '1239425311',
+  'bkneedstatic' => '1239425311',
+) ;
+?>

@@ -1,0 +1,31 @@
+<?php
+$ctaglogin_userinfo_0 = array (
+  'cname' => '登录会员信息',
+  'ename' => 'login_userinfo',
+  'tclass' => 'userinfos',
+  'template' => '<link href="{$tplurl}css/login.css" rel="stylesheet" type="text/css" />
+<div id="logindiv">
+<div id="right">
+<a href="{$cms_abs}adminm.php?action=payonline" target="_blank"><SPAN class="bt_style" style="COLOR: rgb(204,51,0)">我要充值</SPAN></a> <br>
+<a href="{$cms_abs}adminm.php?action=favorites" target="_blank">我的书架</a><br><span class="cRead"><a href="{$cms_abs}adminm.php?action=utrans" target="_blank">申请作家</a></span></div>
+<div id="left">
+<div>欢迎您，<span class="urs">{mname}</span><br>
+<a href="{$cms_abs}mspace/index.php?mid={mid}" target="_blank">进入个人空间</a><br>
+<a href="{$cms_abs}adminm.php" target="_blank">进入会员中心</a>
+<table  border="0" cellspacing="0" cellpadding="0">
+<tr><td width="18" align="left" valign="middle"><img src="{$tplurl}images/clean_009.gif"></td>
+<td width="65" align="left" class="urs1"><a href="{$cms_abs}addpre.php" onclick="return floatwin(\'open_report\',this,800,300)">撰写文章</a></td>
+<td width="18" align="left" valign="middle"><img src="{$tplurl}images/clean_010.gif" align="absmiddle"></td>
+<td width="52" align="left" class="urs1"><a href="{$cms_abs}login.php?action=logout">退出登录</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>',
+  'setting' => 
+  array (
+    'usource' => '0',
+  ),
+  'disabled' => 0,
+) ;
+?>

@@ -1,0 +1,102 @@
+{tpl$header}
+<div class="h3"><span class="reda"><a>当前位置&gt;&gt;</a></span>  <a href="{cms_abs}">首页</a> {c$nav}  {subject}</div>
+</div>
+</div>
+
+<div id="main">
+<div id="left">
+<style type="text/css">
+.book_list_li li {
+	background: url("{tplurl}images/bookbg.png") no-repeat scroll -420px -62px transparent;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 6px;
+	margin-top:40px;
+	margin-right:10px;
+   	text-align: center;
+    width: 76px;
+	float:left;
+}
+</style>
+<div id="lm3">
+<div>
+<div style="margin:5px;float:left;"><img src="{thumb}" title="{subject}" width="120px" height="130px;" /></div>
+<div style="text-align: left;float:left;">
+	<h2 style="font-size: 18px;font-weight: bold;text-align:left;margin-top:15px;">《{subject}》评论区</h2>
+	<p style="margin-top:10px;">作者：{author}</p>
+	<ul class="book_list_li">
+		<li><a target="_blank" href="/archive.php?aid={aid}">点击阅读</a></li>
+		<li><a target="_blank" href="/archive.php?aid={aid}&addno=1">返回目录</a></li>
+		<li><a onclick="javascript:ajax_favorite('{aid}');" href="javascript:;">加入书架</a></li>
+		<li><a target="_blank" href="/adminm.php?action=favorites">进入书签</a></li>
+		<li><a href="#pinglun">评价作品</a></li>
+	</ul>
+</div>
+</div>
+<dl>
+<div class="blank3"></div>
+<dt><cite><a href="{arcurl}">&lt;&lt;返回</a>&nbsp;&nbsp;</cite><img src="{cms_abs}template/default/images/plen.png"  align="absmiddle" /><b><a href="{arcurl}">{u$subject30}</a> </b> 共有<font id="cms_comments" style="color:#F00; font-weight:bold;">0</font> 次评论&nbsp;</dt>
+<dd class="comlist">{p$comments}</dd></dl></div>
+<div class="pagenav">{mpnav}</div>
+<div id="lm3">
+<a name="pinglun"></a>
+<dl>
+<dt><cite><a href="{arcurl}">&lt;&lt;返回</a>&nbsp;&nbsp;</cite><img src="{tplurl}images/bx2.gif"  align="absmiddle" /><b>发表评论</b></dt>
+<dd class="comform">
+<form name="formcomment" method="post" action="{cms_abs}comment.php?aid={aid}">
+<input name="forward" type="hidden" value="{cms_abs}comments.php?aid={aid}" />
+<textarea name="communew[content]" id="communew[content]" tabindex="3" rows="6" cols="130" title="评论内容"></textarea>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td width="60"></td><td width="50">验证码：</td><td width="50"><input type="text" name="regcode" size="7" maxlength="4" id="regcode" tabindex="2" value="" class="input"></td><td><img src="{cms_abs}regcode.php" alt="点击更换验证码" style="vertical-align:middle;cursor:pointer;" onClick="this.src='{cms_abs}regcode.php'" /></td><td align="center"><button type="submit" name="newcommu" value="true" class="cbtn">发表评论</button></td><td width="40%"> </td></tr></table>
+</form></dd>
+</dl></div>
+</div>
+<div id="right">
+<div>
+	<div class="topList borPad" style="height:80px;overflow: hidden;">
+		<?php 
+			$zuozheInfo = zuozhe_info($mid);
+		?>
+		<div style="float:left;margin:5px;"><img src="<?php echo $zuozheInfo['photo'];?>" width="60" height="70" /></div>
+		<div style="float:left;">
+			<p>作者：{author}</p>
+			<p>作者简介：<?php echo $zuozheInfo['intro'];?></p>
+		</div>
+	</div>
+	<div class="blank10"></div>	
+	<div class="topList borPad">
+		<div class="tit02">
+			<h2>本书粉丝荣誉榜</h2>
+		</div>
+		<div class="con">
+			<ul class="top15 fsimg">
+			<?php
+				$userList = shoucang_user_list($aid);
+				foreach ($userList as $u) {
+			?>
+					<li class="li0"><a target="_blank" href="/mspace/index.php?mid=<?php echo $u['mid'];?>"><?php echo $u['nicename'];?></a></li>
+			<?php
+				}
+			?>
+			</ul>
+		</div>
+	</div>
+	<div class="blank10"></div>	
+	<div class="topList borPad">
+		<div class="tit02">
+			<h2>热点作品</h2>				
+		</div>
+		<div class="con">
+			<ul class="top15">
+				{c$zuopin_qiangtuiliebiao}
+			</ul>
+		</div>
+	</div>
+
+</div>
+</div></div>
+<div id="links"><b>友情链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+<script src="{tplurl}js/commu.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">arc_view_count('{aid}')</script>
+{tpl$footer}
+{cms_counter}

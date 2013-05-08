@@ -1,0 +1,2 @@
+<html><head><meta http-equiv="expires" content="0"><meta http-equiv="refresh" content="0;url=<?=$cms_abs?>subscribe.php?aid=<?=$aid?>"></head></html>
+<script type="text/javascript" src="<?=$cms_abs?>ajax.php?action=mark&aid=<?=$aid?>">

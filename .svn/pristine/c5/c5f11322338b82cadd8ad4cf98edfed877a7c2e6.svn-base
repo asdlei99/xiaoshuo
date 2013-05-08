@@ -1,0 +1,10 @@
+<table cellpadding="0">
+<tr>
+<form id="searchform" action="{cmsurl}search.php?sid={sid}" method="get" target="_blank">
+<td width="5%" valign="middle"><img src="{tplurl}images/ico_search.gif" /></td>
+<td width="14%" valign="middle"><b>站内搜索</b></td>
+<td width="66%" id="seach_y"><input name="searchword" value="推荐热门小说" type="text" style="width:260px" maxlength="18" onclick="this.value=''" /></td>
+<td width="15%"><input type="hidden" name="searchsubmit" value="1"><input src="{tplurl}images/b_s.gif"  type="image" width="52" height="21" id="Image12" /></td>
+</form>
+</tr>
+</table>

@@ -1,0 +1,150 @@
+{tpl$header}
+<div class="h3"><em><a href="{rss}" ><img src="{tplurl}images/rss.gif" /></a></em>
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a> {c$nav}</div>
+</div>
+</div>
+
+<div id="main">
+<div id="left">
+<div class="divbox">
+<div class="left">
+
+<script type="text/javascript" src="{tplurl}js/picBox.js" ></script>
+<div id="flash_show">
+<div class="flash_pic"><table cellpadding="0" cellspacing="0" border="0">
+<tr><td align="center" valign="middle" id="flash_img" width="200" height="259"></td></tr></table></div>
+<div class="flash_set"><ul id="flash_btn">{c$list_js_lunhuan}</ul>
+<div class="navli"><a id=img_prev_btn onClick="showPrevImage();return false;" href="javascript:void();" target=_self><img height=12 alt="上一页" src="{tplurl}images/flash_back.gif" width=11 border=0></a>&nbsp;<a id=img_next_btn onClick="showNextImage();return false;" href="javascript:void();" target=_self><img height=12 alt="下一页" src="{tplurl}images/flash_next.gif" width=11 border=0></a></div>
+</div>
+
+<div id="flash_show_ctl_msg" align="center">
+<h3><a id="flash_title" href="javascript:void();"></a></h3>
+<p id="flash_abs"></p></div>
+<script type="text/javascript">
+var fImgs=$("flash_btn").getElementsByTagName("a");
+var fImgsrc=$("flash_btn").getElementsByTagName("img");
+imagePlay();
+
+function change_bg(d){
+    d.style.background = "url('{tplurl}images/indexbg.png')";
+    d.onmouseout = function(){d.style.background = "";}
+}
+</script>
+
+</div>
+
+
+<div id="lm1">
+<dl>
+<dt><img src="{tplurl}images/ggao.gif" align="absmiddle" />网站公告</dt>
+<dd><div class="li_ggao">{c$webnotice}</div></dd>
+</dl>
+</div>
+
+</div>
+<div class="right">
+<div class="search" id="searchbox">{tpl$search}</div>
+
+<div class="k_xx">
+<div class="marquee">{c$newnotics}</div>
+<div class="txt">最新消息</div></div><div class="k_xxbg"></div>
+
+<div id="txtbox" class="k1">
+<h1>{c$index_top_tuijie}</h1>
+<h2>{c$index_tujie}</h2>
+
+{c$index_tuwen}
+
+<div class="txtbox_b">
+[<font style="color:red;">文学</font>]{c$index_wenxue}<BR>
+[<font style="color:red;">VIP</font>]{c$index_vip_tuijie}<BR>
+</div>
+</div>
+</div></div>
+<div class="blank3"></div>
+<div id="lm3"><dl>
+<dt><img src="{tplurl}images/ico_hsg.gif"  align="absmiddle" /><b>最新小说推荐</b></dt>
+<dd>
+<table cellpadding="0" cellspacing="10"><tr><td width="262">
+
+{c$index_img_xianshuo}
+
+</td>
+<td valign="top">
+
+<div class="newtxt"><ul>{c$newindex_title}</ul></div>
+
+</td></tr></table></dd></dl></div>
+
+{c$index_ad_690}
+
+<div id="divboxc">{c$index_relist}</div>
+
+{c$index_ad_b_690}
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新小说更新列表</b><span class="rright"><a href="{c$fenmianurl}">更多&gt;&gt;</a></span></dt>
+<dd>
+<div id="txttd4"><div class="txttb4 txtbg1"><ul>
+{c$index_newlist}
+</ul></div>
+</div></dd>
+</dl></div>
+</div>
+
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新散文/杂文/短篇小说更新列表</b> <span class="rright"><a href="{c$wendangengxing}">更多&gt;&gt;</a></span></dt>
+<dd>
+<div id="txttd4"><div class="txttb5 txtbg1"><ul>{c$index_newlist2}</ul></div>
+</div></dd>
+</dl></div>
+</div>
+
+</div>
+
+<div id="right">
+
+<div id="login">
+<div class="lm_login"><img src="{tplurl}images/ico_login.gif"  align="absmiddle" />会员管理中心</div>
+<div class="login"><script language="javascript"  src="{$cms_abs}login.php?mode=js&sid={sid}"></script></div>
+</div>
+
+<div class="ad m_b8"><div id="li_ad">{c$txt_ad}</div></div>
+<div id="lm2"><dl>
+<dt><img src="{tplurl}images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd>{c$index_readmin}</dd></dl></div>
+{c$index_ad_250_t}
+
+<div id="lm2"><dl><dt><img src="{tplurl}images/ico_bq.gif"  align="absmiddle" />热门标签</dt>
+<dd><div class="li_title">{c$keywords}</div></dd></dl></div>
+
+
+{c$index_ad_250_b}
+
+
+<div id="lm2"><dl><dt>VIP热门<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt><dd><ul>{c$hotindex_mtitle}</ul></dd></dl></div>
+
+
+<div id="lm2"><dl><dt><img src="{tplurl}images/ico_ph.gif"  align="absmiddle" />风云榜<span></span></dt>
+<dd style="padding:0px">
+<div id="TabMenu"><ul>
+<li class="tab_on" onmouseover="changeTab(0)"><a href="{c$pai_index}">点击榜</a></li>
+<li class="div"></li>
+<li class="tab_off" onmouseover="changeTab(1)"><a href="{c$pai_index}">收藏榜</a></li>
+<li class="div"></li>
+<li class="tab_off" onmouseover="changeTab(2)"><a href="{c$pai_index}">评论榜</a></li>
+</ul></div>
+<div id="txt_tab" class="ttxt_tab">
+<div><ul>{c$index_hit}</ul></div>
+<div style="display:none;"><ul>{c$index_fav}</ul></div>
+<div style="display:none"><ul>{c$index_bra}</ul></div>
+</div>
+</dd></dl></div>
+{c$index_reother}
+{c$vote_one}
+<div class="blank9"></div>
+</div>
+</div>
+<div id="links"><b>合作链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

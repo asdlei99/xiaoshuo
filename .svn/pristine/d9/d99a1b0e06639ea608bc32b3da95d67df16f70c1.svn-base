@@ -1,0 +1,15 @@
+<?php $_vote_one=_ctag_parse(array("ename" => "vote_one","tclass" => "votes","limits" => "1","vids" => "1",));foreach($_vote_one as $v){_aenter($v);?>
+<div class="fujia">
+    <div class="vote2">
+        <div class="title01"><img src="<?=$tplurl?>images/ggao.gif"  align="absmiddle" /> 调查投票</div>
+        <div class="title02"><?=$v['content']?></div>
+        <form name="vote<?=$v['vid']?>" method="post" action="<?=$cms_abs?>vote.php?action=vote&vid=<?=$v['vid']?>">
+        <ul><?php $_vote_detail=_ctag_parse(array("ename" => "vote_detail","tclass" => "vote","limits" => "10",));foreach($_vote_detail as $v){_aenter($v);?>
+<li><span class="li_vote"><?=$v['input']?><?=$v['title']?> [票数：<?=$v['votenum']?>] <?=$v['percent']?></span><div class="vote_scale"><div class="vote_bar" style="width:<?=$v['percent']?>"></div></div></li><?php _aquit();} unset($_vote_detail,$v);?>
+</ul>
+        <div class="button1">    <input class="button" type="submit" name="submit" value="投票">
+        <div class="blank9"></div>
+        </div>        
+        </form>
+    </div>
+</div><?php _aquit();} unset($_vote_one,$v);?>

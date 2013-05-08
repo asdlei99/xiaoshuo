@@ -141,18 +141,25 @@ function mtrspecial($trname,$varname,$value = '',$type = 'htmltext',$mode=0,$gui
 	$alert = "<div id=\"alert_$varname\" name=\"alert_$varname\" class=\"red\"></div>";
 	$trname = '<b>'.$trname.'</b>';
 	if($type == 'htmltext'){
-		echo !$mode ? "<tr><td colspan=\"2\" class=\"item1 item4\">$trname&nbsp;$alert$guide</td></tr><tr><td colspan=\"2\" class=\"item2\">\n" : "<tr><td width=\"$width\" class=\"item1 item4\">$trname&nbsp;$alert<br />$guide</td><td class=\"item2\">\n";
-//		include_once M_ROOT.'./include/fckeditor/fckeditor.php';
-//		$sBasePath = $cmsurl.'include/fckeditor/';
-//		$oFCKeditor = new FCKeditor($varname);
-//		$oFCKeditor->BasePath	= $sBasePath;
-//		$oFCKeditor->Height		= !$mode ? '500' : '280';
-//		$oFCKeditor->Value		= tag2atm($value,1);
-//		$oFCKeditor->ToolbarSet	= !$mode ? 'Default' : 'Basic';
-//		$oFCKeditor->Create();
-		echo "<textarea cols=\"80\" id=\"$varname\" name=\"$varname\" rows=\"10\">" . htmlspecialchars(tag2atm($value, 1)) . '</textarea>'.
-			"<script type=\"text/javascript\">CKEDITOR.replace('$varname',{" . ($mode ? "toolbar : 'simple'" : 'height : 500') . '});</script>';
-		echo "</td></tr>\n";
+		if ($mode == 2) {
+			echo "<tr><td width=\"$width\" class=\"item1 item4\">$trname&nbsp;$alert<br />$guide</td><td class=\"item2\">\n";
+			echo "<textarea cols=\"80\" id=\"$varname\" name=\"$varname\" rows=\"20\">" . htmlspecialchars(tag2atm($value, 1)) . '</textarea>';
+			echo "</td></tr>\n";
+		} else {
+			echo !$mode ? "<tr><td colspan=\"2\" class=\"item1 item4\">$trname&nbsp;$alert$guide</td></tr><tr><td colspan=\"2\" class=\"item2\">\n" : "<tr><td width=\"$width\" class=\"item1 item4\">$trname&nbsp;$alert<br />$guide</td><td class=\"item2\">\n";
+	//		include_once M_ROOT.'./include/fckeditor/fckeditor.php';
+	//		$sBasePath = $cmsurl.'include/fckeditor/';
+	//		$oFCKeditor = new FCKeditor($varname);
+	//		$oFCKeditor->BasePath	= $sBasePath;
+	//		$oFCKeditor->Height		= !$mode ? '500' : '280';
+	//		$oFCKeditor->Value		= tag2atm($value,1);
+	//		$oFCKeditor->ToolbarSet	= !$mode ? 'Default' : 'Basic';
+	//		$oFCKeditor->Create();
+			echo "<textarea cols=\"80\" id=\"$varname\" name=\"$varname\" rows=\"10\">" . htmlspecialchars(tag2atm($value, 1)) . '</textarea>'.
+				"<script type=\"text/javascript\">CKEDITOR.replace('$varname',{" . ($mode ? "toolbar : 'simple'" : 'height : 500') . '});</script>';
+			echo "</td></tr>\n";
+		}
+		
 	}elseif(in_array($type,array('images','files','medias','flashs'))){
 		$type = substr($type,0,strlen($type)-1);
 		echo "<tr><td width=\"$width\" class=\"item1\">$trname</td>\n";

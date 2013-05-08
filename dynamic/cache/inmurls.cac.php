@@ -3,7 +3,7 @@ $inmurls_0 = array (
   1 => 
   array (
     'imuid' => '1',
-    'cname' => '编辑',
+    'cname' => '作品信息',
     'remark' => '编辑编辑编辑',
     'uclass' => 'adetail',
     'issys' => '1',
@@ -39,7 +39,7 @@ $inmurls_0 = array (
   5 => 
   array (
     'imuid' => '5',
-    'cname' => '添加',
+    'cname' => '上传章节',
     'remark' => '合辑内添加新文档',
     'uclass' => 'inadd',
     'issys' => '1',
@@ -66,7 +66,7 @@ $inmurls_0 = array (
   101 => 
   array (
     'imuid' => '101',
-    'cname' => '内容',
+    'cname' => '编辑章节',
     'remark' => '小说链接内容管理',
     'uclass' => 'content',
     'issys' => '0',
@@ -75,7 +75,7 @@ $inmurls_0 = array (
   103 => 
   array (
     'imuid' => '103',
-    'cname' => '分卷',
+    'cname' => '分卷管理',
     'remark' => '分卷管理',
     'uclass' => 'custom',
     'issys' => '0',

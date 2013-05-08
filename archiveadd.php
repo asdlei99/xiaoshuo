@@ -209,7 +209,8 @@ if(empty($channel['ucadd'])){
 		unset($a_field);
 		
 		//TODO 验证小说名是否有重复
-		$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}$table WHERE subject='".$archivead['subject']."' AND chid='4' LIMIT 0,1");
+		$sql = "SELECT COUNT(*) AS c FROM {$tblprefix}archives WHERE subject='".$archiveadd['subject']."' AND chid='4' LIMIT 0,1";
+		$output = $db->fetch_one($sql);
 		$output = $output['c'];
 		if (!empty($output)) {
 			mcmessage('小说名称有重复，请修改!',axaction(2,M_REFERER));

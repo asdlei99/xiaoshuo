@@ -1,7 +1,7 @@
 <?php
 $inmurl103_0 = array (
   'imuid' => '103',
-  'cname' => '分卷',
+  'cname' => '分卷管理',
   'remark' => '分卷管理',
   'uclass' => 'custom',
   'issys' => '0',

@@ -1,0 +1,25 @@
+<?php
+$mnlangss_0 = array (
+  'menutype_2' => '内容管理',
+  'menuitem_2' => '内容管理',
+  'menutype_20' => '架构管理',
+  'menuitem_67' => '栏目管理',
+  'menuitem_68' => '类系管理',
+  'menuitem_66' => '文档模型',
+  'menutype_21' => '模版标识',
+  'menuitem_113' => '模板设置',
+  'menuitem_114' => 'CSS与JS管理',
+  'menuitem_121' => '常用标识',
+  'menuitem_115' => '原始标识',
+  'menuitem_116' => '特殊标识',
+  'menuitem_117' => '复合标识',
+  'menuitem_118' => '分页标识',
+  'menuitem_119' => '区块标识',
+  'menutype_23' => '其他管理',
+  'menuitem_108' => '静态页面',
+  'menuitem_109' => '站点设置',
+  'menuitem_110' => '商品记录',
+  'menuitem_111' => '采集管理',
+  'menuitem_112' => '重建缓存',
+) ;
+?>

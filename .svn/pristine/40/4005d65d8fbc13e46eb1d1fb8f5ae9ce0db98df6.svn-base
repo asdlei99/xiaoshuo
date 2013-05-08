@@ -1,0 +1,368 @@
+	                {tpl$header}
+<script type="text/javascript">var CMS_ABS='{$cms_abs}',IXDIR = '{tplurl}css/', charset = 'gbk',allowfloatwin = '1',floatwidth='400',floatheight='400'</script>
+<script type="text/javascript" src="{$cms_abs}include/js/langs.js"></script>
+<script type="text/javascript" src="{$cms_abs}include/js/common.js"></script>
+<script type="text/javascript" src="{$cms_abs}include/js/floatwin.js"></script>
+<script type="text/javascript">
+function chabg(d){
+    d.style.background = "url('{tplurl}images/xqbg.gif')";
+    d.onmouseout = function(){d.style.background = "";}
+}
+</script>
+<div id="append_parent"></div>
+
+
+</div>
+<div class="blank10"></div>
+
+<div id="main">
+
+<div class="area690" style="position:relative;">
+	<div class="bookBox border" style="position:relative;">
+		<div class="bookBox_l">
+			<div class="img book-prop-gz" id="printMarkImg">
+				<span id="printMarkBox"></span>
+				<div id="printMarkBox_Title"></div>
+				<a href="{arcurl}" target="_blank"><img src="<?php echo !empty($thumb) ? $thumb : $tplurl.'images/mr_face.gif';?>" alt="{subject}"></a>
+			</div>
+			<div class="voteBtnList">
+				<ul>
+					<li class="s" title="鲜花" id="cms_praises" onClick="ajax_praise('{aid}');">{praises}</li>
+					<li class="p" title="凹票数" id="cms_debases" onClick="ajax_debase('{aid}');">{debases}</li>
+					<!-- 
+					<li class="t" title="贵宾" id="postVipVote" onClick="_.book.vipVote(this.id);">11289</li>
+					<li class="g" title="盖章" id="postPrintMark" onClick="_.book.printMark('printMarkBox','postPrintMark');">637</li>
+					 -->
+				</ul>
+				<a href="#pinglun" style="font-size: 18px;position: absolute;bottom: 5px;left:25px;">评价作品</a>
+			</div>
+		</div>
+		
+		<div class="bookBox_r">
+		<h1 class="c10" style="text-align:left;font-size: 24px;margin-bottom: 5px;"><a target="_blank" href="{arcurl}" title="">{subject}&nbsp;&nbsp;{subtitle}</a></h1>
+			<span> 作者：{author}</span>
+			<div class="bookCon">
+				<script type="text/javascript">
+					$(function(){
+						var b_tab = $('.b_tab > ul > li');
+						var b_content = $('.b_content > .c6');
+						b_tab.click(function(){
+							var ind = $(this).index();
+							$(this).addClass('btn_a').removeClass('btn_b').siblings().addClass('btn_b').removeClass('btn_a');
+							b_content.eq(ind).show().siblings().hide();
+						});
+					});
+				</script>
+				<div class="b_tab">
+					<ul>
+						<li class="btn_a" id="tab91_btn0">内容介绍</li>
+						<li class="btn_b" id="tab91_btn1">作品信息</li>
+					</ul>
+					<span class="time">更新： {u$updatedate_all}</span>
+				</div>
+				<div class="b_content" style="height:170px;">
+						<div class="c6" id="tab91_div0">
+							<p>{content}</p>
+							</div>
+						<div class="c6" id="tab91_div1" style="display:none;">
+							<ul>
+								<li>类别：{catalog}</li>
+								<li>&nbsp;</li>
+								<li>总收藏次数：{favorites}</li>
+								<li>本周被阅读数：{wclicks}</li>
+								<li>收到鲜花数：{praises}</li>
+								<li>本月被阅读数：{mclicks}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<div class="bookZt">
+				<div class="bookZt_god">
+					<div id="userRecommend" style="padding:0 0 0 5px; width:365px; height:25px; line-height:25px; overflow:hidden;">本站郑重提醒：本故事纯属虚构，如有雷同，纯属巧合，切勿模仿。</div>
+				</div>
+				<p>
+					<b>总点击:</b><em id="ccms_clicks">0</em><br>
+					<b>总字数:</b><em><?php echo xiaoshuo_zongzishu($aid);?></em><br>
+					<b>标签:</b> {keywords}&nbsp;&nbsp;
+
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="book_btn_new">
+			<ul>
+				<li><a href="{arcurl1}" target="_blank">点击阅读</a></li>
+				<!-- baidu_tc end -->
+				<li><a href="javascript:;" onClick="javascript:ajax_favorite('{aid}');">加入书架</a></li>
+				<li><a href="/adminm.php?action=favorites" target="_blank">进入书签</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="blank10"></div>
+	
+	<div class="borPad">
+		<div class="tit01"><h2>最新章节阅读</h2></div>
+		<div class="comment">
+<?php
+$sql = "SELECT arch1.*,arch2.`subject`
+	FROM xs_archives_1 as arch1,
+	(select a5.* from xs_archives as a5, (select a1.aid from xs_albums as a1 LEFT JOIN xs_archives_1 as a2 ON a2.aid=a1.aid WHERE a1.pid='".$aid."') as a4 WHERE a5.aid=a4.aid  ORDER BY a5.createdate DESC LIMIT 1) as arch2
+	where arch1.aid = arch2.aid";
+$wz = $db->fetch_one($sql);
+if (!empty($wz)) {
+	$wz_title = $wz['subject'];
+	$wz_aid = $wz['aid'];
+	include(M_ROOT.'./dynamic/htmltxt/'.$wz['content'].'.php');
+	$content = mb_substr(strip_tags($caccnt), 0, 200, 'gb2312');
+} else {
+	$newContent = $content;
+}
+?>
+			<div class="account">
+			<?php
+				if (isset($wz_title)) {
+					echo '<h2 style="text-align:left;"><a href="/archive.php?aid='.$wz_aid.'">'.$wz_title.'</a></h2>';
+				}
+			?>
+			{content}......
+			</div>
+			<ul class="zxzj_list">
+				{c$news_zhang_list}
+			</ul>
+		</div>
+	</div>
+	
+	<div class="blank10"></div>
+	
+	<div class="borPad">
+		<div id="lm3">
+			<dl>
+				<dt style="text-align:center;"><img src="{tplurl}images/plen.png"  align="absmiddle" /> {subject} 小说已有评论<font id="cms_comments" style="color:#F00; font-weight:bold;">0</font> 次 <a href="{cms_abs}comments.php?aid={aid}">查看所有评论&gt;&gt;</a></dt>
+				<dd><ul class="comcon">{c$pinglunlist}</ul></dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="blank10"></div>
+	<a name="pinglun"></a>
+	<div class="borPad">
+		<div class="tit01"><h2>发表评论</h2></div>
+		<div class="comment">
+			<form name="formcomment" method="post" action="{cms_abs}comment.php?aid={aid}">
+<input name="forward" type="hidden" value="{cms_abs}comments.php?aid={aid}" />
+<textarea name="communew[content]" id="communew[content]" tabindex="3" rows="6" cols="130" title="评论内容"></textarea>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td width="60"></td><td width="50">验证码：</td><td width="50"><input type="text" name="regcode" size="7" maxlength="4" id="regcode" tabindex="2" value="" class="input"></td><td><img src="{cms_abs}regcode.php" alt="点击更换验证码" style="vertical-align:middle;cursor:pointer;" onClick="this.src='{cms_abs}regcode.php'" /></td><td align="center"><button type="submit" name="newcommu" value="true" class="cbtn">发表评论</button></td><td width="40%"> </td></tr></table>
+</form>
+		</div>
+	</div>
+</div>
+
+<div class="area250">
+		<div class="zzgg borPad">
+			<div class="tit01">
+				<h2>作者公告</h2>
+			</div>
+			<div class="con">
+				<p><?php echo zuozhe_gonggao($aid);?></p>
+			</div>
+		</div>
+		<div class="blank10"></div>
+		<div class="tkzpj borPad">
+			<div class="tit01">
+				<h2>该作者其他作品</h2>
+			</div>
+			<div class="con">
+				<ul>
+				<?php
+					$otherArr = xiaoshuo_author_list($author);
+					foreach ($otherArr as $o) {
+				?>
+				<li><span style="width:70px;">[<a href="/list.php?caid=<?php echo $o['caid'];?>" target="_blank"><?php echo $o['title'];?></a>]</span>
+							<a target="_blank" href="/archive.php?aid=<?php echo $o['aid'];?>"><?php echo $o['subject'];?></a>
+						</li>
+				<?php
+					}
+				?>
+				</ul>
+			</div>
+		</div>
+		<div class="blank10"></div>
+		<div class="topList borPad">
+			<div class="tit02">
+				<h2><a href="/book/voteRank.action?bookId=317856&amp;type=fans" target="_blank">本书粉丝荣誉榜</a></h2>
+			</div>
+			<div class="con">
+				<ul class="top15 fsimg">
+					<?php
+						$userList = shoucang_user_list($aid);
+						foreach ($userList as $u) {
+					?>
+					<li class="li0"><a target="_blank" href="/mspace/index.php?mid=<?php echo $u['mid'];?>"><?php echo $u['nicename'];?></a></li>
+					<?php
+						}
+					?>
+				</ul>
+			</div>
+		</div>
+		<div class="blank10"></div>
+		<div class="topList borPad">
+			<div class="tit02">
+				<h2>强推</h2>				
+			</div>
+			<div class="con">
+				<ul class="top15">
+					{c$zuopin_qiangtuiliebiao}
+				</ul>
+			</div>
+		</div>
+		<div class="blank10"></div>
+		<div class="topList borPad">
+			<div class="tit02">
+				<h2>热点作品</h2>				
+			</div>
+			<div class="con">
+				<ul class="top15">
+					{c$zuopin_redianzuopin}
+				</ul>
+			</div>
+		</div>
+		<div class="blank10"></div>
+		<div class="borPad correlative">
+			<div class="tit01">
+				<h2>喜欢本书的人还喜欢</h2>
+			</div>
+			<div class="con" id="netizenAttention">
+				<ul stat_flag="st_book_gz:关注榜">
+	      				{c$zuopin_xiangguangxiaoshuo}
+	      		</ul>
+	      		<div style="clear: both;"></div>
+			</div>
+		</div>
+</div>
+
+<!--<div id="left" class="left">
+<div class="divbox m_b8">
+<div class="txtbox k1">
+<h1>{subject}&nbsp;&nbsp;{subtitle}</h1>
+<h2>发布: {u$createdate_all} | 作者: {author} | 查看: <font id="cms_clicks">0</font>次  |  <a href="{$cms_abs}/adminm.php?action=favorites" class="cRed">打开书架</a></h2>
+<div class="account">{content}</div>
+<div class="shuping">
+<a class="read" href="{arcurl1}">点击阅读</a>
+<a href="javascript:ajax_praise('{aid}');">我顶(<font id="cms_praises">0</font>)</a>
+<a href="javascript:ajax_debase('{aid}');">我踩(<font id="cms_debases">0</font>)</a>
+<a href="javascript:ajax_favorite('{aid}');">收藏(<font id="cms_favorites">0</font>)</a>
+<a href="{cms_abs}report.php?aid={aid}" onClick="return floatwin('open_report',this,800,300)">举报<font>&nbsp;</font></a>
+</div>
+
+<div class="xiqingbox">
+    <div class="xinqing">
+        <ul onClick="ajaxUscore('{aid}','1','cms_score_1')" onMouseOver="chabg(this)" class="c1">
+            <li class="t">怒</li>
+            <li class="b"><font id="cms_score_1">0</font></li>
+        </ul>
+        <ul onClick="ajaxUscore('{aid}','2','cms_score_2')" onMouseOver="chabg(this)" class="c2">
+            <li class="t">囧</li>
+            <li class="b"><font id="cms_score_2">0</font></li>
+        </ul>
+        <ul onClick="ajaxUscore('{aid}','3','cms_score_3')" onMouseOver="chabg(this)" class="c3">
+            <li class="t">汗</li>
+            <li class="b"><font id="cms_score_3">0</font></li>
+        </ul>
+        <ul onClick="ajaxUscore('{aid}','4','cms_score_4')" onMouseOver="chabg(this)" class="c4">
+            <li class="t">笑</li>
+            <li class="b"><font id="cms_score_4">0</font></li>
+        </ul>
+        <ul onClick="ajaxUscore('{aid}','5','cms_score_5')" onMouseOver="chabg(this)" class="c5">
+            <li class="t">期待{avgscore}</li>
+            <li class="b"><font id="cms_score_5">0</font></li>
+        </ul>
+    </div>
+</div>
+<div class="aboutthis">
+    <h1>本书相关</h1>
+    <ul>
+        <li><strong>总点击：</strong><font id="ccms_clicks">0</font></li><li><strong>总收藏：</strong><font id="ccms_favorites">0</font></li><li><strong>总推介：</strong><font id="ccms_praises">0</font></li>
+        <li><strong>本月点击：</strong><font id="ccms_mclicks">0</font></li><li><strong>本月收藏：</strong><font id="ccms_mfavorites">0</font></li><li><strong>本月推介：</strong><font id="ccms_mpraises">0</font></li>
+        <li><strong>本周点击：</strong><font id="ccms_wclicks">0</font></li><li><strong>本周收藏：</strong><font id="ccms_wfavorites">0</font></li><li><strong>本周推介：</strong><font id="ccms_wpraises">0</font></li>
+    </ul>
+</div>
+<div class="pagenav"><span>{c$next_caid}</span>{c$pre_caid}</div>
+</div>
+</div>
+
+
+
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新章节</b></dt>
+<dd>
+<div class="pagelist"><dl>{c$news_zhang_list}</dl></div>
+</dd>
+</dl></div>
+</div>
+<div id="lm3">
+<dl>
+<dt style="text-align:center;"><img src="{tplurl}images/plen.png"  align="absmiddle" /> {subject} 小说已有评论<font id="cms_comments" style="color:#F00; font-weight:bold;">0</font> 次 <a href="{cms_abs}comments.php?aid={aid}">查看所有评论&gt;&gt;</a></dt>
+<dd><ul class="comcon">{c$pinglunlist}</ul></dd></dl></div>
+<div id="lm3"><dl>
+<dt><img src="{cms_abs}template/default/images/bx2.gif"  align="absmiddle" /><b>发表评论</b><span><a href="{cms_abs}comments.php?aid={aid}">更多&gt;&gt;</a></span></dt>
+<dd class="comform">
+<form name="formcomment" method="post" action="{cms_abs}comment.php?aid={aid}">
+<input name="forward" type="hidden" value="{cms_abs}comments.php?aid={aid}" />
+<textarea name="communew[content]" id="communew[content]" tabindex="3" rows="6" cols="130" title="评论内容"></textarea>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td width="60"></td><td width="50">验证码：</td><td width="50"><input type="text" name="regcode" size="7" maxlength="4" id="regcode" tabindex="2" value="" class="input"></td><td><img src="{cms_abs}regcode.php" alt="点击更换验证码" style="vertical-align:middle;cursor:pointer;" onClick="this.src='{cms_abs}regcode.php'" /></td><td align="center"><button type="submit" name="newcommu" value="true" class="cbtn">发表评论</button></td><td width="40%"> </td></tr></table>
+</form></dd>
+</dl></div>
+</div>-->
+
+<!--<div id="right" class="right">
+<div class="picBox m_b8">{u$thumb_240_316}</div>
+<div class="search m_b8" id="searchbox">{tpl$s_box}</div>
+{c$lian_ad_250_t}
+<div style="float:none;"></div>
+<div id="lm2"><dl>
+<dt><img src="{tplurl}images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd>{c$index_readmin}</dd></dl></div>
+
+
+<div id="lm2"><dl><dt>VIP热门</dt><dd><ul>{c$hotindex_mtitle}</ul></dd></dl></div>
+
+
+</div>-->
+
+</div>
+
+<div id="links"><b>友情链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+<script type="text/javascript">
+function set_stat(s){
+    var k, o;
+    s = s['{aid}'];
+    if(!s)return;
+    for(k in s){
+        o = $id('cms_' + k);
+        if(o)o.innerHTML = s[k];
+        o = $id('ccms_' + k);
+        if(o)o.innerHTML = s[k];
+    }
+}
+function set_score(s){
+    var k, o;
+    s = s['{aid}'];
+    if(!s)return;
+    for(k in s){
+        o = $id('cms_' + k);
+        if(o)o.innerHTML = s[k];
+    }
+}
+
+ajax_get_stat('{aid}', set_stat);
+ajax_get_stat.aids = [];
+ajax_get_stat.data = {};
+ajax_get_score('{aid}', set_score);
+
+</script>
+{tpl$footer}
+{cms_counter}
+<script type="text/javascript" src="{$cms_abs}ajax.php?action=mark&aid={$aid}">

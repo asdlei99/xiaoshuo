@@ -1,0 +1,88 @@
+{tpl$header}
+<div class="blank9"></div>
+
+<div id="main">
+<script type="text/javascript" src="{tplurl}js/search.js"></script>
+<style type="text/css">
+.s_list{}
+.s_list h3{border-bottom:#f0f0f0 3px solid;font-size:13px;height:23px;line-height:23px;}
+.s_list ul{}
+.s_list li{height:200%;line-height:200%;}
+.s_list li cite{float:right;font-style:normal;}
+.s_list li .font14{font-weight:normal;}
+</style>
+<div id="left" class="left s_list">
+<h3><img src="{tplurl}images/ico_search.gif"  align="absmiddle" />搜索结果</h3>
+<ul>{p$search_list}</ul>
+<div class="s_pagenav">{mpnav}</div>
+</div>
+<div id="right" class="right">
+<div id="lm2"><dl>
+<dt>搜索</dt>
+<dd class="form_box">
+<table width="100%" border="0" cellpadding="0" cellspacing="1">
+<form name="searchform" id="searchform" method="get" action="{cms_abs}search.php?chid={chid}&sid={sid}">
+<tr><td align="center">搜索方式:</td>
+<td>
+<input type="radio" style="border:0" name="searchmode" id="sid_searchmode_subject" value="subject" checked="checked" />标题
+<input type="radio" style="border:0" name="searchmode" id="sid_searchmode_keywords" value="keywords" />关键词
+<input type="radio" style="border:0" name="searchmode" id="sid_searchmode_mname" value="mname" />会员
+</td></tr>
+<tr><td align="center">关&nbsp;键&nbsp;词:</td>
+<td>
+<input type="text" size="20" name="searchword" value="{searchword}" onmouseover="input_over(this)" onmouseout="input_out(this)">
+</td></tr>
+
+<tr><td align="center">所属栏目:</td>
+<td><select name="caid" id="sid_caid"><option value="0" selected>全部栏目</option>
+{c$searchlist}
+</select></td></tr>
+<tr><td align="center">内容类型:</td>
+<td>
+<select name="chid" id="sid_chid"><option value="0" selected>不限</option>
+{c$searchmode}
+</select>
+</td></tr>
+
+<tr><td align="center">区域管理:</td><td>
+<select name="ccid4" id="sid_ccid4"><option value="0" selected>不限</option>
+{c$searchlist_area}
+</select></td></tr>
+
+
+<tr><td align="center">时间:</td>
+<td>
+<select name="indays" id="sid_indays">
+<option value="0">不限</option>
+<option value="7">一周内</option>
+<option value="30">一个月内</option>
+<option value="90">三个月内</option>
+<option value="180">半年内</option>
+<option value="360">一年内</option>
+</select>
+</td></tr>
+
+<tr><td align="center">排序:</td>
+<td>
+<select name="orderby" id="sid_orderby">
+<option value="createdate" selected>添加时间</option>
+<option value="clicks">点击数</option>
+<option value="comments">评论数</option>
+</select><label for="ordermode" onclick="ch_change()"><input class="checkbox" type="checkbox" id="ordermode" name="ordermode" value="1" style="border:0px">升序</label></td></tr>
+<tr><td colspan="2" align="center" valign="middle" height="40"><input type="hidden" name="searchsubmit" value="1"><input src="{tplurl}images/b_s.gif"  type="image" style="width:52;height:21px;" /></td></tr>
+</form>
+</table>
+</dd></dl></div>
+</div></div>
+<div class="blank9"></div>
+<script type="text/javascript">
+document.getElementById('sid_searchmode_{searchmode}').checked=true;
+sh_select('sid_ccid4','{ccid4}');
+sh_select('sid_caid','{caid}');
+sh_select('sid_indays','{indays}');
+sh_select('sid_chid','{chid}');
+sh_select('sid_orderby','{orderby}');
+sh_checkbox('ordermode','{ordermode}');
+</script>
+<div id="links"><b>合作链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

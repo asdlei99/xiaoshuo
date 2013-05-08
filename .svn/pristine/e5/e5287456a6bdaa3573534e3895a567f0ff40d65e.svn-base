@@ -1,0 +1,16 @@
+<?php
+$ctagindex_relist_0 = array (
+  'cname' => '首页连载列表',
+  'ename' => 'index_relist',
+  'tclass' => 'catalogs',
+  'template' => '未做完。。。待续',
+  'setting' => 
+  array (
+    'nsid' => '-1',
+    'listby' => 'ca',
+    'casource' => '1',
+    'caids' => '2,4,5,6,7,3',
+  ),
+  'disabled' => 0,
+) ;
+?>

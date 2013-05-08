@@ -159,11 +159,18 @@ function trspecial($trname,$varname,$value = '',$type = 'htmltext',$mode=0,$guid
 	$addstr = "<div id=\"alert_$varname\" name=\"alert_$varname\" class=\"mistake0\"></div>";
 	if($guide) $addstr .= "<div class=\"tips1\">$guide</div>";
 	if($type == 'htmltext'){
-		echo !$mode ? "<tr><td colspan=\"2\" class=\"txt txtleft fB\">".$trname.$addstr."</td></tr><tr><td colspan=\"2\" class=\"txt txtleft\">\n" : "<tr><td width=\"$width\" class=\"txt txtright fB borderright\">".$trname."</td><td class=\" class=\"txt txtleft\">\n";
-		echo "<textarea cols=\"80\" id=\"$varname\" name=\"$varname\" rows=\"10\">" . htmlspecialchars(tag2atm($value, 1)) . '</textarea>'.
-			"<script type=\"text/javascript\">CKEDITOR.replace('$varname',{" . ($mode ? "toolbar : 'simple'" : 'height : 500') . '});</script>';
-		if($mode) echo $addstr;
-		echo "</td></tr>\n";
+		if ($mode == 2) {
+			echo !$mode ? "<tr><td colspan=\"2\" class=\"txt txtleft fB\">".$trname.$addstr."</td></tr><tr><td colspan=\"2\" class=\"txt txtleft\">\n" : "<tr><td width=\"$width\" class=\"txt txtright fB borderright\">".$trname."</td><td class=\" class=\"txt txtleft\">\n";
+			echo "<textarea cols=\"80\" id=\"$varname\" name=\"$varname\" rows=\"20\">" . htmlspecialchars(tag2atm($value, 1)) . '</textarea>';
+			if($mode) echo $addstr;
+			echo "</td></tr>\n";
+		} else {
+			echo !$mode ? "<tr><td colspan=\"2\" class=\"txt txtleft fB\">".$trname.$addstr."</td></tr><tr><td colspan=\"2\" class=\"txt txtleft\">\n" : "<tr><td width=\"$width\" class=\"txt txtright fB borderright\">".$trname."</td><td class=\" class=\"txt txtleft\">\n";
+			echo "<textarea cols=\"80\" id=\"$varname\" name=\"$varname\" rows=\"10\">" . htmlspecialchars(tag2atm($value, 1)) . '</textarea>'.
+				"<script type=\"text/javascript\">CKEDITOR.replace('$varname',{" . ($mode ? "toolbar : 'simple'" : 'height : 500') . '});</script>';
+			if($mode) echo $addstr;
+			echo "</td></tr>\n";
+		}
 	}elseif(in_array($type,array('images','files','medias','flashs'))){
 		$type = substr($type,0,strlen($type)-1);
 		echo "<tr><td width=\"$width\" class=\"txt txtright fB borderright\">".$trname."</td>\n";

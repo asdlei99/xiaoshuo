@@ -1,0 +1,63 @@
+{tpl$header}
+
+<style type="text/css">
+.remen_xu{}
+.remen_xu li {width: 268px;height: 26px;line-height: 26px;font-size: 12px;position: relative;background: url({tplurl}images/girltitbgall.png) no-repeat;display: list-item;text-align: -webkit-match-parent;list-style: none outside none;background-position: -468px -44px;}
+.remen_xu span {color: #FFF;margin-left: 5px;display:inline-block;width: 16px;height: 14px;text-align: center;font-size: 10px;line-height: 14px;font-family: Verdana;background: url({tplurl}images/girlicon1.png) no-repeat;background-position: 0 -65px;}
+.remen_xu p {	background: #FFF;padding: 0 2px;display: inline;margin: 0;}
+.remen_xu em {	color: #F00;position: absolute;font-size: 12px;top: 1px;right: 0;background: #FFF;padding: 0 2px;}
+</style>
+
+<div id="main">
+<div id="left" style="width:950px">
+<div class="divbox" style="width:950px;margin-bottom: 5px;">
+
+<div style="width:950px;height：120px;border-top:solid 5px #F3F3F3;padding:24px 150px 8px;overflow:hidden;background: url({tplurl}images/newindexbg1.png) repeat-x 0 -160px;">
+	<div style="margin-right:150px;width:250px;height:120px;float:left;overflow:hidden;text-align:center;">
+		<h2 style="position:absolute;left:-9999px;font-size:0;height:0;">男生版</h2>
+		<a href="index.php?caid=1" title="男频" style="background: url({tplurl}images/nboy2forie6.jpg) no-repeat 0 0;display: block;width: 250px;height: 80px;line-height: 20px;cursor: pointer;" target="_blank"></a>
+		{c$index_nanpin_list}
+	</div>
+	<div style="margin-right:50px;width:250px;height:120px;float:left;overflow:hidden;text-align:center;">
+		<h2 style="position:absolute;left:-9999px;font-size:0;height:0;">女生版</h2>
+		<a href="index.php?caid=1" title="女频" style="background: url({tplurl}images/ngirl2forie6.jpg) no-repeat 0 0;display: block;width: 250px;height: 80px;line-height: 20px;cursor: pointer;" target="_blank"></a>
+		{c$index_nvpin_list}
+	</div>
+</div>
+
+
+</div>
+<div class="blank3"></div>
+{c$index_ad_690}
+
+<div id="lm3"><dl>
+<dt><img src="{tplurl}images/ico_hsg.gif"  align="absmiddle" /><b>最热小说推荐</b></dt>
+<dd>
+<div style="width:330px;float:left;margin-left:150px;">
+	{c$index_nanpin_img_list}
+	<div class="blank3"></div>
+	<div class="remen_xu" style="325px;margin-left:5px;">
+		<ul>
+			{c$index_nanpin_remenlist}
+		</ul>
+	</div>
+</div>
+
+<div style="width:330px;float:left;">
+	{c$index_nvpin_img_list}
+	<div class="blank3"></div>
+	<div class="remen_xu" style="325px;margin-left:5px;margin-right:150px;">
+		<ul>
+			{c$index_nvpin_remenlist}
+		</ul>
+	</div>
+</div>
+</dd></dl></div>
+<div class="blank3"></div>
+{c$index_ad_b_690}
+</div>
+
+
+</div>
+<div id="links"><b>友情链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

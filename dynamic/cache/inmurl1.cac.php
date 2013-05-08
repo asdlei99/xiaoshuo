@@ -1,7 +1,7 @@
 <?php
 $inmurl1_0 = array (
   'imuid' => '1',
-  'cname' => '±à¼­',
+  'cname' => '×÷Æ·ÐÅÏ¢',
   'remark' => '±à¼­±à¼­±à¼­',
   'uclass' => 'adetail',
   'issys' => '1',

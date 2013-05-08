@@ -1,0 +1,79 @@
+{tpl$header}
+<script type="text/javascript" src="{tplurl}js/upload.js"></script>
+<script type="text/javascript" src="{tplurl}js/calendar.js"></script>
+<script type="text/javascript" src="{tplurl}js/register.js"></script>
+<div id="main">
+<div id="left">
+<style type="text/css">
+.form_box{}
+.form_box td{height:30px;line-height:30px;}
+</style>
+<div class="txtbox k1 form_box">
+	<table width="100%" border="0" cellpadding="0" cellspacing="1">
+	<caption>基本信息</caption>
+<form name="register" id="register" method="post" enctype="multipart/form-data" action="{cms_abs}register.php?forward={forward}">
+	<tr><td align="center">验&nbsp;证&nbsp;码：</td>
+	<td><input type="text" name="regcode" id="regcode" size="4" maxlength="4" onBlur="checkregcode()">&nbsp;<img src="regcode.php" alt="点击图片换验证码" style=" vertical-align:inherit;cursor:pointer;" onClick="this.src='regcode.php'">&nbsp;<span class="notice" id="checkregcode">点击图片换验证码</span>
+	</td></tr>
+	<tr><td align="center">用&nbsp;户&nbsp;名：</td>
+	<td>
+	<input type="text" size="35" maxlength="25" name="mname" value="" onBlur="checkmname()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkmname"></span>
+	</td></tr>
+	<tr><td align="center">密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+	<td>
+	<input type="password" size="35" maxlength="25" name="password" value="" onBlur="checkpassword()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkpassword"></span>
+	</td></tr>
+	<tr><td align="center">确认密码：</td>
+	<td>
+	<input type="password" size="35" maxlength="25" name="password2" value="" onBlur="checkpassword2()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkpassword2"></span>
+	</td></tr>
+	<tr><td align="center">邮件地址：</td>
+	<td>
+	<input type="text" size="35" maxlength="25" name="email" value="" onBlur="checkemail()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkemail"></span>
+	</td></tr>
+	<tr><td align="center">空间模板：</td>
+	<td><select style="width:205px;" name="mtcid">
+	<option value="1">默认</option>
+	</select></td></tr>
+	<tr><td align="center">进阶选项：</td><td>&nbsp;</td></tr>
+	<tr><td align="center">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+	<td><input type="text" size="35" maxlength="25" id="truename" name="truename" value=""></td></tr>
+	<tr><td align="center">性&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+	<td>
+	<input class="radio" type="radio" name="gender" value="保密" checked style="border:0">保密
+	<input class="radio" type="radio" name="gender" value="男"  style="border:0">男
+	<input class="radio" type="radio" name="gender" value="女"  style="border:0">女
+	</td></tr>
+	<tr><td align="center">生&nbsp;&nbsp;&nbsp;&nbsp;日：</td>
+	<td><input type="text" id="birthday" size="35" maxlength="25" name="birthday" value="" onclick="ShowCalendar(this.id);" onmouseover="input_over(this)" onmouseout="input_out(this)"></td></tr>
+	<tr><td align="center" valign="top">头&nbsp;&nbsp;&nbsp;&nbsp;像：</td>
+	<td>
+	<div class="s_tr">
+	<input type="file" size="35" id="photolocal" name="photolocal" style="display:none;" unselectable="on" onchange="checksingle('photo','image')">
+	<input type="text" size="35" id="photoremote" name="photoremote" value="" style="display:;" onchange="checksingle('photo','image')" onmouseover="input_over(this)" onmouseout="input_out(this)">
+	<input type="button" class="button" id="photoselect" value="站内选择" style="display:;" onclick="severmanager('photo','0','singleimage')">&nbsp;&nbsp;<input class="checkbox" type="checkbox" id="photomode" name="photomode" value="1" style="border:0" onclick = "singlemode('photo','image')">本地上传</div>
+    <div class="td3">
+	<span id="openviewphoto" style="cursor:pointer;" onclick="openview('photo')"><img src="./images/admina/pv_open.gif" title="预览"></span></div>
+	
+	<span id="photo_hidden" style="position:absolute;left:-100000px;top:-100000px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');width:250px;height:250px"></span>
+    <span class="s_view" style="display:none;" id="viewphoto"><img src="./images/admina/pview.gif" id="photoview" width="150" height="120" align="absmiddle"></span>
+	<script type="text/javascript">
+	var viewwidth = 150;
+	var viewheight = 120;
+	var image_extensions = 'jpg,gif,png,jpeg,bmp';
+	</script>
+	
+	</td></tr>
+    <tr><td colspan="2" align="center"><input type="submit" name="register" value="注册"></td></tr>
+</form>
+	</table>
+</div>
+
+</div>
+<div id="right">
+<div id="lm2"><dl>
+<dt><img src="{tplurl}images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd>{c$index_readmin}</dd></dl></div>
+</div></div>
+<div id="links"><b>合作链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={mcharset}">
+<meta name="keywords" content="{cmskeyword}-{c$list_tit}" />
+<meta name="Description" content="{cmsdescription}-{c$list_tit}" />
+<TITLE>{cmstitle} - {cmsname} - {hostname}-{c$list_tit}</TITLE>
+<link rel="stylesheet" type="text/css" href="{tplurl}css/style.css" />
+<link rel="stylesheet" type="text/css" href="{tplurl}css/17_header.css" />
+<link rel="stylesheet" type="text/css" href="{tplurl}css/index.css" />
+<script type="text/javascript">var cmsUrl = "{cms_abs}";</script>
+<script src="{tplurl}js/common.js" type="text/javascript" language="javascript"></script>
+<script src="{tplurl}js/ajax.js" type="text/javascript" language="javascript"></script>
+<script src="{tplurl}js/commu.js" type="text/javascript" language="javascript"></script>
+<script src="{tplurl}js/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<!-- 顶部 begin -->
+<div id="top">
+<div class="left orangea"><script language="javascript"  src="{$cms_abs}login.php?mode=js&sid={sid}"></script></div>
+<div class="right">【<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{cms_abs}');" style="cursor:hand">设为首页</a>】【<a href="#" onClick="javascript:window.external.AddFavorite('{cms_abs}','{cmsname}');">收藏本站</a>】</div>
+</div>
+<!-- 首体 begin -->
+<div id="head">
+<div class="left"><a href="{cms_abs}" ><img src="{cms_abs}{cmslogo}" /></a></div>
+<div class="right">
+<div class="r1"><ul>
+{c$txt_banner}
+</ul></div>
+<div class="r2"><div class="search" id="searchbox" style="width:650px;margin-top:30px;">
+<table cellpadding="0">
+<tr>
+<form id="searchform" action="{cmsurl}search.php?sid={sid}" method="get" target="_blank">
+<td width="30px" valign="middle"><img src="{tplurl}images/ico_search.gif" /></td>
+<td width="60px;" valign="middle"><b>站内搜索</b></td>
+<td width="100px;" id="seach_y"><input name="searchword" value="推荐热门小说" type="text" style="width:260px" maxlength="18" onclick="this.value=''" /></td>
+<td width="60px;"><input type="hidden" name="searchsubmit" value="1"><input src="{tplurl}images/b_s.gif"  type="image" width="52" height="21" id="Image12" /></td>
+
+<td width="40px">热词：</td>
+<td width="60px"><a href="{cmsurl}search.php?sid={sid}&searchword=吞天神帝&searchsubmit=1&x=40&y=12">吞天神帝</a></td>
+<td width="60px"><a href="{cmsurl}search.php?sid={sid}&searchword=特种教师&searchsubmit=1&x=40&y=12">特种教师</a></td>
+<td width="60px"><a href="{cmsurl}search.php?sid={sid}&searchword=江北女匪&searchsubmit=1&x=40&y=12">江北女匪</a></td>
+
+</form>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+<!-- 首体 begin -->
+<script type="text/javascript">
+function showmenu(id){
+	for(var i=1; i<=6; i++){
+		$('menu_'+i).style.display='none';
+	}
+	$('menu_'+id).style.display='block';
+}
+</script>
+<!--  -->
+<div id="menu">
+<div class="h1"><ul>
+<li><a href="{cms_abs}">首页</a></li>
+<li onmouseover="showmenu(1)"><a href="{c$xs_menunode}">男频</a></li>
+<li onmouseover="showmenu(6)"><a href="{c$xs_nvpinnode}">女频</a></li>
+{c$main_menus}
+<li onmouseover="showmenu(4)"><a href="{c$quanben_list}">全本小说</a></li>
+<li>{c$ztnode}</li>
+<li onmouseover="showmenu(3)"><a href="{c$pai_index}">排行榜</a></li>
+<li><a href="{cms_abs}adminm.php" target="_blank">会员中心</a></li>
+<li onmouseover="showmenu(2)"><a href="{c$vipnode}">VIP专区</a></li>
+</ul></div>
+<div class="h2" id="menu_1">
+<div class="left"><a>男频&gt;&gt;</a></div>
+<div class="right">{c$outxsnode}</div>
+</div>
+<div class="h2" id="menu_6">
+<div class="left"><a>女频&gt;&gt;</a></div>
+<div class="right">{c$outnpxsnode}</div>
+</div>
+<div class="h2" id="menu_2">
+<div class="left"><a>&lt;&lt; VIP小说频道</a></div>
+<div class="right">{c$outvipnode}</div>
+</div>
+
+<div class="h2" id="menu_3">
+<div class="left"><a>&lt;&lt; 排行榜</a></div>
+<div class="right">{c$outphnode}</div>
+</div>
+
+<div class="h2" id="menu_4">
+<div class="left"><a>全本小说&gt;&gt;</a></div>
+<div class="right">{c$outqbnode}</div>
+</div>
+
+<div class="h2" id="menu_5">
+<div class="left" style="display: none;"><a>&lt;&lt; 专题</a></div>
+<div class="right" style="display: none;">{c$outztnode}</div>
+</div>

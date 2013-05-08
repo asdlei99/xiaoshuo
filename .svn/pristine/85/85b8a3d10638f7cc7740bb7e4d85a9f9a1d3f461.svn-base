@@ -1,0 +1,273 @@
+{tpl$header}
+
+<!-- 
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a> {c$nav}</div>
+ -->
+<div style="height:3px;width:960px;"></div>
+<style type="text/css">
+.tab {margin-bottom: 10px;text-align: left;}
+.tab-menuWrapper{background-image: url({tplurl}images/fy-bg-201005.png);background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;padding: 4px 0 0 5px;height: 26px;}
+.J_tab-menu, .J_tab-menu span, .tab-menuWrapper .active{background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;}
+.J_tab-menu {background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;background-position: left -311px;font-weight: bold;cursor: pointer;float: left;display: inline;margin-right: 2px;font-size: 14px;white-space: nowrap;}
+.J_tab-menu span {cursor: pointer;font-size: 14px;white-space: nowrap;font-weight: bold;background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;display: block;height: 26px;line-height: 26px;padding: 0 8px;background-position: right -380px;}
+.tab-menu-m {background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;position: absolute;top: 4px;right: 5px;width: 35px;background-position: 30px -240px;line-height: 26px;}
+.tab-menu-m a {color: #fff;font-size: 12px;}
+.J_tab-content {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;}
+
+.J_tab-content ul {display: block;list-style-type: disc;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;margin: 0;padding: 0;list-style: none outside none;}
+.list1 li {display: list-item;text-align: -webkit-match-parent;position: relative;zoom: 1;line-height: 21px;height: 21px;border-bottom: 1px solid #e6e6e6;}
+.list1 li span.sort {padding-left: 8px;color: #999;line-height: 21px;}
+.clearfix {display: block;}
+.list2col li {margin-top:1px;list-style: none outside none;display: list-item;text-align: -webkit-match-parent;background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;background-position: 0 -486px;padding-left: 12px;font-size: 14px;line-height: 24px;float: left;width: 45%;}
+.list2col li a {color: #004d01;text-decoration: none;}
+.list2col li a:hover {color: #F00;text-decoration:underline;}
+.mod-bd {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;height: auto;background: url({tplurl}images/fy-line-201005.png) repeat-x 0 165px;padding-bottom: 0;}
+.picList1 {	position: relative;zoom: 1;height: 165px;margin-bottom: 10px;}
+.picList1 dt {	display: block;margin-left: 135px;padding: 4px 0 0;font-size: 14px;font-weight: normal;text-indent: -7px;position: relative;zoom: 1;}
+.picList1 dt a {font-weight: bold;}
+.picList1 dd {margin-left: 135px;}
+.picList1 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList1 dd.pic img {vertical-align: middle;width: 120px;height: 150px;border: 1px solid #d1d1d1;background: #fff;padding: 1px;}
+.picList1 dd.intro {margin-left: 135px;}
+.picList1 dd.upd a {color: #006704;}
+
+
+.mod-1 {margin-bottom: 10px;}
+.mod-1 .mod-hd {background-position: 0 -447px;background-repeat: repeat-x;background-image: none;border: 1px solid #CCCCCC; height: 28px;overflow: hidden; position: relative;}
+.mod-1 .mod-hd h2 {  color: #000000;font-size: 14px;    line-height: 30px;    padding-left: 10px;font-weight:bold;text-align: left;}
+.clearfix:after {    clear: both;    content: ".";    display: block;    height: 0;    visibility: hidden;}
+.sortTop .mod-bd {    padding-bottom: 0;}
+.mod-bd, .J_tab-content {    -moz-border-bottom-colors: none;    -moz-border-left-colors: none;    -moz-border-right-colors: none;    -moz-border-top-colors: none;    border-image: none;    border-style: none solid solid;    border-width: 0 1px 1px;    padding: 10px;    position: relative;}
+.content-rl .content-lr .main {    float: left;}
+.w210 {    width: 220px;	float:left;margin-bottom:5px;}
+.sortTop .mod-sub {    margin-bottom: 10px;}
+.sortTop .mod-sub h3 {	background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;    background-position: 0 -170px;font-size: 100%;    height: 23px;    margin-bottom: 10px;    padding: 0 0 0 20px;}
+.picList2 {position: relative;zoom: 1;height: 135px;}
+.picList2 dt {margin-left: 110px;font-size: 12px;font-weight: normal;text-indent: -3px;position: relative;zoom: 1;}
+.picList2 dt a {font-weight: bold;}
+.picList2 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList2 dd.pic img {	vertical-align: middle;width: 96px;height: 120px;border: 1px solid #999;background: #fff;padding: 2px;}
+.picList2 dd {margin-left: 110px;}
+.picList2 dd.intro {color: #646464;}
+.sortTop .mod-sub li {height: 20px;line-height: 20px;position: relative;zoom: 1;overflow: hidden;}
+span.sort {color: #999;}
+.sortTop .mod-sub li {line-height: 20px;}
+.mod-sub dl {display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
+.mod-sub ul, ol {list-style: none outside none;}
+.txt_tab li {padding-left: 23px;}
+.txt_tab li a {width: 155px;}
+
+
+
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: block;}
+.content, .content-lr, .content-rl {position: relative;zoom: 1;}
+#wrap {text-align: left;}
+.mr10 {margin-right: 10px;}
+.main, .sidebar {display: inline;}
+.w230 {width: 230px;}
+.content-lr .main {float: left;}
+.mod-1 {margin-bottom: 10px;}
+.mod-hd, .tab-menuWrapper {height: 30px;background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;}
+.mod-1 .mod-hd {background-image: none;height: 28px;border: 1px solid #ccc;position: relative;zoom: 1;overflow: hidden;}
+.mod-hd h2 {font-size: 14px;line-height: 30px;padding-left: 10px;color: #fff;}
+.mod-1 .mod-hd h2 {color: #000;}
+.mod-hd-m {background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;}
+.mod-hd-m, .tab-menu-m {position: absolute;top: 4px;right: 5px;width: 35px;background-position: 30px -240px;line-height: 26px;}
+.mod-1 .mod-hd-m {background-position: 30px -211px;}
+.mod-hd-m a, .tab-menu-m a {font-size: 12px;}
+.mod-1 .mod-hd-m a {color: #000;}
+.mod-bd, .J_tab-content {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;background:none;}
+.picList3 {position: relative;zoom: 1;height: 96px;background: url({tplurl}images/fy-bg-201005.png) repeat-x 0 103px;padding-bottom: 9px;margin-bottom: 5px;}
+.picList3 dt {height:20px;overflow:hidden;margin-left: 90px;font-size: 12px;font-weight: normal;text-indent: -3px;position: relative;zoom: 1;}
+.picList3 dt a {font-weight: bold;}
+.picList3 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList3 dd.pic img {width: 72px;height: 90px;border: 1px solid #d1d1d1;background: #fff;padding: 2px;}
+.picList3 dd {margin-left: 90px;}
+.picList3 dd.author {color: #656565;}
+.picList3 dd {margin-left: 90px;}
+.picList3 dd.intro {height:50px;overflow:hidden;color: #999;width: 118px;}
+.topList3 {background: url({tplurl}images/fy-line-201005.png) repeat;}
+.topList3 li{background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;}
+li.No1 {background-position: -380px -15px;}
+.topList3 li span {background: #fff;margin-left: 16px;}
+.topList3 li {height: 22px;line-height: 22px;overflow: hidden;position: relative;zoom: 0;}
+.topList3 li span {margin-left:15px;}
+.topList3 li span.author {position: absolute;top: 0;right: 0;padding: 0 0 0 5px;margin: 0;display: inline-table;}
+li.No2 {background-position: -380px -39px;}
+li.No3 {background-position: -380px -63px;}
+li.No4 {background-position: -380px -87px;}
+li.No5 {background-position: -380px -111px;}
+li.No6 {background-position: -380px -135px;}
+li.No7 {background-position: -380px -159px;}
+li.No8 {background-position: -380px -183px;}
+li.No9 {background-position: -380px -207px;}
+li.No10 {background-position: -380px -231px;}
+li.No11 {background-position: -380px -255px;}
+li.No12 {background-position: -380px -279px;}
+li.No13 {background-position: -380px -303px;}
+li.No14 {background-position: -380px -327px;}
+li.No15 {background-position: -380px -351px;}
+.content-lr .sidebar {float: right;}
+
+</style>
+
+<div id="main">
+<div id="left">
+<div class="divbox">
+<div class="left">
+
+	<div class="tab J_tab">
+    	<div class="tab-menuWrapper">
+        	<h2 class="J_tab-menu active"><span>风云推荐</span></h2>
+        	<div class="tab-menu-m"><a href="index.php?caid=1&ccid7=38" target="_blank">更多</a></div>
+        </div>
+        <div class="tab-contentWrapper">
+            <div class="J_tab-content" style="display: block;">
+              <ul class="list1">
+               	{p$xiaoshuoqingtui}
+      		</ul>
+            </div>
+          </div>
+        </div>
+
+</div>
+<div class="right">
+<!-- 小幅广告 -->
+{p$nanpinxiaotupianguanggao}
+<div id="txtbox" class="k1">
+<h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
+	{p$nanpinshouyedawenzituig1}
+</h2>
+
+
+<ul class="list2col clearfix">
+	{p$nanpinshouyeshoutuiliebiao}
+</ul>																																																															          </ul>
+
+
+
+{c$xiao_tuwen}
+</div>
+</div></div>
+<div class="blank3"></div>
+
+
+<div class="mod-1 sortTop">
+	<!-- 热门小说推荐 -->
+	<div class="mod-hd ">
+    	<h2><font style="color:red">热门小说推荐</font></h2>
+    </div>
+	<div class="mod-bd content-lr clearfix" style="background:none;">
+    	{c$nanpin_remen_list}
+            
+    </div>
+	<!-- END 分类推荐榜 -->
+</div>
+
+</div>
+
+<div id="right">
+
+<div class="mod book">
+        <div class="tab J_tab">
+          <!-- 重磅推荐&大神推荐 -->
+			<div class="tab-menuWrapper">
+			<h2 class="J_tab-menu active"><span>重磅推荐</span></h2>
+			</div>
+			<div class="J_tab-content" style="border: none; padding: 0px; display: block;">
+			  <div class="mod-bd">
+			  	 	{p$nanpinshouyetuwenxiaoshuotuijian}
+			  </div>
+            </div>
+          <!--END 重磅推荐&强力推荐 -->
+      </div>
+      <!--右侧部分 结束-->
+</div>
+
+
+{c$xiao_ad_250_t}
+
+<div id="lm2" class="lmc">
+	<dl><dt>男频点击榜<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt>
+	<dd class="txt_tab" id="dd_11">
+		<ul>{c$nanpindianjibang}</ul>
+	</dd>
+	</dl>
+</div>
+{c$xiao_ad_250_t}
+
+</div>
+
+
+<div class="blank3"></div>
+
+<div class="content-lr clearfix">
+    <!--第三部分 开始-->
+    
+    
+   {c$nanpin_xinshu_list3}
+   
+   
+    <div class="sidebar w230">
+        <div class="mod-1">
+          <!-- 签约作家新书榜 -->
+          <div class="mod-hd">
+            <h2>签约作家新书榜</h2>
+            <div class="mod-hd-m"><a href="http://a.readnovel.com/fytop/qyxs.html" title="更多" target="_blank">更多</a></div>
+          </div>
+          <div class="mod-bd">
+            
+					<dl class="picList3">
+				<dt>《<a href="http://www.readnovel.com/partlist/202541.html" target="_blank" title="龙舞玄元">制霸花都</a>》</dt>
+				<dd class="pic"><a href="http://www.readnovel.com/partlist/202541.html" target="_blank" title="制霸花都"><img src="userfiles/image/20130318/18220350fe5867a5913427.jpg#182#272" alt="《制霸花都》"></a></dd>
+				<dd class="author">作者：<a href="http://u.readnovel.com/user/36839762.html" target="_blank">破茧重生</a></dd>
+				<dd class="intro"></dd>
+			</dl>
+		            <ul class="topList3">
+                                                                                                         <li class="No1"><span>《<a href="http://www.readnovel.com/partlist/202013.html" target="_blank">虚无神在都市</a>》</span><span class="author"><a href="http://u.readnovel.com/user/5565789.html" target="_blank">血色红泪</a></span></li>
+                                                                                                                <li class="No2"><span>《<a href="http://www.readnovel.com/partlist/201326.html" target="_blank">绝代风流神仙手</a>》</span><span class="author"><a href="http://u.readnovel.com/user/28318461.html" target="_blank">风度犹存</a></span></li>
+                                                                                                                <li class="No3"><span>《<a href="http://www.readnovel.com/partlist/202832.html" target="_blank">魔武邪尊</a>》</span><span class="author"><a href="http://u.readnovel.com/user/33116610.html" target="_blank">1山河1</a></span></li>
+                                                                                                                <li class="No4"><span>《<a href="http://www.readnovel.com/partlist/202312.html" target="_blank">弑仙</a>》</span><span class="author"><a href="http://u.readnovel.com/user/30025377.html" target="_blank">零度忧伤</a></span></li>
+                                                                                                                <li class="No5"><span>《<a href="http://www.readnovel.com/partlist/203097.html" target="_blank">超级至尊任务系统</a>》</span><span class="author"><a href="http://u.readnovel.com/user/36926769.html" target="_blank">贪酒和尚</a></span></li>
+                                                                                                                                                                <li class="No7"><span>《<a href="http://www.readnovel.com/partlist/204108.html" target="_blank">极品风流圣皇</a>》</span><span class="author"><a href="http://u.readnovel.com/user/33352949.html" target="_blank">天涯沦落1218</a></span></li>
+                                                                                                                <li class="No8"><span>《<a href="http://www.readnovel.com/partlist/201079.html" target="_blank">命运诡记</a>》</span><span class="author"><a href="http://u.readnovel.com/user/36718585.html" target="_blank">越冰洋</a></span></li>
+                                                                                                                <li class="No9"><span>《<a href="http://www.readnovel.com/partlist/203294.html" target="_blank">澜沧手记</a>》</span><span class="author"><a href="http://u.readnovel.com/user/37204960.html" target="_blank">澜沧小水</a></span></li>
+                                                                                                                <li class="No10"><span>《<a href="http://www.readnovel.com/partlist/202922.html" target="_blank">异界之绝代兵王</a>》</span><span class="author"><a href="http://u.readnovel.com/user/37129954.html" target="_blank">江湖大虾</a></span></li>
+                                                                                                                <li class="No11"><span>《<a href="http://www.readnovel.com/partlist/202325.html" target="_blank">风流痞医</a>》</span><span class="author"><a href="http://u.readnovel.com/user/35669812.html" target="_blank">今夕何年</a></span></li>
+                                                                                                                <li class="No12"><span>《<a href="http://www.readnovel.com/partlist/203262.html" target="_blank" title="与美女同居：风流保镖">与美女同居：风流保</a>》</span><span class="author"><a href="http://u.readnovel.com/user/25513853.html" target="_blank">暗夜玄雨</a></span></li>
+                                                                                                                <li class="No13"><span>《<a href="http://www.readnovel.com/partlist/202221.html" target="_blank">修罗魔神录</a>》</span><span class="author"><a href="http://u.readnovel.com/user/35846497.html" target="_blank">包大人</a></span></li>
+                                                                                                                <li class="No14"><span>《<a href="http://www.readnovel.com/partlist/202552.html" target="_blank" title="天生黑客之疯狂的键盘">天生黑客之疯狂的键</a>》</span><span class="author"><a href="http://u.readnovel.com/user/36994120.html" target="_blank">天生黑客</a></span></li>
+                                                                                                                <li class="No15"><span>《<a href="http://www.readnovel.com/partlist/202658.html" target="_blank">少年武仙在都市</a>》</span><span class="author"><a href="http://u.readnovel.com/user/37068591.html" target="_blank">知己武道</a></span></li>
+                                                                                </ul>
+          </div>
+          <!-- END 签约作家新书榜 -->
+        </div>
+      </div>
+      <div class="blank3"></div>
+      {c$nanpin_xinshu_list6}
+</div>
+
+
+
+
+
+
+
+<div id="left">
+
+{c$xiao_ad_690}
+
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新小说更新列表</b><span class="rright"><a href="{c$fenmianabouturl}">更多&gt;&gt;</a></span></dt>
+<dd><div id="txttd4"><div class="txttb4 txtbg1"><ul>{c$list_newlist}</ul></div></div></dd>
+</dl></div>
+</div>
+
+</div>
+
+</div>
+<div id="links"><b>合作链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

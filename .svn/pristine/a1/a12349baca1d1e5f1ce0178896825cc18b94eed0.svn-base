@@ -1,0 +1,74 @@
+{tpl$header}
+<script type="text/javascript">var CMS_ABS='{cms_abs}',IXDIR = '{tplurl}css/', charset = 'gbk',allowfloatwin = '1',floatwidth='400',floatheight='400'</script>
+<script type="text/javascript" src="{cms_abs}include/js/langs.js"></script>
+<script type="text/javascript" src="{cms_abs}include/js/common.js"></script>
+<script type="text/javascript" src="{cms_abs}include/js/floatwin.js"></script>
+<div id="append_parent"></div>
+<div class="h3"><em><a href="{rss}" ><img src="{tplurl}images/rss.gif" /></a></em>
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a> {c$nav}</div>
+</div>
+</div>
+
+<div id="main">
+<div id="left" class="left">
+<div class="divbox m_b8">
+<div class="txtbox k1">
+<h1>{u$subject}{subtitle}</h1>
+<h2>发布: {u$createdate_all} | 作者: {author} | 来源: {source} | 查看: <font id="cms_clicks">0</font>次</h2>
+<div class="account">{account}</div>
+<div class="shuping">
+<a href="javascript:ajax_praise('{aid}');">我顶(<font id="cms_praises">0</font>)</a>
+<a href="javascript:ajax_debase('{aid}');">我踩(<font id="cms_debases">0</font>)</a>
+<a href="javascript:ajax_favorite('{aid}');">收藏(<font id="cms_favorites">0</font>)</a>
+<a href="{cms_abs}report.php?aid={aid}" onclick="return floatwin('open_report',this,800,300)">举报<font>&nbsp;</font></a>
+</div>
+<div class="pagenav"><span style="float:right">{c$next_caid}</span>{c$pre_caid}</div>
+</div>
+</div>
+
+<div class="divbox m_b8 k1" style="display:none;"><img src="{tplurl}banner688X60.gif"  border="0" /></div>
+
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>内容列表</b></dt>
+<dd>
+<div class="pagelist"><dl>{c$art_zlist}</dl></div>
+</dd>
+</dl></div>
+</div>
+<div id="lm3"><dl>
+<dt><img src="{tplurl}images/bx2.gif"  align="absmiddle" /><b>最新评论</b>&nbsp; &nbsp; &nbsp;评论 <font id="cms_comments" color="red">0</font> 次&nbsp; &nbsp; 评分 <font id="cms_scores" color="red">0</font> 分<span><a href="{cms_abs}comments.php?aid={aid}">更多&gt;&gt;</a></span></dt>
+<dd><ul class="comcon">{c$comments}</ul></dd></dl></div>
+<div id="lm3"><dl>
+<dt><img src="/template/default/images/bx2.gif"  align="absmiddle" /><b>发表评论</b></dt>
+<dd class="comform">
+<form name="formcomment" method="post" action="{cms_abs}comments.php?aid={aid}">
+<textarea name="content" id="content" tabindex="3" rows="6" cols="130" title="评论内容"></textarea>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td width="60"><select name="score" id="score" style="width:55px;">
+<option value="0">0分</option>
+<option value="1">1分</option>
+<option value="2">2分</option>
+<option value="3" selected>3分</option>
+<option value="4">4分</option>
+<option value="5">5分</option>
+</select></td><td width="50">验证码：</td><td width="50"><input type="text" name="regcode" size="7" maxlength="4" id="regcode" tabindex="2" value="" class="input"></td><td><img src="{cms_abs}regcode.php" alt="点击更换验证码" style="vertical-align:middle;cursor:pointer;" onClick="this.src='{cms_abs}regcode.php'" /></td><td align="center"><button type="submit" name="submit" value="true" class="cbtn">发表评论</button></td><td width="40%">&nbsp;</td></tr></table>
+</form></dd>
+</dl></div>
+</div>
+
+<div id="right" class="right">
+<div class="picBox m_b8">{u$thumb_240_316}</div>
+<div class="search m_b8" id="searchbox">{tpl$s_box}</div>
+<div id="lm2"><dl>
+<dt><img src="{tplurl}images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd>{c$index_readmin}</dd></dl></div>
+
+<!--VIP热门-->
+<div id="lm2"><dl><dt>VIP热门</dt><dd><ul>{c$column_related}</ul></dd></dl></div>
+<!--/VIP热门-->
+
+</div></div>
+
+<div id="links"><b>友情链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

@@ -1,0 +1,169 @@
+{tpl$header}
+<script type="text/javascript">var CMS_ABS='{cms_abs}',IXDIR = '{tplurl}css/', charset = 'gbk',allowfloatwin = '1',floatwidth='400',floatheight='400'</script>
+<script type="text/javascript" src="{cms_abs}include/js/langs.js"></script>
+<script type="text/javascript" src="{cms_abs}include/js/common.js"></script>
+<script type="text/javascript" src="{cms_abs}include/js/floatwin.js"></script>
+<div id="append_parent"></div>
+</div>
+</div>
+
+<?php
+//记录当前会员最近阅读的小说
+if (isset($curuser->info['mid'])) {
+	//如果有用户登录
+	//获取该章节所属小说的 aid
+	$part = $db->fetch_one('SELECT * FROM xs_albums where aid=\''.$aid.'\'');
+	if (!empty($part)) {
+		//查找是否已经添加
+		$mid = $curuser->info['mid'];
+		$pid = $part['pid'];
+		$sql = "select * from xs_newread where mid='".$mid."' and aid='".$pid."'";
+		$isResult = $db->fetch_one($sql);
+		if (empty($isResult)) {
+			$time = time();
+			$sql = 'INSERT into xs_newread (`mid`, `aid`, `readtime`) VALUES("'.$mid.'", "'.$pid.'", "'.$time.'")';
+			$db->query($sql);
+		} else {
+			$db->query("update xs_newread set readtime='".time()."' where mid='".$mid."' and aid='".$pid."'");
+		}
+	}
+}
+?>
+
+<div id="main">
+		<div class="read_tit">
+			<div id="setting">
+				<div id="fontColor">
+					<strong>选择背景颜色：</strong>
+					<span onclick="setBgCollor('#e8ebec')">1</span>
+					<span onclick="setBgCollor('#e7f4fe')">2</span>
+					<span onclick="setBgCollor('#e7eeda')">3</span>
+					<span onclick="setBgCollor('#eae6da')">4</span>
+					<span onclick="setBgCollor('#efe8ea')">5</span>
+					<span onclick="setBgCollor('#f0ebe3')">6</span>
+					<span onclick="setBgCollor('#e5e9e8')">7</span>
+					<span onclick="setBgCollor('#ececed')">8</span>
+				</div>
+				<div id="fontSize">
+					<strong>选择字号：</strong>
+					<span onclick="setBgFont(24)">特大</span>
+					<span onclick="setBgFont(18)">大</span>
+					<span onclick="setBgFont(16)">中</span>
+					<span onclick="setBgFont(14)">小</span>
+				</div>
+			</div>
+			<div class="btn right">
+				<ul>
+					<li><a href="/comments.php?aid={c$arc_nav_id}" target="_blank">发表评论</a></li>
+					<li><a href="/archive.php?aid={c$arc_nav_id}" target="_blank">返回目录</a></li>
+					<!-- <li><a href="javascript:ajax_favorite('{aid}');">添加书签</a></li> -->
+					<li>{c$xiaoshuo_shangyizhang}</li>
+					<li>{c$xiaoshuo_xiayizhang}</li>
+				</ul>
+			</div>
+		</div>
+    <div class="container" style="width:740px;float: left;">
+        <div id="arc_title" style="height:auto;"><!-- <h1>{c$arc_nav_xx} </h1> -->
+        <h1 style="border-bottom:#BFBFBF 1px dashed;">{u$subject30}</h1>
+        <div class="info"><span>
+        	<span>小说:{c$arc_nav_xx}</span>&nbsp;&nbsp;
+        	<span>作者:{c$arc_nav_zuozhe}</span>&nbsp;&nbsp;
+        	<!-- 
+        	<a href="javascript:alt_font('contents','12');" class="font12">小</a>
+            <a href="javascript:alt_font('contents','14');" class="font14">中</a>
+            <a href="javascript:alt_font('contents','16');" class="font16">大</a>
+        	 -->
+            </span>   更新时间: {u$createdate_all} |  字数: <font id="cms_content_counts">0</font></div>
+            </div>
+        <div id="contents">
+        {content}
+        <div class="blank18"></div> {$mpnav}     
+        </div>
+  <div class="blank18"></div>
+  <!-- 
+        <div class="shuping" align="center">
+            <a href="javascript:ajax_praise('{aid}');" class="btn">我顶(<font id="cms_praises">0</font>)</a>
+            <a href="javascript:ajax_debase('{aid}');" class="btn">我踩(<font id="cms_debases">0</font>)</a>
+            <a href="{cms_abs}report.php?aid={aid}" class="btn" onclick="return floatwin('open_report',this,800,300)">举报<font>&nbsp;</font></a>
+        </div>
+   -->
+  <div class="blank18"></div>
+    <div class="blank9"></div>
+    <div class="read_tit" style="padding-left: 250px;">
+			<div class="btn">
+				<ul>
+					<li>{c$xiaoshuo_shangyizhang}</li>
+					<li><a href="/archive.php?aid={c$arc_nav_id}&addno=1" target="_blank">返回目录</a></li>
+					<li>{c$xiaoshuo_xiayizhang}</li>
+				</ul>
+			</div>
+		</div>
+    <div class="blank9"></div>
+    </div>
+
+
+<style type="text/css">
+.c11, .c11 a, .c11 a:visited {color: #24a3ce;}
+.rightSide dl {margin: 12px 10px;border: #ccc 1px solid;font-size: 14px;font-weight: bold;}
+.rightSide dl {margin: 12px 10px;border: #ccc 1px solid;font-size: 14px;font-weight: bold;}
+.rightSide ul {margin: 12px 10px;}
+.rightSide li {height: 18px;line-height: 18px;overflow: hidden;}    
+</style>
+
+    <div class="rightSide" id="rightSide" style="display: block;width:200px;float:right;">
+		<ul class="c11" style="margin-top:70px;">
+			<h3>{catalog}强推</h3> 
+			{c$yueduyemianqiangtui}  
+		</ul>
+		<ul class="c11">
+			<h3>全站强推</h3>  
+			{c$yueduyemianquanzhantuijian}   
+		</ul>
+		<ul class="c11">
+			<h3>热点作品</h3>   
+			{c$yueduyemianredianzuopin}  
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+
+//cms_content_counts
+$(document).ready(function(){
+	var content = $('#contents').text();
+	var intLength=0
+	for (var i = 0; i < content.length; i++) {
+		if ((content.charCodeAt(i) < 0) || (content.charCodeAt(i) > 255))
+			intLength=intLength+2   
+	}
+	$('#cms_content_counts').text(intLength);
+});
+
+//设置背景颜色
+function setBgCollor(color) {
+	$("#contents").css({"background": 'none'});
+	$("#contents").css({"background-color": color});
+}
+//设置文字大小
+function setBgFont(size) {
+	$('#contents').css({'font-size': size+'px'});
+	$('#contents p').css({'font-size': size+'px'});
+}
+
+function set_stat(s){
+    var k, o;
+    s = s['{aid}'];
+    if(!s)return;
+    for(k in s){
+        o = $id('cms_' + k);
+        if(o)o.innerHTML = s[k];
+        o = $id('ccms_' + k);
+        if(o)o.innerHTML = s[k];
+    }
+}
+ajax_get_stat('{aid}', set_stat);
+
+</script>
+<div class="blank3"></div>
+{tpl$footer}
+{cms_counter}
+<script type="text/javascript" src="{$cms_abs}ajax.php?action=mark&aid={$aid}">

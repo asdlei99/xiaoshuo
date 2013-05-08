@@ -1,0 +1,14 @@
+<?php
+$utagzujicname_0 = array (
+  'cname' => '×÷¼Ò×é',
+  'ename' => 'zujicname',
+  'tclass' => 'fromid',
+  'template' => '&nbsp;|&nbsp;{cname}',
+  'setting' => 
+  array (
+    'val' => 'u',
+    'type' => 'grouptype5',
+    'idsoruce' => 0,
+  ),
+) ;
+?>

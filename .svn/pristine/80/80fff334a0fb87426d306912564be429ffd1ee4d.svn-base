@@ -1,0 +1,31 @@
+<?php
+$ffield_9_rc_tuchu_0 = array (
+  'fid' => '37',
+  'ename' => 'rc_tuchu',
+  'cname' => '是否突出',
+  'chid' => '9',
+  'issystem' => '0',
+  'available' => '1',
+  'isfunc' => '0',
+  'func' => '',
+  'innertext' => '1=突出
+0=不突出',
+  'fromcode' => '0',
+  'length' => '10',
+  'datatype' => 'select',
+  'notnull' => '0',
+  'nohtml' => '0',
+  'mlimit' => '',
+  'regular' => '',
+  'min' => '',
+  'max' => '',
+  'rpid' => '0',
+  'isadmin' => '0',
+  'vieworder' => '0',
+  'mode' => '1',
+  'guide' => '',
+  'vdefault' => '',
+  'pmid' => '0',
+  'useredit' => '0',
+) ;
+?>

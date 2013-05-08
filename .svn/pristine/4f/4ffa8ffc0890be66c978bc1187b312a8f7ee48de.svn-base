@@ -1,0 +1,91 @@
+{tpl$header}
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a>&nbsp;>&nbsp;VIP专区</div>
+</div>
+</div>
+
+<div id="main">
+<div id="left">
+<div class="divbox">
+<div class="left">
+<style type="text/css">
+#menu #menu_1{display:none;}
+#menu #menu_2{display:block;}
+</style>
+<script type="text/javascript" src="{tplurl}js/picBox.js" ></script>
+<div id="flash_show">
+<div class="flash_pic"><table cellpadding="0" cellspacing="0" border="0">
+<tr><td align="center" valign="middle" id="flash_img" width="200" height="259"></td></tr></table></div>
+<div class="flash_set"><ul id="flash_btn">{c$vip_lunhuan}</ul>
+<div class="navli"><a id=img_prev_btn onClick="showPrevImage();return false;" href="javascript:void();" target=_self><img height=12 alt=上一页 src="{tplurl}images/flash_back.gif" width=11 border=0></a> <a id=img_next_btn onClick="showNextImage();return false;" href="javascript:void();" target=_self><img height=12 alt=下一页 src="{tplurl}images/flash_next.gif" width=11 border=0></a></div>
+</div>
+<div id="flash_show_ctl_msg" align="center">
+<h3><a id="flash_title" href="javascript:void();"></a></h3>
+<p id="flash_abs"></p></div>
+<script type="text/javascript">
+var fImgs=$("flash_btn").getElementsByTagName("a");
+var fImgsrc=$("flash_btn").getElementsByTagName("img");
+imagePlay();
+function change_bg(d){
+	d.style.background = "url('{tplurl}images/indexbg.png')";
+	d.onmouseout = function(){d.style.background = "";}
+}
+</script>
+</div>
+</div>
+<div class="right">
+<div class="search" id="searchbox">{tpl$search}</div>
+<div class="k_xx">
+<a href="" target="_blank">拜金王妃</a> 
+<a href="" target="_blank">酷总裁</a> 
+<a href="" target="_blank">月光MM游唐朝</a> 
+<a href="" target="_blank">替身新娘</a> 
+<a href="" target="_blank">胭脂乱：风月</a> 
+<a href="" target="_blank">侠客路</a> 
+</div>
+<div class="k_xxbg"></div>
+<div id="txtbox" class="k1">
+<h1>{c$vip_toutiao}</h1>
+<h2>{c$vip_zhuanqu}</h2>
+{c$vip_tuwen}
+</div>
+</div></div>
+
+
+<div id="lm3"><dl>
+<dt><img src="{tplurl}images/ico_hsg.gif"  align="absmiddle" /><b>最新<img src="{tplurl}images/vip.gif"  align="absmiddle" />小说推荐</b></dt>
+<dd>
+<table cellpadding="0" cellspacing="10"><tr><td width="262">{c$vipindex_pictxt}</td>
+<td valign="top">
+<div class="newtxt"><ul>{c$vipindex_title}</ul></div>
+</td></tr></table></dd></dl></div>
+
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新<img src="{tplurl}images/vip.gif"  align="absmiddle" />小说更新列表</b></dt>
+<dd><div id="txttd4"><div class="txttb4 txtbg1"><ul>{c$index_vip_newlist}</ul></div></div></dd>
+</dl></div>
+</div>
+
+</div>
+
+<div id="right">
+
+<div id="login">
+<div class="lm_login"><img src="{tplurl}images/ico_login.gif"  align="absmiddle" />会员管理中心</div>
+<div class="login"><script language="javascript"  src="{cms_abs}login.php?mode=js"></script></div>
+</div>
+
+<div class="ad m_b8"><div id="li_ad">{c$txt_ad}</div></div>
+<div id="lm2"><dl><dt><img src="{tplurl}images/ico_bq.gif"  align="absmiddle" />热门标签</dt>
+<dd><div class="li_title">{c$keywords}</div></dd></dl></div>
+<div id="lm2"><dl>
+<dt><img src="{tplurl}images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd>{c$index_readmin}</dd></dl></div>
+
+<div id="lm2"><dl><dt>VIP热门</dt><dd><ul>{c$hotindex_mtitle}</ul></dd></dl></div>
+
+
+</div></div>
+<div id="links"><b>友情链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

@@ -1,7 +1,7 @@
 <?php
 $inmurl101_0 = array (
   'imuid' => '101',
-  'cname' => '内容',
+  'cname' => '编辑章节',
   'remark' => '小说链接内容管理',
   'uclass' => 'content',
   'issys' => '0',

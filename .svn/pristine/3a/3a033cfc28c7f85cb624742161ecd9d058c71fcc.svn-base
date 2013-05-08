@@ -1,0 +1,49 @@
+{tpl$header}
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a>&nbsp;>&nbsp;{c$list_tit}排行榜</div>
+</div>
+</div>
+<style type="text/css">
+#lm2{width:306px;float:left;height:265px;margin-right:3px;margin-left:3px;}
+#menu #menu_1{display:none;}
+#menu #menu_3{display:block;}
+</style>
+<script type="text/javascript">
+function changecla(id){
+    var arcid1 = id.slice(-2,-1);
+    var arcid2 = id.slice(-2);
+    for(var i=1; i<=3; i++){
+        $("font_" + arcid1 + i).className = "";
+        $("dd_" + arcid1 + i).style.display = "none";
+    }
+    $("font_" + arcid2).className = "act";
+    $("dd_" + arcid2).style.display = "";
+    
+}
+</script>
+<div id="main">
+<div id="lm2" class="lmc{sn_row}">
+<dt><strong><img src="{$tplurl}images/tuijian2ico.gif"  align="absmiddle" />{c$list_tit}点击榜</strong><font onmouseover="changecla(this.id);" id="font_13">周</font><font onmouseover="changecla(this.id);" id="font_12">月</font><font onmouseover="changecla(this.id);" id="font_11">总</font></dt><dd id="dd_11" class="txt_tab" style="display:none"><ul>{c$all_dian_panhan}</ul></dd><dd id="dd_12" class="txt_tab" style="display:none"><ul>{c$m_dian_panhan}</ul></dd><dd id="dd_13" class="txt_tab" style="display:none"><ul>{c$w_dian_panhan}</ul></dd></div>
+
+<div id="lm2" class="lmc{sn_row}">
+<dt><strong><img src="{$tplurl}images/tuijian2ico.gif"  align="absmiddle" />{c$list_tit}推介榜</strong><font onmouseover="changecla(this.id);" id="font_23">周</font><font onmouseover="changecla(this.id);" id="font_22">月</font><font onmouseover="changecla(this.id);" id="font_21">总</font></dt><dd id="dd_21" class="txt_tab" style="display:none"><ul>{c$all_ding_panhan}</ul></dd><dd id="dd_22" class="txt_tab" style="display:none"><ul>{c$m_ding_panhan}</ul></dd><dd id="dd_23" class="txt_tab" style="display:none"><ul>{c$w_ding_panhan}</ul></dd></div>
+
+<div id="lm2" class="lmc{sn_row}">
+<dt><strong><img src="{$tplurl}images/tuijian2ico.gif"  align="absmiddle" />{c$list_tit}人气榜</strong><font onmouseover="changecla(this.id);" id="font_33">周</font><font onmouseover="changecla(this.id);" id="font_32">月</font><font onmouseover="changecla(this.id);" id="font_31">总</font></dt><dd id="dd_31" class="txt_tab" style="display:none"><ul>{c$all_ping_panhan}</ul></dd><dd id="dd_32" class="txt_tab" style="display:none"><ul>{c$m_ping_panhan}</ul></dd><dd id="dd_33" class="txt_tab" style="display:none"><ul>{c$w_ping_panhan}</ul></dd></div>
+
+<div id="lm2" class="lmc{sn_row}">
+<dt><strong><img src="{$tplurl}images/tuijian2ico.gif"  align="absmiddle" />{c$list_tit}收藏榜</strong><font onmouseover="changecla(this.id);" id="font_43">周</font><font onmouseover="changecla(this.id);" id="font_42">月</font><font onmouseover="changecla(this.id);" id="font_41">总</font></dt><dd id="dd_41" class="txt_tab" style="display:none"><ul>{c$all_sou_panhan}</ul></dd><dd id="dd_42" class="txt_tab" style="display:none"><ul>{c$m_sou_panhan}</ul></dd><dd id="dd_43" class="txt_tab" style="display:none"><ul>{c$w_sou_panhan}</ul></dd></div>
+
+<div id="lm2" class="lmc{sn_row}">
+<dt><strong><img src="{$tplurl}images/tuijian2ico.gif"  align="absmiddle" />{c$list_tit}心情榜</strong></dt><dd id="dd_41" class="txt_tab"><ul>{c$xin_sou_panhan}</ul></dd></div>
+<script type="text/javascript">
+for(var i=1; i<=100; i++){
+    if($("font_" + i + 1)){
+        $("font_" + i + 1).className = "act";
+        $("dd_" + i + 1).style.display = "";
+    }
+    else{break;}
+}
+</script>
+</div>
+{tpl$footer}

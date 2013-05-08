@@ -1,0 +1,348 @@
+{tpl$header}
+
+<!-- 
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a> {c$nav}</div>
+ -->
+<div style="height:3px;width:960px;"></div>
+<style type="text/css">
+.tab {margin-bottom: 10px;text-align: left;}
+.tab-menuWrapper{background-image: url({tplurl}images/fy-bg-201005.png);background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;padding: 4px 0 0 5px;height: 26px;}
+.J_tab-menu, .J_tab-menu span, .tab-menuWrapper .active{background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;}
+.J_tab-menu {background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;background-position: left -311px;font-weight: bold;cursor: pointer;float: left;display: inline;margin-right: 2px;font-size: 14px;white-space: nowrap;}
+.J_tab-menu span {cursor: pointer;font-size: 14px;white-space: nowrap;font-weight: bold;background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;display: block;height: 26px;line-height: 26px;padding: 0 8px;background-position: right -380px;}
+.tab-menu-m {background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;position: absolute;top: 4px;right: 5px;width: 35px;background-position: 30px -240px;line-height: 26px;}
+.tab-menu-m a {color: #fff;font-size: 12px;}
+.J_tab-content {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;}
+
+.J_tab-content ul {display: block;list-style-type: disc;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;margin: 0;padding: 0;list-style: none outside none;}
+.list1 li {display: list-item;text-align: -webkit-match-parent;position: relative;zoom: 1;line-height: 21px;height: 21px;border-bottom: 1px solid #e6e6e6;}
+.list1 li span.sort {padding-left: 8px;color: #999;line-height: 21px;}
+.clearfix {display: block;}
+.list2col li {margin-top:1px;list-style: none outside none;display: list-item;text-align: -webkit-match-parent;background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;background-position: 0 -486px;padding-left: 12px;font-size: 14px;line-height: 24px;float: left;width: 45%;}
+.list2col li a {color: #004d01;text-decoration: none;}
+.list2col li a:hover {color: #F00;text-decoration:underline;}
+.mod-bd {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;height: auto;background: url({tplurl}images/fy-line-201005.png) repeat-x 0 165px;padding-bottom: 0;}
+.picList1 {	position: relative;zoom: 1;height: 165px;margin-bottom: 10px;}
+.picList1 dt {	display: block;margin-left: 135px;padding: 4px 0 0;font-size: 14px;font-weight: normal;text-indent: -7px;position: relative;zoom: 1;}
+.picList1 dt a {font-weight: bold;}
+.picList1 dd {margin-left: 135px;}
+.picList1 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList1 dd.pic img {vertical-align: middle;width: 120px;height: 150px;border: 1px solid #d1d1d1;background: #fff;padding: 1px;}
+.picList1 dd.intro {margin-left: 135px;}
+.picList1 dd.upd a {color: #006704;}
+
+
+.mod-1 {margin-bottom: 10px;}
+.mod-1 .mod-hd {background-position: 0 -447px;background-repeat: repeat-x;background-image: none;border: 1px solid #CCCCCC; height: 28px;overflow: hidden; position: relative;}
+.mod-1 .mod-hd h2 {  color: #000000;font-size: 14px;    line-height: 30px;    padding-left: 10px;font-weight:bold;text-align: left;}
+.clearfix:after {    clear: both;    content: ".";    display: block;    height: 0;    visibility: hidden;}
+.sortTop .mod-bd {    padding-bottom: 0;}
+.mod-bd, .J_tab-content {    -moz-border-bottom-colors: none;    -moz-border-left-colors: none;    -moz-border-right-colors: none;    -moz-border-top-colors: none;    border-image: none;    border-style: none solid solid;    border-width: 0 1px 1px;    padding: 10px;    position: relative;}
+.content-rl .content-lr .main {    float: left;}
+.w210 {    width: 220px;	float:left;margin-bottom:5px;}
+.sortTop .mod-sub {    margin-bottom: 10px;}
+.sortTop .mod-sub h3 {	background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;    background-position: 0 -170px;font-size: 100%;    height: 23px;    margin-bottom: 10px;    padding: 0 0 0 20px;}
+.picList2 {position: relative;zoom: 1;height: 135px;}
+.picList2 dt {margin-left: 110px;font-size: 12px;font-weight: normal;text-indent: -3px;position: relative;zoom: 1;}
+.picList2 dt a {font-weight: bold;}
+.picList2 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList2 dd.pic img {	vertical-align: middle;width: 96px;height: 120px;border: 1px solid #999;background: #fff;padding: 2px;}
+.picList2 dd {margin-left: 110px;}
+.picList2 dd.intro {color: #646464;}
+.sortTop .mod-sub li {height: 20px;line-height: 20px;position: relative;zoom: 1;overflow: hidden;}
+span.sort {color: #999;}
+.sortTop .mod-sub li {line-height: 20px;}
+.mod-sub dl {display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
+.mod-sub ul, ol {list-style: none outside none;}
+.txt_tab li {padding-left: 13px;}
+.txt_tab li a {width:165px;float:left;}
+.txt_tab li span {display: inline-block;float: right;height: 22px;line-height: 22px;text-align: right;width: auto;}
+
+
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: block;}
+.content, .content-lr, .content-rl {position: relative;zoom: 1;}
+#wrap {text-align: left;}
+.mr10 {margin-right: 10px;}
+.main, .sidebar {display: inline;}
+.w230 {width: 230px;}
+.content-lr .main {float: left;}
+.mod-1 {margin-bottom: 10px;}
+.mod-hd, .tab-menuWrapper {height: 30px;background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;}
+.mod-1 .mod-hd {background-image: none;height: 28px;border: 1px solid #ccc;position: relative;zoom: 1;overflow: hidden;}
+.mod-hd h2 {font-size: 14px;line-height: 30px;padding-left: 10px;color: #fff;}
+.mod-1 .mod-hd h2 {color: #000;}
+.mod-hd-m {background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;}
+.mod-hd-m, .tab-menu-m {position: absolute;top: 4px;right: 5px;width: 35px;background-position: 30px -240px;line-height: 26px;}
+.mod-1 .mod-hd-m {background-position: 30px -211px;}
+.mod-hd-m a, .tab-menu-m a {font-size: 12px;}
+.mod-1 .mod-hd-m a {color: #000;}
+.mod-bd, .J_tab-content {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;background:none;}
+.picList3 {position: relative;zoom: 1;height: 96px;background: url({tplurl}images/fy-bg-201005.png) repeat-x 0 103px;padding-bottom: 9px;margin-bottom: 5px;}
+.picList3 dt {height:20px;overflow:hidden;margin-left: 90px;font-size: 12px;font-weight: normal;text-indent: -3px;position: relative;zoom: 1;}
+.picList3 dt a {font-weight: bold;}
+.picList3 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList3 dd.pic img {width: 72px;height: 90px;border: 1px solid #d1d1d1;background: #fff;padding: 2px;}
+.picList3 dd {margin-left: 90px;}
+.picList3 dd.author {color: #656565;}
+.picList3 dd {margin-left: 90px;}
+.picList3 dd.intro {height:50px;overflow:hidden;color: #999;width: 118px;}
+.topList3 {background: url({tplurl}images/fy-line-201005.png) repeat;}
+.topList3 li{background-image: url({tplurl}images/fy-bg-201005.png);background-repeat: no-repeat;}
+li.No1 {background-position: -380px -15px;}
+.topList3 li span {background: #fff;margin-left: 16px;}
+.topList3 li {height: 22px;line-height: 22px;overflow: hidden;position: relative;zoom: 0;}
+.topList3 li span {margin-left:15px;}
+.topList3 li span.author {position: absolute;top: 0;right: 0;padding: 0 0 0 5px;margin: 0;display: inline-table;}
+li.No2 {background-position: -380px -39px;}
+li.No3 {background-position: -380px -63px;}
+li.No4 {background-position: -380px -87px;}
+li.No5 {background-position: -380px -111px;}
+li.No6 {background-position: -380px -135px;}
+li.No7 {background-position: -380px -159px;}
+li.No8 {background-position: -380px -183px;}
+li.No9 {background-position: -380px -207px;}
+li.No10 {background-position: -380px -231px;}
+li.No11 {background-position: -380px -255px;}
+li.No12 {background-position: -380px -279px;}
+li.No13 {background-position: -380px -303px;}
+li.No14 {background-position: -380px -327px;}
+li.No15 {background-position: -380px -351px;}
+.content-lr .sidebar {float: right;}
+
+</style>
+
+<div id="main">
+
+{c$nanpin_ad_1_950}
+
+<div class="tab J_tab" style="width:350px; float:left;">
+	 <!-- 重磅推荐&大神推荐 -->
+	<div class="tab-menuWrapper" style="height:0px;"></div>
+	<div class="J_tab-content" style="border: none; padding: 0px; display: block;">
+		<div class="mod-bd">
+			{c$nvpinshouyetuwentuijian}
+		</div>
+	</div>
+	<!--END 重磅推荐&强力推荐 -->
+</div>
+
+<div id="txtbox" class="k1" style="width:375px;float:left;margin-left:10px;">
+	<br>
+	<h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
+		{p$nanpinshouyedawenzituig1}
+	</h2>
+	
+	<ul class="list2col clearfix">
+		{p$nanpinshouyeshoutuiliebiao}
+	</ul>
+	<br><br>
+	<h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
+		{p$nanpinshouyedawenzituig1}
+	</h2>
+	
+	<ul class="list2col clearfix">
+		{p$nanpinshouyeshoutuiliebiao}
+	</ul>
+</div>
+
+<div class="tab J_tab" style="width:205px;height:370px;overflow:hidden;float:left;margit:5px;margin-left: 5px;">
+	<div class="tab-menuWrapper">
+		<h2 class="J_tab-menu active"><span>全站强推</span></h2>
+		<div class="tab-menu-m"><a href="index.php?caid=1&ccid7=38" target="_blank">更多</a></div>
+	</div>
+	<div class="tab-contentWrapper">
+		<div class="J_tab-content" style="display: block;">
+			<ul class="list1">
+               	{p$xiaoshuoqingtui}
+               	{p$xiaoshuoqingtui}
+      		</ul>
+		</div>
+	</div>
+</div>
+
+
+      
+<div class="blank3"></div>
+{c$nanpin_ad_1_950}
+
+<div class="picList1" style="width:270px;height:150px;float:left;border: 1px solid #ccc;">
+	<dt><a target="_blank" title="网游之王者无敌" href="archive.php?aid=36">网游之王者无敌</a></dt>
+	<dd class="pic"><a target="_blank" title="网游之王者无敌" href="archive.php?aid=59">
+	<img style="width:111px;higth:130px;" alt="网游之王者无敌" src="userfiles/image/20130316/16023928a0bcfc50bf3342.jpg#189#272"></a></dd>
+	<dd class="intro">现代武器和古老魔法的碰撞，异能与古武之间的较量，不同信仰的纷争，这是一个充满了冒险和挑战同时......</dd>
+	<dd class="upd"><a target="_blank" title="网游之王者无敌" href="archive.php?aid=59">阅读>></a></dd>
+</div>
+
+<div style="width:395px;height:150px;float:left;margin-left:5px; border: 1px solid #ccc;">
+	<ul class="list2col clearfix" style="list-style: none;">
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=37" target="_blank" title="【上架】江北女匪">【上架】<span style="color:#000;font-size: 13px;">江北女匪</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=50" target="_blank" title="【上架】残袍">【上架】<span style="color:#000;font-size: 13px;">残袍</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=52" target="_blank" title="【上架】全能兵皇">【上架】<span style="color:#000;font-size: 13px;">全能兵皇</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之王者无敌">【上架】<span style="color:#000;font-size: 13px;">网游之王者无敌</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=51" target="_blank" title="【上架】焚天裂地">【上架】<span style="color:#000;font-size: 13px;">焚天裂地</span></a></li>
+	</ul>
+</div>
+
+
+<div class="picList1" style="width:270px;height:150px;float:right;border: 1px solid #ccc;">
+	<dt><a target="_blank" title="残袍" href="archive.php?aid=36">言情都市爱情故事</a></dt>
+	<dd class="pic"><a target="_blank" title="残袍" href="archive.php?aid=50">
+	<img style="width:111px;higth:130px;" alt="残袍" src="userfiles/image/20130316/1602261935c960b26a3567.jpg#189#272"></a></dd>
+	<dd class="intro">她，身负异能，是21世纪让人闻风丧胆的冷面女特工，一朝醒来，身海腾沸，指山山动摇。蛟鳄潜形百怪伏。...</dd>
+	<dd class="upd"><a target="_blank" title="残袍" href="archive.php?aid=50">阅读>></a></dd>
+</div>
+
+<div class="blank3"></div>
+
+<div style="width:230px;float:left">
+	<div id="lm2" class="lmc" style="width:230px;float:left;">
+		<dl><dt>点击榜<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul>{c$nanpindianjibang}</ul>
+		</dd>
+		</dl>
+	</div>
+	<br>
+	<div id="lm2" class="lmc" style="width:230px;float:left;">
+		<dl><dt>订阅榜<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul>{c$nanpindianjibang}</ul>
+		</dd>
+		</dl>
+	</div>
+</div>
+
+<div class="content-lr clearfix" style="width:710px;margin-left:10px;float:right;">
+    <!--第三部分 开始--> 
+	{c$nvpin_tuwenliebiao}
+</div>
+
+<div class="blank3"></div>
+
+{c$nvpin_xinshu_paihangbang}
+
+<div style="width:232px;float:left;margin:0px;margin-left:5px;" class="main w230 mr10">
+	<div class="mod-1">
+	<!-- 玄幻·奇幻新书榜 -->
+	<div class="mod-hd">
+		<h2>耽美同人</h2>
+		<div class="mod-hd-m"><a target="_blank" title="更多" href="http://xiaoshuo.com/list.php?caid=4">更多</a></div>
+	</div>
+	<div class="mod-bd">
+		<dl class="picList3">
+			<dt>《<a title="江湖传奇之天子无忧" target="_blank" href="http://xiaoshuo.com/archive.php?aid=78">江湖传奇之天子无忧</a>》</dt>
+			<dd class="pic"><a title="江湖传奇之天子无忧" target="_blank" href="http://xiaoshuo.com/archive.php?aid=78"><img alt="《江湖传奇之天子无忧》" src="userfiles/image/20130318/182157169cbfbfeddf6060.jpg#189#269"></a></dd>
+			<dd class="author">作者：天子无忧</dd>
+			<dd title="&#12288;&#12288;什么是江湖，江湖是一个充满了热血和尔虞我诈的地方。有的人 ..." class="intro">&#12288;&#12288;什么是江湖，江湖是一个充满了热血和尔虞我诈的地方。有的人 ...</dd>
+		</dl>
+		<ul class="topList3">
+			<li class="No1"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=78">江湖传奇之天子无忧</a>》</span><span class="author">天子无忧</span></li>			
+			<li class="No2"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=77">折剑恩仇录</a>》</span><span class="author">冷月古桥</span></li>			
+			<li class="No3"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=76">紫砚阁</a>》</span><span class="author">初溅一</span></li>			
+			<li class="No4"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=75">征帆天涯</a>》</span><span class="author">边王</span></li>			
+			<li class="No5"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=74">星月帝国</a>》</span><span class="author">九世乞丐</span></li>			
+			<li class="No6"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=73">笑傲君子系统</a>》</span><span class="author">醉权天下</span></li>			
+			<li class="No7"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=72">笑傲江湖续</a>》</span><span class="author">苦小涩</span></li>			
+			<li class="No8"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=71">笑傲江湖之兄弟情</a>》</span><span class="author">苍狼泪</span></li>			
+			<li class="No9"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=70">艳侠羞天下</a>》</span><span class="author">冷日夕宇</span></li>
+		</ul>
+	</div>
+	<!-- END 武侠仙侠新书榜 -->
+	</div>
+</div>
+
+<div style="width:232px;float:left;margin:0px;margin-left:5px;" class="main w230 mr10">
+	<div class="mod-1">
+	<!-- 科幻·灵异新书榜 -->
+	<div class="mod-hd">
+		<h2>完本精选</h2>
+		<div class="mod-hd-m"><a target="_blank" title="更多" href="http://xiaoshuo.com/list.php?caid=5">更多</a></div>
+	</div>
+	<div class="mod-bd">
+		<dl class="picList3">
+			<dt>《<a title="硬骨头陆战队" target="_blank" href="http://xiaoshuo.com/archive.php?aid=87">硬骨头陆战队</a>》</dt>
+			<dd class="pic"><a title="硬骨头陆战队" target="_blank" href="http://xiaoshuo.com/archive.php?aid=87"><img alt="《硬骨头陆战队》" src="userfiles/image/20130318/18220350fe5867a5913427.jpg#182#272"></a></dd>
+			<dd class="author">作者：格林吗啡</dd>
+			<dd title="我不知道第三次世界大战会是什么样，但我知道第四次世界大战会用 ..." class="intro">我不知道第三次世界大战会是什么样，但我知道第四次世界大战会用 ...</dd>
+		</dl>
+		<ul class="topList3">
+			<li class="No1"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=87">硬骨头陆战队</a>》</span><span class="author">格林吗啡</span></li>			
+			<li class="No2"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=86">进化奇缘</a>》</span><span class="author">怒三放</span></li>			
+			<li class="No3"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=85">假面骑士电骑</a>》</span><span class="author">少三</span></li>			
+			<li class="No4"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=84">万亿遗产和四十一个未婚妻</a>》</span><span class="author">丁门</span></li>			
+			<li class="No5"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=83">无限之主神争霸</a>》</span><span class="author">怪兽很萌</span></li>			
+			<li class="No6"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=82">偷天杀手</a>》</span><span class="author">盘丝小枣</span></li>			
+			<li class="No7"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=81">小人物大传奇</a>》</span><span class="author">巅疯</span></li>			
+			<li class="No8"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=80">驾机器人时空遨游记</a>》</span><span class="author">盼归游子</span></li>			
+			<li class="No9"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=79">星空名将录</a>》</span><span class="author">东南匪</span></li>
+		</ul>
+		</div>
+	<!-- END 武侠仙侠新书榜 -->
+	</div>
+</div>
+
+
+
+<div class="blank3"></div>
+
+
+<div style="width:230px;float:left;margin-left:2px;">
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>连载精品<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul>{c$nanpindianjibang}</ul>
+		</dd>
+		</dl>
+	</div>
+	<br>
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>热点精品<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul>{c$nanpindianjibang}</ul>
+		</dd>
+		</dl>
+	</div>
+</div>
+
+<div id="divboxd" style="width:470px;float:left;margin-left:7px;">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新小说更新列表</b><span class="rright"><a href="{c$fenmianabouturl}">更多&gt;&gt;</a></span></dt>
+<dd><div id="txttd4"><div class="txttb4 txtbg1"><ul>{c$list_newlist}</ul></div></div></dd>
+</dl></div>
+</div>
+
+<div style="width:230px;float:right;">
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>打赏榜<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul>{c$nanpindianjibang}</ul>
+		</dd>
+		</dl>
+	</div>
+	<br>
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>推荐榜<span><a href="{c$vipnode}">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul>{c$nanpindianjibang}</ul>
+		</dd>
+		</dl>
+	</div>
+</div>
+
+
+<div class="blank3"></div>
+{c$nanpin_ad_1_950}
+
+
+
+
+</div>
+<div id="links"><b>合作链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

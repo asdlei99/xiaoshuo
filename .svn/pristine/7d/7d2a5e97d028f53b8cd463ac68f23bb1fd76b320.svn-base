@@ -1,0 +1,9 @@
+<?php
+$nvconfigs = array (
+  'readprice20' => 5,
+  'readprice19' => 4,
+  'readprice0' => 3,
+  'downcache' => 2,
+  'downtpl' => 'nv_down.html',
+) ;
+?>

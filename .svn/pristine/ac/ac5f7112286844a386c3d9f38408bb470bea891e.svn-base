@@ -1,0 +1,26 @@
+<?php
+$ctagindex_vip_tuijie_0 = array (
+  'cname' => 'Ê×Ò³VIPÍÆ½é',
+  'ename' => 'index_vip_tuijie',
+  'tclass' => 'archives',
+  'template' => '<a href="{arcurl}" title="{subject}"  target="_blank">{u$subject30}</a>',
+  'setting' => 
+  array (
+    'limits' => 3,
+    'cols' => 1,
+    'caidson' => '1',
+    'casource' => '1',
+    'caids' => '1',
+    'ccidson1' => '1',
+    'cosource1' => '1',
+    'ccids1' => '29',
+    'ccids2' => '',
+    'ccids3' => '',
+    'ccids4' => '',
+    'ccids5' => '',
+    'chids' => '',
+    'closed' => '-1',
+    'abover' => '-1',
+  ),
+) ;
+?>

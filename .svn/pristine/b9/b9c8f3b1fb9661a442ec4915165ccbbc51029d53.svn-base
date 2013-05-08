@@ -1,0 +1,20 @@
+<?php
+$vcps_0 = array (
+  'tax' => 
+  array (
+    '1_1' => '1»ý·Ö',
+  ),
+  'sale' => 
+  array (
+  ),
+  'award' => 
+  array (
+  ),
+  'ftax' => 
+  array (
+  ),
+  'fsale' => 
+  array (
+  ),
+) ;
+?>

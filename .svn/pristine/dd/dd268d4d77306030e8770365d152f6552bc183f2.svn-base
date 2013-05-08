@@ -1,0 +1,158 @@
+{tpl$header}
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a>&nbsp;>&nbsp;{c$list_tit}排行榜</div>
+</div>
+</div>
+<style type="text/css">
+#lm2{width:306px;float:left;height:265px;margin-right:3px;margin-left:3px;}
+#menu #menu_1{display:none;}
+#menu #menu_3{display:block;}
+</style>
+<script type="text/javascript">
+function changecla(id){
+    var arcid1 = id.slice(-2,-1);
+    var arcid2 = id.slice(-2);
+    for(var i=1; i<=3; i++){
+        $("font_" + arcid1 + i).className = "";
+        $("dd_" + arcid1 + i).style.display = "none";
+    }
+    $("font_" + arcid2).className = "act";
+    $("dd_" + arcid2).style.display = "";
+    
+}
+</script>
+<div id="main">
+
+	<div style="width:150px;float:left;border: 1px solid #ccc;padding:5px;">
+		<h3>全站排行榜</h3>
+		<ul>
+			<li><a href="#">连载小说点击榜&gt;&gt;</a></li>
+			<li><a href="#">收藏榜&gt;&gt;</a></li>
+			<li><a href="#">打赏榜&gt;&gt;</a></li>
+			<li><a href="#">推荐榜&gt;&gt;</a></li>
+			<li><a href="#">评价榜&gt;&gt;</a></li>
+			<li><a href="#">订阅榜&gt;&gt;</a></li>
+			
+		</ul>
+		
+		<h3><a href="/index.php?caid=1&ccid7=38">男频小说排行榜</a></h3>
+		<ul>
+			<li><a href="/index.php?caid=2&ccid7=38">武侠&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=4&ccid7=38">玄幻&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=5&ccid7=38">科幻&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=6&ccid7=38">历史&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=7&ccid7=38">悬疑&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=17&ccid7=38">都市&gt;&gt;</a></li>
+		</ul>
+		
+		<h3><a href="/index.php?caid=14&ccid7=38">女频小说排行榜</a></h3>
+		<ul>
+			<li><a href="/index.php?caid=3&ccid7=38">言情&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=15&ccid7=38">穿越&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=16&ccid7=38">女强&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=18&ccid7=38">精品&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=19&ccid7=38">家斗&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=20&ccid7=38">灵异&gt;&gt;</a></li>
+		</ul>
+		
+		<h3>作者排行榜</h3>
+		<ul>
+			<li><a href="#">作者财富榜&gt;&gt;</a></li>
+			<li><a href="#">作者更新榜&gt;&gt;</a></li>
+			<li><a href="#">作者粉丝榜&gt;&gt;</a></li>
+		</ul>
+		
+		<h3>读者排行榜</h3>
+		<ul>
+			<li><a href="#">vip书友榜&gt;&gt;</a></li>
+			<li><a href="#">读者打赏榜&gt;&gt;</a></li>
+			<li><a href="#">读者推荐榜&gt;&gt;</a></li>
+			<li><a href="#">读者评价榜&gt;&gt;</a></li>
+		</ul>
+	</div>
+<style type="text/css">
+.boyRank .rankRightList {border-color: #DFDFDF;}
+.rankRightList {width: 247px;border: 1px solid;margin-left: 10px;margin-bottom:5px;float: left;position: relative;display: inline;overflow: hidden;}
+.boyRank .rankRightList h3 {background: #f0f0f0;}
+.rankRightList h3 {height: 29px;line-height: 29px;padding-left: 20px;font-size: 14px;color: #333;font-weight: bold;}
+.rankRightNr1 ul {height: 270px;padding: 5px;}
+.rankRightNr1 li {height: 26px;color: #333;line-height: 26px;font-size: 12px;border-bottom: 1px dotted #ccc;position: relative;}
+.rankRightNr1 .bookid {display: inline-block;font-size: 13px;color: #333;width: 22px;text-align: right;}
+.rankRightNr1 .amout {height: 13px;color: #666;position: absolute;right: 6px;top: 2px;width: 48px;text-align: right;}
+.rankRightNr1 .bookname {height: 13px;left: 22px;color: #1A53FF;word-wrap: break-word;}
+.rankRightNr1 a:link {color: #1952FF;}
+.rankRightNr1 a:visited {color: #551A8B;}
+.rankRightNr1 a {color: #1952FF;text-decoration: none;}
+.rankRightList a:HOVER { color: #ff0000;}
+</style>
+
+	<div style="width:780px;float:right;">
+		<div class="rankRightList">
+		    <h3>{c$list_tit}点击榜</h3>
+		    <div class="rankRightNr1">
+		    	<ul>
+		    		{c$paihang_dianjibang}
+				</ul>
+		    </div>
+	    </div>
+	    
+	    <div class="rankRightList">
+		    <h3>{c$list_tit}推荐榜</h3>
+		    <div class="rankRightNr1">
+		    	<ul>
+		    		{c$paihang_tuijianbang}
+				</ul>
+		    </div>
+	    </div>
+	    
+	    <div class="rankRightList">
+		    <h3>{c$list_tit}收藏榜</h3>
+		    <div class="rankRightNr1">
+		    	<ul>
+		    		 {c$paihang_shoucangbang}
+				</ul>
+		    </div>
+	    </div>
+	    
+	    <div class="rankRightList">
+		    <h3>{c$list_tit}评论榜</h3>
+		    <div class="rankRightNr1">
+		    	<ul>
+		    		{c$paihang_pinlunbang}
+				</ul>
+		    </div>
+	    </div>
+	    
+	    <div class="rankRightList">
+		    <h3>{c$list_tit}打赏榜</h3>
+		    <div class="rankRightNr1">
+		    	<ul>
+		    		{c$paihang_dashangbang}
+				</ul>
+		    </div>
+	    </div>
+	    
+	    <div class="rankRightList">
+		    <h3>{c$list_tit}新书榜</h3>
+		    <div class="rankRightNr1">
+		    	<ul>
+		    		{c$paihang_xinshubang}
+				</ul>
+		    </div>
+	    </div>
+    
+    
+    
+	</div>
+<script type="text/javascript">
+for(var i=1; i<=100; i++){
+    if($("font_" + i + 1)){
+        $("font_" + i + 1).className = "act";
+        $("dd_" + i + 1).style.display = "";
+    }
+    else{break;}
+}
+</script>
+</div>
+<div class="blank3"></div>
+{tpl$footer}

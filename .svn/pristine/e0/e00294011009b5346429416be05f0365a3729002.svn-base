@@ -1,0 +1,15 @@
+<?php
+$ctaghead_ad_700_60_0 = array (
+  'cname' => 'Í·²¿Í¼Æ¬700*60',
+  'ename' => 'head_ad_700_60',
+  'tclass' => 'farchives',
+  'template' => '<a href="{advurl}" title="{subject}" target="_blank">{u$adimg [tclass=image/] [tname=advimg/] [maxwidth=700/] [maxheight=60/]}<img width="{width}" height="{height}" src="{url}" border="0" />{/u$adimg}</a>',
+  'setting' => 
+  array (
+    'limits' => 1,
+    'cols' => 1,
+    'casource' => '4',
+    'orderby' => 'vieworder_asc',
+  ),
+) ;
+?>

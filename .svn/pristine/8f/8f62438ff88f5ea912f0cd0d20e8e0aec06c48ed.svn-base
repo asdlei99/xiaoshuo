@@ -1,0 +1,47 @@
+<div style="width:150px;float:left;border: 1px solid #ccc;padding:5px;">
+		<h3>全站排行榜</h3>
+		<ul>
+			<li><a href="#">连载小说点击榜&gt;&gt;</a></li>
+			<li><a href="#">收藏榜&gt;&gt;</a></li>
+			<li><a href="#">打赏榜&gt;&gt;</a></li>
+			<li><a href="#">推荐榜&gt;&gt;</a></li>
+			<li><a href="#">评价榜&gt;&gt;</a></li>
+			<li><a href="#">订阅榜&gt;&gt;</a></li>
+			
+		</ul>
+		
+		<h3><a href="/index.php?caid=1&ccid7=38">男频小说排行榜</a></h3>
+		<ul>
+			<li><a href="/index.php?caid=2&ccid7=38">武侠&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=4&ccid7=38">玄幻&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=5&ccid7=38">科幻&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=6&ccid7=38">历史&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=7&ccid7=38">悬疑&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=17&ccid7=38">都市&gt;&gt;</a></li>
+		</ul>
+		
+		<h3><a href="/index.php?caid=14&ccid7=38">女频小说排行榜</a></h3>
+		<ul>
+			<li><a href="/index.php?caid=3&ccid7=38">言情&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=15&ccid7=38">穿越&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=16&ccid7=38">女强&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=18&ccid7=38">精品&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=19&ccid7=38">家斗&gt;&gt;</a></li>
+			<li><a href="/index.php?caid=20&ccid7=38">灵异&gt;&gt;</a></li>
+		</ul>
+		
+		<h3>作者排行榜</h3>
+		<ul>
+			<li><a href="#">作者财富榜&gt;&gt;</a></li>
+			<li><a href="#">作者更新榜&gt;&gt;</a></li>
+			<li><a href="#">作者粉丝榜&gt;&gt;</a></li>
+		</ul>
+		
+		<h3>读者排行榜</h3>
+		<ul>
+			<li><a href="#">vip书友榜&gt;&gt;</a></li>
+			<li><a href="#">读者打赏榜&gt;&gt;</a></li>
+			<li><a href="#">读者推荐榜&gt;&gt;</a></li>
+			<li><a href="#">读者评价榜&gt;&gt;</a></li>
+		</ul>
+	</div>

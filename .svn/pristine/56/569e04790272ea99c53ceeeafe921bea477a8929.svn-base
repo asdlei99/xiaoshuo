@@ -1,0 +1,11 @@
+<?php
+$ctaglist_tit_0 = array (
+  'cname' => 'À¸Ä¿±êÌâ',
+  'ename' => 'list_tit',
+  'tclass' => 'cnmod',
+  'template' => '{title}',
+  'setting' => 
+  array (
+  ),
+) ;
+?>

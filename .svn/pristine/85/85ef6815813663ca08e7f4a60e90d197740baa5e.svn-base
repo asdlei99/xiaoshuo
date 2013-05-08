@@ -1,0 +1,245 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?=$mcharset?>">
+<meta name="keywords" content="<?=$cmskeyword?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<?=$v['title']?><?php _aquit();} unset($v);?>
+" />
+<meta name="Description" content="<?=$cmsdescription?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<?=$v['title']?><?php _aquit();} unset($v);?>
+" />
+<TITLE><?=$cmstitle?> - <?=$cmsname?> - <?=$hostname?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<?=$v['title']?><?php _aquit();} unset($v);?>
+</TITLE>
+<link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/common.css" />
+<link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/17_header.css" />
+<link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/index.css" />
+<script type="text/javascript">var cmsUrl = "<?=$cms_abs?>";</script>
+<script src="<?=$tplurl?>js/common.js" type="text/javascript" language="javascript"></script>
+<script src="<?=$tplurl?>js/ajax.js" type="text/javascript" language="javascript"></script>
+<script src="<?=$tplurl?>js/commu.js" type="text/javascript" language="javascript"></script>
+<script src="<?=$tplurl?>js/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<!-- 顶部 begin -->
+<div id="top">
+<div class="left orangea"><script language="javascript"  src="<?=$cms_abs?>login.php?mode=js&sid=<?=$sid?>"></script></div>
+<div class="right">【<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<?=$cms_abs?>');" style="cursor:hand">设为首页</a>】【<a href="#" onClick="javascript:window.external.AddFavorite('<?=$cms_abs?>','<?=$cmsname?>');">收藏本站</a>】</div>
+</div>
+<!-- 首体 begin -->
+<div id="head">
+<div class="left"><a href="<?=$cms_abs?>" ><img src="<?=$cms_abs?><?=$cmslogo?>" /></a></div>
+<div class="right">
+<div class="r1"><ul>
+<?php $_txt_banner=_ctag_parse(array("ename" => "txt_banner","tclass" => "farchives","limits" => "3","cols" => "1","casource" => "5","orderby" => "vieworder_desc",));foreach($_txt_banner as $v){_aenter($v);?>
+<li><a href="<?=$v['advurl']?>" target="_blank" title="<?=$v['alttext']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_txt_banner,$v);?>
+
+</ul></div>
+<div class="r2"><div class="search" id="searchbox" style="width:650px;margin-top:30px;">
+<table cellpadding="0">
+<tr>
+<form id="searchform" action="<?=$cmsurl?>search.php?sid=<?=$sid?>" method="get" target="_blank">
+<td width="30px" valign="middle"><img src="<?=$tplurl?>images/ico_search.gif" /></td>
+<td width="60px;" valign="middle"><b>站内搜索</b></td>
+<td width="100px;" id="seach_y"><input name="searchword" value="推荐热门小说" type="text" style="width:260px" maxlength="18" onclick="this.value=''" /></td>
+<td width="60px;"><input type="hidden" name="searchsubmit" value="1"><input src="<?=$tplurl?>images/b_s.gif"  type="image" width="52" height="21" id="Image12" /></td>
+
+<td width="40px">热词：</td>
+<td width="60px"><a href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=吞天神帝&searchsubmit=1&x=40&y=12">吞天神帝</a></td>
+<td width="60px"><a href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=特种教师&searchsubmit=1&x=40&y=12">特种教师</a></td>
+<td width="60px"><a href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=江北女匪&searchsubmit=1&x=40&y=12">江北女匪</a></td>
+
+</form>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+<!-- 首体 begin -->
+<script type="text/javascript">
+function showmenu(id){
+	for(var i=1; i<=6; i++){
+		$('menu_'+i).style.display='none';
+	}
+	$('menu_'+id).style.display='block';
+}
+</script>
+<!--  -->
+<div id="menu">
+<div class="h1"><ul>
+<li><a href="<?=$cms_abs?>">首页</a></li>
+<li onmouseover="showmenu(1)"><a href="<?php $v=_ctag_parse(array("ename" => "xs_menunode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">男频</a></li>
+<li onmouseover="showmenu(6)"><a href="<?php $v=_ctag_parse(array("ename" => "xs_nvpinnode","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "14",));if(!empty($v)){_aenter($v);?>
+		<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">女频</a></li>
+<?php $_main_menus=_ctag_parse(array("ename" => "main_menus","tclass" => "catalogs","limits" => "10","cols" => "1","listby" => "ca","casource" => "1","caids" => "8,9,10",));foreach($_main_menus as $v){_aenter($v);?>
+<li><a href="<?=$v['listurl']?>"  title="<?=$v['title']?>"><?=$v['title']?></a></li><?php _aquit();} unset($_main_menus,$v);?>
+
+<li onmouseover="showmenu(4)"><a href="<?php $_quanben_list=_ctag_parse(array("ename" => "quanben_list","tclass" => "catalogs","disabled" => "0","nsid" => "-1","listby" => "co6","cosource6" => "1","ccids6" => "36","cainherit" => "1",));foreach($_quanben_list as $v){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($_quanben_list,$v);?>
+">全本小说</a></li>
+<li><?php $v=_ctag_parse(array("ename" => "ztnode","tclass" => "cnode","listby" => "ca","casource" => "11",));if(!empty($v)){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($v);?>
+</li>
+<li onmouseover="showmenu(3)"><a href="<?php $v=_ctag_parse(array("ename" => "pai_index","tclass" => "cnode","disabled" => "0","casource" => "1","listby" => "co7","cosource7" => "38",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">排行榜</a></li>
+<li><a href="<?=$cms_abs?>adminm.php" target="_blank">会员中心</a></li>
+<li onmouseover="showmenu(2)"><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">VIP专区</a></li>
+</ul></div>
+<div class="h2" id="menu_1">
+<div class="left"><a>男频&gt;&gt;</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outxsnode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_xs_sen_list=_ctag_parse(array("ename" => "xs_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","urlmode" => "caid",));foreach($_xs_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_xs_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+<div class="h2" id="menu_6">
+<div class="left"><a>女频&gt;&gt;</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outnpxsnode","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "14",));if(!empty($v)){_aenter($v);?>
+<?php $_xs_sen_list=_ctag_parse(array("ename" => "xs_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","urlmode" => "caid",));foreach($_xs_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_xs_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+<div class="h2" id="menu_2">
+<div class="left"><a>&lt;&lt; VIP小说频道</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outvipnode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_vip_sen_list=_ctag_parse(array("ename" => "vip_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","coinherit3" => "6","urlmode" => "caid",));foreach($_vip_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['listurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_vip_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+
+<div class="h2" id="menu_3">
+<div class="left"><a>&lt;&lt; 排行榜</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outphnode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_ph_sen_list=_ctag_parse(array("ename" => "ph_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","coinherit7" => "38","urlmode" => "caid",));foreach($_ph_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_ph_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+
+<div class="h2" id="menu_4">
+<div class="left"><a>全本小说&gt;&gt;</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outqbnode","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_qb_sen_list=_ctag_parse(array("ename" => "qb_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","coinherit6" => "36","urlmode" => "caid",));foreach($_qb_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['listurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_qb_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+
+<div class="h2" id="menu_5">
+<div class="left" style="display: none;"><a>&lt;&lt; 专题</a></div>
+<div class="right" style="display: none;"><?php $v=_ctag_parse(array("ename" => "outztnode","tclass" => "cnode","listby" => "ca","casource" => "11",));if(!empty($v)){_aenter($v);?>
+<?php $_zt_sen_list=_ctag_parse(array("ename" => "zt_sen_list","tclass" => "catalogs","limits" => "100","listby" => "ca","casource" => "2",));foreach($_zt_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['listurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_zt_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+<script type="text/javascript" src="<?=$tplurl?>js/upload.js"></script>
+<script type="text/javascript" src="<?=$tplurl?>js/calendar.js"></script>
+<script type="text/javascript" src="<?=$tplurl?>js/register.js"></script>
+<div id="main">
+<div id="left">
+<style type="text/css">
+.form_box{}
+.form_box td{height:30px;line-height:30px;}
+</style>
+<div class="txtbox k1 form_box">
+	<table width="100%" border="0" cellpadding="0" cellspacing="1">
+	<caption>基本信息</caption>
+<form name="register" id="register" method="post" enctype="multipart/form-data" action="<?=$cms_abs?>register.php?forward=<?=$forward?>">
+	<tr><td align="center">用&#160;户&#160;名：</td>
+	<td>
+	<input type="text" size="35" maxlength="25" name="mname" value="" onBlur="checkmname()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkmname"></span>
+	</td></tr>
+	<tr><td align="center">密&#160;&#160;&#160;&#160;码：</td>
+	<td>
+	<input type="password" size="35" maxlength="25" name="password" value="" onBlur="checkpassword()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkpassword"></span>
+	</td></tr>
+	<tr><td align="center">确认密码：</td>
+	<td>
+	<input type="password" size="35" maxlength="25" name="password2" value="" onBlur="checkpassword2()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkpassword2"></span>
+	</td></tr>
+	<tr><td align="center">邮件地址：</td>
+	<td>
+	<input type="text" size="35" maxlength="25" name="email" value="" onBlur="checkemail()" onmouseover="input_over(this)" onmouseout="input_out(this)"><span id="checkemail"></span>
+	</td></tr>
+	<tr><td align="center">空间模板：</td>
+	<td><select style="width:205px;" name="mtcid">
+	<option value="1">默认</option>
+	</select></td></tr>
+	<tr><td align="center">进阶选项：</td><td>&#160;</td></tr>
+	<tr><td align="center">姓&#160;&#160;&#160;&#160;名：</td>
+	<td><input type="text" size="35" maxlength="25" id="truename" name="truename" value=""></td></tr>
+	<tr><td align="center">性&#160;&#160;&#160;&#160;别：</td>
+	<td>
+	<input class="radio" type="radio" name="gender" value="保密" checked style="border:0">保密
+	<input class="radio" type="radio" name="gender" value="男"  style="border:0">男
+	<input class="radio" type="radio" name="gender" value="女"  style="border:0">女
+	</td></tr>
+	<tr><td align="center">生&#160;&#160;&#160;&#160;日：</td>
+	<td><input type="text" id="birthday" size="35" maxlength="25" name="birthday" value="" onclick="ShowCalendar(this.id);" onmouseover="input_over(this)" onmouseout="input_out(this)"></td></tr>
+	<tr><td align="center" valign="top">头&#160;&#160;&#160;&#160;像：</td>
+	<td>
+	<div class="s_tr">
+	<input type="file" size="35" id="photolocal" name="photolocal" style="display:none;" unselectable="on" onchange="checksingle('photo','image')">
+	<input type="text" size="35" id="photoremote" name="photoremote" value="" style="display:;" onchange="checksingle('photo','image')" onmouseover="input_over(this)" onmouseout="input_out(this)">
+	<input type="button" class="button" id="photoselect" value="站内选择" style="display:;" onclick="severmanager('photo','0','singleimage')">&#160;&#160;<input class="checkbox" type="checkbox" id="photomode" name="photomode" value="1" style="border:0" onclick = "singlemode('photo','image')">本地上传</div>
+    <div class="td3">
+	<span id="openviewphoto" style="cursor:pointer;" onclick="openview('photo')"><img src="./images/admina/pv_open.gif" title="预览"></span></div>
+	
+	<span id="photo_hidden" style="position:absolute;left:-100000px;top:-100000px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');width:250px;height:250px"></span>
+    <span class="s_view" style="display:none;" id="viewphoto"><img src="./images/admina/pview.gif" id="photoview" width="150" height="120" align="absmiddle"></span>
+	<script type="text/javascript">
+	var viewwidth = 150;
+	var viewheight = 120;
+	var image_extensions = 'jpg,gif,png,jpeg,bmp';
+	</script>
+	
+	</td></tr>
+<tr><td align="center">验 证 码：</td>
+	<td><input type="text" name="regcode" id="regcode" size="4" maxlength="4" onBlur="checkregcode()"> <img src="regcode.php" alt="点击图片换验证码" style=" vertical-align:inherit;cursor:pointer;" onClick="this.src='regcode.php'"> <span class="notice" id="checkregcode">点击图片换验证码</span>
+	</td></tr>
+    <tr><td colspan="2" align="center"><input type="submit" name="register" value="注册"></td></tr>
+</form>
+	</table>
+</div>
+
+</div>
+<div id="right">
+<div id="lm2"><dl>
+<dt><img src="<?=$tplurl?>images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd><?php $_index_readmin=_ctag_parse(array("ename" => "index_readmin","tclass" => "archives","limits" => "6","ccidson1" => "1","cosource1" => "1","ccids1" => "30","closed" => "-1","abover" => "-1",));foreach($_index_readmin as $v){_aenter($v);?>
+<div id="txtpic">
+<div class="retxtpic_r"><b><a <? if(($v['ccid3'])) { ?>style="color:red;"<? } ?> href="<?=$v['arcurl']?>" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></b><br>作者：<?=$v['author']?><br>发表时间：<?php echo _utag_parse(array("ename" => "createdate_nj","tclass" => "date","tname" => "$v[createdate]","date" => "m-d",));?>
+<br /><a href="<?=$v['arcurl']?>"  target="_blank">[全文阅读]</a>
+</div>
+<div class="retxtpic_l pic_on"><a href="<?=$v['arcurl']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "thumb_66_87","tclass" => "image","tname" => "$v[thumb]","maxwidth" => "66","maxheight" => "87","thumb" => "1","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url_s']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$u['subject']?>"><?php } unset($u);?></a></div>
+</div><?php _aquit();} unset($_index_readmin,$v);?>
+</dd></dl></div>
+</div></div>
+<div id="links"><b>合作链接：</b><?php $_txtflinklist=_ctag_parse(array("ename" => "txtflinklist","tclass" => "farchives","limits" => "10","cols" => "1","casource" => "1","orderby" => "vieworder_asc",));foreach($_txtflinklist as $v){_aenter($v);?>
+<a href="<?=$v['linkurl']?>" title="<?=$v['subject']?>" target=_blank><?=$v['subject']?></a><?php _aquit();} unset($_txtflinklist,$v);?>
+<br /><?php $_picflinklist=_ctag_parse(array("ename" => "picflinklist","tclass" => "farchives","limits" => "10","cols" => "1","casource" => "2","orderby" => "vieworder_asc",));foreach($_picflinklist as $v){_aenter($v);?>
+<a href="<?=$v['linkurl']?>" title="<?=$v['linktxt']?>"><?php $u=_utag_parse(array("tclass" => "image","tname" => "$v[piclink]","maxwidth" => "88","maxheight" => "31","emptyurl" => "images/common/logo.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$u['subject']?>"><?php } unset($u);?></a><?php _aquit();} unset($_picflinklist,$v);?>
+</div>
+<div id="foot">
+<span>
+<?php $_all_dibu=_ctag_parse(array("ename" => "all_dibu","tclass" => "farchives","limits" => "100","cols" => "1","casource" => "11","orderby" => "vieworder_asc",));foreach($_all_dibu as $v){_aenter($v);?>
+<a href="<?=$v['arcurl']?>" target="_blank"><?=$v['subject']?></a>　|　<?php _aquit();} unset($_all_dibu,$v);?>
+
+<a href="<?=$cms_abs?>register.php" >会员注册</a>
+</span>
+<p id="copyright"><?=$copyright?>  Powered by <a href="<?=$hosturl?>" target="_blank"><?=$hostname?></a> v2013 &copy; 2013-2015 Inc.</a><br><?=$cms_icpno?> </p>
+</div>
+</body>
+</html>

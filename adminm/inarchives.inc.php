@@ -170,7 +170,7 @@ if(empty($u_tplname) || !empty($u_onlyview)){
 				$refreshdatestr = $row['refreshdate'] ? date('Y-m-d',$row['refreshdate']) : '-';
 				$enddatestr = $row['enddate'] ? date('Y-m-d',$row['enddate']) : '-';
 				$viewstr = "<a id=\"{$action}_info_$row[aid]\" href=\"?action=arcview&aid=$row[aid]\" onclick=\"return showInfo(this.id,this.href)\">".lang('look')."</a>";
-				$editstr = $row['mid'] == $memberid ? "<a href=\"?action=archive&aid=$row[aid]\" onclick=\"return floatwin('open_archiveedit',this)\">".lang('detail')."</a>" : '-';
+				$editstr = $row['mid'] == $memberid ? "<a href=\"?action=archive&aid=$row[aid]\" onclick=\"return floatwin('open_archiveedit',this)\">ÐÞ¸Ä</a>" : '-';
 	
 				$itemstr .= "<tr class=\"txt\"><td class=\"item\" >$selectstr</td><td class=\"item2\">$subjectstr</td>\n";
 				if(in_array('catalog',$u_lists)) $itemstr .= "<td class=\"item\">$catalogstr</td>\n";

@@ -1,0 +1,11 @@
+<?php
+$rtaghead_con_0 = array (
+  'cname' => 'ÄÚÈÝÒ³Í·²¿',
+  'ename' => 'head_con',
+  'tclass' => '',
+  'template' => 'head_con.tpl.html',
+  'setting' => 
+  array (
+  ),
+) ;
+?>

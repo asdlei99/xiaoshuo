@@ -1,0 +1,9 @@
+<div id="foot">
+<span>
+{c$all_dibu}
+<a href="{cms_abs}register.php" >»áÔ±×¢²á</a>
+</span>
+<p id="copyright">{copyright}  Powered by <a href="{hosturl}" target="_blank">{hostname}</a> v2013 &copy; 2013-2015, <a href="{hosturl}" target="_blank">{hostname}  Inc.</a><br>{cms_icpno} </p>
+</div>
+</body>
+</html>

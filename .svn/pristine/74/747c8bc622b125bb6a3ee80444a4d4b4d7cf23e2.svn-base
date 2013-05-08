@@ -1,0 +1,210 @@
+	{tpl$header}
+</div>
+</div>
+<style type="text/css">
+#lm2{width:306px;float:left;height:265px;margin-right:3px;margin-left:3px;}
+#menu #menu_1{display:none;}
+#menu #menu_3{display:block;}
+</style>
+<script type="text/javascript">
+function changecla(id){
+    var arcid1 = id.slice(-2,-1);
+    var arcid2 = id.slice(-2);
+    for(var i=1; i<=3; i++){
+        $("font_" + arcid1 + i).className = "";
+        $("dd_" + arcid1 + i).style.display = "none";
+    }
+    $("font_" + arcid2).className = "act";
+    $("dd_" + arcid2).style.display = "";
+    
+}
+
+$(document).ready(function(){
+	var paren = $(".list_wz ul");
+	paren.each(function(i,e){
+		$(e).find(".table_td").live("mouseover",function(){
+			$(this).parent().find(".table_td").attr("class", "table_td");
+			$(this).parent().find(".table_td movehover").attr("class","table_td");
+			$(this).attr("class","table_td movehover");	
+		});
+	});
+});
+
+
+</script>
+<style type="text/css">
+.boyRank .rankRightList {border-color: #CECECE;}
+.rankRightList {width: 247px; border: 1px solid #CECECE;margin-left: 10px;margin-bottom:5px;float: left;position: relative;display: inline;overflow: hidden;}
+.boyRank .rankRightList h3 {background: #f0f0f0;}
+.rankRightList h3 {height: 29px;line-height: 29px;padding-left: 20px;font-size: 14px;color: #333;font-weight: bold;background: url("{tplurl}images/bg_lm.jpg") repeat-x scroll 0 0 transparent;color: #CC3300;font-weight: bold;height: 25px;line-height: 25px;overflow: hidden;padding-left: 8px;}
+.rankRightNr1 ul {height: 270px;padding: 5px;}
+.rankRightNr1 li {height: 26px;color: #333;line-height: 26px;font-size: 12px;border-bottom: 1px dotted #ccc;position: relative;}
+.rankRightNr1 .bookid {display: inline-block;font-size: 13px;color: #333;width: 22px;text-align: right;}
+.rankRightNr1 .amout {height: 13px;color: #666;position: absolute;right: 6px;top: 2px;width: 48px;text-align: right;}
+.rankRightNr1 .bookname {height: 13px;left: 22px;color: #1A53FF;word-wrap: break-word;}
+.rankRightNr1 a:link {color: #1952FF;}
+.rankRightNr1 a:visited {color: #551A8B;}
+.rankRightNr1 a {color: #1952FF;text-decoration: none;}
+.rankRightList a:HOVER { color: #ff0000;}
+
+.tit_r {height: 35px;line-height: 35px;background: url({tplurl}images/tit_bg.png) no-repeat 0 -35px;}
+.tit_r h2 {height: 35px;overflow: hidden;padding-left: 15px;font-size: 16px;font-weight: bold;text-align: left;padding-top: 7px;}
+.c1row {background: url({tplurl}images/tit1.gif) no-repeat 0 0;color: #a37d1e;}
+.con790 {border: #e1e3e2 1px solid;border-width: 0 1px 1px;padding-bottom: 10px;width: 100%;overflow: hidden;background: url({tplurl}images/con790_bg.png) repeat-x #fff;}
+.list_wz {border-top: #e5e5e5 1px solid;background: #fff;}
+.list_wz ul {width: 780px;overflow: hidden;background: url({tplurl}images/table.png) left top;}
+.list_wz li {float: left;width: 780px;height: 36px;line-height: 36px;overflow: hidden;}
+.movehover {background: #fffce7;}
+.list_wz .table_th {font-weight: bold;color: #7e7e7e;background: #efefef;}
+.list_wz .table_th div, .table_td div {text-align: left;}
+.list_wz li div {float: left;}
+.list_wz .table_th .n {text-align: center;}
+.list_wz .table_th .lb {text-align: center;}
+.list_wz .zp {width: 140px;padding-left: 5px;font-weight: bold;}
+.list_wz .zj {width: 180px;}
+.list_wz .table_th .time {text-align: center;}
+.list_wz .zz {width: 90px;padding-left: 15px;}
+.list_wz .zt {width: 40px;}
+.list_wz .bd {width: 55px;}
+.list_wz .table_td .n {color: #aaaaaa;}
+.list_wz .n {width: 40px;text-align: center;font-weight: bold;}
+.list_wz .lb {padding-left: 10px;width: 66px;text-align: center;}
+.list_wz .zp {width: 140px;padding-left: 5px;font-weight: bold;}
+.list_wz .zp a, .list_wz .zp a:visited {color: #1886ac;}
+.list_wz .zj {width: 180px;}
+.list_wz .time {width: 125px;}
+.list_wz .zz {width: 90px;padding-left: 15px;}
+.list_wz .table_td .zt {color: #000;}
+.list_wz .bd {width: 55px;text-align: center;}
+</style>
+<div id="main">
+
+    {tpl$paihanglist_tpl}
+
+<?php
+error_reporting(ALL);
+/**
+dianji => 小说点击榜
+shoucang => 小说收藏榜
+pingjia => 小说评价榜
+tuijian => 小说推荐榜
+zuixin => 最新小说榜
+dingyue => 小说订阅榜
+
+dashang => 小说打赏榜
+*/
+$action = $_GET['action'] == '' ? 'dianji' : $_GET['action'];
+
+$title = '';
+
+$isNotShuzi = false;
+
+switch($action) {
+	case 'dianji':
+		$title = '小说点击榜';
+		$sql = "SELECT *, clicks as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY clicks DESC LIMIT 0, 100";
+		break;
+	case 'shoucang' :
+		$title = '小说收藏榜';
+		$sql = "SELECT *, favorites as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY favorites DESC LIMIT 0, 100";
+		break;
+	case 'pingjia':
+		$title = '小说评价榜';
+		$sql = "SELECT *, comments as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY comments DESC LIMIT 0, 100";
+		break;
+	case 'tuijian':
+		$title = '小说推荐榜';
+		$sql = "SELECT *, praises as shuzhi FROM xs_archives WHERE ucid=5 ORDER BY praises DESC LIMIT 0, 100";
+		break;
+	case 'zuixin':
+		$title = '最新小说榜';
+		$sql = "SELECT * FROM xs_archives WHERE ucid=5 ORDER BY createdate DESC LIMIT 0, 100";
+		$isNotShuzi = true;
+		break;
+	default:
+		header('Location:/index.php');
+		eixt();
+		break;
+}
+$query = $db->query($sql);
+$result = $db->fetch_all($query);
+
+?>
+
+
+    <div style="width:780px;float:right;border:1px solid #ccc;">
+        <div class="tit_r">
+			<h2 class="c1row"><?php echo $title;?></h2>
+		</div>
+<div class="list_wz">
+				<ul>
+					<li class="table_th">
+						<div class="n">排名</div>
+						<div class="lb">类别</div>
+						<div class="zp">作品</div>
+						<div class="zj">最新章节</div>
+						<div class="time">更新时间</div>
+						<div class="zz">作者</div>
+						<div class="zt">状态</div>
+						<?php
+							if ($isNotShuzi == false) {
+								echo '<div class="bd">榜单数值</div>';
+							}
+						?>
+						
+					</li>
+<?php
+if (!empty($result)) {
+	foreach ($result as $key => $r) {
+		//获取该小说最后更新文章信息
+		$sql = "select a5.* from xs_archives as a5, (select a1.aid from xs_albums as a1 LEFT JOIN xs_archives_1 as a2 ON a2.aid=a1.aid WHERE a1.pid='".$r['aid']."') as a4 WHERE a5.aid=a4.aid  ORDER BY a5.createdate DESC LIMIT 1";
+		$wz = $db->fetch_one($sql);
+		if (!empty($wz)) {
+			$zj = $wz['subject'];
+			$dt = date('Y-m-d H:i' ,$wz['createdate']);
+			$zjid = $wz['aid'];
+		} else {
+			$zj = '无最新章节';
+			$dt = '';
+			$zjid = '';
+		}
+		//获取小说的制定类别
+		$sql = "SELECT * from xs_catalogs WHERE caid=".$r['caid'];
+		$lb = $db->fetch_one($sql);
+		if (!empty($lb)) {
+			$lb = $lb['title'];
+		} else {
+			$lb = '';
+		}
+
+		echo '<li class="table_td">';
+		echo '<div class="n">'.($key+1).'</div>';
+		echo '<div class="lb">[<a href="/index.php?caid='.$r['caid'].'" target="_blank">'.$lb.'</a>]</div>	';
+		echo '<div class="zp"><a target="_blank" title="'.$r['subject'].'" href="/archive.php?aid='.$r['aid'].'">'.$r['subject'].'</a></div>';
+		if ($zjid !== '') {
+			echo '<div class="zj"><a target="_blank" title="'.$zj.'" href="/archive.php?aid='.$zjid.'">'.$zj.'</a></div>';
+		} else {
+			echo '<div class="zj">'.$zj.'</div>';
+		}
+		echo '<div class="time">'.date('Y-m-d H:i:s', $r['createdate']).'</div>';
+		echo '<div class="zz">'.$r['author'].'</div>';
+		if ($r['abover'] == 1){
+			echo '<div class="zt">完结</div>';
+		} else {
+			echo '<div class="zt">连载</div>';
+		}
+		if ($isNotShuzi == false) {
+			echo '<div class="bd">'.(isset($r['shuzhi']) ? $r['shuzhi'] : '').'</div>';
+		}
+		echo '</li>';
+	}
+}
+?>
+				</ul>
+			</div>    
+    
+    
+    </div>
+</div>
+<div class="blank3"></div>
+{tpl$footer}

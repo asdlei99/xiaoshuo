@@ -1,0 +1,42 @@
+{tpl$header}
+<style type="text/css">
+#menu #menu_1{display:none;}
+#menu #menu_4{display:block;}
+</style>
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a>&nbsp;>&nbsp;VIP专区</div>
+</div>
+</div>
+
+<div id="main">
+<div id="left">
+<div>还没做好</div>
+<div class="findivbox">
+<div class="findivtop"><img src="{tplurl}images/ico_hsg.gif" align="absmiddle" /><b>热门全本小说推荐</b></div>
+{c$finish_m}	
+</div>
+<div class="blank9"></div>
+
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新全本小说列表</b><span class="rright"><a href="{c$finish_node}">更多&gt;&gt;</a></span></dt>
+<dd><div id="txttd4"><div class="txttb4 txtbg1"><ul>{c$finish_lianzai}</ul></div></div></dd>
+</dl></div>
+</div>
+
+</div>
+
+<div id="right">
+
+<div id="lm2"><dl><dt><img src="{tplurl}images/ico_bq.gif"  align="absmiddle" />热门标签</dt>
+<dd><div class="li_title">{c$keywords}</div></dd></dl></div>
+<div id="lm2"><dl>
+<dt><img src="{tplurl}images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd>{c$index_readmin}</dd></dl></div>
+
+<div id="lm2"><dl><dt>VIP热门</dt><dd><ul>{c$hotindex_mtitle}</ul></dd></dl></div>
+
+
+</div></div>
+<div id="links"><b>友情链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

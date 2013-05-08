@@ -1,0 +1,639 @@
+<?php _mpinfo(array("ename" => "nanpinshouyedawenzituig1","tclass" => "farchives","limits" => "1","casource" => "26","orderby" => "vieworder_asc","validperiod" => "1","length" => "10",));?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?=$mcharset?>">
+<meta name="keywords" content="<?=$cmskeyword?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<?=$v['title']?><?php _aquit();} unset($v);?>
+" />
+<meta name="Description" content="<?=$cmsdescription?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<?=$v['title']?><?php _aquit();} unset($v);?>
+" />
+<TITLE><?=$cmstitle?> - <?=$cmsname?> - <?=$hostname?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<?=$v['title']?><?php _aquit();} unset($v);?>
+</TITLE>
+<link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/17_header.css" />
+<script type="text/javascript">var cmsUrl = "<?=$cms_abs?>";</script>
+<script src="<?=$tplurl?>js/common.js" type="text/javascript" language="javascript"></script>
+<script src="<?=$tplurl?>js/ajax.js" type="text/javascript" language="javascript"></script>
+<script src="<?=$tplurl?>js/commu.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<!-- 顶部 begin -->
+<div id="top">
+<div class="left orangea"><script language="javascript"  src="<?=$cms_abs?>login.php?mode=js&sid=<?=$sid?>"></script></div>
+<div class="right">【<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<?=$cms_abs?>');" style="cursor:hand">设为首页</a>】【<a href="#" onClick="javascript:window.external.AddFavorite('<?=$cms_abs?>','<?=$cmsname?>');">收藏本站</a>】</div>
+</div>
+<!-- 首体 begin -->
+<div id="head">
+<div class="left"><a href="<?=$cms_abs?>" ><img src="<?=$cms_abs?><?=$cmslogo?>" /></a></div>
+<div class="right">
+<div class="r1"><ul>
+<?php $_txt_banner=_ctag_parse(array("ename" => "txt_banner","tclass" => "farchives","limits" => "3","cols" => "1","casource" => "5","orderby" => "vieworder_desc",));foreach($_txt_banner as $v){_aenter($v);?>
+<li><a href="<?=$v['advurl']?>" target="_blank" title="<?=$v['alttext']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_txt_banner,$v);?>
+
+</ul></div>
+<div class="r2"><div class="search" id="searchbox" style="width:650px;margin-top:30px;">
+<table cellpadding="0">
+<tr>
+<form id="searchform" action="<?=$cmsurl?>search.php?sid=<?=$sid?>" method="get" target="_blank">
+<td width="30px" valign="middle"><img src="<?=$tplurl?>images/ico_search.gif" /></td>
+<td width="60px;" valign="middle"><b>站内搜索</b></td>
+<td width="100px;" id="seach_y"><input name="searchword" value="推荐热门小说" type="text" style="width:260px" maxlength="18" onclick="this.value=''" /></td>
+<td width="60px;"><input type="hidden" name="searchsubmit" value="1"><input src="<?=$tplurl?>images/b_s.gif"  type="image" width="52" height="21" id="Image12" /></td>
+
+<td width="40px">热词：</td>
+<td width="60px"><a href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=吞天神帝&searchsubmit=1&x=40&y=12">吞天神帝</a></td>
+<td width="60px"><a href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=特种教师&searchsubmit=1&x=40&y=12">特种教师</a></td>
+<td width="60px"><a href="<?=$cmsurl?>search.php?sid=<?=$sid?>&searchword=江北女匪&searchsubmit=1&x=40&y=12">江北女匪</a></td>
+
+</form>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+<!-- 首体 begin -->
+<script type="text/javascript">
+function showmenu(id){
+	for(var i=1; i<=6; i++){
+		$('menu_'+i).style.display='none';
+	}
+	$('menu_'+id).style.display='block';
+}
+</script>
+<!--  -->
+<div id="menu">
+<div class="h1"><ul>
+<li><a href="<?=$cms_abs?>">首页</a></li>
+<li onmouseover="showmenu(1)"><a href="<?php $v=_ctag_parse(array("ename" => "xs_menunode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">男频</a></li>
+<li onmouseover="showmenu(6)"><a href="<?php $v=_ctag_parse(array("ename" => "xs_nvpinnode","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "14",));if(!empty($v)){_aenter($v);?>
+		<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">女频</a></li>
+<?php $_main_menus=_ctag_parse(array("ename" => "main_menus","tclass" => "catalogs","limits" => "10","cols" => "1","listby" => "ca","casource" => "1","caids" => "8,9,10",));foreach($_main_menus as $v){_aenter($v);?>
+<li><a href="<?=$v['listurl']?>"  title="<?=$v['title']?>"><?=$v['title']?></a></li><?php _aquit();} unset($_main_menus,$v);?>
+
+<li onmouseover="showmenu(4)"><a href="<?php $_quanben_list=_ctag_parse(array("ename" => "quanben_list","tclass" => "catalogs","disabled" => "0","nsid" => "-1","listby" => "co6","cosource6" => "1","ccids6" => "36","cainherit" => "1",));foreach($_quanben_list as $v){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($_quanben_list,$v);?>
+">全本小说</a></li>
+<li><?php $v=_ctag_parse(array("ename" => "ztnode","tclass" => "cnode","listby" => "ca","casource" => "11",));if(!empty($v)){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($v);?>
+</li>
+<li onmouseover="showmenu(3)"><a href="<?php $v=_ctag_parse(array("ename" => "pai_index","tclass" => "cnode","disabled" => "0","casource" => "1","listby" => "co7","cosource7" => "38",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">排行榜</a></li>
+<li><a href="<?=$cms_abs?>adminm.php" target="_blank">会员中心</a></li>
+<li onmouseover="showmenu(2)"><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">VIP专区</a></li>
+</ul></div>
+<div class="h2" id="menu_1">
+<div class="left"><a>男频&gt;&gt;</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outxsnode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_xs_sen_list=_ctag_parse(array("ename" => "xs_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","urlmode" => "caid",));foreach($_xs_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_xs_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+<div class="h2" id="menu_6">
+<div class="left"><a>女频&gt;&gt;</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outnpxsnode","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "14",));if(!empty($v)){_aenter($v);?>
+<?php $_xs_sen_list=_ctag_parse(array("ename" => "xs_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","urlmode" => "caid",));foreach($_xs_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_xs_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+<div class="h2" id="menu_2">
+<div class="left"><a>&lt;&lt; VIP小说频道</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outvipnode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_vip_sen_list=_ctag_parse(array("ename" => "vip_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","coinherit3" => "6","urlmode" => "caid",));foreach($_vip_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['listurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_vip_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+
+<div class="h2" id="menu_3">
+<div class="left"><a>&lt;&lt; 排行榜</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outphnode","tclass" => "cnode","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_ph_sen_list=_ctag_parse(array("ename" => "ph_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","coinherit7" => "38","urlmode" => "caid",));foreach($_ph_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['indexurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_ph_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+
+<div class="h2" id="menu_4">
+<div class="left"><a>全本小说&gt;&gt;</a></div>
+<div class="right"><?php $v=_ctag_parse(array("ename" => "outqbnode","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "1",));if(!empty($v)){_aenter($v);?>
+<?php $_qb_sen_list=_ctag_parse(array("ename" => "qb_sen_list","tclass" => "catalogs","disabled" => "0","limits" => "100","listby" => "ca","casource" => "2","coinherit6" => "36","urlmode" => "caid",));foreach($_qb_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['listurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_qb_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+
+<div class="h2" id="menu_5">
+<div class="left" style="display: none;"><a>&lt;&lt; 专题</a></div>
+<div class="right" style="display: none;"><?php $v=_ctag_parse(array("ename" => "outztnode","tclass" => "cnode","listby" => "ca","casource" => "11",));if(!empty($v)){_aenter($v);?>
+<?php $_zt_sen_list=_ctag_parse(array("ename" => "zt_sen_list","tclass" => "catalogs","limits" => "100","listby" => "ca","casource" => "2",));foreach($_zt_sen_list as $v){_aenter($v);?>
+<a href="<?=$v['listurl']?>"><?=$v['title']?></a><?php _aquit();} unset($_zt_sen_list,$v);?>
+<?php _aquit();} unset($v);?>
+</div>
+</div>
+
+<!-- 
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="<?=$cms_abs?>">首页</a> <?php $_nav=_ctag_parse(array("ename" => "nav","tclass" => "nownav",));foreach($_nav as $v){_aenter($v);?>
+> <a href="<?=$v['listurl']?>"><?=$v['title']?></a>&nbsp;<?php _aquit();} unset($_nav,$v);?>
+</div>
+ -->
+<div style="height:3px;width:960px;"></div>
+<style type="text/css">
+.tab {margin-bottom: 10px;text-align: left;}
+.tab-menuWrapper{background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;padding: 4px 0 0 5px;height: 26px;}
+.J_tab-menu, .J_tab-menu span, .tab-menuWrapper .active{background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;}
+.J_tab-menu {background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;background-position: left -311px;font-weight: bold;cursor: pointer;float: left;display: inline;margin-right: 2px;font-size: 14px;white-space: nowrap;}
+.J_tab-menu span {cursor: pointer;font-size: 14px;white-space: nowrap;font-weight: bold;background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;display: block;height: 26px;line-height: 26px;padding: 0 8px;background-position: right -380px;}
+.tab-menu-m {background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;position: absolute;top: 4px;right: 5px;width: 35px;background-position: 30px -240px;line-height: 26px;}
+.tab-menu-m a {color: #fff;font-size: 12px;}
+.J_tab-content {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;}
+
+.J_tab-content ul {display: block;list-style-type: disc;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;margin: 0;padding: 0;list-style: none outside none;}
+.list1 li {display: list-item;text-align: -webkit-match-parent;position: relative;zoom: 1;line-height: 21px;height: 21px;border-bottom: 1px solid #e6e6e6;}
+.list1 li span.sort {padding-left: 8px;color: #999;line-height: 21px;}
+.clearfix {display: block;}
+.list2col li {margin-top:1px;list-style: none outside none;display: list-item;text-align: -webkit-match-parent;background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;background-position: 0 -486px;padding-left: 12px;font-size: 14px;line-height: 24px;float: left;width: 45%;}
+.list2col li a {color: #004d01;text-decoration: none;}
+.list2col li a:hover {color: #F00;text-decoration:underline;}
+.mod-bd {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;height: auto;background: url(<?=$tplurl?>images/fy-line-201005.png) repeat-x 0 165px;padding-bottom: 0;}
+.picList1 {	position: relative;zoom: 1;height: 165px;margin-bottom: 10px;}
+.picList1 dt {	display: block;margin-left: 135px;padding: 4px 0 0;font-size: 14px;font-weight: normal;text-indent: -7px;position: relative;zoom: 1;}
+.picList1 dt a {font-weight: bold;}
+.picList1 dd {margin-left: 135px;}
+.picList1 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList1 dd.pic img {vertical-align: middle;width: 120px;height: 150px;border: 1px solid #d1d1d1;background: #fff;padding: 1px;}
+.picList1 dd.intro {margin-left: 135px;}
+.picList1 dd.upd a {color: #006704;}
+
+
+.mod-1 {margin-bottom: 10px;}
+.mod-1 .mod-hd {background-position: 0 -447px;background-repeat: repeat-x;background-image: none;border: 1px solid #CCCCCC; height: 28px;overflow: hidden; position: relative;}
+.mod-1 .mod-hd h2 {  color: #000000;font-size: 14px;    line-height: 30px;    padding-left: 10px;font-weight:bold;text-align: left;}
+.clearfix:after {    clear: both;    content: ".";    display: block;    height: 0;    visibility: hidden;}
+.sortTop .mod-bd {    padding-bottom: 0;}
+.mod-bd, .J_tab-content {    -moz-border-bottom-colors: none;    -moz-border-left-colors: none;    -moz-border-right-colors: none;    -moz-border-top-colors: none;    border-image: none;    border-style: none solid solid;    border-width: 0 1px 1px;    padding: 10px;    position: relative;}
+.content-rl .content-lr .main {    float: left;}
+.w210 {    width: 220px;	float:left;margin-bottom:5px;}
+.sortTop .mod-sub {    margin-bottom: 10px;}
+.sortTop .mod-sub h3 {	background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;    background-position: 0 -170px;font-size: 100%;    height: 23px;    margin-bottom: 10px;    padding: 0 0 0 20px;}
+.picList2 {position: relative;zoom: 1;height: 135px;}
+.picList2 dt {margin-left: 110px;font-size: 12px;font-weight: normal;text-indent: -3px;position: relative;zoom: 1;}
+.picList2 dt a {font-weight: bold;}
+.picList2 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList2 dd.pic img {	vertical-align: middle;width: 96px;height: 120px;border: 1px solid #999;background: #fff;padding: 2px;}
+.picList2 dd {margin-left: 110px;}
+.picList2 dd.intro {color: #646464;}
+.sortTop .mod-sub li {height: 20px;line-height: 20px;position: relative;zoom: 1;overflow: hidden;}
+span.sort {color: #999;}
+.sortTop .mod-sub li {line-height: 20px;}
+.mod-sub dl {display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
+.mod-sub ul, ol {list-style: none outside none;}
+.txt_tab li {padding-left: 13px;}
+.txt_tab li a {width:165px;float:left;}
+.txt_tab li span {display: inline-block;float: right;height: 22px;line-height: 22px;text-align: right;width: auto;}
+
+
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: block;}
+.content, .content-lr, .content-rl {position: relative;zoom: 1;}
+#wrap {text-align: left;}
+.mr10 {margin-right: 10px;}
+.main, .sidebar {display: inline;}
+.w230 {width: 230px;}
+.content-lr .main {float: left;}
+.mod-1 {margin-bottom: 10px;}
+.mod-hd, .tab-menuWrapper {height: 30px;background-position: 0 -447px;background-repeat: repeat-x;position: relative;zoom: 1;}
+.mod-1 .mod-hd {background-image: none;height: 28px;border: 1px solid #ccc;position: relative;zoom: 1;overflow: hidden;}
+.mod-hd h2 {font-size: 14px;line-height: 30px;padding-left: 10px;color: #fff;}
+.mod-1 .mod-hd h2 {color: #000;}
+.mod-hd-m {background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;}
+.mod-hd-m, .tab-menu-m {position: absolute;top: 4px;right: 5px;width: 35px;background-position: 30px -240px;line-height: 26px;}
+.mod-1 .mod-hd-m {background-position: 30px -211px;}
+.mod-hd-m a, .tab-menu-m a {font-size: 12px;}
+.mod-1 .mod-hd-m a {color: #000;}
+.mod-bd, .J_tab-content {border: 1px solid #ccc;border-top: 0 none;padding: 10px;position: relative;zoom: 1;background:none;}
+.picList3 {position: relative;zoom: 1;height: 96px;background: url(<?=$tplurl?>images/fy-bg-201005.png) repeat-x 0 103px;padding-bottom: 9px;margin-bottom: 5px;}
+.picList3 dt {height:20px;overflow:hidden;margin-left: 90px;font-size: 12px;font-weight: normal;text-indent: -3px;position: relative;zoom: 1;}
+.picList3 dt a {font-weight: bold;}
+.picList3 dd.pic {margin: 0;position: absolute;left: 0;top: 0;}
+.picList3 dd.pic img {width: 72px;height: 90px;border: 1px solid #d1d1d1;background: #fff;padding: 2px;}
+.picList3 dd {margin-left: 90px;}
+.picList3 dd.author {color: #656565;}
+.picList3 dd {margin-left: 90px;}
+.picList3 dd.intro {height:50px;overflow:hidden;color: #999;width: 118px;}
+.topList3 {background: url(<?=$tplurl?>images/fy-line-201005.png) repeat;}
+.topList3 li{background-image: url(<?=$tplurl?>images/fy-bg-201005.png);background-repeat: no-repeat;}
+li.No1 {background-position: -380px -15px;}
+.topList3 li span {background: #fff;margin-left: 16px;}
+.topList3 li {height: 22px;line-height: 22px;overflow: hidden;position: relative;zoom: 0;}
+.topList3 li span {margin-left:15px;}
+.topList3 li span.author {position: absolute;top: 0;right: 0;padding: 0 0 0 5px;margin: 0;display: inline-table;}
+li.No2 {background-position: -380px -39px;}
+li.No3 {background-position: -380px -63px;}
+li.No4 {background-position: -380px -87px;}
+li.No5 {background-position: -380px -111px;}
+li.No6 {background-position: -380px -135px;}
+li.No7 {background-position: -380px -159px;}
+li.No8 {background-position: -380px -183px;}
+li.No9 {background-position: -380px -207px;}
+li.No10 {background-position: -380px -231px;}
+li.No11 {background-position: -380px -255px;}
+li.No12 {background-position: -380px -279px;}
+li.No13 {background-position: -380px -303px;}
+li.No14 {background-position: -380px -327px;}
+li.No15 {background-position: -380px -351px;}
+.content-lr .sidebar {float: right;}
+
+</style>
+
+<div id="main">
+
+<?php $_nanpin_ad_1_950=_ctag_parse(array("ename" => "nanpin_ad_1_950","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "30","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_ad_1_950 as $v){_aenter($v);?>
+				<div class="adwimg" style="width:950px;"><a href="<?=$v['advurl']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "adimg_950_50","tclass" => "image","disabled" => "0","tname" => "$v[advimg]","maxwidth" => "950","maxheight" => "50",));if(!empty($u)){?>	<img width="950" height="50" src="<?=$u['url']?>" border="0" /><?php } unset($u);?></a></div><?php _aquit();} unset($_nanpin_ad_1_950,$v);?>
+
+
+<div class="tab J_tab" style="width:350px; float:left;">
+	 <!-- 重磅推荐&大神推荐 -->
+	<div class="tab-menuWrapper" style="height:0px;"></div>
+	<div class="J_tab-content" style="border: none; padding: 0px; display: block;">
+		<div class="mod-bd">
+			<?php $_nvpinshouyetuwentuijian=_ctag_parse(array("ename" => "nvpinshouyetuwentuijian","tclass" => "archives","disabled" => "0","limits" => "2","caidson" => "1","casource" => "1","caids" => "3,15,16,18,19,20","chsource" => "2","chids" => "4","orderby" => "favorites_desc","orderby1" => "mpraises_desc","closed" => "-1","abover" => "-1",));foreach($_nvpinshouyetuwentuijian as $v){_aenter($v);?>
+			<dl class="picList1">
+					<dt><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+					<dd class="pic"><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank"><img src="<?=$v['thumb']?>" alt="<?=$v['subject']?>"></a></dd>
+                                        <dt>作者：<?=$v['author']?></a></dt>
+					<dd class="intro"><?php echo _utag_parse(array("ename" => "abstract120","tclass" => "odeal","disabled" => "0","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+					<dd class="upd"><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl><?php _aquit();} unset($_nvpinshouyetuwentuijian,$v);?>
+
+		</div>
+	</div>
+	<!--END 重磅推荐&强力推荐 -->
+</div>
+
+<div id="txtbox" class="k1" style="width:375px;float:left;margin-left:10px;">
+	<br>
+	<h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
+		<?php $_nanpinshouyedawenzituig1=_ptag_parse(array("ename" => "nanpinshouyedawenzituig1","tclass" => "farchives","limits" => "1","casource" => "26","orderby" => "vieworder_asc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyedawenzituig1 as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['advurl']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpinshouyedawenzituig1,$v);?>
+
+	</h2>
+	
+	<ul class="list2col clearfix">
+		<?php $_nanpinshouyeshoutuiliebiao=_ptag_parse(array("ename" => "nanpinshouyeshoutuiliebiao","tclass" => "farchives","disabled" => "0","casource" => "28","orderby" => "vieworder_desc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyeshoutuiliebiao as $v){_aenter($v);?>
+					<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['advurl']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nanpinshouyeshoutuiliebiao,$v);?>
+
+	</ul>
+	<br><br>
+	<h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
+		<?php $_nanpinshouyedawenzituig1=_ptag_parse(array("ename" => "nanpinshouyedawenzituig1","tclass" => "farchives","limits" => "1","casource" => "26","orderby" => "vieworder_asc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyedawenzituig1 as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['advurl']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpinshouyedawenzituig1,$v);?>
+
+	</h2>
+	
+	<ul class="list2col clearfix">
+		<?php $_nanpinshouyeshoutuiliebiao=_ptag_parse(array("ename" => "nanpinshouyeshoutuiliebiao","tclass" => "farchives","disabled" => "0","casource" => "28","orderby" => "vieworder_desc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyeshoutuiliebiao as $v){_aenter($v);?>
+					<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['advurl']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nanpinshouyeshoutuiliebiao,$v);?>
+
+	</ul>
+</div>
+
+<div class="tab J_tab" style="width:205px;height:370px;overflow:hidden;float:left;margit:5px;margin-left: 5px;">
+	<div class="tab-menuWrapper">
+		<h2 class="J_tab-menu active"><span>全站强推</span></h2>
+		<div class="tab-menu-m"><a href="index.php?caid=1&ccid7=38" target="_blank">更多</a></div>
+	</div>
+	<div class="tab-contentWrapper">
+		<div class="J_tab-content" style="display: block;">
+			<ul class="list1">
+               	<?php $_xiaoshuoqingtui=_ptag_parse(array("ename" => "xiaoshuoqingtui","tclass" => "farchives","disabled" => "0","limits" => "8","casource" => "22","orderby" => "vieworder_asc","validperiod" => "1","orderstr" => "xs_pai ASC","length" => "10",));foreach($_xiaoshuoqingtui as $v){_aenter($v);?>
+	<li><span class="sort">[<?=$v['xs_type']?>]</span>《<a target="_blank" href="<?=$v['xs_link']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_xiaoshuoqingtui,$v);?>
+
+               	<?php $_xiaoshuoqingtui=_ptag_parse(array("ename" => "xiaoshuoqingtui","tclass" => "farchives","disabled" => "0","limits" => "8","casource" => "22","orderby" => "vieworder_asc","validperiod" => "1","orderstr" => "xs_pai ASC","length" => "10",));foreach($_xiaoshuoqingtui as $v){_aenter($v);?>
+	<li><span class="sort">[<?=$v['xs_type']?>]</span>《<a target="_blank" href="<?=$v['xs_link']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_xiaoshuoqingtui,$v);?>
+
+      		</ul>
+		</div>
+	</div>
+</div>
+
+
+      
+<div class="blank3"></div>
+<?php $_nanpin_ad_1_950=_ctag_parse(array("ename" => "nanpin_ad_1_950","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "30","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_ad_1_950 as $v){_aenter($v);?>
+				<div class="adwimg" style="width:950px;"><a href="<?=$v['advurl']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "adimg_950_50","tclass" => "image","disabled" => "0","tname" => "$v[advimg]","maxwidth" => "950","maxheight" => "50",));if(!empty($u)){?>	<img width="950" height="50" src="<?=$u['url']?>" border="0" /><?php } unset($u);?></a></div><?php _aquit();} unset($_nanpin_ad_1_950,$v);?>
+
+
+<div class="picList1" style="width:270px;height:150px;float:left;border: 1px solid #ccc;">
+	<dt><a target="_blank" title="网游之王者无敌" href="archive.php?aid=36">网游之王者无敌</a></dt>
+	<dd class="pic"><a target="_blank" title="网游之王者无敌" href="archive.php?aid=59">
+	<img style="width:111px;higth:130px;" alt="网游之王者无敌" src="userfiles/image/20130316/16023928a0bcfc50bf3342.jpg#189#272"></a></dd>
+	<dd class="intro">现代武器和古老魔法的碰撞，异能与古武之间的较量，不同信仰的纷争，这是一个充满了冒险和挑战同时......</dd>
+	<dd class="upd"><a target="_blank" title="网游之王者无敌" href="archive.php?aid=59">阅读>></a></dd>
+</div>
+
+<div style="width:395px;height:150px;float:left;margin-left:5px; border: 1px solid #ccc;">
+	<ul class="list2col clearfix" style="list-style: none;">
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=37" target="_blank" title="【上架】江北女匪">【上架】<span style="color:#000;font-size: 13px;">江北女匪</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之江山美人">【上架】<span style="color:#000;font-size: 13px;">网游之江山美人</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=50" target="_blank" title="【上架】残袍">【上架】<span style="color:#000;font-size: 13px;">残袍</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=52" target="_blank" title="【上架】全能兵皇">【上架】<span style="color:#000;font-size: 13px;">全能兵皇</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=59" target="_blank" title="【上架】网游之王者无敌">【上架】<span style="color:#000;font-size: 13px;">网游之王者无敌</span></a></li>					
+		<li style="margin-top:4px;margin-left: 5px;font-size: 13px;"><a href="archive.php?aid=51" target="_blank" title="【上架】焚天裂地">【上架】<span style="color:#000;font-size: 13px;">焚天裂地</span></a></li>
+	</ul>
+</div>
+
+
+<div class="picList1" style="width:270px;height:150px;float:right;border: 1px solid #ccc;">
+	<dt><a target="_blank" title="残袍" href="archive.php?aid=36">言情都市爱情故事</a></dt>
+	<dd class="pic"><a target="_blank" title="残袍" href="archive.php?aid=50">
+	<img style="width:111px;higth:130px;" alt="残袍" src="userfiles/image/20130316/1602261935c960b26a3567.jpg#189#272"></a></dd>
+	<dd class="intro">她，身负异能，是21世纪让人闻风丧胆的冷面女特工，一朝醒来，身海腾沸，指山山动摇。蛟鳄潜形百怪伏。...</dd>
+	<dd class="upd"><a target="_blank" title="残袍" href="archive.php?aid=50">阅读>></a></dd>
+</div>
+
+<div class="blank3"></div>
+
+<div style="width:230px;float:left">
+	<div id="lm2" class="lmc" style="width:230px;float:left;">
+		<dl><dt>打赏榜<span><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul><?php $_nanpindianjibang=_ctag_parse(array("ename" => "nanpindianjibang","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_nanpindianjibang as $v){_aenter($v);?>
+	<li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+<? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?></a><span><?=$v['clicks']?></span></li><?php _aquit();} unset($_nanpindianjibang,$v);?>
+</ul>
+		</dd>
+		</dl>
+	</div>
+	<br>
+	<div id="lm2" class="lmc" style="width:230px;float:left;">
+		<dl><dt>订阅榜<span><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul><?php $_nanpindianjibang=_ctag_parse(array("ename" => "nanpindianjibang","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_nanpindianjibang as $v){_aenter($v);?>
+	<li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+<? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?></a><span><?=$v['clicks']?></span></li><?php _aquit();} unset($_nanpindianjibang,$v);?>
+</ul>
+		</dd>
+		</dl>
+	</div>
+</div>
+
+<div class="content-lr clearfix" style="width:710px;margin-left:10px;float:right;">
+    <!--第三部分 开始--> 
+	<?php $_nvpin_tuwenliebiao=_ctag_parse(array("ename" => "nvpin_tuwenliebiao","tclass" => "catalogs","disabled" => "0","limits" => "6","nsid" => "-1","listby" => "ca","casource" => "1","caids" => "17,2,4,5,6,7",));foreach($_nvpin_tuwenliebiao as $v){_aenter($v);?>
+		<div class="main w230 mr10" style="width:230px;margin:0px;margin-left:6px;">
+      <div class="mod-1">
+        <!-- <?=$v['title']?>新书榜 -->
+        <div class="mod-hd">
+          <h2><?=$v['title']?></h2>
+          <div class="mod-hd-m"><a href="<?=$v['listurl']?>" title="更多" target="_blank">更多</a></div>
+        </div>
+        <div class="mod-bd">
+	      <?php $_nvpin_jihuo_tuwenshuoming=_ctag_parse(array("ename" => "nvpin_jihuo_tuwenshuoming","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "createdate_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nvpin_jihuo_tuwenshuoming as $v){_aenter($v);?>
+	<dl class="picList3">
+	<dt>《<a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</dt>
+	<dd class="pic"><a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><img src="<?=$v['thumb']?>" alt="《<?=$v['subject']?>》"></a></dd>
+        <dd class="intro" style="height:auto;" title="<?php echo _utag_parse(array("ename" => "abstract60","tclass" => "odeal","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "60",));?>
+ ..."><?php echo _utag_parse(array("ename" => "abstract60","tclass" => "odeal","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "60",));?>
+ ...</dd>
+</dl><?php _aquit();} unset($_nvpin_jihuo_tuwenshuoming,$v);?>
+
+		          <ul class="topList3" style="background:none;">
+		  		<?php $_nvpin_jihuo_list=_ctag_parse(array("ename" => "nvpin_jihuo_list","tclass" => "archives","disabled" => "0","limits" => "6","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "createdate_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nvpin_jihuo_list as $v){_aenter($v);?>
+					<? if($v['sn_row']!==1) { ?><li style="background-image:none;">
+<span style="color:#656565;margin-left:-1px;">[<?=$v['catalog']?>]</span>
+<span><a href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></span>
+</li><? } ?><?php _aquit();} unset($_nvpin_jihuo_list,$v);?>
+
+		          </ul>
+        </div>
+        <!-- END 武侠仙侠新书榜 -->
+      </div>
+    </div><?php _aquit();} unset($_nvpin_tuwenliebiao,$v);?>
+
+</div>
+
+<div class="blank3"></div>
+
+<?php $_nvpin_xinshu_paihangbang=_ctag_parse(array("ename" => "nvpin_xinshu_paihangbang","tclass" => "catalogs","disabled" => "0","limits" => "6","nsid" => "-1","listby" => "ca","casource" => "1","caids" => "2,4,5,6,7,17",));foreach($_nvpin_xinshu_paihangbang as $v){_aenter($v);?>
+			<div class="main w230 mr10" style="width:232px;float:left;margin:0px;margin-left:5px;">
+      <div class="mod-1">
+        <!-- <?=$v['title']?>新书榜 -->
+        <div class="mod-hd">
+          <h2><?=$v['title']?>新书榜</h2>
+          <div class="mod-hd-m"><a href="<?=$v['listurl']?>" title="更多" target="_blank">更多</a></div>
+        </div>
+        <div class="mod-bd">
+	      <?php $_nanpin_xinshu_tuwenshuoming=_ctag_parse(array("ename" => "nanpin_xinshu_tuwenshuoming","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "createdate_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_xinshu_tuwenshuoming as $v){_aenter($v);?>
+		<dl class="picList3">
+	<dt>《<a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</dt>
+	<dd class="pic"><a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><img src="<?=$v['thumb']?>" alt="《<?=$v['subject']?>》"></a></dd>
+        <dd class="author">作者：<?=$v['author']?></dd>
+        <dd class="intro" title="<?php echo _utag_parse(array("ename" => "abstract60","tclass" => "odeal","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "60",));?>
+ ..."><?php echo _utag_parse(array("ename" => "abstract60","tclass" => "odeal","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "60",));?>
+ ...</dd>
+</dl><?php _aquit();} unset($_nanpin_xinshu_tuwenshuoming,$v);?>
+
+		          <ul class="topList3">
+		  		<?php $_nanpin_xinshu_list_15=_ctag_parse(array("ename" => "nanpin_xinshu_list_15","tclass" => "archives","disabled" => "0","limits" => "9","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "createdate_desc","orderby1" => "mclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_xinshu_list_15 as $v){_aenter($v);?>
+			<li class="No<?=$v['sn_row']?>"><span>《<a href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</span>
+<span class="author"><?=$v['author']?></span></li><?php _aquit();} unset($_nanpin_xinshu_list_15,$v);?>
+
+		          </ul>
+        </div>
+        <!-- END 武侠仙侠新书榜 -->
+      </div>
+    </div><?php _aquit();} unset($_nvpin_xinshu_paihangbang,$v);?>
+
+
+<div style="width:232px;float:left;margin:0px;margin-left:5px;" class="main w230 mr10">
+	<div class="mod-1">
+	<!-- 玄幻·奇幻新书榜 -->
+	<div class="mod-hd">
+		<h2>耽美同人</h2>
+		<div class="mod-hd-m"><a target="_blank" title="更多" href="http://xiaoshuo.com/list.php?caid=4">更多</a></div>
+	</div>
+	<div class="mod-bd">
+		<dl class="picList3">
+			<dt>《<a title="江湖传奇之天子无忧" target="_blank" href="http://xiaoshuo.com/archive.php?aid=78">江湖传奇之天子无忧</a>》</dt>
+			<dd class="pic"><a title="江湖传奇之天子无忧" target="_blank" href="http://xiaoshuo.com/archive.php?aid=78"><img alt="《江湖传奇之天子无忧》" src="userfiles/image/20130318/182157169cbfbfeddf6060.jpg#189#269"></a></dd>
+			<dd class="author">作者：天子无忧</dd>
+			<dd title="&#12288;&#12288;什么是江湖，江湖是一个充满了热血和尔虞我诈的地方。有的人 ..." class="intro">&#12288;&#12288;什么是江湖，江湖是一个充满了热血和尔虞我诈的地方。有的人 ...</dd>
+		</dl>
+		<ul class="topList3">
+			<li class="No1"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=78">江湖传奇之天子无忧</a>》</span><span class="author">天子无忧</span></li>			
+			<li class="No2"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=77">折剑恩仇录</a>》</span><span class="author">冷月古桥</span></li>			
+			<li class="No3"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=76">紫砚阁</a>》</span><span class="author">初溅一</span></li>			
+			<li class="No4"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=75">征帆天涯</a>》</span><span class="author">边王</span></li>			
+			<li class="No5"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=74">星月帝国</a>》</span><span class="author">九世乞丐</span></li>			
+			<li class="No6"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=73">笑傲君子系统</a>》</span><span class="author">醉权天下</span></li>			
+			<li class="No7"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=72">笑傲江湖续</a>》</span><span class="author">苦小涩</span></li>			
+			<li class="No8"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=71">笑傲江湖之兄弟情</a>》</span><span class="author">苍狼泪</span></li>			
+			<li class="No9"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=70">艳侠羞天下</a>》</span><span class="author">冷日夕宇</span></li>
+		</ul>
+	</div>
+	<!-- END 武侠仙侠新书榜 -->
+	</div>
+</div>
+
+<div style="width:232px;float:left;margin:0px;margin-left:5px;" class="main w230 mr10">
+	<div class="mod-1">
+	<!-- 科幻·灵异新书榜 -->
+	<div class="mod-hd">
+		<h2>完本精选</h2>
+		<div class="mod-hd-m"><a target="_blank" title="更多" href="http://xiaoshuo.com/list.php?caid=5">更多</a></div>
+	</div>
+	<div class="mod-bd">
+		<dl class="picList3">
+			<dt>《<a title="硬骨头陆战队" target="_blank" href="http://xiaoshuo.com/archive.php?aid=87">硬骨头陆战队</a>》</dt>
+			<dd class="pic"><a title="硬骨头陆战队" target="_blank" href="http://xiaoshuo.com/archive.php?aid=87"><img alt="《硬骨头陆战队》" src="userfiles/image/20130318/18220350fe5867a5913427.jpg#182#272"></a></dd>
+			<dd class="author">作者：格林吗啡</dd>
+			<dd title="我不知道第三次世界大战会是什么样，但我知道第四次世界大战会用 ..." class="intro">我不知道第三次世界大战会是什么样，但我知道第四次世界大战会用 ...</dd>
+		</dl>
+		<ul class="topList3">
+			<li class="No1"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=87">硬骨头陆战队</a>》</span><span class="author">格林吗啡</span></li>			
+			<li class="No2"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=86">进化奇缘</a>》</span><span class="author">怒三放</span></li>			
+			<li class="No3"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=85">假面骑士电骑</a>》</span><span class="author">少三</span></li>			
+			<li class="No4"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=84">万亿遗产和四十一个未婚妻</a>》</span><span class="author">丁门</span></li>			
+			<li class="No5"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=83">无限之主神争霸</a>》</span><span class="author">怪兽很萌</span></li>			
+			<li class="No6"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=82">偷天杀手</a>》</span><span class="author">盘丝小枣</span></li>			
+			<li class="No7"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=81">小人物大传奇</a>》</span><span class="author">巅疯</span></li>			
+			<li class="No8"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=80">驾机器人时空遨游记</a>》</span><span class="author">盼归游子</span></li>			
+			<li class="No9"><span>《<a target="_blank" href="http://xiaoshuo.com/archive.php?aid=79">星空名将录</a>》</span><span class="author">东南匪</span></li>
+		</ul>
+		</div>
+	<!-- END 武侠仙侠新书榜 -->
+	</div>
+</div>
+
+
+
+<div class="blank3"></div>
+
+
+<div style="width:230px;float:left;margin-left:2px;">
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>连载精品<span><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul><?php $_nanpindianjibang=_ctag_parse(array("ename" => "nanpindianjibang","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_nanpindianjibang as $v){_aenter($v);?>
+	<li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+<? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?></a><span><?=$v['clicks']?></span></li><?php _aquit();} unset($_nanpindianjibang,$v);?>
+</ul>
+		</dd>
+		</dl>
+	</div>
+	<br>
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>热点精品<span><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul><?php $_nanpindianjibang=_ctag_parse(array("ename" => "nanpindianjibang","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_nanpindianjibang as $v){_aenter($v);?>
+	<li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+<? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?></a><span><?=$v['clicks']?></span></li><?php _aquit();} unset($_nanpindianjibang,$v);?>
+</ul>
+		</dd>
+		</dl>
+	</div>
+</div>
+
+<div id="divboxd" style="width:470px;float:left;margin-left:7px;">
+<div id="lm4"><dl>
+<dt><img src="<?=$tplurl?>images/ico_gx.gif"  align="absmiddle" /><b>最新小说更新列表</b><span class="rright"><a href="<?php $v=_ctag_parse(array("ename" => "fenmianabouturl","tclass" => "cnode","disabled" => "0","listby" => "ca","casource" => "active",));if(!empty($v)){_aenter($v);?>
+<?=$v['listurl']?><?php _aquit();} unset($v);?>
+">更多&gt;&gt;</a></span></dt>
+<dd><div id="txttd4"><div class="txttb4 txtbg1"><ul><?php $_list_newlist=_ctag_parse(array("ename" => "list_newlist","tclass" => "archives","disabled" => "0","limits" => "24","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderstr" => "a.abnew DESC","closed" => "-1","abover" => "-1",));foreach($_list_newlist as $v){_aenter($v);?>
+<li><span class="urs4 cGray">[<?=$v['catalog']?>]</span> <span class="urs5"><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></span>
+
+<?php $h=_ctag_parse(array("tclass" => "archive","aid" => "$v[abnew]","album" => "0",));if(!empty($h)){_aenter($h);?>
+<span class="urs3 cGray"><?php echo _utag_parse(array("ename" => "gx_min","tclass" => "date","tname" => "$h[createdate]","date" => "m-d","time" => "H:i",));?>
+</span><a href="<?=$h['arcurl']?>" title="<?=$h['subject']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$h[subject]","trim" => "30",));?>
+</a><? if(($h['ccid3'])) { ?><font style="color:red">[VIP]</font><? } ?><?php _aquit();} unset($h);?>
+
+
+</li><?php _aquit();} unset($_list_newlist,$v);?>
+</ul></div></div></dd>
+</dl></div>
+</div>
+
+<div style="width:230px;float:right;">
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>打赏榜<span><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul><?php $_nanpindianjibang=_ctag_parse(array("ename" => "nanpindianjibang","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_nanpindianjibang as $v){_aenter($v);?>
+	<li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+<? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?></a><span><?=$v['clicks']?></span></li><?php _aquit();} unset($_nanpindianjibang,$v);?>
+</ul>
+		</dd>
+		</dl>
+	</div>
+	<br>
+	<div id="lm2" class="lmc" style="width:230px;float:right;">
+		<dl><dt>推荐榜<span><a href="<?php $v=_ctag_parse(array("ename" => "vipnode","tclass" => "cnode","casource" => "1","listby" => "co3","cosource3" => "6","urlmode" => "caid",));if(!empty($v)){_aenter($v);?>
+<?=$v['indexurl']?><?php _aquit();} unset($v);?>
+">更多&gt;&gt;</a></span></dt>
+		<dd class="txt_tab" id="dd_11">
+			<ul><?php $_nanpindianjibang=_ctag_parse(array("ename" => "nanpindianjibang","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "1","caids" => "2,4,5,6,7,17","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_nanpindianjibang as $v){_aenter($v);?>
+	<li><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank" class="vip_<?=$v['ccid3']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+<? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?></a><span><?=$v['clicks']?></span></li><?php _aquit();} unset($_nanpindianjibang,$v);?>
+</ul>
+		</dd>
+		</dl>
+	</div>
+</div>
+
+
+<div class="blank3"></div>
+<?php $_nanpin_ad_1_950=_ctag_parse(array("ename" => "nanpin_ad_1_950","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "30","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_ad_1_950 as $v){_aenter($v);?>
+				<div class="adwimg" style="width:950px;"><a href="<?=$v['advurl']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "adimg_950_50","tclass" => "image","disabled" => "0","tname" => "$v[advimg]","maxwidth" => "950","maxheight" => "50",));if(!empty($u)){?>	<img width="950" height="50" src="<?=$u['url']?>" border="0" /><?php } unset($u);?></a></div><?php _aquit();} unset($_nanpin_ad_1_950,$v);?>
+
+
+
+
+
+</div>
+<div id="links"><b>合作链接：</b><?php $_txtflinklist=_ctag_parse(array("ename" => "txtflinklist","tclass" => "farchives","limits" => "10","cols" => "1","casource" => "1","orderby" => "vieworder_asc",));foreach($_txtflinklist as $v){_aenter($v);?>
+<a href="<?=$v['linkurl']?>" title="<?=$v['subject']?>" target=_blank><?=$v['subject']?></a><?php _aquit();} unset($_txtflinklist,$v);?>
+<br /><?php $_picflinklist=_ctag_parse(array("ename" => "picflinklist","tclass" => "farchives","limits" => "10","cols" => "1","casource" => "2","orderby" => "vieworder_asc",));foreach($_picflinklist as $v){_aenter($v);?>
+<a href="<?=$v['linkurl']?>" title="<?=$v['linktxt']?>"><?php $u=_utag_parse(array("tclass" => "image","tname" => "$v[piclink]","maxwidth" => "88","maxheight" => "31","emptyurl" => "images/common/logo.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$u['subject']?>"><?php } unset($u);?></a><?php _aquit();} unset($_picflinklist,$v);?>
+</div>
+<div id="foot">
+<span>
+<?php $_all_dibu=_ctag_parse(array("ename" => "all_dibu","tclass" => "farchives","limits" => "100","cols" => "1","casource" => "11","orderby" => "vieworder_asc",));foreach($_all_dibu as $v){_aenter($v);?>
+<a href="<?=$v['arcurl']?>" target="_blank"><?=$v['subject']?></a>　|　<?php _aquit();} unset($_all_dibu,$v);?>
+
+<a href="<?=$cms_abs?>register.php" >会员注册</a>
+</span>
+<p id="copyright"><?=$copyright?>  Powered by <a href="<?=$hosturl?>" target="_blank"><?=$hostname?></a> v2013 &copy; 2013-2015 Inc.</a><br><?=$cms_icpno?> </p>
+</div>
+</body>
+</html>

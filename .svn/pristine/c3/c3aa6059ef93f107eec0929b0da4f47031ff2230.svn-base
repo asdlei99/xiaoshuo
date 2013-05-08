@@ -1,0 +1,47 @@
+{tpl$header}
+<div id="main">
+<div id="left" class="left">
+<style type="text/css">
+#lm3{}
+#lm3 b,#lm3 em,#lm3 strong,#lm3 dfn,#lm3 font,#lm3 li span{display:inline-block;text-align:center;font-style:normal;font-weight:normal;}
+#lm3 ul{padding:7px;}
+#lm3 li{height:23px;line-height:23px;overflow:hidden;background:url("{tplurl}images/line_x.gif") left top repeat-x;}
+#lm3 dt b{width:385px;text-align:left;font-size:14px;}
+#lm3 li b{width:370px;text-align:left;padding-left:20px; letter-spacing:1px;font-size:14px;background:url("{tplurl}images/li_ggao.gif") 5px top no-repeat;}/*标题*/
+#lm3 dt strong{width:100px;}/*作者*/
+#lm3 dfn{width:50px;}
+#lm3 em{width:60px;}/*点击量*/
+#lm3 font{width:70px;}/*创建时间*/
+#lm3 li span{width:100px;}/*作者*/
+</style>
+<div id="lm3"><dl>
+<dt><b>{title}小说名称</b><strong>作者</strong><em>点击</em><dfn>评论</dfn><font>发表时间</font></dt>
+<dd><ul>{p$time_tit}</ul></dd>
+<div class="pagenav">{mpnav}</div>
+</dl></div>
+
+</div>
+<style type="text/css">
+.menu_list{}
+.menu_list dt{}
+.menu_list dd{text-align:center;line-height:23px;}
+.menu_list dd a{background:none;display:block;width:98%;height:23px;border:#fff 1px solid;}
+.menu_list dd a:hover{background:#fcfcfc;}
+.menu_list dd a.on{background:url("{tplurl}images/ico_arr.gif") left top repeat-x;}
+</style>
+<div id="right" class="right">
+<div id="lm3">
+<dl class="menu_list">
+<dt>年代分类</dt>
+<dd>{c$time_list}</dd>
+</dl></div>
+<div id="lm3">
+<dl class="menu_list">
+<dt>区域分类</dt>
+<dd>{c$area_list}</dd>
+</dl></div>
+
+
+</div></div>
+<div id="links"><b>合作链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+{tpl$footer}

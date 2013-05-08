@@ -1,0 +1,14 @@
+<?php
+$utagadimg_690_690_0 = array (
+  'cname' => 'ͼƬ690_690',
+  'ename' => 'adimg_690_690',
+  'tclass' => 'image',
+  'template' => '<img width="{width}" height="{height}" src="{url}" border="0" />',
+  'setting' => 
+  array (
+    'tname' => 'advimg',
+    'maxwidth' => 690,
+    'maxheight' => 690,
+  ),
+) ;
+?>

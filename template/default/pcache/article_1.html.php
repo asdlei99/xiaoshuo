@@ -107,6 +107,11 @@ function request(paras){
 }
 $(function(){
 	var caid = request("caid");
+	<?php
+	if (isset($caid)) {
+		echo "caid = '".$caid."';";
+	}
+	?>
 	var ccid7 = request("ccid7");
 	var ccid3 = request("ccid3");
 	var ind;
@@ -120,7 +125,6 @@ $(function(){
 
 	if (caid == 22) ind = 0;
 	if (ccid7 == 38) ind = 0;
-	
 	if (ind == undefined) ind = 0;
 	
 	$('.tagdhnew_01 ul li').eq(ind).addClass('selected').siblings().removeClass('selected');
@@ -217,6 +221,19 @@ $(function(){
 </div>
 </div>
 
+<style type="text/css">
+.c11, .c11 a, .c11 a:visited {color: #24a3ce;}
+.rightSide dl {margin: 12px 10px;border: #ccc 1px solid;font-size: 14px;font-weight: bold;}
+.rightSide dl {margin: 12px 10px;border: #ccc 1px solid;font-size: 14px;font-weight: bold;}
+.rightSide ul {margin: 12px 10px;}
+.rightSide li {height: 18px;line-height: 18px;overflow: hidden;}    
+.container #contents{ line-height:180%;}
+.container #contents br {
+	margin-top:15px;
+	display: block;
+}
+</style>
+
 <?php
 //记录当前会员最近阅读的小说
 if (isset($curuser->info['mid'])) {
@@ -272,10 +289,10 @@ if (isset($curuser->info['mid'])) {
 " target="_blank">返回目录</a></li>
 					<!-- <li><a href="javascript:ajax_favorite('<?=$aid?>');">添加书签</a></li> -->
 					<li><?php $v=_ctag_parse(array("ename" => "xiaoshuo_shangyizhang","tclass" => "acontext","disabled" => "0","chid" => "4",));if(!empty($v)){_aenter($v);?>
-	<a href="<?=$v['arcurl']?>" class="btn">上一章</a><?php _aquit();} unset($v);?>
+	    <a href="<?=$v['arcurl']?>" class="btn" id="shangyizhanga">上一章</a><?php _aquit();} unset($v);?>
 </li>
 					<li><?php $v=_ctag_parse(array("ename" => "xiaoshuo_xiayizhang","tclass" => "acontext","disabled" => "0","next" => "1","chid" => "4",));if(!empty($v)){_aenter($v);?>
-	<a href="<?=$v['arcurl']?>" class="btn">下一章</a><?php _aquit();} unset($v);?>
+	    <a href="<?=$v['arcurl']?>" class="btn" id="xiayizhanga">下一章</a><?php _aquit();} unset($v);?>
 </li>
 				</ul>
 			</div>
@@ -305,7 +322,12 @@ if (isset($curuser->info['mid'])) {
 </h1>
             </div>
         <div id="contents" style="padding:0 42px 20px;border:none;">
-        <?=$content?>
+        <?php
+        $content = str_replace(chr(32), "&nbsp;", $content);
+        $content = str_replace(chr(13), "<br>", $content);
+		
+		echo $content; 
+        ?>
         <div class="blank18"></div> <?=$mpnav?>     
         </div>
   <div class="blank18"></div>
@@ -321,14 +343,14 @@ if (isset($curuser->info['mid'])) {
     <div class="read_tit" style="padding-left: 250px;">
 			<div class="btn">
 				<ul>
-					<li><?php $v=_ctag_parse(array("ename" => "xiaoshuo_shangyizhang","tclass" => "acontext","disabled" => "0","chid" => "4",));if(!empty($v)){_aenter($v);?>
-	<a href="<?=$v['arcurl']?>" class="btn">上一章</a><?php _aquit();} unset($v);?>
+					<li id="shangyipian"><?php $v=_ctag_parse(array("ename" => "xiaoshuo_shangyizhang","tclass" => "acontext","disabled" => "0","chid" => "4",));if(!empty($v)){_aenter($v);?>
+	    <a href="<?=$v['arcurl']?>" class="btn" id="shangyizhanga">上一章</a><?php _aquit();} unset($v);?>
 </li>
 					<li><a href="/archive.php?aid=<?php $a=_ctag_parse(array("ename" => "arc_nav_id","tclass" => "archive","disabled" => "0","album" => "4",));if(!empty($a)){_aenter($a);?>
 <?=$a['aid']?><?php _aquit();} unset($a);?>
 &addno=1" target="_blank">返回目录</a></li>
-					<li><?php $v=_ctag_parse(array("ename" => "xiaoshuo_xiayizhang","tclass" => "acontext","disabled" => "0","next" => "1","chid" => "4",));if(!empty($v)){_aenter($v);?>
-	<a href="<?=$v['arcurl']?>" class="btn">下一章</a><?php _aquit();} unset($v);?>
+					<li id="xiayipian"><?php $v=_ctag_parse(array("ename" => "xiaoshuo_xiayizhang","tclass" => "acontext","disabled" => "0","next" => "1","chid" => "4",));if(!empty($v)){_aenter($v);?>
+	    <a href="<?=$v['arcurl']?>" class="btn" id="xiayizhanga">下一章</a><?php _aquit();} unset($v);?>
 </li>
 				</ul>
 			</div>
@@ -336,15 +358,6 @@ if (isset($curuser->info['mid'])) {
     <div class="blank9"></div>
     </div>
 
-
-<style type="text/css">
-.c11, .c11 a, .c11 a:visited {color: #24a3ce;}
-.rightSide dl {margin: 12px 10px;border: #ccc 1px solid;font-size: 14px;font-weight: bold;}
-.rightSide dl {margin: 12px 10px;border: #ccc 1px solid;font-size: 14px;font-weight: bold;}
-.rightSide ul {margin: 12px 10px;}
-.rightSide li {height: 18px;line-height: 18px;overflow: hidden;}    
-#contents p { line-height:155%;}
-</style>
 
     <div class="rightSide" id="rightSide" style="display: block;width:200px;float:right;background-color: ">
 		<ul class="c11" style="margin-top:70px;">
@@ -369,6 +382,24 @@ if (isset($curuser->info['mid'])) {
 </div>
 <script type="text/javascript">
 
+$(document).keyup(function(event){   
+    if(event.keyCode == 37){   
+        var prepage = $('#shangyizhanga').attr('href');
+        if (prepage == undefined) {
+    		alert('没有上一章节');
+    	} else {
+    		location.href = prepage;
+    	}
+    }else if(event.keyCode == 39){  
+    	var nextpage = $('#xiayizhanga').attr('href');
+    	if (nextpage == undefined) {
+    		alert('没有下一章节');
+    	} else {
+    		location.href = nextpage;
+    	}
+    }   
+}); 
+
 //cms_content_counts
 $(document).ready(function(){
 	var content = $('#contents').text();
@@ -381,6 +412,13 @@ $(document).ready(function(){
 	
 	setBgCollor('#e7f4fe');
 	setBgFont(16);
+	
+	
+});
+
+  
+$(':text,textarea').keyup(function(event){   
+    event.stopPropagation();   
 });
 
 //设置背景颜色

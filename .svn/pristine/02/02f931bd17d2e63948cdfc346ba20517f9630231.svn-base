@@ -1,0 +1,20 @@
+<?php
+$ctagxiao_top_tuijie_0 = array (
+  'cname' => '小说头条推介',
+  'ename' => 'xiao_top_tuijie',
+  'tclass' => 'archives',
+  'template' => '<a href="{arcurl}" title="{subject}"  target="_blank">{u$subject30}</a>',
+  'setting' => 
+  array (
+    'limits' => 3,
+    'cols' => 1,
+    'caidson' => '1',
+    'casource' => '2',
+    'ccidson1' => '1',
+    'cosource1' => '1',
+    'ccids1' => '28',
+    'closed' => '-1',
+    'abover' => '-1',
+  ),
+) ;
+?>

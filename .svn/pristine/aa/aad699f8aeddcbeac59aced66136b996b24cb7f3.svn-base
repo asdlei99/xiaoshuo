@@ -1,0 +1,76 @@
+<?php
+$commus_0 = array (
+  1 => 
+  array (
+    'cuid' => '1',
+    'cname' => 'ÔÞ',
+    'available' => '1',
+    'cclass' => 'praise',
+    'sortable' => '0',
+    'ch' => '0',
+  ),
+  2 => 
+  array (
+    'cuid' => '2',
+    'cname' => 'ÆÀ·Ö',
+    'available' => '1',
+    'cclass' => 'score',
+    'sortable' => '0',
+    'ch' => '0',
+  ),
+  3 => 
+  array (
+    'cuid' => '3',
+    'cname' => '¾Ù±¨´íÎó',
+    'available' => '1',
+    'cclass' => 'report',
+    'sortable' => '0',
+    'ch' => '1',
+  ),
+  4 => 
+  array (
+    'cuid' => '4',
+    'cname' => 'ÊÕ²Ø',
+    'available' => '1',
+    'cclass' => 'favorite',
+    'sortable' => '0',
+    'ch' => '0',
+  ),
+  5 => 
+  array (
+    'cuid' => '5',
+    'cname' => 'ÆÀÂÛ',
+    'available' => '1',
+    'cclass' => 'comment',
+    'sortable' => '1',
+    'ch' => '1',
+  ),
+  6 => 
+  array (
+    'cuid' => '6',
+    'cname' => '´ðÒÉ',
+    'available' => '1',
+    'cclass' => 'answer',
+    'sortable' => '1',
+    'ch' => '1',
+  ),
+  7 => 
+  array (
+    'cuid' => '7',
+    'cname' => '¹ºÂòÉÌÆ·',
+    'available' => '1',
+    'cclass' => 'purchase',
+    'sortable' => '1',
+    'ch' => '1',
+  ),
+  8 => 
+  array (
+    'cuid' => '8',
+    'cname' => '¶©ÔÄ',
+    'available' => '1',
+    'cclass' => 'subscribe',
+    'sortable' => '0',
+    'ch' => '0',
+  ),
+) ;
+?>

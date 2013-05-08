@@ -1,7 +1,7 @@
 <?php
 $inmurl5_0 = array (
   'imuid' => '5',
-  'cname' => '添加',
+  'cname' => '上传章节',
   'remark' => '合辑内添加新文档',
   'uclass' => 'inadd',
   'issys' => '1',

@@ -1,0 +1,11 @@
+<?php
+$rtagsearch_0 = array (
+  'cname' => 'ËÑË÷Ìõ¿é',
+  'ename' => 'search',
+  'tclass' => '',
+  'template' => 'search.tpl.htm',
+  'setting' => 
+  array (
+  ),
+) ;
+?>

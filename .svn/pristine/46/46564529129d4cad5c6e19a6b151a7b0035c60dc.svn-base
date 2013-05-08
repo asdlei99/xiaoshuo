@@ -1,0 +1,136 @@
+<?php
+$coclasses1_0 = array (
+  1 => 
+  array (
+    'ccid' => '1',
+    'pid' => '0',
+    'level' => '0',
+    'title' => '二级推荐',
+    'isframe' => '1',
+    'chids' => '1,2,3,4',
+    'mchids' => '',
+    'dirname' => 'reindex',
+    'vieworder' => '0',
+  ),
+  34 => 
+  array (
+    'ccid' => '34',
+    'pid' => '1',
+    'level' => '1',
+    'title' => '首页二级推荐',
+    'isframe' => '0',
+    'chids' => '1,2,3,4',
+    'mchids' => '',
+    'dirname' => 'reindex_sy',
+    'vieworder' => '0',
+  ),
+  35 => 
+  array (
+    'ccid' => '35',
+    'pid' => '1',
+    'level' => '1',
+    'title' => 'vip专区二级推荐',
+    'isframe' => '0',
+    'chids' => '4',
+    'mchids' => '',
+    'dirname' => 'reindex_vip',
+    'vieworder' => '0',
+  ),
+  2 => 
+  array (
+    'ccid' => '2',
+    'pid' => '0',
+    'level' => '0',
+    'title' => '图文推荐',
+    'isframe' => '1',
+    'chids' => '1,2,3,4',
+    'mchids' => '',
+    'dirname' => 'reindex_pictxt',
+    'vieworder' => '0',
+  ),
+  32 => 
+  array (
+    'ccid' => '32',
+    'pid' => '2',
+    'level' => '1',
+    'title' => '首页图文推荐',
+    'isframe' => '0',
+    'chids' => '1,2,3,4',
+    'mchids' => '',
+    'dirname' => 'reindex_pictxts',
+    'vieworder' => '0',
+  ),
+  33 => 
+  array (
+    'ccid' => '33',
+    'pid' => '2',
+    'level' => '1',
+    'title' => 'vip专区_图文推荐',
+    'isframe' => '0',
+    'chids' => '4',
+    'mchids' => '',
+    'dirname' => 'reindex_pictxtv',
+    'vieworder' => '0',
+  ),
+  3 => 
+  array (
+    'ccid' => '3',
+    'pid' => '0',
+    'level' => '0',
+    'title' => '头条推荐',
+    'isframe' => '1',
+    'chids' => '1,2,3,4',
+    'mchids' => '',
+    'dirname' => 'reindex_type',
+    'vieworder' => '0',
+  ),
+  28 => 
+  array (
+    'ccid' => '28',
+    'pid' => '3',
+    'level' => '1',
+    'title' => '首页头条推荐',
+    'isframe' => '0',
+    'chids' => '1,2,3,4',
+    'mchids' => '',
+    'dirname' => 'reindex_typesy',
+    'vieworder' => '0',
+  ),
+  29 => 
+  array (
+    'ccid' => '29',
+    'pid' => '3',
+    'level' => '1',
+    'title' => 'vip专区_头条推荐',
+    'isframe' => '0',
+    'chids' => '4',
+    'mchids' => '',
+    'dirname' => 'reindex_typevip',
+    'vieworder' => '0',
+  ),
+  30 => 
+  array (
+    'ccid' => '30',
+    'pid' => '3',
+    'level' => '1',
+    'title' => '专题推荐',
+    'isframe' => '0',
+    'chids' => '5',
+    'mchids' => '',
+    'dirname' => 'index_readminsy',
+    'vieworder' => '0',
+  ),
+  4 => 
+  array (
+    'ccid' => '4',
+    'pid' => '0',
+    'level' => '0',
+    'title' => 'VIP强力推介和',
+    'isframe' => '1',
+    'chids' => '1,2,3,4',
+    'mchids' => '',
+    'dirname' => 'index_readmin',
+    'vieworder' => '0',
+  ),
+) ;
+?>

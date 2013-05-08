@@ -1,0 +1,27 @@
+<?php
+$ctagnanpin_remen_list_0 = array (
+  'cname' => '男频首页连载热门列表',
+  'ename' => 'nanpin_remen_list',
+  'tclass' => 'catalogs',
+  'template' => '<div style="height:278px;" class="main w210">
+              <div class="mod-sub">
+                <h3><a target="_blank" href="{listurl}">{title}</a></h3>
+                <dl class="picList2">
+                     {c$nanpin_jihuo_shoutu}
+		</dl>
+                <ul class="list">
+			{c$nanpin_jihuo_liebiao}	
+		</ul>
+              </div>
+            </div>',
+  'setting' => 
+  array (
+    'limits' => 6,
+    'nsid' => '-1',
+    'listby' => 'ca',
+    'casource' => '1',
+    'caids' => '2,4,5,6,7,17',
+  ),
+  'disabled' => 0,
+) ;
+?>

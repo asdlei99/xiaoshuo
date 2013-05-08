@@ -1,0 +1,36 @@
+<?php
+$mfield_1_gender_0 = array (
+  'mfid' => '16',
+  'cname' => '性别',
+  'ename' => 'gender',
+  'mchid' => '1',
+  'issystem' => '0',
+  'available' => '1',
+  'iscustom' => '1',
+  'mcommon' => '0',
+  'isfunc' => '0',
+  'func' => '',
+  'tbl' => 'custom',
+  'innertext' => '保密
+男
+女',
+  'fromcode' => '0',
+  'issearch' => '0',
+  'length' => '10',
+  'datatype' => 'select',
+  'notnull' => '0',
+  'nohtml' => '0',
+  'mlimit' => '0',
+  'regular' => '',
+  'min' => '',
+  'max' => '',
+  'rpid' => '0',
+  'isadmin' => '0',
+  'vieworder' => '0',
+  'mode' => '0',
+  'guide' => '',
+  'vdefault' => '',
+  'pmid' => '0',
+  'useredit' => '0',
+) ;
+?>

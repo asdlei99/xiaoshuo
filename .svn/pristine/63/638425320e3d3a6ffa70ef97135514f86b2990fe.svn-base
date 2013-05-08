@@ -1,0 +1,147 @@
+{tpl$header}
+<script type="text/javascript">var CMS_ABS='{$cms_abs}',IXDIR = '{tplurl}css/', charset = 'gbk',allowfloatwin = '1',floatwidth='400',floatheight='400'</script>
+<script type="text/javascript" src="{$cms_abs}include/js/langs.js"></script>
+<script type="text/javascript" src="{$cms_abs}include/js/common.js"></script>
+<script type="text/javascript" src="{$cms_abs}include/js/floatwin.js"></script>
+<script type="text/javascript">
+function chabg(d){
+    d.style.background = "url('{tplurl}images/xqbg.gif')";
+    d.onmouseout = function(){d.style.background = "";}
+}
+</script>
+<div id="append_parent"></div>
+<div class="h3">
+<span class="reda">当前位置&gt;&gt;</span>  <a href="{cms_abs}">首页</a> {c$nav}</div>
+</div>
+</div>
+
+<div id="main">
+
+<div>
+
+</div>
+
+
+<div id="left" class="left">
+<div class="divbox m_b8">
+<div class="txtbox k1">
+<h1>{subject}&nbsp;&nbsp;{subtitle}</h1>
+<h2>发布: {u$createdate_all} | 作者: {author} | 查看: <font id="cms_clicks">0</font>次  |  <a href="{$cms_abs}/adminm.php?action=favorites" class="cRed">打开书架</a></h2>
+<div class="account">{content}</div>
+<div class="shuping">
+<a class="read" href="{arcurl1}">点击阅读</a>
+<a href="javascript:ajax_praise('{aid}');">我顶(<font id="cms_praises">0</font>)</a>
+<a href="javascript:ajax_debase('{aid}');">我踩(<font id="cms_debases">0</font>)</a>
+<a href="javascript:ajax_favorite('{aid}');">收藏(<font id="cms_favorites">0</font>)</a>
+<a href="{cms_abs}report.php?aid={aid}" onclick="return floatwin('open_report',this,800,300)">举报<font>&nbsp;</font></a>
+</div>
+
+<div class="xiqingbox">
+    <div class="xinqing">
+        <ul onclick="ajaxUscore('{aid}','1','cms_score_1')" onmouseover="chabg(this)" class="c1">
+            <li class="t">怒</li>
+            <li class="b"><font id="cms_score_1">0</font></li>
+        </ul>
+        <ul onclick="ajaxUscore('{aid}','2','cms_score_2')" onmouseover="chabg(this)" class="c2">
+            <li class="t">囧</li>
+            <li class="b"><font id="cms_score_2">0</font></li>
+        </ul>
+        <ul onclick="ajaxUscore('{aid}','3','cms_score_3')" onmouseover="chabg(this)" class="c3">
+            <li class="t">汗</li>
+            <li class="b"><font id="cms_score_3">0</font></li>
+        </ul>
+        <ul onclick="ajaxUscore('{aid}','4','cms_score_4')" onmouseover="chabg(this)" class="c4">
+            <li class="t">笑</li>
+            <li class="b"><font id="cms_score_4">0</font></li>
+        </ul>
+        <ul onclick="ajaxUscore('{aid}','5','cms_score_5')" onmouseover="chabg(this)" class="c5">
+            <li class="t">期待{avgscore}</li>
+            <li class="b"><font id="cms_score_5">0</font></li>
+        </ul>
+    </div>
+</div>
+<div class="aboutthis">
+    <h1>本书相关</h1>
+    <ul>
+        <li><strong>总点击：</strong><font id="ccms_clicks">0</font></li><li><strong>总收藏：</strong><font id="ccms_favorites">0</font></li><li><strong>总推介：</strong><font id="ccms_praises">0</font></li>
+        <li><strong>本月点击：</strong><font id="ccms_mclicks">0</font></li><li><strong>本月收藏：</strong><font id="ccms_mfavorites">0</font></li><li><strong>本月推介：</strong><font id="ccms_mpraises">0</font></li>
+        <li><strong>本周点击：</strong><font id="ccms_wclicks">0</font></li><li><strong>本周收藏：</strong><font id="ccms_wfavorites">0</font></li><li><strong>本周推介：</strong><font id="ccms_wpraises">0</font></li>
+    </ul>
+</div>
+<div class="pagenav"><span>{c$next_caid}</span>{c$pre_caid}</div>
+</div>
+</div>
+
+
+
+<div id="divboxd">
+<div id="lm4"><dl>
+<dt><img src="{tplurl}images/ico_gx.gif"  align="absmiddle" /><b>最新章节</b></dt>
+<dd>
+<div class="pagelist"><dl>{c$news_zhang_list}</dl></div>
+</dd>
+</dl></div>
+</div>
+<div id="lm3">
+<dl>
+<dt style="text-align:center;"><img src="{tplurl}images/plen.png"  align="absmiddle" /> {subject} 小说已有评论<font id="cms_comments" style="color:#F00; font-weight:bold;">0</font> 次 <a href="{cms_abs}comments.php?aid={aid}">查看所有评论&gt;&gt;</a></dt>
+<dd><ul class="comcon">{c$pinglunlist}</ul></dd></dl></div>
+<div id="lm3"><dl>
+<dt><img src="{cms_abs}template/default/images/bx2.gif"  align="absmiddle" /><b>发表评论</b><span><a href="{cms_abs}comments.php?aid={aid}">更多&gt;&gt;</a></span></dt>
+<dd class="comform">
+<form name="formcomment" method="post" action="{cms_abs}comment.php?aid={aid}">
+<input name="forward" type="hidden" value="{cms_abs}comments.php?aid={aid}" />
+<textarea name="communew[content]" id="communew[content]" tabindex="3" rows="6" cols="130" title="评论内容"></textarea>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td width="60"></td><td width="50">验证码：</td><td width="50"><input type="text" name="regcode" size="7" maxlength="4" id="regcode" tabindex="2" value="" class="input"></td><td><img src="{cms_abs}regcode.php" alt="点击更换验证码" style="vertical-align:middle;cursor:pointer;" onClick="this.src='{cms_abs}regcode.php'" /></td><td align="center"><button type="submit" name="newcommu" value="true" class="cbtn">发表评论</button></td><td width="40%"> </td></tr></table>
+</form></dd>
+</dl></div>
+</div>
+
+<div id="right" class="right">
+<div class="picBox m_b8">{u$thumb_240_316}</div>
+<div class="search m_b8" id="searchbox">{tpl$s_box}</div>
+{c$lian_ad_250_t}
+<div style="float:none;"></div>
+<div id="lm2"><dl>
+<dt><img src="{tplurl}images/tuijian2ico.gif"  align="absmiddle" />推荐专题</dt>
+<dd>{c$index_readmin}</dd></dl></div>
+
+
+<div id="lm2"><dl><dt>VIP热门</dt><dd><ul>{c$hotindex_mtitle}</ul></dd></dl></div>
+
+
+</div></div>
+
+<div id="links"><b>合作链接：</b>{c$txtflinklist}<br />{c$picflinklist}</div>
+<script type="text/javascript">
+function set_stat(s){
+    var k, o;
+    s = s['{aid}'];
+    if(!s)return;
+    for(k in s){
+        o = $id('cms_' + k);
+        if(o)o.innerHTML = s[k];
+        o = $id('ccms_' + k);
+        if(o)o.innerHTML = s[k];
+    }
+}
+function set_score(s){
+    var k, o;
+    s = s['{aid}'];
+    if(!s)return;
+    for(k in s){
+        o = $id('cms_' + k);
+        if(o)o.innerHTML = s[k];
+    }
+}
+
+ajax_get_stat('{aid}', set_stat);
+ajax_get_stat.aids = [];
+ajax_get_stat.data = {};
+ajax_get_score('{aid}', set_score);
+
+</script>
+{tpl$footer}
+{cms_counter}
+<script type="text/javascript" src="{$cms_abs}ajax.php?action=mark&aid={$aid}">

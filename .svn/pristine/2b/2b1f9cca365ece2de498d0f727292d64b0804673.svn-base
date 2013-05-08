@@ -1,0 +1,389 @@
+<?PHP exit(); ?>
+<?PHP exit;?>	1362811805	1	admin	创始人	127.0.0.1	网站设置	网站基本设置
+<?PHP exit;?>	1362816103	1	admin	创始人	127.0.0.1	删除栏目	
+<?PHP exit;?>	1362823352	1	admin	创始人	127.0.0.1	删除栏目	
+<?PHP exit;?>	1362823416	1	admin	创始人	127.0.0.1	添加类系	
+<?PHP exit;?>	1362823446	1	admin	创始人	127.0.0.1	详细修改类系	
+<?PHP exit;?>	1362823836	1	admin	创始人	127.0.0.1	删除类系	
+<?PHP exit;?>	1362823909	1	admin	创始人	127.0.0.1	详细修改类系	
+<?PHP exit;?>	1362823938	1	admin	创始人	127.0.0.1	编辑文档分类管理列表	
+<?PHP exit;?>	1362823950	1	admin	创始人	127.0.0.1	删除文档分类	
+<?PHP exit;?>	1362823973	1	admin	创始人	127.0.0.1	删除文档分类	
+<?PHP exit;?>	1362823983	1	admin	创始人	127.0.0.1	删除文档分类	
+<?PHP exit;?>	1362823993	1	admin	创始人	127.0.0.1	删除文档分类	
+<?PHP exit;?>	1362824002	1	admin	创始人	127.0.0.1	删除文档分类	
+<?PHP exit;?>	1362824106	1	admin	创始人	127.0.0.1	详细修改类系	
+<?PHP exit;?>	1362824149	1	admin	创始人	127.0.0.1	编辑类系管理列表	
+<?PHP exit;?>	1362824263	1	admin	创始人	127.0.0.1	详细修改交互项目	
+<?PHP exit;?>	1362824398	1	admin	创始人	127.0.0.1	会员组变更管理	会员组变更列表管理操作
+<?PHP exit;?>	1362824763	1	admin	创始人	127.0.0.1	编辑会员中心菜单列表	
+<?PHP exit;?>	1362828613	1	admin	创始人	127.0.0.1	编辑栏目管理列表	
+<?PHP exit;?>	1362828701	1	admin	创始人	127.0.0.1	添加栏目	
+<?PHP exit;?>	1362828732	1	admin	创始人	127.0.0.1	详细修改栏目	
+<?PHP exit;?>	1362828751	1	admin	创始人	127.0.0.1	编辑栏目管理列表	
+<?PHP exit;?>	1362828791	1	admin	创始人	127.0.0.1	详细修改栏目	
+<?PHP exit;?>	1362828838	1	admin	创始人	127.0.0.1	删除类系	
+<?PHP exit;?>	1362828897	1	admin	创始人	127.0.0.1	详细修改栏目	
+<?PHP exit;?>	1362828916	1	admin	创始人	127.0.0.1	详细修改栏目	
+<?PHP exit;?>	1362828930	1	admin	创始人	127.0.0.1	详细修改栏目	
+<?PHP exit;?>	1362828987	1	admin	创始人	127.0.0.1	首页静态管理	
+<?PHP exit;?>	1362829726	1	admin	创始人	127.0.0.1	编辑空间栏目管理列表	
+<?PHP exit;?>	1362830173	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1362830194	1	admin	创始人	127.0.0.1	编辑复合标识管理列表	
+<?PHP exit;?>	1362830225	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1362831017	1	admin	创始人	127.0.0.1	添加会员档案类型	
+<?PHP exit;?>	1362831040	1	admin	创始人	127.0.0.1	详细设置会员档案类型	
+<?PHP exit;?>	1362831093	1	admin	创始人	127.0.0.1	修改会员组变更方案	修改会员组变更方案
+<?PHP exit;?>	1362831340	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1362831412	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1362831442	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1362831554	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1362831574	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1362831617	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1362831661	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1362905113	1	admin	创始人	127.0.0.1	网站设置	站点信息
+<?PHP exit;?>	1362905204	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362905327	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362905375	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362905441	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362905539	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362905768	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1362906053	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1362906180	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1362906269	1	admin	创始人	127.0.0.1	网站设置	站点信息
+<?PHP exit;?>	1362906369	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362906419	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362906482	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1362906500	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1362906508	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1362906638	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1362906694	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1362906751	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362906804	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362906905	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362906975	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1362907143	1	admin	创始人	127.0.0.1	添加插件模型	
+<?PHP exit;?>	1362907228	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1362907270	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1362907315	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1362907320	1	admin	创始人	127.0.0.1	详细修改插件模型字段	
+<?PHP exit;?>	1362907386	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1362907407	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1362908177	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1362908757	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363097228	1	admin	创始人	127.0.0.1	详细修改采集任务	
+<?PHP exit;?>	1363097776	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1363098101	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363098529	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1363098881	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363098977	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363099226	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363099257	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363099295	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363099511	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363099560	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363099636	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363099690	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363099747	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363099799	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363099839	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363099858	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363100073	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363100162	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363100301	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363100372	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363100449	1	admin	创始人	127.0.0.1	从系统导入热门关键词	
+<?PHP exit;?>	1363100462	1	admin	创始人	127.0.0.1	从系统导入热门关键词	
+<?PHP exit;?>	1363100567	1	admin	创始人	127.0.0.1	详细修改类系	
+<?PHP exit;?>	1363100612	1	admin	创始人	127.0.0.1	详细修改文档分类	
+<?PHP exit;?>	1363100634	1	admin	创始人	127.0.0.1	详细修改文档分类	
+<?PHP exit;?>	1363101315	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363101368	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363101413	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363101438	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363101551	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363101572	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363101651	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363101689	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363268880	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1363269002	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1363269037	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1363269096	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1363354147	1	admin	创始人	127.0.0.1	网站设置	页面与模板设置
+<?PHP exit;?>	1363354471	1	admin	创始人	127.0.0.1	详细修改特定功能模板	
+<?PHP exit;?>	1363354485	1	admin	创始人	127.0.0.1	详细修改特定功能模板	
+<?PHP exit;?>	1363354775	1	admin	创始人	127.0.0.1	添加栏目	
+<?PHP exit;?>	1363354807	1	admin	创始人	127.0.0.1	添加栏目	
+<?PHP exit;?>	1363354843	1	admin	创始人	127.0.0.1	添加栏目	
+<?PHP exit;?>	1363354868	1	admin	创始人	127.0.0.1	添加栏目	
+<?PHP exit;?>	1363354897	1	admin	创始人	127.0.0.1	添加栏目	
+<?PHP exit;?>	1363354939	1	admin	创始人	127.0.0.1	添加栏目	
+<?PHP exit;?>	1363363225	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363363307	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363363422	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363363463	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363363619	1	admin	创始人	127.0.0.1	编辑复合标识管理列表	
+<?PHP exit;?>	1363363690	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363363795	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363363841	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363363896	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363363931	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363363957	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363364069	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363364084	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363364109	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363364154	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363364195	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363364227	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363365499	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363365557	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363365682	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363369100	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363369171	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363369242	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363369441	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363370022	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363370268	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363370876	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363371041	1	admin	创始人	127.0.0.1	copy utag	
+<?PHP exit;?>	1363371088	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1363371126	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363371414	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363371451	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363371559	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363371600	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363371665	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363371688	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363372067	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363372109	1	admin	创始人	127.0.0.1	修改文档	
+<?PHP exit;?>	1363372672	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363372684	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363372786	1	admin	创始人	127.0.0.1	文档更新管理	文档列表管理操作
+<?PHP exit;?>	1363373003	1	admin	创始人	127.0.0.1	从系统导入热门关键词	
+<?PHP exit;?>	1363373017	1	admin	创始人	127.0.0.1	从系统导入热门关键词	
+<?PHP exit;?>	1363373132	1	admin	创始人	127.0.0.1	编辑被关联词管理列表	
+<?PHP exit;?>	1363373161	1	admin	创始人	127.0.0.1	从系统导入热门关键词	
+<?PHP exit;?>	1363373184	1	admin	创始人	127.0.0.1	从系统导入热门关键词	
+<?PHP exit;?>	1363408399	1	admin	创始人	127.0.0.1	详细修改文档模型信息字段	
+<?PHP exit;?>	1363408473	1	admin	创始人	127.0.0.1	详细修改文档模型信息字段	
+<?PHP exit;?>	1363408692	1	admin	创始人	127.0.0.1	添加文档通用信息字段	
+<?PHP exit;?>	1363408763	1	admin	创始人	127.0.0.1	详细修改文档模型信息字段	
+<?PHP exit;?>	1363408799	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1363408939	1	admin	创始人	127.0.0.1	编辑文档通用信息字段管理列表	
+<?PHP exit;?>	1363409062	1	admin	创始人	127.0.0.1	详细修改文档模型	
+<?PHP exit;?>	1363409287	1	admin	创始人	127.0.0.1	添加文档模型信息字段	
+<?PHP exit;?>	1363416796	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363416842	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363416876	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363418094	1	admin	创始人	127.0.0.1	详细修改栏目	
+<?PHP exit;?>	1363419022	1	admin	创始人	127.0.0.1	详细类目节点	
+<?PHP exit;?>	1363426961	1	admin	创始人	127.0.0.1	添加插件模型	
+<?PHP exit;?>	1363427010	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1363427128	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1363427184	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1363427218	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363427373	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363427403	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363427421	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363427440	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363427819	1	admin	创始人	127.0.0.1	添加 ptag	
+<?PHP exit;?>	1363427944	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363428032	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363428081	1	admin	创始人	127.0.0.1	详细修改插件模型字段	
+<?PHP exit;?>	1363428114	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1363428185	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363428241	1	admin	创始人	127.0.0.1	详细修改插件模型字段	
+<?PHP exit;?>	1363428261	1	admin	创始人	127.0.0.1	详细修改插件模型字段	
+<?PHP exit;?>	1363428288	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363428329	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363428366	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363428415	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363428437	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363428469	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363428581	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363428609	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363429087	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363429163	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363429178	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363429236	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363429509	1	admin	创始人	127.0.0.1	添加 ptag	
+<?PHP exit;?>	1363429594	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363429895	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363429932	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363429966	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430057	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430069	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430081	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430099	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430109	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430127	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430139	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430151	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430162	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363430176	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363433801	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363433816	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363433880	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363433898	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363433966	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363433974	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363434312	1	admin	创始人	127.0.0.1	添加 ptag	
+<?PHP exit;?>	1363434883	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363434898	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363434907	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363436081	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436109	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436131	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436149	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436163	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436178	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436197	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363436214	1	admin	创始人	127.0.0.1	编辑分页标识管理列表	
+<?PHP exit;?>	1363436297	1	admin	创始人	127.0.0.1	添加 ptag	
+<?PHP exit;?>	1363436433	1	admin	创始人	127.0.0.1	详细修改插件信息	
+<?PHP exit;?>	1363436508	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436527	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363436538	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363436704	1	admin	创始人	127.0.0.1	添加插件模型	
+<?PHP exit;?>	1363436759	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1363436795	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1363436830	1	admin	创始人	127.0.0.1	添加插件模型字段	
+<?PHP exit;?>	1363438629	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363438700	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363438774	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363438783	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363438988	1	admin	创始人	127.0.0.1	添加 ptag	
+<?PHP exit;?>	1363439140	1	admin	创始人	127.0.0.1	添加 utag	
+<?PHP exit;?>	1363439172	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363439215	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363439232	1	admin	创始人	127.0.0.1	编辑特殊字段标识管理列表	
+<?PHP exit;?>	1363439248	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1363489077	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489082	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489091	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489096	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489313	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489317	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489322	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489326	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489331	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489335	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363489361	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363489402	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363493783	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363494159	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363494202	1	admin	创始人	127.0.0.1	添加 utag	
+<?PHP exit;?>	1363494289	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363494501	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363494553	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363494709	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363494844	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363495327	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363495354	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363534343	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363534649	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363534703	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363620298	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363620738	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363620771	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363620855	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363620883	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363621190	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363621338	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363621354	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363621411	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363621427	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363621731	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363621973	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363622088	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363622118	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363622208	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363622239	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363695996	1	admin	创始人	127.0.0.1	编辑插件分类管理列表	
+<?PHP exit;?>	1363696155	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363696184	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363696260	1	admin	创始人	127.0.0.1	copy utag	
+<?PHP exit;?>	1363696286	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1363696319	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363696330	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363696454	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363696576	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363696609	1	admin	创始人	127.0.0.1	编辑插件分类管理列表	
+<?PHP exit;?>	1363696658	1	admin	创始人	127.0.0.1	编辑插件分类管理列表	
+<?PHP exit;?>	1363696698	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363696727	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363696744	1	admin	创始人	127.0.0.1	添加插件分类	
+<?PHP exit;?>	1363696784	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363696807	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363696826	1	admin	创始人	127.0.0.1	添加插件信息	
+<?PHP exit;?>	1363696877	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363696937	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363696965	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363697012	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363697040	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363697057	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363697073	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363697081	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363697090	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363697099	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363697108	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363697552	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363697567	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363697576	1	admin	创始人	127.0.0.1	插件信息管理	插件信息列表管理
+<?PHP exit;?>	1363697725	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363697739	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363698208	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363698301	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363698384	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363698482	1	admin	创始人	127.0.0.1	detamodptag	
+<?PHP exit;?>	1363698514	1	admin	创始人	127.0.0.1	copy utag	
+<?PHP exit;?>	1363698527	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1363699032	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363699066	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363699130	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363699158	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363699177	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363699745	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363699859	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363699896	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363699912	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363701015	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363701630	1	admin	创始人	127.0.0.1	复制常规模板	
+<?PHP exit;?>	1363701655	1	admin	创始人	127.0.0.1	详细类目节点	
+<?PHP exit;?>	1363702274	1	admin	创始人	127.0.0.1	添加 ctag	
+<?PHP exit;?>	1363702468	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363702495	1	admin	创始人	127.0.0.1	copy utag	
+<?PHP exit;?>	1363702504	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363702530	1	admin	创始人	127.0.0.1	detamodutag	
+<?PHP exit;?>	1363703868	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363704076	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363704140	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363704180	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363704217	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363704448	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363704544	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363704661	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363704871	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363704968	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363704994	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705145	1	admin	创始人	127.0.0.1	copy ctag	
+<?PHP exit;?>	1363705311	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705359	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705390	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705416	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705435	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705470	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705502	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705870	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705892	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363705908	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707374	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707522	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707779	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707805	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707826	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707899	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707918	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707936	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363707956	1	admin	创始人	127.0.0.1	detamodctag	
+<?PHP exit;?>	1363708150	1	admin	创始人	127.0.0.1	网站设置	站点信息
