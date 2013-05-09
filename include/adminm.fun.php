@@ -295,8 +295,10 @@ global $copyright,$cms_power,$cms_icpno,$inajax,$infloat,$cms_version;
 </div>
 <div class="blank9"></div>
 <div class="area lineheight200 copy">
-Copyright &copy; 2008-2012 <a href="http://oa.stawin.com.cn:86" target="_blank">203.171.225.68:86</a> All rights reserved.<br />
-Powered by 小说网 v<?=$cms_version?> Code &copy; 2013-2015 203.171.225.68:86 Corporation
+Copyright &copy; 2013-2013 <a href="http://www.jd2100.com" target="_blank">http://www.jd2100.com</a> All rights reserved.<br />
+Powered by <a href="http://www.jd2100.com" target="_blank">经典小说阅读</a> v2013 ? 2013-2015 Inc.
+<br />
+<a href="http://www.miibeian.gov.cn" target="_blank">京ICP备9988833号</a>
 </div>
 <!--</div>--><?php
 }else echo '</div></div>';?>
