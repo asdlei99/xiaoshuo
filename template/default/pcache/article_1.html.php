@@ -228,7 +228,7 @@ $(function(){
 .rightSide ul {margin: 12px 10px;}
 .rightSide li {height: 18px;line-height: 18px;overflow: hidden;}    
 .container #contents{ line-height:180%;}
-.container #contents br {
+.container #contents .pbr {
 	margin-top:15px;
 	display: block;
 }
@@ -323,10 +323,10 @@ if (isset($curuser->info['mid'])) {
             </div>
         <div id="contents" style="padding:0 42px 20px;border:none;">
         <?php
-        $content = str_replace(chr(32), "&nbsp;", $content);
-        $content = str_replace(chr(13), "<br>", $content);
+        $content = str_replace(chr(32), "", $content);
+        $content = str_replace(chr(13), "<p class='pbr'> </p>&nbsp;&nbsp;&nbsp;&nbsp;", $content);
 		
-		echo $content; 
+		echo '&nbsp;&nbsp;&nbsp;&nbsp;'.$content; 
         ?>
         <div class="blank18"></div> <?=$mpnav?>     
         </div>

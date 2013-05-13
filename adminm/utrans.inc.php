@@ -31,6 +31,10 @@ if(!isset($utran['toid'])){
 					$toidsarr[$v['tugid']] = $v['tugid'] ? $usergroups[$v['tugid']]['cname'] : lang('user0');
 				}
 			}
+			//TODO 如果只剩一个方案，那就说明他已经是作家了
+			if (count($toidsarr) <= 1) {
+				mcmessage('您已经是本站作家。');
+			}
 			if($toidsarr){
 				$isold = $db->result_one("SELECT COUNT(*) FROM {$tblprefix}utrans WHERE mid='$memberid' AND checked='0' AND gtid='$gtid'");
 				$nowugstr = '&nbsp; '.lang('groupcurrentuser').'&nbsp;:&nbsp;'.($curuser->info["grouptype$gtid"] ? $usergroups[$curuser->info["grouptype$gtid"]]['cname'] : lang('user0'));
@@ -68,6 +72,15 @@ if(!isset($utran['toid'])){
 	$minfos['fromid'] = $curuser->info["grouptype$gtid"];
 	$minfos['toid'] = $utran['toid'];
 	if(!submitcheck('butran')){
+		//TODO 验证笔名是否重复
+		if (!empty($utran['biming'])) {
+			$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}members_1 WHERE biming='{$utran['biming']}' LIMIT 0,1");
+			$output = $output['c'];
+			if (!empty($output)) {
+				mcmessage('笔名不能重复!', "?action=utrans");
+			}
+		}
+		
 		$usergroups = read_cache('usergroups',$gtid);
 		$submitstr = '';
 		mtabheader(lang('usergroupneedoption').'&nbsp; -&nbsp; '.$grouptypes[$gtid]['cname'],'utrans',"?action=utrans",2,1,1);
@@ -86,6 +99,13 @@ if(!isset($utran['toid'])){
 		
 		//TODO 更新用户的笔名
 		if (!empty($utran['biming'])) {
+			//TODO 验证笔名是否重复
+			$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}members_1 WHERE biming='{$utran['biming']}' LIMIT 0,1");
+			$output = $output['c'];
+			if (!empty($output)) {
+				mcmessage('笔名不能重复!', "?action=utrans");
+			}
+		
 			$sql = "update {$tblprefix}members_1 SET biming='{$utran['biming']}' WHERE mid={$curuser->info['mid']}";
 			$db->query($sql);
 			$utran['remark'] = '作者笔名：'.$utran['biming'].'\n'.$utran['remark'];

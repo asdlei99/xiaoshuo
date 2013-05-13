@@ -71,7 +71,7 @@ if(empty($channel['umdetail'])){
 				$a_field = new cls_field;
 				$subject_table = 'archives';
 				//var_dump($fields);exit();
-				//TODO 删除编辑小说的一些现实
+				//TODO 删除编辑小说的一些显示
 				unset($fields['source']);	//删除来源
 				unset($fields['keywords']);	//删除关键词subtitle
 				unset($fields['subtitle']);	//删除副标题keywords
@@ -86,7 +86,7 @@ if(empty($channel['umdetail'])){
 							$a_field->field = read_cache('field',$chid,$k);
 							$a_field->oldvalue = isset($aedit->archive[$k]) ? $aedit->archive[$k] : '';
 							$noedit = noedit($k,!$curuser->pmbypmids('field',$a_field->field['pmid']));
-							if ($k == 'subject') {
+							if ($k == 'subject' && isset($_GET['nimuid'])) {
 								echo '
 								<tr><td width="25%" class="item1"><b>*作品名&nbsp; <img align="absmiddle" src="images/common/lock.gif"></b></td>
 <td class="item2"><input type="text" value="'.$a_field->oldvalue.'" name="archivenew[subject]" id="archivenew[subject]" readonly="true" size="60">&nbsp;&nbsp;<div class="red" name="alert_archivenew[subject]" id="alert_archivenew[subject]"></div></td></tr>

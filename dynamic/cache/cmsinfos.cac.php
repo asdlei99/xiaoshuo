@@ -1,16 +1,16 @@
 <?php
 $cmsinfos_0 = array (
   'dbversion' => '5.1.56-community',
-  'dbsize' => '902.75 KB',
+  'dbsize' => '903.67 KB',
   'attachsize' => '3.64 MB',
   'sys_mail' => 'Unix Sendmail ( Path: G:/APMServ5.2.6/sendmail/sendmail.exe -t -i)',
   'serverip' => '127.0.0.1',
   'servername' => 'xiaoshuo.com',
   'archive' => 
   array (
-    'ck' => '187',
+    'ck' => '188',
     'nock' => '1',
-    'm' => '42',
+    'm' => '43',
     'w' => '1',
     'd3' => '0',
     'd1' => '0',

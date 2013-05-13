@@ -1,4 +1,0 @@
-<?php $_leimushupinglist=_ctag_parse(array("ename" => "leimushupinglist","tclass" => "commus","disabled" => "0","cuid" => "5","idsource" => "aid","ucsource" => "1",));foreach($_leimushupinglist as $v){_aenter($v);?>
-	<li><span><?php echo _utag_parse(array("ename" => "ztinfo","tclass" => "odeal","tname" => "$v[content]","dealhtml" => "clearhtml",));?>
-</span><font><?php echo _utag_parse(array("ename" => "createdate_all","tclass" => "date","tname" => "$v[createdate]","date" => "Y-m-d","time" => "H:i",));?>
-</font><a href="<?=$cms_abs?>mspace/index.php?mid=<?=$v['mid']?>" target="_blank"><?=$v['mname']?></a></li><?php _aquit();} unset($_leimushupinglist,$v);?>

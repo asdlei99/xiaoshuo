@@ -178,7 +178,7 @@ function mtrspecial($trname,$varname,$value = '',$type = 'htmltext',$mode=0,$gui
 		echo "$alert$guide</td></tr>\n";
 	}elseif($type == 'text'){
 		//TODO隐藏添加章节的检测重名
-		if($subject_table && ($varname == 'subject' || strpos($varname,'[subject]')) && empty($pid)) {
+		if($subject_table && ($varname == 'subject' || strpos($varname,'[subject]')) && empty($pid) && $trname == '<b>*作品名</b>') {
 			$alert = "&nbsp;&nbsp;<input type=\"button\" value=\"".lang('checksubject')."\" onclick=\"checksubject(this,'$subject_table','$varname');\">$alert";
 		}
 		echo "<tr><td width=\"$width\" class=\"item1\">$trname</td>\n";

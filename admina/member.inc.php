@@ -77,6 +77,13 @@ if($action == 'memberdetail' && $mid){
 		$a_field = new cls_field;
 		//TODO 如果有更新笔名，则更新该作者所有的作品作者名
 		if (!empty($minfosnew['biming'])) {
+			//检查笔名是否有重复
+			$output = $db->fetch_one("SELECT COUNT(*) AS c FROM {$tblprefix}members_1 WHERE biming='{$minfosnew['biming']}' AND mid != '{$mid}' LIMIT 0,1");
+			$output = $output['c'];
+			if (!empty($output)) {
+				amessage('笔名不能重复!', M_REFERER);
+			}
+			
 			$sql = "update {$tblprefix}archives SET author='{$minfosnew['biming']}' WHERE mid={$mid}";
 			$db->query($sql);
 		}
