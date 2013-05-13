@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset={mcharset}">
 <meta name="keywords" content="{cmskeyword}-{c$list_tit}" />
 <meta name="Description" content="{cmsdescription}-{c$list_tit}" />
-<TITLE>{cmstitle} - {cmsname} - {hostname}-{c$list_tit}</TITLE>
+<TITLE><?php echo isset($subject) ? $subject.' - ' : ''; ?>{cmstitle} - {cmsname} - {hostname}-{c$list_tit}</TITLE>
 <link rel="stylesheet" type="text/css" href="{tplurl}css/common.css" />
 <link rel="stylesheet" type="text/css" href="{tplurl}css/style.css" />
 <link rel="stylesheet" type="text/css" href="{tplurl}css/17_header.css" />
