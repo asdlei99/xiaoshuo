@@ -898,8 +898,17 @@ function ccstrlen($str){
 	global $mcharset;
 	if(!($len = strlen($str))) return 0;
 	//自己写的，替换之前的
-	$num = preg_match_all("/[\xB0-\xF7][\xA1-\xFE]/",$str,$ff);
+	$str = preg_replace("/\s/", "", $str, -1, $count);
+	$fuhao = array(',','.','/',';','\'','[',']','\\','{','}','!','@','#','$','%','&','*','(',')','，','。','、','《','》','？','；','‘','：','“','’','”','【','】','！','@','#','￥','%','……','&','*','（','）');
+	$fuhao = array_unique($fuhao);
+	$count = 0;
+	foreach ($fuhao as $f) {
+		$count += substr_count($str, $f);
+	}
+  	$num = preg_match_all("/[\xB0-\xF7][\xA1-\xFE]/",$str, $ff);
+	$num += $count;
 	return (int)$num;
+	
 	
 	$n = $i = 0;
 	if(strtolower($mcharset) == 'utf-8'){
