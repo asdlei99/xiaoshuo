@@ -91,11 +91,13 @@ if (isset($curuser->info['mid'])) {
             </div>
         <div id="contents" style="padding:0 42px 20px;border:none;">
         <?php
-        $content = strip_tags($content);
-		$content = str_replace('&nbsp;', "", $content);	¡¡¡¡
-		$content = str_replace(' ', "", $content);
+         $content = strip_tags($content);
+	$content = str_replace('&nbsp;', '', $content);
+	$content = str_replace(' ', '', $content);
+	$content = str_replace('	', '', $content);
         $content = str_replace(chr(32), "", $content);
         $content = str_replace(chr(13), "<p class='pbr'> </p>&nbsp;&nbsp;&nbsp;&nbsp;", $content);
+
 		
 		echo '&nbsp;&nbsp;&nbsp;&nbsp;'.$content; 
         ?>

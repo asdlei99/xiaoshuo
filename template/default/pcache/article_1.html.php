@@ -9,7 +9,7 @@
 <meta name="Description" content="<?=$cmsdescription?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
 <?=$v['title']?><?php _aquit();} unset($v);?>
 " />
-<TITLE><?=$cmstitle?> - <?=$cmsname?> - <?=$hostname?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<TITLE><?php echo isset($subject) ? $subject.' - ' : ''; ?><?=$cmstitle?> - <?=$cmsname?> - <?=$hostname?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
 <?=$v['title']?><?php _aquit();} unset($v);?>
 </TITLE>
 <link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/common.css" />
@@ -323,8 +323,13 @@ if (isset($curuser->info['mid'])) {
             </div>
         <div id="contents" style="padding:0 42px 20px;border:none;">
         <?php
+         $content = strip_tags($content);
+	$content = str_replace('&nbsp;', '', $content);
+	$content = str_replace(' ', '', $content);
+	$content = str_replace('	', '', $content);
         $content = str_replace(chr(32), "", $content);
         $content = str_replace(chr(13), "<p class='pbr'> </p>&nbsp;&nbsp;&nbsp;&nbsp;", $content);
+
 		
 		echo '&nbsp;&nbsp;&nbsp;&nbsp;'.$content; 
         ?>
