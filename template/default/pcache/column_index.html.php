@@ -9,7 +9,7 @@
 <meta name="Description" content="<?=$cmsdescription?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
 <?=$v['title']?><?php _aquit();} unset($v);?>
 " />
-<TITLE><?=$cmstitle?> - <?=$cmsname?> - <?=$hostname?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
+<TITLE><?php echo isset($subject) ? $subject.' - ' : ''; ?><?=$cmstitle?> - <?=$cmsname?> - <?=$hostname?>-<?php $v=_ctag_parse(array("ename" => "list_tit","tclass" => "cnmod",));if(!empty($v)){_aenter($v);?>
 <?=$v['title']?><?php _aquit();} unset($v);?>
 </TITLE>
 <link rel="stylesheet" type="text/css" href="<?=$tplurl?>css/common.css" />

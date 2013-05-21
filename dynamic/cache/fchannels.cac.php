@@ -45,5 +45,10 @@ $fchannels_0 = array (
     'chid' => '9',
     'cname' => '搜索热词',
   ),
+  10 => 
+  array (
+    'chid' => '10',
+    'cname' => '推荐类别一',
+  ),
 ) ;
 ?>
