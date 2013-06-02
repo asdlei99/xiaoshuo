@@ -897,46 +897,12 @@ function axaction($mode,$url=''){
 function ccstrlen($str){
 	global $mcharset;
 	if(!($len = strlen($str))) return 0;
-	//自己写的，替换之前的
-	$str = preg_replace("/\s/", "", $str, -1, $count);
-	$fuhao = array(',','.','/',';','\'','[',']','\\','{','}','!','@','#','$','%','&','*','(',')','，','。','、','《','》','？','；','‘','：','“','’','”','【','】','！','@','#','￥','%','……','&','*','（','）');
-	$fuhao = array_unique($fuhao);
-	$count = 0;
-	foreach ($fuhao as $f) {
-		$count += substr_count($str, $f);
-	}
-  	$num = preg_match_all("/[\xB0-\xF7][\xA1-\xFE]/",$str, $ff);
-	$num += $count;
-	return (int)$num;
 	
-	
-	$n = $i = 0;
-	if(strtolower($mcharset) == 'utf-8'){
-		while($n < $len){
-			$t = ord($str[$n]);
-			if(194 <= $t && $t <= 223){
-				$n += 2;
-			}elseif(224 <= $t && $t <= 239){
-				$n += 3;
-			}elseif(240 <= $t && $t <= 247){
-				$n += 4;
-			}elseif(248 <= $t && $t <= 251){
-				$n += 5;
-			}elseif($t == 252 || $t == 253){
-				$n += 6;
-			}else  $n++;
-			$i ++;
-		}
-	}else{
-		var_dump($str);
-		var_dump($len);
-		while($n < $len){
-			$n += ord($str[$n]) > 127 ? 2 : 1;
-			$i ++;
-		}
-	}
-	var_dump($i);exit();
-	return $i;
+	$str = preg_replace('/\s(?=\s)/','',html_entity_decode(strip_tags($str)));
+	$str = preg_replace('/[\n\r\t]/', '', $str);
+	$str = str_replace('　', '', $str);  	//使用以下方法统计字数，必须确保字符串中没有空白字符
+	$output = mb_strlen($str, 'GB2312');   
+   	return $output;
 }
 
 function html2text($str){
