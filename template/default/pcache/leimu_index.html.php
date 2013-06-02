@@ -356,17 +356,178 @@ li.No15 {background-position: -380px -351px;}
 	 <!-- 重磅推荐&大神推荐 -->
 	<div class="tab-menuWrapper" style="height:0px;"></div>
 	<div class="J_tab-content" style="border: none; padding: 0px; display: block;">
-		<div class="mod-bd">
-			<?php $_leimushouyetuwentuijian=_ctag_parse(array("ename" => "leimushouyetuwentuijian","tclass" => "archives","disabled" => "0","limits" => "2","caidson" => "1","casource" => "2","caids" => "3,15,16,18,19,20","chsource" => "2","chids" => "4","orderby" => "favorites_desc","orderby1" => "mpraises_desc","closed" => "-1","abover" => "-1",));foreach($_leimushouyetuwentuijian as $v){_aenter($v);?>
-				<dl class="picList1">
-					<dt><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
-					<dd class="pic"><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank"><img src="<?=$v['thumb']?>" alt="<?=$v['subject']?>"></a></dd>
-                                        <dt>作者：<?=$v['author']?></a></dt>
-					<dd class="intro"><?php echo _utag_parse(array("ename" => "abstract120","tclass" => "odeal","disabled" => "0","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "120",));?>
+		<div class="mod-bd" style="height:350px;">
+<?php
+if ($caid==2) {
+?>
+<?php $_fengmiantuwentuijian_dsyn=_ctag_parse(array("ename" => "fengmiantuwentuijian_dsyn","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "83","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_dsyn as $v){_aenter($v);?>
+	<dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
 ...</dd>
-					<dd class="upd"><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
-</dl><?php _aquit();} unset($_leimushouyetuwentuijian,$v);?>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_dsyn,$v);?>
 
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_fengmiantuwentuijian_xhqh=_ctag_parse(array("ename" => "fengmiantuwentuijian_xhqh","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "92","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_xhqh as $v){_aenter($v);?>
+	<dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_fengmiantuwentuijian_wxxx=_ctag_parse(array("ename" => "fengmiantuwentuijian_wxxx","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "101","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_wxxx as $v){_aenter($v);?>
+	<dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_fengmiantuwentuijian_lsjs=_ctag_parse(array("ename" => "fengmiantuwentuijian_lsjs","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "110","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_lsjs as $v){_aenter($v);?>
+	<dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_fengmiantuwentuijian_wyjj=_ctag_parse(array("ename" => "fengmiantuwentuijian_wyjj","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "119","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_wyjj as $v){_aenter($v);?>
+	<dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_fengmiantuwentuijian_khly=_ctag_parse(array("ename" => "fengmiantuwentuijian_khly","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "128","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_khly as $v){_aenter($v);?>
+	<dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_fengmiantuwentuijian_dsyq=_ctag_parse(array("ename" => "fengmiantuwentuijian_dsyq","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "156","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_dsyq as $v){_aenter($v);?>
+	    <dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_fengmiantuwentuijian_cycs=_ctag_parse(array("ename" => "fengmiantuwentuijian_cycs","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "165","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_cycs as $v){_aenter($v);?>
+	    <dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_fengmiantuwentuijian_qcxy=_ctag_parse(array("ename" => "fengmiantuwentuijian_qcxy","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "174","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_qcxy as $v){_aenter($v);?>
+	    <dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_fengmiantuwentuijian_gzgd=_ctag_parse(array("ename" => "fengmiantuwentuijian_gzgd","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "183","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_gzgd as $v){_aenter($v);?>
+	    <dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_fengmiantuwentuijian_xhnq=_ctag_parse(array("ename" => "fengmiantuwentuijian_xhnq","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "192","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_xhnq as $v){_aenter($v);?>
+	    <dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_fengmiantuwentuijian_trdm=_ctag_parse(array("ename" => "fengmiantuwentuijian_trdm","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "201","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fengmiantuwentuijian_trdm as $v){_aenter($v);?>
+	    <dl class="picList1">
+<dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+          <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+          <dt>作者：<?=$v['author']?></a></dt>
+          <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</dd>
+          <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a></dd>
+</dl>
+<?php _aquit();} unset($_fengmiantuwentuijian_trdm,$v);?>
+
+<?php
+}
+?>
 		</div>
 	</div>
 	<!--END 重磅推荐&强力推荐 -->
@@ -375,26 +536,318 @@ li.No15 {background-position: -380px -351px;}
 <div id="txtbox" class="k1" style="width:375px;float:left;margin-left:7px;height:372px;padding-left:5px;">
 	<br>
 	<h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
-		<?php $_nanpinshouyedawenzituig2=_ptag_parse(array("ename" => "nanpinshouyedawenzituig2","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "27","orderby" => "vieworder_asc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyedawenzituig2 as $v){_aenter($v);?>
-	    <a style="color: #d91c23;" href="<?=$v['advurl']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpinshouyedawenzituig2,$v);?>
+<?php
+if ($caid==2) {
+?>
+<?php $_dawenzilianshang_dsyn=_ctag_parse(array("ename" => "dawenzilianshang_dsyn","tclass" => "farchives","limits" => "1","casource" => "84","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_dsyn as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_dsyn,$v);?>
+
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_dawenzilianshang_xhqh=_ctag_parse(array("ename" => "dawenzilianshang_xhqh","tclass" => "farchives","limits" => "1","casource" => "93","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_xhqh as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_dawenzilianshang_wxxx=_ctag_parse(array("ename" => "dawenzilianshang_wxxx","tclass" => "farchives","limits" => "1","casource" => "102","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_wxxx as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_dawenzilianshang_lsjs=_ctag_parse(array("ename" => "dawenzilianshang_lsjs","tclass" => "farchives","limits" => "1","casource" => "111","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_lsjs as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_dawenzilianshang_wyjj=_ctag_parse(array("ename" => "dawenzilianshang_wyjj","tclass" => "farchives","limits" => "1","casource" => "120","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_wyjj as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_dawenzilianshang_khly=_ctag_parse(array("ename" => "dawenzilianshang_khly","tclass" => "farchives","limits" => "1","casource" => "129","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_khly as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_dawenzilianshang_dsyq=_ctag_parse(array("ename" => "dawenzilianshang_dsyq","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "157","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_dsyq as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_dawenzilianshang_cycs=_ctag_parse(array("ename" => "dawenzilianshang_cycs","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "166","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_cycs as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_dawenzilianshang_qcxy=_ctag_parse(array("ename" => "dawenzilianshang_qcxy","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "175","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_qcxy as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_dawenzilianshang_gzgd=_ctag_parse(array("ename" => "dawenzilianshang_gzgd","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "184","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_gzgd as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_dawenzilianshang_xhnq=_ctag_parse(array("ename" => "dawenzilianshang_xhnq","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "193","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_xhnq as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_dawenzilianshang_trdm=_ctag_parse(array("ename" => "dawenzilianshang_trdm","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "202","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianshang_trdm as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianshang_trdm,$v);?>
+
+<?php
+}
+?>
 
 	</h2>
 	
 	<ul class="list2col clearfix">
-		<?php $_nvpinshouyeshoutuilist2=_ptag_parse(array("ename" => "nvpinshouyeshoutuilist2","tclass" => "farchives","disabled" => "0","casource" => "36","orderby" => "vieworder_desc","validperiod" => "1","length" => "10",));foreach($_nvpinshouyeshoutuilist2 as $v){_aenter($v);?>
-	                    <li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['advurl']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nvpinshouyeshoutuilist2,$v);?>
+<?php
+if ($caid==2) {
+?>
+<?php $_xiaowenzilianshang_dsyn=_ctag_parse(array("ename" => "xiaowenzilianshang_dsyn","tclass" => "farchives","limits" => "10","casource" => "85","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_dsyn as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_dsyn,$v);?>
+
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_xiaowenzilianshang_xhqh=_ctag_parse(array("ename" => "xiaowenzilianshang_xhqh","tclass" => "farchives","limits" => "10","casource" => "94","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_xhqh as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_xiaowenzilianshang_wxxx=_ctag_parse(array("ename" => "xiaowenzilianshang_wxxx","tclass" => "farchives","limits" => "10","casource" => "103","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_wxxx as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_xiaowenzilianshang_lsjs=_ctag_parse(array("ename" => "xiaowenzilianshang_lsjs","tclass" => "farchives","limits" => "10","casource" => "112","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_lsjs as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_xiaowenzilianshang_wyjj=_ctag_parse(array("ename" => "xiaowenzilianshang_wyjj","tclass" => "farchives","limits" => "10","casource" => "121","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_wyjj as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_xiaowenzilianshang_khly=_ctag_parse(array("ename" => "xiaowenzilianshang_khly","tclass" => "farchives","limits" => "10","casource" => "130","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_khly as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_xiaowenzilianshang_dsyq=_ctag_parse(array("ename" => "xiaowenzilianshang_dsyq","tclass" => "farchives","disabled" => "0","casource" => "158","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_dsyq as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_xiaowenzilianshang_cycs=_ctag_parse(array("ename" => "xiaowenzilianshang_cycs","tclass" => "farchives","disabled" => "0","casource" => "167","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_cycs as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_xiaowenzilianshang_qcxy=_ctag_parse(array("ename" => "xiaowenzilianshang_qcxy","tclass" => "farchives","disabled" => "0","casource" => "176","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_qcxy as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_xiaowenzilianshang_gzgd=_ctag_parse(array("ename" => "xiaowenzilianshang_gzgd","tclass" => "farchives","disabled" => "0","casource" => "185","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_gzgd as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_xiaowenzilianshang_xhnq=_ctag_parse(array("ename" => "xiaowenzilianshang_xhnq","tclass" => "farchives","disabled" => "0","casource" => "194","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_xhnq as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_xiaowenzilianshang_trdm=_ctag_parse(array("ename" => "xiaowenzilianshang_trdm","tclass" => "farchives","disabled" => "0","casource" => "203","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianshang_trdm as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianshang_trdm,$v);?>
+
+<?php
+}
+?>
 
 	</ul>
 	<br><br>
 	<h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
-		<?php $_nanpinshouyedawenzituig1=_ptag_parse(array("ename" => "nanpinshouyedawenzituig1","tclass" => "farchives","limits" => "1","casource" => "26","orderby" => "vieworder_asc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyedawenzituig1 as $v){_aenter($v);?>
-	<a style="color: #d91c23;" href="<?=$v['advurl']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpinshouyedawenzituig1,$v);?>
+<?php
+if ($caid==2) {
+?>
+<?php $_dawenzilianxia_dsyn=_ctag_parse(array("ename" => "dawenzilianxia_dsyn","tclass" => "farchives","limits" => "1","casource" => "86","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_dsyn as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_dsyn,$v);?>
+
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_dawenzilianxia_xhqh=_ctag_parse(array("ename" => "dawenzilianxia_xhqh","tclass" => "farchives","limits" => "1","casource" => "95","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_xhqh as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_dawenzilianxia_wxxx=_ctag_parse(array("ename" => "dawenzilianxia_wxxx","tclass" => "farchives","limits" => "1","casource" => "104","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_wxxx as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_dawenzilianxia_lsjs=_ctag_parse(array("ename" => "dawenzilianxia_lsjs","tclass" => "farchives","limits" => "1","casource" => "113","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_lsjs as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_dawenzilianxia_wyjj=_ctag_parse(array("ename" => "dawenzilianxia_wyjj","tclass" => "farchives","limits" => "1","casource" => "122","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_wyjj as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_dawenzilianxia_khly=_ctag_parse(array("ename" => "dawenzilianxia_khly","tclass" => "farchives","limits" => "1","casource" => "131","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_khly as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_dawenzilianxia_dsyq=_ctag_parse(array("ename" => "dawenzilianxia_dsyq","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "159","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_dsyq as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_dawenzilianxia_cycs=_ctag_parse(array("ename" => "dawenzilianxia_cycs","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "168","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_cycs as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_dawenzilianxia_qcxy=_ctag_parse(array("ename" => "dawenzilianxia_qcxy","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "177","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_qcxy as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_dawenzilianxia_gzgd=_ctag_parse(array("ename" => "dawenzilianxia_gzgd","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "186","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_gzgd as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_dawenzilianxia_xhnq=_ctag_parse(array("ename" => "dawenzilianxia_xhnq","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "195","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_xhnq as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_dawenzilianxia_trdm=_ctag_parse(array("ename" => "dawenzilianxia_trdm","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "204","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_dawenzilianxia_trdm as $v){_aenter($v);?>
+	<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_dawenzilianxia_trdm,$v);?>
+
+<?php
+}
+?>
 
 	</h2>
 	
 	<ul class="list2col clearfix">
-		<?php $_nanpinshouyeshoutuiliebiao=_ptag_parse(array("ename" => "nanpinshouyeshoutuiliebiao","tclass" => "farchives","disabled" => "0","casource" => "28","orderby" => "vieworder_desc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyeshoutuiliebiao as $v){_aenter($v);?>
-					<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['advurl']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nanpinshouyeshoutuiliebiao,$v);?>
+<?php
+if ($caid==2) {
+?>
+<?php $_xiaowenzilianxia_dsyn=_ctag_parse(array("ename" => "xiaowenzilianxia_dsyn","tclass" => "farchives","limits" => "10","casource" => "87","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_dsyn as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_dsyn,$v);?>
+
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_xiaowenzilianxia_xhqh=_ctag_parse(array("ename" => "xiaowenzilianxia_xhqh","tclass" => "farchives","limits" => "10","casource" => "96","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_xhqh as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_xiaowenzilianxia_wxxx=_ctag_parse(array("ename" => "xiaowenzilianxia_wxxx","tclass" => "farchives","limits" => "10","casource" => "105","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_wxxx as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_xiaowenzilianxia_lsjs=_ctag_parse(array("ename" => "xiaowenzilianxia_lsjs","tclass" => "farchives","limits" => "10","casource" => "114","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_lsjs as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_xiaowenzilianxia_wyjj=_ctag_parse(array("ename" => "xiaowenzilianxia_wyjj","tclass" => "farchives","limits" => "10","casource" => "123","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_wyjj as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_xiaowenzilianxia_khly=_ctag_parse(array("ename" => "xiaowenzilianxia_khly","tclass" => "farchives","limits" => "10","casource" => "132","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_khly as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_xiaowenzilianxia_dsyq=_ctag_parse(array("ename" => "xiaowenzilianxia_dsyq","tclass" => "farchives","disabled" => "0","casource" => "160","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_dsyq as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_xiaowenzilianxia_cycs=_ctag_parse(array("ename" => "xiaowenzilianxia_cycs","tclass" => "farchives","disabled" => "0","casource" => "169","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_cycs as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_xiaowenzilianxia_qcxy=_ctag_parse(array("ename" => "xiaowenzilianxia_qcxy","tclass" => "farchives","disabled" => "0","casource" => "178","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_qcxy as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_xiaowenzilianxia_gzgd=_ctag_parse(array("ename" => "xiaowenzilianxia_gzgd","tclass" => "farchives","disabled" => "0","casource" => "187","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_gzgd as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_xiaowenzilianxia_xhnq=_ctag_parse(array("ename" => "xiaowenzilianxia_xhnq","tclass" => "farchives","disabled" => "0","casource" => "196","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_xhnq as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_xiaowenzilianxia_trdm=_ctag_parse(array("ename" => "xiaowenzilianxia_trdm","tclass" => "farchives","disabled" => "0","casource" => "205","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_xiaowenzilianxia_trdm as $v){_aenter($v);?>
+	<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_xiaowenzilianxia_trdm,$v);?>
+
+<?php
+}
+?>
 
 	</ul>
 </div>
@@ -407,11 +860,81 @@ li.No15 {background-position: -380px -351px;}
 	<div class="tab-contentWrapper">
 		<div class="J_tab-content" style="height: 319px;overflow: hidden;display: block;">
 			<ul class="list1" style="overflow: hidden;">
-               	<?php $_leimu_qiangtuilist=_ctag_parse(array("ename" => "leimu_qiangtuilist","tclass" => "archives","disabled" => "0","limits" => "15","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_leimu_qiangtuilist as $v){_aenter($v);?>
-	        <li><? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?>《<a target="_blank" href="<?=$v['arcurl']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_leimu_qiangtuilist,$v);?>
+<?php
+if ($caid==2) {
+?>
+<?php $_fenleiqiangtui_dsyn=_ctag_parse(array("ename" => "fenleiqiangtui_dsyn","tclass" => "farchives","limits" => "15","casource" => "88","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_dsyn as $v){_aenter($v);?>
+<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_dsyn,$v);?>
 
-               	<?php $_leimu_qiangtuilist=_ctag_parse(array("ename" => "leimu_qiangtuilist","tclass" => "archives","disabled" => "0","limits" => "15","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderby" => "clicks_desc","closed" => "-1","abover" => "-1",));foreach($_leimu_qiangtuilist as $v){_aenter($v);?>
-	        <li><? if(($v['ccid3'])) { ?><font style="color:red;font-size:10px;">[VIP]</font><? } ?>《<a target="_blank" href="<?=$v['arcurl']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_leimu_qiangtuilist,$v);?>
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_fenleiqiangtui_xhqh=_ctag_parse(array("ename" => "fenleiqiangtui_xhqh","tclass" => "farchives","limits" => "15","casource" => "97","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_xhqh as $v){_aenter($v);?>
+<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_fenleiqiangtui_wxxx=_ctag_parse(array("ename" => "fenleiqiangtui_wxxx","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "106","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_wxxx as $v){_aenter($v);?>
+<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_fenleiqiangtui_lsjs=_ctag_parse(array("ename" => "fenleiqiangtui_lsjs","tclass" => "farchives","limits" => "15","casource" => "115","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_lsjs as $v){_aenter($v);?>
+<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_fenleiqiangtui_wyjj=_ctag_parse(array("ename" => "fenleiqiangtui_wyjj","tclass" => "farchives","limits" => "15","casource" => "124","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_wyjj as $v){_aenter($v);?>
+<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_fenleiqiangtui_khly=_ctag_parse(array("ename" => "fenleiqiangtui_khly","tclass" => "farchives","limits" => "15","casource" => "133","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_khly as $v){_aenter($v);?>
+<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_fenleiqiangtui_dsyq=_ctag_parse(array("ename" => "fenleiqiangtui_dsyq","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "161","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_dsyq as $v){_aenter($v);?>
+	<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_fenleiqiangtui_cycs=_ctag_parse(array("ename" => "fenleiqiangtui_cycs","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "170","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_cycs as $v){_aenter($v);?>
+	<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_fenleiqiangtui_qcxy=_ctag_parse(array("ename" => "fenleiqiangtui_qcxy","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "179","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_qcxy as $v){_aenter($v);?>
+	<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_fenleiqiangtui_gzgd=_ctag_parse(array("ename" => "fenleiqiangtui_gzgd","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "188","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_gzgd as $v){_aenter($v);?>
+	<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_fenleiqiangtui_xhnq=_ctag_parse(array("ename" => "fenleiqiangtui_xhnq","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "197","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_xhnq as $v){_aenter($v);?>
+	    <li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_fenleiqiangtui_trdm=_ctag_parse(array("ename" => "fenleiqiangtui_trdm","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "206","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_fenleiqiangtui_trdm as $v){_aenter($v);?>
+	<li>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?=$v['subject']?></a>》</li><?php _aquit();} unset($_fenleiqiangtui_trdm,$v);?>
+
+<?php
+}
+?>
 
       		</ul>
 		</div>
@@ -425,10 +948,154 @@ li.No15 {background-position: -380px -351px;}
 .leimutu i {	color: #999999;    float: left;    font-size: 12px;    font-style: normal;    height: 16px;    line-height: 16px;    overflow: hidden;text-align: center;width: 100%;}
 .leimutu  em {float: left;   font-size: 12px;   font-style: normal;   font-weight: bold;height: 22px;line-height: 22px;overflow: hidden;text-align: center;width: 100%;}
 </style>
-<div class="finish_list" style="width:736px; float:left;border: 1px solid #CECECE;">
-	<?php $_leimu_pic_list=_ptag_parse(array("ename" => "leimu_pic_list","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","closed" => "-1","abover" => "-1","length" => "10",));foreach($_leimu_pic_list as $v){_aenter($v);?>
-										<div class="leimutu"><b><u><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "thumb_105_137","tclass" => "image","tname" => "$v[thumb]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url_s']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>"><?php } unset($u);?></a></u></b><i><? if($v['ccid3']) { ?><font class="cRed">VIP</font><? } ?>[<?=$v['catalog']?>]</i><em><a href="<?=$v['arcurl']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
-</a></em></div><?php _aquit();} unset($_leimu_pic_list,$v);?>
+<div class="finish_list" style="width:736px; float:left;border: 1px solid #CECECE;height: 383px;">
+<?php
+if ($caid==2) {
+?>
+<?php $_shifujingpintuijian_dsyn=_ctag_parse(array("ename" => "shifujingpintuijian_dsyn","tclass" => "farchives","limits" => "10","casource" => "89","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_dsyn as $v){_aenter($v);?>
+<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_dsyn,$v);?>
+
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_shifujingpintuijian_xhqh=_ctag_parse(array("ename" => "shifujingpintuijian_xhqh","tclass" => "farchives","limits" => "10","casource" => "98","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_xhqh as $v){_aenter($v);?>
+<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_shifujingpintuijian_wxxx=_ctag_parse(array("ename" => "shifujingpintuijian_wxxx","tclass" => "farchives","limits" => "10","casource" => "107","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_wxxx as $v){_aenter($v);?>
+<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_shifujingpintuijian_lsjs=_ctag_parse(array("ename" => "shifujingpintuijian_lsjs","tclass" => "farchives","limits" => "10","casource" => "116","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_lsjs as $v){_aenter($v);?>
+<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_shifujingpintuijian_wyjj=_ctag_parse(array("ename" => "shifujingpintuijian_wyjj","tclass" => "farchives","limits" => "10","casource" => "125","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_wyjj as $v){_aenter($v);?>
+<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_shifujingpintuijian_khly=_ctag_parse(array("ename" => "shifujingpintuijian_khly","tclass" => "farchives","limits" => "10","casource" => "134","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_khly as $v){_aenter($v);?>
+<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_shifujingpintuijian_dsyq=_ctag_parse(array("ename" => "shifujingpintuijian_dsyq","tclass" => "farchives","disabled" => "0","casource" => "162","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_dsyq as $v){_aenter($v);?>
+	<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_shifujingpintuijian_cycs=_ctag_parse(array("ename" => "shifujingpintuijian_cycs","tclass" => "farchives","disabled" => "0","casource" => "171","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_cycs as $v){_aenter($v);?>
+	<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_shifujingpintuijian_qcxy=_ctag_parse(array("ename" => "shifujingpintuijian_qcxy","tclass" => "farchives","disabled" => "0","casource" => "180","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_qcxy as $v){_aenter($v);?>
+	<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_shifujingpintuijian_gzgd=_ctag_parse(array("ename" => "shifujingpintuijian_gzgd","tclass" => "farchives","disabled" => "0","casource" => "189","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_gzgd as $v){_aenter($v);?>
+	<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_shifujingpintuijian_xhnq=_ctag_parse(array("ename" => "shifujingpintuijian_xhnq","tclass" => "farchives","disabled" => "0","casource" => "198","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_xhnq as $v){_aenter($v);?>
+	<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_shifujingpintuijian_trdm=_ctag_parse(array("ename" => "shifujingpintuijian_trdm","tclass" => "farchives","disabled" => "0","casource" => "207","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shifujingpintuijian_trdm as $v){_aenter($v);?>
+	<div class="leimutu">
+      <b><u><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic_105_137","tclass" => "image","tname" => "$v[pic]","maxwidth" => "105","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>"  width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" /><?php } unset($u);?></a></u></b>
+      <i>[<?=$v['fenlei']?>]</i>
+      <em><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></em>
+</div>
+<?php _aquit();} unset($_shifujingpintuijian_trdm,$v);?>
+
+<?php
+}
+?>
 
 </div>
 
@@ -482,25 +1149,275 @@ li.No15 {background-position: -380px -351px;}
 	</div>
 </div>
 
-<div class="content-lr clearfix qyjp" style="width:535px;margin-left:7px;float:left;">
+<div class="content-lr clearfix qyjp" style="width:535px;margin-left:7px;float:left;height:542px;">
     <!--第三部分 开始--> 
-    <?php $_leimuxiaoshuotuwen6=_ctag_parse(array("ename" => "leimuxiaoshuotuwen6","tclass" => "archives","disabled" => "0","limits" => "4","caidson" => "1","casource" => "2","chsource" => "2","chids" => "4","orderby" => "createdate_desc","closed" => "-1","abover" => "-1",));foreach($_leimuxiaoshuotuwen6 as $v){_aenter($v);?>
-	                                    <dl>                                                                                
-      <dt><a  href="<?=$v['arcurl']?>" target="_blank"><img src="<?=$v['thumb']?>" /></a> </dt>
-<dd>                                                                                
-        <h3>《<a  href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
-</a>》</h3>                                                                                
-        <h4>作者：<a href="<?=$v['arcurl']?>" target="_blank"> <?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
-</a></h4>                                                                                                
-        <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['aid']?>');">[加入书架]</a><br>
-        <a  href="<?=$v['arcurl']?>" target="_blank" title="点击阅读">[点击阅读]</a></span> 
-</dd>
-<dd style="clear:both;display:block;height:1px;width:100%;"></dd> 
-<dd style="height:auto;"><p><a  href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "abstract120","tclass" => "odeal","disabled" => "0","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "120",));?>
-...
-        </a></p> </dd>                                                                                                                                        
-    </dl><?php _aquit();} unset($_leimuxiaoshuotuwen6,$v);?>
+<?php
+if ($caid==2) {
+?>
+<?php $_zhongxinsifutuijian_dsyn=_ctag_parse(array("ename" => "zhongxinsifutuijian_dsyn","tclass" => "farchives","limits" => "4","casource" => "90","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_dsyn as $v){_aenter($v);?>
+<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_dsyn,$v);?>
 
+<?php
+} elseif ($caid==4) {
+?>
+<?php $_zhongxinsifutuijian_xhqh=_ctag_parse(array("ename" => "zhongxinsifutuijian_xhqh","tclass" => "farchives","limits" => "4","casource" => "99","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_xhqh as $v){_aenter($v);?>
+<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_xhqh,$v);?>
+
+<?php
+} elseif ($caid==5) {
+?>
+<?php $_zhongxinsifutuijian_wxxx=_ctag_parse(array("ename" => "zhongxinsifutuijian_wxxx","tclass" => "farchives","limits" => "4","casource" => "108","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_wxxx as $v){_aenter($v);?>
+<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_wxxx,$v);?>
+
+<?php
+} elseif ($caid==6) {
+?>
+<?php $_zhongxinsifutuijian_lsjs=_ctag_parse(array("ename" => "zhongxinsifutuijian_lsjs","tclass" => "farchives","limits" => "4","casource" => "117","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_lsjs as $v){_aenter($v);?>
+<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_lsjs,$v);?>
+
+<?php
+} elseif ($caid==7) {
+?>
+<?php $_zhongxinsifutuijian_wyjj=_ctag_parse(array("ename" => "zhongxinsifutuijian_wyjj","tclass" => "farchives","limits" => "4","casource" => "126","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_wyjj as $v){_aenter($v);?>
+<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_wyjj,$v);?>
+
+<?php
+} elseif ($caid==17) {
+?>
+<?php $_zhongxinsifutuijian_khly=_ctag_parse(array("ename" => "zhongxinsifutuijian_khly","tclass" => "farchives","limits" => "4","casource" => "135","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_khly as $v){_aenter($v);?>
+<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_khly,$v);?>
+
+<?php
+} elseif ($caid==3) {
+?>
+<?php $_zhongxinsifutuijian_dsyq=_ctag_parse(array("ename" => "zhongxinsifutuijian_dsyq","tclass" => "farchives","disabled" => "0","limits" => "4","casource" => "163","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_dsyq as $v){_aenter($v);?>
+	<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_dsyq,$v);?>
+
+<?php
+} elseif ($caid==15) {
+?>
+<?php $_zhongxinsifutuijian_cycs=_ctag_parse(array("ename" => "zhongxinsifutuijian_cycs","tclass" => "farchives","disabled" => "0","limits" => "4","casource" => "172","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_cycs as $v){_aenter($v);?>
+	<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_cycs,$v);?>
+
+<?php
+} elseif ($caid==16) {
+?>
+<?php $_zhongxinsifutuijian_qcxy=_ctag_parse(array("ename" => "zhongxinsifutuijian_qcxy","tclass" => "farchives","disabled" => "0","limits" => "4","casource" => "181","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_qcxy as $v){_aenter($v);?>
+	<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_qcxy,$v);?>
+
+<?php
+} elseif ($caid==18) {
+?>
+<?php $_zhongxinsifutuijian_gzgd=_ctag_parse(array("ename" => "zhongxinsifutuijian_gzgd","tclass" => "farchives","disabled" => "0","limits" => "4","casource" => "190","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_gzgd as $v){_aenter($v);?>
+	<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_gzgd,$v);?>
+
+<?php
+} elseif ($caid==19) {
+?>
+<?php $_zhongxinsifutuijian_xhnq=_ctag_parse(array("ename" => "zhongxinsifutuijian_xhnq","tclass" => "farchives","disabled" => "0","limits" => "4","casource" => "199","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_xhnq as $v){_aenter($v);?>
+	<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_xhnq,$v);?>
+
+<?php
+} elseif ($caid==20) {
+?>
+<?php $_zhongxinsifutuijian_trdm=_ctag_parse(array("ename" => "zhongxinsifutuijian_trdm","tclass" => "farchives","disabled" => "0","limits" => "4","casource" => "208","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_zhongxinsifutuijian_trdm as $v){_aenter($v);?>
+	<dl>
+      <dt><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dt>
+      <dd>
+            <h3>《<a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</h3>
+            <h4>作者：<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
+</a></h4>
+            <span><br><a href="javascript:;" onclick="ajax_favorite_alert('<?=$v['xsid']?>');">[加入书架]</a><br>
+            <a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="点击阅读">[点击阅读]</a></span>
+      </dd>
+      <dd style="clear:both;display:block;height:1px;width:100%;"></dd>
+      <dd style="height:auto;">
+            <p><a  href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "jianjie120","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "120",));?>
+...</a></p>
+      </dd>
+</dl>
+<?php _aquit();} unset($_zhongxinsifutuijian_trdm,$v);?>
+
+<?php
+}
+?>
 </div>
 
 <div style="width:200px;float:right;">

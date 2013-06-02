@@ -430,10 +430,25 @@ if (!empty($wz)) {
 			</div>
 			<div class="con">
 				<ul class="top15">
-					<?php $_zuopin_qiangtuiliebiao=_ctag_parse(array("ename" => "zuopin_qiangtuiliebiao","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "2","caids" => "1,2,4,5,6,7,17,14,3,15,16,18,19,20","chsource" => "2","chids" => "4","orderby" => "praises_desc","closed" => "-1","abover" => "-1",));foreach($_zuopin_qiangtuiliebiao as $v){_aenter($v);?>
-<li class="li<?=$v['sn_row']?>"><a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
-</a></li><?php _aquit();} unset($_zuopin_qiangtuiliebiao,$v);?>
+<?php
+if (in_array($caid, array(2,4,5,6,7,17))) {
+?>
+<?php $_shuye_nanpinqiangtui=_ctag_parse(array("ename" => "shuye_nanpinqiangtui","tclass" => "farchives","limits" => "10","casource" => "64","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shuye_nanpinqiangtui as $v){_aenter($v);?>
+<li class="li<?=$v['sn_row']?>"><a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
+</a></li><?php _aquit();} unset($_shuye_nanpinqiangtui,$v);?>
 
+<?php
+} else {
+?>
+<?php $_shuye_nvpinqiangtui=_ctag_parse(array("ename" => "shuye_nvpinqiangtui","tclass" => "farchives","limits" => "10","casource" => "142","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shuye_nvpinqiangtui as $v){_aenter($v);?>
+<li class="li<?=$v['sn_row']?>"><a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
+</a></li><?php _aquit();} unset($_shuye_nvpinqiangtui,$v);?>
+
+<?php
+}
+?>
+					
+					
 				</ul>
 			</div>
 		</div>
@@ -444,9 +459,23 @@ if (!empty($wz)) {
 			</div>
 			<div class="con">
 				<ul class="top15">
-					<?php $_zuopin_redianzuopin=_ctag_parse(array("ename" => "zuopin_redianzuopin","tclass" => "archives","disabled" => "0","caidson" => "1","casource" => "2","caids" => "1,2,4,5,6,7,17,14,3,15,16,18,19,20","chsource" => "2","chids" => "4","orderby" => "favorites_desc","closed" => "-1","abover" => "-1",));foreach($_zuopin_redianzuopin as $v){_aenter($v);?>
-	<li class="li<?=$v['sn_row']?>"><a href="<?=$v['arcurl']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
-</a></li><?php _aquit();} unset($_zuopin_redianzuopin,$v);?>
+<?php
+if (in_array($caid, array(2,4,5,6,7,17))) {
+?>
+<?php $_shuye_nanpinredianzuopin=_ctag_parse(array("ename" => "shuye_nanpinredianzuopin","tclass" => "farchives","limits" => "10","casource" => "210","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shuye_nanpinredianzuopin as $v){_aenter($v);?>
+ <li class="li<?=$v['sn_row']?>"><a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
+</a></li><?php _aquit();} unset($_shuye_nanpinredianzuopin,$v);?>
+
+<?php
+} else {
+?>
+<?php $_shuye_nvpinredianzuopin=_ctag_parse(array("ename" => "shuye_nvpinredianzuopin","tclass" => "farchives","limits" => "10","casource" => "211","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_shuye_nvpinredianzuopin as $v){_aenter($v);?>
+<li class="li<?=$v['sn_row']?>"><a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
+</a></li><?php _aquit();} unset($_shuye_nvpinredianzuopin,$v);?>
+
+<?php
+}
+?>
 
 				</ul>
 			</div>

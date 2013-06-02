@@ -212,7 +212,19 @@ if (!empty($wz)) {
 			</div>
 			<div class="con">
 				<ul class="top15">
-					{c$zuopin_qiangtuiliebiao}
+<?php
+if (in_array($caid, array(2,4,5,6,7,17))) {
+?>
+{c$shuye_nanpinqiangtui}
+<?php
+} else {
+?>
+{c$shuye_nvpinqiangtui}
+<?php
+}
+?>
+					
+					
 				</ul>
 			</div>
 		</div>
@@ -223,7 +235,18 @@ if (!empty($wz)) {
 			</div>
 			<div class="con">
 				<ul class="top15">
-					{c$zuopin_redianzuopin}
+<?php
+if (in_array($caid, array(2,4,5,6,7,17))) {
+?>
+{c$shuye_nanpinredianzuopin}
+<?php
+} else {
+?>
+{c$shuye_nvpinredianzuopin}
+<?php
+}
+?>
+
 				</ul>
 			</div>
 		</div>

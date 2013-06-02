@@ -348,11 +348,11 @@ li.No15 {background-position: -380px -351px;}
         <div class="tab-menu-m"><a href="/index.php?caid=24&action=tuijian" target="_blank">更多</a></div>
     </div>
     <div class="tab-contentWrapper">
-        <div class="J_tab-content" style="display: block;">
+        <div class="J_tab-content" style="display: block;height: 330px;">
             <ul class="list1">
-                   <?php $_nanpinxiaoshuoqingtui=_ptag_parse(array("ename" => "nanpinxiaoshuoqingtui","tclass" => "farchives","disabled" => "0","limits" => "15","casource" => "22","orderby" => "vieworder_asc","validperiod" => "1","orderstr" => "xs_pai ASC","length" => "10",));foreach($_nanpinxiaoshuoqingtui as $v){_aenter($v);?>
-	    <li><span class="sort">[<?=$v['xs_type']?>]</span>《<a target="_blank" href="<?=$v['xs_link']?>" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
-</a>》</li><?php _aquit();} unset($_nanpinxiaoshuoqingtui,$v);?>
+                   <?php $_nanpin_qiangtui=_ctag_parse(array("ename" => "nanpin_qiangtui","tclass" => "farchives","limits" => "15","casource" => "64","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_qiangtui as $v){_aenter($v);?>
+<li><span class="sort">[<?=$v['fenlei']?>]</span>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>"><?php echo _utag_parse(array("ename" => "subject20","tclass" => "odeal","disabled" => "0","tname" => "$v[subject]","trim" => "26",));?>
+</a>》</li><?php _aquit();} unset($_nanpin_qiangtui,$v);?>
 
               </ul>
         </div>
@@ -369,25 +369,25 @@ li.No15 {background-position: -380px -351px;}
 </div><?php _aquit();} unset($_nanpinxiaotuguanggao,$v);?>
 
     <h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
-        <?php $_nanpinshouyedawenzituig1=_ptag_parse(array("ename" => "nanpinshouyedawenzituig1","tclass" => "farchives","limits" => "1","casource" => "26","orderby" => "vieworder_asc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyedawenzituig1 as $v){_aenter($v);?>
-	<a style="color: #d91c23;" href="<?=$v['advurl']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpinshouyedawenzituig1,$v);?>
+        <?php $_nanpin_wenzi_1=_ctag_parse(array("ename" => "nanpin_wenzi_1","tclass" => "farchives","limits" => "1","casource" => "65","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_wenzi_1 as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpin_wenzi_1,$v);?>
 
     </h2>
     
     <ul class="list2col clearfix">
-        <?php $_nanpinshouyeshoutuiliebiao=_ptag_parse(array("ename" => "nanpinshouyeshoutuiliebiao","tclass" => "farchives","disabled" => "0","casource" => "28","orderby" => "vieworder_desc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyeshoutuiliebiao as $v){_aenter($v);?>
-					<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['advurl']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nanpinshouyeshoutuiliebiao,$v);?>
+        <?php $_nanpin_wenzi_2=_ctag_parse(array("ename" => "nanpin_wenzi_2","tclass" => "farchives","limits" => "10","casource" => "66","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_wenzi_2 as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nanpin_wenzi_2,$v);?>
 
     </ul>
     <h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
-        <?php $_nanpinshouyedawenzituig2=_ptag_parse(array("ename" => "nanpinshouyedawenzituig2","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "27","orderby" => "vieworder_asc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyedawenzituig2 as $v){_aenter($v);?>
-	    <a style="color: #d91c23;" href="<?=$v['advurl']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpinshouyedawenzituig2,$v);?>
+        <?php $_nanpin_wenzi_3=_ctag_parse(array("ename" => "nanpin_wenzi_3","tclass" => "farchives","limits" => "1","casource" => "67","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_wenzi_3 as $v){_aenter($v);?>
+<a style="color: #d91c23;" href="<?=$v['link']?>" target="_blank" title="<?=$v['subject']?>"><?=$v['subject']?></a><?php _aquit();} unset($_nanpin_wenzi_3,$v);?>
 
     </h2>
     
     <ul class="list2col clearfix">
-        <?php $_nanpinshouyeshoutuiliebiao2=_ptag_parse(array("ename" => "nanpinshouyeshoutuiliebiao2","tclass" => "farchives","disabled" => "0","casource" => "51","orderby" => "vieworder_desc","validperiod" => "1","length" => "10",));foreach($_nanpinshouyeshoutuiliebiao2 as $v){_aenter($v);?>
-	                    <li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['advurl']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nanpinshouyeshoutuiliebiao2,$v);?>
+        <?php $_nanpin_wenzi_4=_ctag_parse(array("ename" => "nanpin_wenzi_4","tclass" => "farchives","limits" => "10","casource" => "68","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_wenzi_4 as $v){_aenter($v);?>
+<li><a title="<?=$v['subject']?>" target="_blank" href="<?=$v['link']?>"><?=$v['subject']?></a></li><?php _aquit();} unset($_nanpin_wenzi_4,$v);?>
 
     </ul>
     <br >
@@ -398,17 +398,17 @@ li.No15 {background-position: -380px -351px;}
     <div class="tab-menuWrapper">
         <h2 class="J_tab-menu active"><span style="color:#f00;">热点推荐</span></h2>
     </div>
-    <div class="J_tab-content">
+    <div class="J_tab-content" style="height: 330px;">
 
-            <?php $_nanpinshouyetuwenxiaoshuotuijian=_ptag_parse(array("ename" => "nanpinshouyetuwenxiaoshuotuijian","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "29","orderby" => "vieworder_asc","length" => "10",));foreach($_nanpinshouyetuwenxiaoshuotuijian as $v){_aenter($v);?>
-	                                <dl class="picList1" style="height:165px;margin-bottom:0px;">
-                    <dt><a href="<?=$v['xs_link']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
-                    <dd class="pic"><a href="<?=$v['xs_link']?>" title="<?=$v['subject']?>" target="_blank"><img src="<?=$v['xs_fengmian']?>" alt="<?=$v['subject']?>"></a></dd>
-                    <dd class="intro"><?php echo _utag_parse(array("ename" => "xs_miaoshu180","tclass" => "odeal","disabled" => "0","tname" => "$v[xs_miaoshu]","dealhtml" => "clearhtml","trim" => "180",));?>
+            <?php $_nanpin_rediantuijian=_ctag_parse(array("ename" => "nanpin_rediantuijian","tclass" => "farchives","disabled" => "0","limits" => "2","casource" => "69","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_nanpin_rediantuijian as $v){_aenter($v);?>
+	<dl class="picList1" style="height:165px;margin-bottom:0px;">
+                    <dt><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?=$v['subject']?></a></dt>
+                    <dd class="pic"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+                    <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie180","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "180",));?>
 ...</dd>
-                    <dd class="upd"><a href="<?=$v['xs_link']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a>
+                    <dd class="upd"><a href="/archive.php?aid=<?=$v['xsid']?>" title="<?=$v['subject']?>" target="_blank">［点击阅读］</a>
 </dd>
-</dl><?php _aquit();} unset($_nanpinshouyetuwenxiaoshuotuijian,$v);?>
+</dl><?php _aquit();} unset($_nanpin_rediantuijian,$v);?>
 
 
     </div>
@@ -447,35 +447,170 @@ li.No15 {background-position: -380px -351px;}
 <div class="mod-1 sortTop" style="width:534px;float:left;margin-left:8px;border-top: 1px solid #CECECE;">
     <!-- 热门小说推荐 -->
     <div class="mod-bd content-lr clearfix" style="background:none;">
-        <?php $_nanpin_remen_list=_ctag_parse(array("ename" => "nanpin_remen_list","tclass" => "catalogs","disabled" => "0","limits" => "6","nsid" => "-1","listby" => "ca","casource" => "1","caids" => "2,4,5,6,7,17",));foreach($_nanpin_remen_list as $v){_aenter($v);?>
-	                    <div style="height:245px;" class="main w210">
+		<div style="height:245px;" class="main w210">
               <div class="mod-sub">
-        <div class="tut03">        
-	    <h2><a target="_blank" href="<?=$v['listurl']?>"><?=$v['title']?></a></h2>        
-	    <span class="shu_hot"></span>        
-	</div>
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="/list.php?caid=2">都市·异能</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
                 <dl class="picList2">
-                     <?php $_nanpin_jihuo_shoutu=_ctag_parse(array("ename" => "nanpin_jihuo_shoutu","tclass" => "archives","disabled" => "0","limits" => "1","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "favorites_desc","orderby1" => "wclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_jihuo_shoutu as $v){_aenter($v);?>
-	        <dl class="picList2">
- <dt><a target="_blank" title="<?=$v['subject']?>" href="<?=$v['arcurl']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+                	<?php $_np_dushiyineng_tu=_ctag_parse(array("ename" => "np_dushiyineng_tu","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "70","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_dushiyineng_tu as $v){_aenter($v);?>
+	<dl class="picList2">
+    <dt><a target="_blank" title="<?=$v['subject']?>" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a></dt>
-<dd class="pic"><a target="_blank" title="<?=$v['subject']?>" href="<?=$v['arcurl']?>"><img alt="《<?=$v['subject']?>》" src="<?=$v['thumb']?>"></a></dd>
-<dd class="author">作者：<span style="color:#007F00;"><?=$v['author']?></span></dd>
-<dd class="intro"><?php echo _utag_parse(array("ename" => "abstract60","tclass" => "odeal","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "60",));?>
+    <dd class="pic"><a target="_blank" title="<?=$v['subject']?>" href="http://xiaoshuo.com/archive.php?aid=59"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+    <dd class="author">作者：<span style="color:#007F00;"><?=$v['author']?></span></dd>
+    <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie60","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "60",));?>
 ..</dd>
-<dd class="oper"><a href="<?=$v['arcurl']?>">点击阅读</a>   <a href="javascript:;" onclick="javascript:ajax_favorite('<?=$v['aid']?>');">加入书架</a></dd>
-</dl><?php _aquit();} unset($_nanpin_jihuo_shoutu,$v);?>
+    <dd class="oper"><a href="/archive.php?aid=<?=$v['xsid']?>">点击阅读</a>   <a href="javascript:;" onclick="javascript:ajax_favorite('<?=$v['xsid']?>');">加入书架</a></dd>
+</dl><?php _aquit();} unset($_np_dushiyineng_tu,$v);?>
 
-        </dl>
+        		</dl>
                 <ul class="list">
-            <?php $_nanpin_jihuo_liebiao=_ctag_parse(array("ename" => "nanpin_jihuo_liebiao","tclass" => "archives","disabled" => "0","limits" => "4","caidson" => "1","casource" => "2","ccids1" => "32","chsource" => "2","chids" => "4","orderby" => "favorites_desc","orderby1" => "wclicks_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_nanpin_jihuo_liebiao as $v){_aenter($v);?>
-		<? if($v['sn_row'] !== 1) { ?><li><span class="sort">[<?=$v['catalog']?>]</span>《<a target="_blank" href="<?=$v['arcurl']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
-</a>》</li><? } ?><?php _aquit();} unset($_nanpin_jihuo_liebiao,$v);?>
-    
-        </ul>
+					<?php $_np_dushiyineng_list=_ctag_parse(array("ename" => "np_dushiyineng_list","tclass" => "farchives","limits" => "3","casource" => "71","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_dushiyineng_list as $v){_aenter($v);?>
+<li><span class="sort">[<?=$v['fenlei']?>]</span>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</li>	<?php _aquit();} unset($_np_dushiyineng_list,$v);?>
+	
+        		</ul>
               </div>
-            </div><?php _aquit();} unset($_nanpin_remen_list,$v);?>
+		</div>	                    
+        <div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=4">玄幻·奇幻</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+               		<?php $_np_xuanhuanqihuan_tu=_ctag_parse(array("ename" => "np_xuanhuanqihuan_tu","tclass" => "farchives","disabled" => "0","limits" => "1","casource" => "72","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_xuanhuanqihuan_tu as $v){_aenter($v);?>
+	<dl class="picList2">
+     <dt><a target="_blank" title="<?=$v['subject']?>" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></dt>
+     <dd class="pic"><a target="_blank" title="<?=$v['subject']?>" href="http://xiaoshuo.com/archive.php?aid=59"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+     <dd class="author">作者：<span style="color:#007F00;"><?=$v['author']?></span></dd>
+     <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie60","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "60",));?>
+..</dd>
+     <dd class="oper"><a href="/archive.php?aid=<?=$v['xsid']?>">点击阅读</a>   <a href="javascript:;" onclick="javascript:ajax_favorite('<?=$v['xsid']?>');">加入书架</a></dd>
+</dl><?php _aquit();} unset($_np_xuanhuanqihuan_tu,$v);?>
 
+        		</dl>
+                <ul class="list">
+            		<?php $_np_xuanhuanqihuan_list=_ctag_parse(array("ename" => "np_xuanhuanqihuan_list","tclass" => "farchives","limits" => "3","casource" => "73","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_xuanhuanqihuan_list as $v){_aenter($v);?>
+<li><span class="sort">[<?=$v['fenlei']?>]</span>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</li><?php _aquit();} unset($_np_xuanhuanqihuan_list,$v);?>
+    
+       			</ul>
+              </div>
+		</div>	                    
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=5">武侠·仙侠</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
+	            <dl class="picList2">
+		            <?php $_np_wuxiaoxianxia_tu=_ctag_parse(array("ename" => "np_wuxiaoxianxia_tu","tclass" => "farchives","limits" => "1","casource" => "74","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_wuxiaoxianxia_tu as $v){_aenter($v);?>
+<dl class="picList2">
+     <dt><a target="_blank" title="<?=$v['subject']?>" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></dt>
+     <dd class="pic"><a target="_blank" title="<?=$v['subject']?>" href="http://xiaoshuo.com/archive.php?aid=59"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+     <dd class="author">作者：<span style="color:#007F00;"><?=$v['author']?></span></dd>
+     <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie60","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "60",));?>
+..</dd>
+     <dd class="oper"><a href="/archive.php?aid=<?=$v['xsid']?>">点击阅读</a>   <a href="javascript:;" onclick="javascript:ajax_favorite('<?=$v['xsid']?>');">加入书架</a></dd>
+</dl><?php _aquit();} unset($_np_wuxiaoxianxia_tu,$v);?>
+
+	        	</dl>
+	            <ul class="list">
+	            	<?php $_np_wuxiaoxianxia_list=_ctag_parse(array("ename" => "np_wuxiaoxianxia_list","tclass" => "farchives","limits" => "3","casource" => "75","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_wuxiaoxianxia_list as $v){_aenter($v);?>
+<li><span class="sort">[<?=$v['fenlei']?>]</span>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</li><?php _aquit();} unset($_np_wuxiaoxianxia_list,$v);?>
+    
+	        	</ul>
+         	</div>
+		</div>
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=6">历史·军事</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+	                <?php $_np_lishijunshi_tu=_ctag_parse(array("ename" => "np_lishijunshi_tu","tclass" => "farchives","limits" => "1","casource" => "76","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_lishijunshi_tu as $v){_aenter($v);?>
+<dl class="picList2">
+     <dt><a target="_blank" title="<?=$v['subject']?>" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></dt>
+     <dd class="pic"><a target="_blank" title="<?=$v['subject']?>" href="http://xiaoshuo.com/archive.php?aid=59"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+     <dd class="author">作者：<span style="color:#007F00;"><?=$v['author']?></span></dd>
+     <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie60","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "60",));?>
+..</dd>
+     <dd class="oper"><a href="/archive.php?aid=<?=$v['xsid']?>">点击阅读</a>   <a href="javascript:;" onclick="javascript:ajax_favorite('<?=$v['xsid']?>');">加入书架</a></dd>
+</dl><?php _aquit();} unset($_np_lishijunshi_tu,$v);?>
+
+       			</dl>
+                <ul class="list">
+            		<?php $_np_lishijunshi_list=_ctag_parse(array("ename" => "np_lishijunshi_list","tclass" => "farchives","limits" => "3","casource" => "77","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_lishijunshi_list as $v){_aenter($v);?>
+<li><span class="sort">[<?=$v['fenlei']?>]</span>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</li><?php _aquit();} unset($_np_lishijunshi_list,$v);?>
+    
+        		</ul>
+           </div>
+		</div>	                    
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+				    <h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=7">网游·竞技</a></h2>        
+				    <span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+                	<?php $_np_wangyoujingji_tu=_ctag_parse(array("ename" => "np_wangyoujingji_tu","tclass" => "farchives","limits" => "1","casource" => "78","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_wangyoujingji_tu as $v){_aenter($v);?>
+<dl class="picList2">
+     <dt><a target="_blank" title="<?=$v['subject']?>" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></dt>
+     <dd class="pic"><a target="_blank" title="<?=$v['subject']?>" href="http://xiaoshuo.com/archive.php?aid=59"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+     <dd class="author">作者：<span style="color:#007F00;"><?=$v['author']?></span></dd>
+     <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie60","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "60",));?>
+..</dd>
+     <dd class="oper"><a href="/archive.php?aid=<?=$v['xsid']?>">点击阅读</a>   <a href="javascript:;" onclick="javascript:ajax_favorite('<?=$v['xsid']?>');">加入书架</a></dd>
+</dl>
+
+<?php _aquit();} unset($_np_wangyoujingji_tu,$v);?>
+
+        		</dl>
+                <ul class="list">
+            		<?php $_np_wangyoujingji_list=_ctag_parse(array("ename" => "np_wangyoujingji_list","tclass" => "farchives","limits" => "3","casource" => "79","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_wangyoujingji_list as $v){_aenter($v);?>
+<li><span class="sort">[<?=$v['fenlei']?>]</span>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</li><?php _aquit();} unset($_np_wangyoujingji_list,$v);?>
+
+       			</ul>
+           </div>
+		</div>	                    
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+				    <h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=17">科幻·灵异</a></h2>        
+				    <span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+                    <?php $_np_kehuanlingyi_tu=_ctag_parse(array("ename" => "np_kehuanlingyi_tu","tclass" => "farchives","limits" => "1","casource" => "80","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_kehuanlingyi_tu as $v){_aenter($v);?>
+<dl class="picList2">
+     <dt><a target="_blank" title="<?=$v['subject']?>" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a></dt>
+     <dd class="pic"><a target="_blank" title="<?=$v['subject']?>" href="http://xiaoshuo.com/archive.php?aid=59"><?php $u=_utag_parse(array("ename" => "pic","tclass" => "image","tname" => "$v[pic]","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" /><?php } unset($u);?></a></dd>
+     <dd class="author">作者：<span style="color:#007F00;"><?=$v['author']?></span></dd>
+     <dd class="intro"><?php echo _utag_parse(array("ename" => "jianjie60","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "60",));?>
+..</dd>
+     <dd class="oper"><a href="/archive.php?aid=<?=$v['xsid']?>">点击阅读</a>   <a href="javascript:;" onclick="javascript:ajax_favorite('<?=$v['xsid']?>');">加入书架</a></dd>
+</dl><?php _aquit();} unset($_np_kehuanlingyi_tu,$v);?>
+
+        		</dl>
+                <ul class="list">
+            		<?php $_np_kehuanlingyi_list=_ctag_parse(array("ename" => "np_kehuanlingyi_list","tclass" => "farchives","limits" => "3","casource" => "81","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_np_kehuanlingyi_list as $v){_aenter($v);?>
+<li><span class="sort">[<?=$v['fenlei']?>]</span>《<a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+</a>》</li><?php _aquit();} unset($_np_kehuanlingyi_list,$v);?>
+
+        		</ul>
+           </div>
+		</div>
     </div>
     <!-- END 分类推荐榜 -->
 </div>

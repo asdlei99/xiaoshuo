@@ -130,9 +130,9 @@ li.No15 {background-position: -380px -351px;}
         <div class="tab-menu-m"><a href="/index.php?caid=24&action=tuijian" target="_blank">更多</a></div>
     </div>
     <div class="tab-contentWrapper">
-        <div class="J_tab-content" style="display: block;">
+        <div class="J_tab-content" style="display: block;height: 330px;">
             <ul class="list1">
-                   {p$nanpinxiaoshuoqingtui}
+                   {c$nanpin_qiangtui}
               </ul>
         </div>
     </div>
@@ -142,18 +142,18 @@ li.No15 {background-position: -380px -351px;}
 <div id="txtbox" class="k1" style="width:320px;float:left;margin-left:10px;padding-left:5px;height: 380px;">
     {c$nanpinxiaotuguanggao}
     <h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
-        {p$nanpinshouyedawenzituig1}
+        {c$nanpin_wenzi_1}
     </h2>
     
     <ul class="list2col clearfix">
-        {p$nanpinshouyeshoutuiliebiao}
+        {c$nanpin_wenzi_2}
     </ul>
     <h2 style="font-size: 18px;font-family: "黑体","宋体";font-weight: normal;text-align: center;margin: 16px 0 12px;">
-        {p$nanpinshouyedawenzituig2}
+        {c$nanpin_wenzi_3}
     </h2>
     
     <ul class="list2col clearfix">
-        {p$nanpinshouyeshoutuiliebiao2}
+        {c$nanpin_wenzi_4}
     </ul>
     <br >
 </div>
@@ -163,9 +163,9 @@ li.No15 {background-position: -380px -351px;}
     <div class="tab-menuWrapper">
         <h2 class="J_tab-menu active"><span style="color:#f00;">热点推荐</span></h2>
     </div>
-    <div class="J_tab-content">
+    <div class="J_tab-content" style="height: 330px;">
 
-            {p$nanpinshouyetuwenxiaoshuotuijian}
+            {c$nanpin_rediantuijian}
 
     </div>
     <!--END 重磅推荐&强力推荐 -->
@@ -195,7 +195,90 @@ li.No15 {background-position: -380px -351px;}
 <div class="mod-1 sortTop" style="width:534px;float:left;margin-left:8px;border-top: 1px solid #CECECE;">
     <!-- 热门小说推荐 -->
     <div class="mod-bd content-lr clearfix" style="background:none;">
-        {c$nanpin_remen_list}
+		<div style="height:245px;" class="main w210">
+              <div class="mod-sub">
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="/list.php?caid=2">都市·异能</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+                	{c$np_dushiyineng_tu}
+        		</dl>
+                <ul class="list">
+					{c$np_dushiyineng_list}	
+        		</ul>
+              </div>
+		</div>	                    
+        <div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=4">玄幻·奇幻</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+               		{c$np_xuanhuanqihuan_tu}
+        		</dl>
+                <ul class="list">
+            		{c$np_xuanhuanqihuan_list}    
+       			</ul>
+              </div>
+		</div>	                    
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=5">武侠·仙侠</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
+	            <dl class="picList2">
+		            {c$np_wuxiaoxianxia_tu}
+	        	</dl>
+	            <ul class="list">
+	            	{c$np_wuxiaoxianxia_list}    
+	        	</ul>
+         	</div>
+		</div>
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+	    			<h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=6">历史·军事</a></h2>        
+	    			<span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+	                {c$np_lishijunshi_tu}
+       			</dl>
+                <ul class="list">
+            		{c$np_lishijunshi_list}    
+        		</ul>
+           </div>
+		</div>	                    
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+				    <h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=7">网游·竞技</a></h2>        
+				    <span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+                	{c$np_wangyoujingji_tu}
+        		</dl>
+                <ul class="list">
+            		{c$np_wangyoujingji_list}
+       			</ul>
+           </div>
+		</div>	                    
+		<div style="height:245px;" class="main w210">
+        	<div class="mod-sub">
+        		<div class="tut03">        
+				    <h2><a target="_blank" href="http://xiaoshuo.com/list.php?caid=17">科幻·灵异</a></h2>        
+				    <span class="shu_hot"></span>        
+				</div>
+                <dl class="picList2">
+                    {c$np_kehuanlingyi_tu}
+        		</dl>
+                <ul class="list">
+            		{c$np_kehuanlingyi_list}
+        		</ul>
+           </div>
+		</div>
     </div>
     <!-- END 分类推荐榜 -->
 </div>

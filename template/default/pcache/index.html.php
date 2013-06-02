@@ -163,7 +163,7 @@ function request(paras){
 
 <style type="text/css">
 .remen_xu{}
-.remen_xu li {width: 268px;height: 26px;line-height: 26px;font-size: 12px;position: relative;background: url(<?=$tplurl?>images/girltitbgall.png) no-repeat;display: list-item;text-align: -webkit-match-parent;list-style: none outside none;background-position: -468px -44px;}
+.remen_xu li {width: 268px;height: 26px;line-height: 26px;font-size: 12px;position: relative;background: url(<?=$tplurl?>images/girltitbgall1.gif) no-repeat;display: list-item;text-align: -webkit-match-parent;list-style: none outside none;background-position: -0px -0px;}
 .remen_xu span {font-weight:bold; margin-left: 5px;display:inline-block;width: 16px;height: 14px;text-align: center;font-size: 10px;line-height: 14px;font-family: Verdana;}
 .remen_xu p {	background: #FFF;padding: 0 2px;display: inline;margin: 0;}
 .remen_xu em {	color: #007F00;position: absolute;font-size: 12px;top: 1px;right: 0;background: #FFF;padding: 0 2px;}
@@ -211,29 +211,26 @@ function request(paras){
 	    <h2><a target="_blank" href="/index.php?caid=1">热点男性小说</a></h2>        
 	    <span class="shu_hot"></span>        
 	</div>
-	<?php $_index_nanpin_img_list=_ctag_parse(array("ename" => "index_nanpin_img_list","tclass" => "archives","disabled" => "0","limits" => "1","nsid" => "-1","caidson" => "1","casource" => "1","caids" => "1","chsource" => "2","chids" => "4","orderby" => "comments_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_index_nanpin_img_list as $v){_aenter($v);?>
-	                            
-<div style="float:left;margin:5px;"><a target="_blank" href="<?=$v['arcurl']?>"><?php $u=_utag_parse(array("ename" => "thumb_110_145","tclass" => "image","disabled" => "0","tname" => "$v[thumb]","maxwidth" => "110","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?>	    <img src="<?=$u['url_s']?>"  width="120" height="150" title="<?=$v['subject']?>"><?php } unset($u);?></a></div>
+	<?php $_index_tu_1=_ctag_parse(array("ename" => "index_tu_1","tclass" => "farchives","limits" => "1","casource" => "60","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_index_tu_1 as $v){_aenter($v);?>
+<div style="float:left;margin:5px;"><a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php $u=_utag_parse(array("ename" => "pic_120_150","tclass" => "image","tname" => "$v[pic]","maxwidth" => "120","maxheight" => "150","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" data-pinit="registered" /><?php } unset($u);?></a></div>
     <div class="txtpic_fm_r" style="width:160px;float:left;">
-    <div style="padding:5px 0" class="font14"><a target="_blank" href="<?=$v['arcurl']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+    <div style="padding:5px 0" class="font14"><a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a></div>
     <div>作者：<span style="color:#007F00;"><?=$v['author']?></span></div>
-    <span class="orange_u"><?php echo _utag_parse(array("ename" => "hotindex_abs_100","tclass" => "odeal","disabled" => "0","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "90","wordlink" => "1",));?>
-...  <br /><A href="<?=$v['arcurl']?>"  target=_blank>点击阅读</A>
+    <span class="orange_u"><?php echo _utag_parse(array("ename" => "jianjie90","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "90",));?>
+...  <br /><A href="/archive.php?aid=<?=$v['xsid']?>"  target=_blank>点击阅读</A>
 &nbsp;
-<a onclick="javascript:ajax_favorite('<?=$v['aid']?>');" href="javascript:;">加入书架</a>
+<a onclick="javascript:ajax_favorite('/archive.php?aid=<?=$v['xsid']?>');" href="javascript:;">加入书架</a>
 </span>
-    </div><?php _aquit();} unset($_index_nanpin_img_list,$v);?>
+    </div><?php _aquit();} unset($_index_tu_1,$v);?>
 
 	<div class="blank3"></div>
 	<div class="remen_xu" style="325px;margin-left:5px;">
 		<ul>
-			<?php $_index_nanpin_remenlist=_ctag_parse(array("ename" => "index_nanpin_remenlist","tclass" => "archives","disabled" => "0","nsid" => "-1","caidson" => "1","casource" => "1","caids" => "1","chsource" => "2","chids" => "4","orderby" => "comments_desc","closed" => "-1","abover" => "-1",));foreach($_index_nanpin_remenlist as $v){_aenter($v);?>
-		<? if($v['sn_row']!=1) { ?>
-<li><span><?=$v['sn_row']?></span><p>《<a href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+			<?php $_index_list_1=_ctag_parse(array("ename" => "index_list_1","tclass" => "farchives","casource" => "212","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_index_list_1 as $v){_aenter($v);?>
+<li><span><?=$v['sn_row']?></span><p>《<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a>》</p><em><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
-</em></li>
-<? } ?><?php _aquit();} unset($_index_nanpin_remenlist,$v);?>
+</em></li><?php _aquit();} unset($_index_list_1,$v);?>
 
 		</ul>
 	</div>
@@ -244,29 +241,26 @@ function request(paras){
 	    <h2><a target="_blank" href="/index.php?caid=14">热点女性小说</a></h2>        
 	    <span class="shu_hot"></span>        
 	</div>
-	<?php $_index_nvpin_img_list=_ctag_parse(array("ename" => "index_nvpin_img_list","tclass" => "archives","disabled" => "0","limits" => "1","nsid" => "-1","caidson" => "1","casource" => "1","caids" => "14","chsource" => "2","chids" => "4","orderby" => "comments_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_index_nvpin_img_list as $v){_aenter($v);?>
-	                            
-<div style="float:left;margin:5px;"><a target="_blank" href="<?=$v['arcurl']?>"><?php $u=_utag_parse(array("ename" => "thumb_110_145","tclass" => "image","disabled" => "0","tname" => "$v[thumb]","maxwidth" => "110","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?>	    <img src="<?=$u['url_s']?>"  width="120" height="150" title="<?=$v['subject']?>"><?php } unset($u);?></a></div>
+	 <?php $_index_tu_2=_ctag_parse(array("ename" => "index_tu_2","tclass" => "farchives","limits" => "1","casource" => "61","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_index_tu_2 as $v){_aenter($v);?>
+<div style="float:left;margin:5px;"><a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php $u=_utag_parse(array("ename" => "pic_120_150","tclass" => "image","tname" => "$v[pic]","maxwidth" => "120","maxheight" => "150","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" data-pinit="registered" /><?php } unset($u);?></a></div>
     <div class="txtpic_fm_r" style="width:160px;float:left;">
-    <div style="padding:5px 0" class="font14"><a target="_blank" href="<?=$v['arcurl']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+    <div style="padding:5px 0" class="font14"><a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a></div>
     <div>作者：<span style="color:#007F00;"><?=$v['author']?></span></div>
-    <span class="orange_u"><?php echo _utag_parse(array("ename" => "hotindex_abs_100","tclass" => "odeal","disabled" => "0","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "90","wordlink" => "1",));?>
-... <br /> <A href="<?=$v['arcurl']?>"  target=_blank>点击阅读</A>
+    <span class="orange_u"><?php echo _utag_parse(array("ename" => "jianjie90","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "90",));?>
+...  <br /><A href="/archive.php?aid=<?=$v['xsid']?>"  target=_blank>点击阅读</A>
 &nbsp;
-<a onclick="javascript:ajax_favorite('<?=$v['aid']?>');" href="javascript:;">加入书架</a>
+<a onclick="javascript:ajax_favorite('/archive.php?aid=<?=$v['xsid']?>');" href="javascript:;">加入书架</a>
 </span>
-    </div><?php _aquit();} unset($_index_nvpin_img_list,$v);?>
+    </div><?php _aquit();} unset($_index_tu_2,$v);?>
 
 	<div class="blank3"></div>
 	<div class="remen_xu" style="325px;margin-left:5px;margin-right:150px;">
 		<ul>
-			<?php $_index_nvpin_remenlist=_ctag_parse(array("ename" => "index_nvpin_remenlist","tclass" => "archives","disabled" => "0","nsid" => "-1","caidson" => "1","casource" => "1","caids" => "14","chsource" => "2","chids" => "4","orderby" => "comments_desc","closed" => "-1","abover" => "-1",));foreach($_index_nvpin_remenlist as $v){_aenter($v);?>
-				<? if($v['sn_row']!=1) { ?>
-<li><span><?=$v['sn_row']?></span><p>《<a href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+			<?php $_index_list_2=_ctag_parse(array("ename" => "index_list_2","tclass" => "farchives","limits" => "10","casource" => "213","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_index_list_2 as $v){_aenter($v);?>
+<li><span><?=$v['sn_row']?></span><p>《<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a>》</p><em><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
-</em></li>
-<? } ?><?php _aquit();} unset($_index_nvpin_remenlist,$v);?>
+</em></li><?php _aquit();} unset($_index_list_2,$v);?>
 
 		</ul>
 	</div>
@@ -277,29 +271,26 @@ function request(paras){
 	    <h2><a target="_blank" href="/index.php?caid=1&ccid7=38">读者推荐小说</a></h2>        
 	    <span class="shu_hot"></span>        
 	</div>
-	<?php $_index_quanzhan_img_list=_ctag_parse(array("ename" => "index_quanzhan_img_list","tclass" => "archives","disabled" => "0","limits" => "1","nsid" => "-1","caidson" => "1","casource" => "1","caids" => "14,1","chsource" => "2","chids" => "4","orderby" => "favorites_desc","closed" => "-1","abover" => "-1","wherestr" => "a.thumb != \'\'",));foreach($_index_quanzhan_img_list as $v){_aenter($v);?>
-	                                
-<div style="float:left;margin:5px;"><a target="_blank" href="<?=$v['arcurl']?>"><?php $u=_utag_parse(array("ename" => "thumb_110_145","tclass" => "image","disabled" => "0","tname" => "$v[thumb]","maxwidth" => "110","maxheight" => "137","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?>	    <img src="<?=$u['url_s']?>"  width="120" height="150" title="<?=$v['subject']?>"><?php } unset($u);?></a></div>
+	<?php $_index_tu_3=_ctag_parse(array("ename" => "index_tu_3","tclass" => "farchives","limits" => "1","casource" => "62","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_index_tu_3 as $v){_aenter($v);?>
+<div style="float:left;margin:5px;"><a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php $u=_utag_parse(array("ename" => "pic_120_150","tclass" => "image","tname" => "$v[pic]","maxwidth" => "120","maxheight" => "150","emptyurl" => "template/default/images/mr_face.gif",));if(!empty($u)){?><img src="<?=$u['url']?>" width="<?=$u['width']?>" height="<?=$u['height']?>" title="<?=$v['subject']?>" data-pinit="registered" /><?php } unset($u);?></a></div>
     <div class="txtpic_fm_r" style="width:160px;float:left;">
-    <div style="padding:5px 0" class="font14"><a target="_blank" href="<?=$v['arcurl']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+    <div style="padding:5px 0" class="font14"><a target="_blank" href="/archive.php?aid=<?=$v['xsid']?>"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a></div>
     <div>作者：<span style="color:#007F00;"><?=$v['author']?></span></div>
-    <span class="orange_u"><?php echo _utag_parse(array("ename" => "hotindex_abs_100","tclass" => "odeal","disabled" => "0","tname" => "$v[abstract]","dealhtml" => "clearhtml","trim" => "90","wordlink" => "1",));?>
-... <br /> <A href="<?=$v['arcurl']?>"  target=_blank>点击阅读</A>
+    <span class="orange_u"><?php echo _utag_parse(array("ename" => "jianjie90","tclass" => "odeal","tname" => "$v[jianjie]","dealhtml" => "clearhtml","trim" => "90",));?>
+...  <br /><A href="/archive.php?aid=<?=$v['xsid']?>"  target=_blank>点击阅读</A>
 &nbsp;
-<a onclick="javascript:ajax_favorite('<?=$v['aid']?>');" href="javascript:;">加入书架</a>
+<a onclick="javascript:ajax_favorite('/archive.php?aid=<?=$v['xsid']?>');" href="javascript:;">加入书架</a>
 </span>
-    </div><?php _aquit();} unset($_index_quanzhan_img_list,$v);?>
+    </div><?php _aquit();} unset($_index_tu_3,$v);?>
 
 	<div class="blank3"></div>
 	<div class="remen_xu" style="325px;margin-left:5px;margin-right:150px;">
 		<ul>
-			<?php $_index_quanzhan_remenlist=_ctag_parse(array("ename" => "index_quanzhan_remenlist","tclass" => "archives","disabled" => "0","nsid" => "-1","caidson" => "1","casource" => "1","caids" => "14,1","chsource" => "2","chids" => "4","orderby" => "favorites_desc","closed" => "-1","abover" => "-1",));foreach($_index_quanzhan_remenlist as $v){_aenter($v);?>
-	                <? if($v['sn_row']!=1) { ?>
-<li><span><?=$v['sn_row']?></span><p>《<a href="<?=$v['arcurl']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
+			<?php $_index_list_3=_ctag_parse(array("ename" => "index_list_3","tclass" => "farchives","limits" => "10","casource" => "214","orderby" => "vieworder_asc","validperiod" => "1",));foreach($_index_list_3 as $v){_aenter($v);?>
+<li><span><?=$v['sn_row']?></span><p>《<a href="/archive.php?aid=<?=$v['xsid']?>" target="_blank"><?php echo _utag_parse(array("ename" => "subject30","tclass" => "odeal","tname" => "$v[subject]","trim" => "30",));?>
 </a>》</p><em><?php echo _utag_parse(array("ename" => "author10","tclass" => "odeal","disabled" => "0","tname" => "$v[author]","trim" => "10",));?>
-</em></li>
-<? } ?><?php _aquit();} unset($_index_quanzhan_remenlist,$v);?>
+</em></li><?php _aquit();} unset($_index_list_3,$v);?>
 
 		</ul>
 	</div>

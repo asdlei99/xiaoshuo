@@ -31,6 +31,7 @@ if(!$cnstr){
 	re_cnode($_da,$cnstr,$cnode);
 	$tplname = $cnode['indextpl'];
 }
+//var_dump($tplname);
 empty($tplname) && message('definereltem');
 
 _aenter($_da,1);

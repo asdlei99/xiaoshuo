@@ -1,0 +1,14 @@
+<?php
+$utagjianjie180_0 = array (
+  'cname' => 'Ð¡Ëµ¼ò½é180',
+  'ename' => 'jianjie180',
+  'tclass' => 'odeal',
+  'template' => '',
+  'setting' => 
+  array (
+    'tname' => 'jianjie',
+    'dealhtml' => 'clearhtml',
+    'trim' => 180,
+  ),
+) ;
+?>

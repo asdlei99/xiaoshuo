@@ -15,6 +15,5 @@ $ctagnvpintuwenxiaoshuotuijianzuo_0 = array (
     'orderby' => 'vieworder_asc',
     'validperiod' => '1',
   ),
-  'disabled' => 0,
 ) ;
 ?>

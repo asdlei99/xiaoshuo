@@ -90,12 +90,47 @@ $utags_0 = array (
     'tclass' => 'odeal',
     'vieworder' => 0,
   ),
+  'jianjie120' => 
+  array (
+    'tclass' => 'odeal',
+    'vieworder' => 0,
+  ),
+  'jianjie180' => 
+  array (
+    'tclass' => 'odeal',
+    'vieworder' => 0,
+  ),
+  'jianjie60' => 
+  array (
+    'tclass' => 'odeal',
+    'vieworder' => 0,
+  ),
+  'jianjie90' => 
+  array (
+    'tclass' => 'odeal',
+    'vieworder' => 0,
+  ),
   'menbergroup' => 
   array (
     'tclass' => 'fromid',
     'vieworder' => 0,
   ),
   'photo_66_66' => 
+  array (
+    'tclass' => 'image',
+    'vieworder' => 0,
+  ),
+  'pic' => 
+  array (
+    'tclass' => 'image',
+    'vieworder' => 0,
+  ),
+  'pic_105_137' => 
+  array (
+    'tclass' => 'image',
+    'vieworder' => 0,
+  ),
+  'pic_120_150' => 
   array (
     'tclass' => 'image',
     'vieworder' => 0,
